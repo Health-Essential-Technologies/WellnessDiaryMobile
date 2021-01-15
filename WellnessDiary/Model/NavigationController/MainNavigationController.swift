@@ -20,8 +20,9 @@ class MainNavigationController: SimpleNavigationViewController {
     // MARK: - Methods
     
     override func loadBasicTheme() {
-//        navigationBar.barTintColor = ThemeKitManager.shared.getColorWith(name: ThemeKitManager.MAIN_GREEN_COLOR_VAR_NAME)
-//        navigationBar.tintColor = ThemeKitManager.shared.getColorWith(name: ThemeKitManager.NAVIGATION_BAR_TITLE_COLOR_VAR_NAME)
+        let mainColor = UIColor(named: "mainColor")
+        navigationBar.barTintColor = mainColor
+        navigationBar.tintColor = mainColor
 //        navigationBar.titleTextAttributes = StringAttributes.navigationBarTitleTitleAttributes()
     }
 
