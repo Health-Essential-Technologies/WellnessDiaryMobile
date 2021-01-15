@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		AB2E791025B22D7E008B37B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E790F25B22D7E008B37B4 /* AppDelegate.swift */; };
 		AB2E791225B22D7E008B37B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E791125B22D7E008B37B4 /* SceneDelegate.swift */; };
-		AB2E791425B22D7E008B37B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E791325B22D7E008B37B4 /* ViewController.swift */; };
-		AB2E791725B22D7E008B37B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2E791525B22D7E008B37B4 /* Main.storyboard */; };
 		AB2E791A25B22D7E008B37B4 /* WellnessDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB2E791825B22D7E008B37B4 /* WellnessDiary.xcdatamodeld */; };
 		AB2E791C25B22D81008B37B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2E791B25B22D81008B37B4 /* Assets.xcassets */; };
 		AB2E791F25B22D81008B37B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2E791D25B22D81008B37B4 /* LaunchScreen.storyboard */; };
+		AB2E792E25B22F99008B37B4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E792D25B22F99008B37B4 /* CoreDataManager.swift */; };
+		AB2E793825B23337008B37B4 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E793725B23337008B37B4 /* MainTabViewController.swift */; };
+		AB2E793B25B23371008B37B4 /* SimpleTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E793A25B23371008B37B4 /* SimpleTabViewController.swift */; };
+		AB2E793F25B23424008B37B4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E793E25B23424008B37B4 /* UIViewController+Extension.swift */; };
+		AB2E794325B234AB008B37B4 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E794225B234AB008B37B4 /* SimpleViewController.swift */; };
+		AB2E794925B2358D008B37B4 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E794825B2358D008B37B4 /* MainNavigationController.swift */; };
+		AB2E794C25B2359A008B37B4 /* SimpleNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E794B25B2359A008B37B4 /* SimpleNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB2E790C25B22D7E008B37B4 /* WellnessDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellnessDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2E790F25B22D7E008B37B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB2E791125B22D7E008B37B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB2E791325B22D7E008B37B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AB2E791625B22D7E008B37B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB2E791925B22D7E008B37B4 /* WellnessDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WellnessDiary.xcdatamodel; sourceTree = "<group>"; };
 		AB2E791B25B22D81008B37B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB2E791E25B22D81008B37B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB2E792025B22D81008B37B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB2E792D25B22F99008B37B4 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		AB2E793725B23337008B37B4 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		AB2E793A25B23371008B37B4 /* SimpleTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabViewController.swift; sourceTree = "<group>"; };
+		AB2E793E25B23424008B37B4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		AB2E794225B234AB008B37B4 /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
+		AB2E794825B2358D008B37B4 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		AB2E794B25B2359A008B37B4 /* SimpleNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +68,85 @@
 		AB2E790E25B22D7E008B37B4 /* WellnessDiary */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E790F25B22D7E008B37B4 /* AppDelegate.swift */,
-				AB2E791125B22D7E008B37B4 /* SceneDelegate.swift */,
-				AB2E791325B22D7E008B37B4 /* ViewController.swift */,
-				AB2E791525B22D7E008B37B4 /* Main.storyboard */,
-				AB2E791B25B22D81008B37B4 /* Assets.xcassets */,
-				AB2E791D25B22D81008B37B4 /* LaunchScreen.storyboard */,
+				AB2E793D25B233F8008B37B4 /* Extensions */,
+				AB2E792B25B22F5B008B37B4 /* Model */,
+				AB2E792825B22F0F008B37B4 /* Storyboards */,
+				AB2E792725B22F01008B37B4 /* Resources */,
 				AB2E792025B22D81008B37B4 /* Info.plist */,
-				AB2E791825B22D7E008B37B4 /* WellnessDiary.xcdatamodeld */,
 			);
 			path = WellnessDiary;
+			sourceTree = "<group>";
+		};
+		AB2E792725B22F01008B37B4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E790F25B22D7E008B37B4 /* AppDelegate.swift */,
+				AB2E791125B22D7E008B37B4 /* SceneDelegate.swift */,
+				AB2E791B25B22D81008B37B4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB2E792825B22F0F008B37B4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E791D25B22D81008B37B4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AB2E792B25B22F5B008B37B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E794125B23492008B37B4 /* TabViewController */,
+				AB2E794725B23559008B37B4 /* NavigationController */,
+				AB2E793625B2330C008B37B4 /* ViewControllers */,
+				AB2E792C25B22F80008B37B4 /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB2E792C25B22F80008B37B4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E791825B22D7E008B37B4 /* WellnessDiary.xcdatamodeld */,
+				AB2E792D25B22F99008B37B4 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AB2E793625B2330C008B37B4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E794225B234AB008B37B4 /* SimpleViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AB2E793D25B233F8008B37B4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E793E25B23424008B37B4 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AB2E794125B23492008B37B4 /* TabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E793725B23337008B37B4 /* MainTabViewController.swift */,
+				AB2E793A25B23371008B37B4 /* SimpleTabViewController.swift */,
+			);
+			path = TabViewController;
+			sourceTree = "<group>";
+		};
+		AB2E794725B23559008B37B4 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E794825B2358D008B37B4 /* MainNavigationController.swift */,
+				AB2E794B25B2359A008B37B4 /* SimpleNavigationViewController.swift */,
+			);
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +208,6 @@
 			files = (
 				AB2E791F25B22D81008B37B4 /* LaunchScreen.storyboard in Resources */,
 				AB2E791C25B22D81008B37B4 /* Assets.xcassets in Resources */,
-				AB2E791725B22D7E008B37B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,9 +218,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2E794925B2358D008B37B4 /* MainNavigationController.swift in Sources */,
+				AB2E793B25B23371008B37B4 /* SimpleTabViewController.swift in Sources */,
+				AB2E793825B23337008B37B4 /* MainTabViewController.swift in Sources */,
 				AB2E791A25B22D7E008B37B4 /* WellnessDiary.xcdatamodeld in Sources */,
-				AB2E791425B22D7E008B37B4 /* ViewController.swift in Sources */,
 				AB2E791025B22D7E008B37B4 /* AppDelegate.swift in Sources */,
+				AB2E793F25B23424008B37B4 /* UIViewController+Extension.swift in Sources */,
+				AB2E794C25B2359A008B37B4 /* SimpleNavigationViewController.swift in Sources */,
+				AB2E792E25B22F99008B37B4 /* CoreDataManager.swift in Sources */,
+				AB2E794325B234AB008B37B4 /* SimpleViewController.swift in Sources */,
 				AB2E791225B22D7E008B37B4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,14 +234,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AB2E791525B22D7E008B37B4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB2E791625B22D7E008B37B4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AB2E791D25B22D81008B37B4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
