@@ -10,7 +10,7 @@ import CoreData
 
 class CoreDataManager {
     
-    // MARK: - Properties
+    // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentCloudKitContainer = {
         let container = NSPersistentCloudKitContainer(name: "WellnessDiary")

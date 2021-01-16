@@ -3,186 +3,189 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB2E791025B22D7E008B37B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E790F25B22D7E008B37B4 /* AppDelegate.swift */; };
-		AB2E791225B22D7E008B37B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E791125B22D7E008B37B4 /* SceneDelegate.swift */; };
-		AB2E791A25B22D7E008B37B4 /* WellnessDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB2E791825B22D7E008B37B4 /* WellnessDiary.xcdatamodeld */; };
-		AB2E791C25B22D81008B37B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2E791B25B22D81008B37B4 /* Assets.xcassets */; };
-		AB2E791F25B22D81008B37B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2E791D25B22D81008B37B4 /* LaunchScreen.storyboard */; };
-		AB2E792E25B22F99008B37B4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E792D25B22F99008B37B4 /* CoreDataManager.swift */; };
-		AB2E793825B23337008B37B4 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E793725B23337008B37B4 /* MainTabViewController.swift */; };
-		AB2E793B25B23371008B37B4 /* SimpleTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E793A25B23371008B37B4 /* SimpleTabViewController.swift */; };
-		AB2E793F25B23424008B37B4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E793E25B23424008B37B4 /* UIViewController+Extension.swift */; };
-		AB2E794325B234AB008B37B4 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E794225B234AB008B37B4 /* SimpleViewController.swift */; };
-		AB2E794925B2358D008B37B4 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E794825B2358D008B37B4 /* MainNavigationController.swift */; };
-		AB2E794C25B2359A008B37B4 /* SimpleNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E794B25B2359A008B37B4 /* SimpleNavigationViewController.swift */; };
-		AB2E794F25B239A2008B37B4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2E794E25B239A2008B37B4 /* Colors.xcassets */; };
-		AB2E795525B23B12008B37B4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E795425B23B12008B37B4 /* UIView+Extension.swift */; };
-		AB2E795A25B23B93008B37B4 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E795925B23B93008B37B4 /* UIImage+Extension.swift */; };
-		AB2E795F25B23C31008B37B4 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E795E25B23C31008B37B4 /* Collection+Extension.swift */; };
-		AB2E796225B23C59008B37B4 /* UITableview+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E796125B23C59008B37B4 /* UITableview+Extension.swift */; };
-		AB2E796525B23C92008B37B4 /* UITableviewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E796425B23C92008B37B4 /* UITableviewCell+Extension.swift */; };
-		AB2E796825B23CC1008B37B4 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E796725B23CC1008B37B4 /* UIButton+Extension.swift */; };
-		AB2E796B25B23CF0008B37B4 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E796A25B23CF0008B37B4 /* Date+Extension.swift */; };
+		0B63969CE6C6A8C17208F5BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC8B61A2B382A454DFB759 /* LaunchScreen.storyboard */; };
+		0CE0E3C29E521838D919BDCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8D6636D32350437B52BF16D /* Assets.xcassets */; };
+		319FD4A22E01521C60F5C8E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE48FF325C580155FD62279 /* SceneDelegate.swift */; };
+		399A5E7BCCC509F02EB7852D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3693E25E6A23B032FCBB15BB /* MainTabViewController.swift */; };
+		40AC6F2253711AD700AAA2C9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED327D5DB0207A4B2940928 /* UIView+Extension.swift */; };
+		5110AAD9810D5D5DF26F4B2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FA7AACC16EFFB7AEA6D0F8 /* AppDelegate.swift */; };
+		633849EFA9C15F022D043884 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0FA53C784A626E63E1648F9 /* Colors.xcassets */; };
+		694725E4395CF97582E7EC3C /* UITableviewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D984080EDD2F73A2A5E1CDD /* UITableviewCell+Extension.swift */; };
+		8B62A7670B7460CED94AFF89 /* SimpleTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940C73299B37115E18DEC0A /* SimpleTabViewController.swift */; };
+		8DBA154E687156E7BF6BBE01 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B3CC3BD241092DB12DB93 /* MainNavigationController.swift */; };
+		9876E139F8A36926083460D5 /* WellnessDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABAC3454F5CCF34B9AA3E113 /* WellnessDiary.xcdatamodeld */; };
+		9C29D62E2FFCE399C7AD2DB1 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B31327A469D95C4B6CCE6F6 /* UIViewController+Extension.swift */; };
+		9D453B9F2066200353EAE1A9 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0EADD17469A8E113703FEA /* Date+Extension.swift */; };
+		A992D6F6C9F0F33BF2AB02BD /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B082016E5C51FCFD01C06B /* UIButton+Extension.swift */; };
+		AB2E798025B26B18008B37B4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E797F25B26B18008B37B4 /* Colors.swift */; };
+		AB350407E3CED47A2BF85B97 /* SimpleNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250D3A2AD7B5613FEBDEED6 /* SimpleNavigationViewController.swift */; };
+		B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895A81BAE10799A35A91E93 /* UIImage+Extension.swift */; };
+		CB69BCC8DB599350090E033A /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DDF026850C3F78D13B563B /* Collection+Extension.swift */; };
+		D98BF8D0A77D93E31116D765 /* UITableview+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C4CCDE4DA69A35418758B /* UITableview+Extension.swift */; };
+		DF8C40D43EB6893ACA99A816 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD31B7F9177C89437D51DF /* SimpleViewController.swift */; };
+		E4F0112CB37B6387993FB2F5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3B73742C91BBF067937552 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB2E790C25B22D7E008B37B4 /* WellnessDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellnessDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB2E790F25B22D7E008B37B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB2E791125B22D7E008B37B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB2E791925B22D7E008B37B4 /* WellnessDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WellnessDiary.xcdatamodel; sourceTree = "<group>"; };
-		AB2E791B25B22D81008B37B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AB2E791E25B22D81008B37B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AB2E792025B22D81008B37B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB2E792D25B22F99008B37B4 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		AB2E793725B23337008B37B4 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
-		AB2E793A25B23371008B37B4 /* SimpleTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabViewController.swift; sourceTree = "<group>"; };
-		AB2E793E25B23424008B37B4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		AB2E794225B234AB008B37B4 /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
-		AB2E794825B2358D008B37B4 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
-		AB2E794B25B2359A008B37B4 /* SimpleNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNavigationViewController.swift; sourceTree = "<group>"; };
-		AB2E794E25B239A2008B37B4 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		AB2E795425B23B12008B37B4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		AB2E795925B23B93008B37B4 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		AB2E795E25B23C31008B37B4 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
-		AB2E796125B23C59008B37B4 /* UITableview+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableview+Extension.swift"; sourceTree = "<group>"; };
-		AB2E796425B23C92008B37B4 /* UITableviewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableviewCell+Extension.swift"; sourceTree = "<group>"; };
-		AB2E796725B23CC1008B37B4 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		AB2E796A25B23CF0008B37B4 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		1250D3A2AD7B5613FEBDEED6 /* SimpleNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNavigationViewController.swift; sourceTree = "<group>"; };
+		3693E25E6A23B032FCBB15BB /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		36DDF026850C3F78D13B563B /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		37FA7AACC16EFFB7AEA6D0F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3ED327D5DB0207A4B2940928 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4895A81BAE10799A35A91E93 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		4F0EADD17469A8E113703FEA /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		5C3B73742C91BBF067937552 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5E4B3CC3BD241092DB12DB93 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		62828B4B2D7C7A8437472C6C /* WellnessDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WellnessDiary.xcdatamodel; sourceTree = "<group>"; };
+		64B082016E5C51FCFD01C06B /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		8B31327A469D95C4B6CCE6F6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		90DF4AF2A837E77B63A8BCCC /* WellnessDiary.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = WellnessDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D984080EDD2F73A2A5E1CDD /* UITableviewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableviewCell+Extension.swift"; sourceTree = "<group>"; };
+		A3CD31B7F9177C89437D51DF /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
+		A8D6636D32350437B52BF16D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAC2558D975C5C64245E2372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB2E797F25B26B18008B37B4 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B35C4CCDE4DA69A35418758B /* UITableview+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableview+Extension.swift"; sourceTree = "<group>"; };
+		BEE48FF325C580155FD62279 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C940C73299B37115E18DEC0A /* SimpleTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabViewController.swift; sourceTree = "<group>"; };
+		CB9E2895F53F79CC38FA56BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D0FA53C784A626E63E1648F9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		AB2E790925B22D7E008B37B4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
-		AB2E790325B22D7E008B37B4 = {
+		0B5DEA200C24B945B777F787 /* WellnessDiary */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E790E25B22D7E008B37B4 /* WellnessDiary */,
-				AB2E790D25B22D7E008B37B4 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		AB2E790D25B22D7E008B37B4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AB2E790C25B22D7E008B37B4 /* WellnessDiary.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AB2E790E25B22D7E008B37B4 /* WellnessDiary */ = {
-			isa = PBXGroup;
-			children = (
-				AB2E793D25B233F8008B37B4 /* Extensions */,
-				AB2E792B25B22F5B008B37B4 /* Model */,
-				AB2E792825B22F0F008B37B4 /* Storyboards */,
-				AB2E792725B22F01008B37B4 /* Resources */,
-				AB2E792025B22D81008B37B4 /* Info.plist */,
+				658CD080FDA4F6F0E47A771E /* Resources */,
+				AB2E797D25B2689D008B37B4 /* Generated */,
+				CB9E2895F53F79CC38FA56BC /* Info.plist */,
+				EE99487FB21F30BAE2CFD887 /* Extensions */,
+				5C3BBAA04845D93BB672BE18 /* Model */,
+				48B10A2DC96D85E6C7E64B6C /* Storyboards */,
 			);
 			path = WellnessDiary;
 			sourceTree = "<group>";
 		};
-		AB2E792725B22F01008B37B4 /* Resources */ = {
+		1844256F92E28A9BAC1C2FD5 /* NavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E790F25B22D7E008B37B4 /* AppDelegate.swift */,
-				AB2E791125B22D7E008B37B4 /* SceneDelegate.swift */,
-				AB2E791B25B22D81008B37B4 /* Assets.xcassets */,
-				AB2E794E25B239A2008B37B4 /* Colors.xcassets */,
+				5E4B3CC3BD241092DB12DB93 /* MainNavigationController.swift */,
+				1250D3A2AD7B5613FEBDEED6 /* SimpleNavigationViewController.swift */,
 			);
-			path = Resources;
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
-		AB2E792825B22F0F008B37B4 /* Storyboards */ = {
+		48B10A2DC96D85E6C7E64B6C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E791D25B22D81008B37B4 /* LaunchScreen.storyboard */,
+				1CEC8B61A2B382A454DFB759 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		AB2E792B25B22F5B008B37B4 /* Model */ = {
+		5C3BBAA04845D93BB672BE18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E794125B23492008B37B4 /* TabViewController */,
-				AB2E794725B23559008B37B4 /* NavigationController */,
-				AB2E793625B2330C008B37B4 /* ViewControllers */,
-				AB2E792C25B22F80008B37B4 /* CoreData */,
+				FA8936BB7FF9EE61E1743A88 /* CoreData */,
+				1844256F92E28A9BAC1C2FD5 /* NavigationController */,
+				A27CBFFC5BE9BC90E538B788 /* TabViewController */,
+				D5A149489B3514AEB540439D /* ViewControllers */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		AB2E792C25B22F80008B37B4 /* CoreData */ = {
+		658CD080FDA4F6F0E47A771E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E791825B22D7E008B37B4 /* WellnessDiary.xcdatamodeld */,
-				AB2E792D25B22F99008B37B4 /* CoreDataManager.swift */,
+				37FA7AACC16EFFB7AEA6D0F8 /* AppDelegate.swift */,
+				A8D6636D32350437B52BF16D /* Assets.xcassets */,
+				D0FA53C784A626E63E1648F9 /* Colors.xcassets */,
+				BEE48FF325C580155FD62279 /* SceneDelegate.swift */,
 			);
-			path = CoreData;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		AB2E793625B2330C008B37B4 /* ViewControllers */ = {
+		907B1442F3F53CF9F337E424 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E794225B234AB008B37B4 /* SimpleViewController.swift */,
+				90DF4AF2A837E77B63A8BCCC /* WellnessDiary.app */,
 			);
-			path = ViewControllers;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		AB2E793D25B233F8008B37B4 /* Extensions */ = {
+		A27CBFFC5BE9BC90E538B788 /* TabViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E793E25B23424008B37B4 /* UIViewController+Extension.swift */,
-				AB2E795925B23B93008B37B4 /* UIImage+Extension.swift */,
-				AB2E795425B23B12008B37B4 /* UIView+Extension.swift */,
-				AB2E795E25B23C31008B37B4 /* Collection+Extension.swift */,
-				AB2E796125B23C59008B37B4 /* UITableview+Extension.swift */,
-				AB2E796425B23C92008B37B4 /* UITableviewCell+Extension.swift */,
-				AB2E796725B23CC1008B37B4 /* UIButton+Extension.swift */,
-				AB2E796A25B23CF0008B37B4 /* Date+Extension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		AB2E794125B23492008B37B4 /* TabViewController */ = {
-			isa = PBXGroup;
-			children = (
-				AB2E793725B23337008B37B4 /* MainTabViewController.swift */,
-				AB2E793A25B23371008B37B4 /* SimpleTabViewController.swift */,
+				3693E25E6A23B032FCBB15BB /* MainTabViewController.swift */,
+				C940C73299B37115E18DEC0A /* SimpleTabViewController.swift */,
 			);
 			path = TabViewController;
 			sourceTree = "<group>";
 		};
-		AB2E794725B23559008B37B4 /* NavigationController */ = {
+		A6BEE39E06F8D72833A4CB3D = {
 			isa = PBXGroup;
 			children = (
-				AB2E794825B2358D008B37B4 /* MainNavigationController.swift */,
-				AB2E794B25B2359A008B37B4 /* SimpleNavigationViewController.swift */,
+				0B5DEA200C24B945B777F787 /* WellnessDiary */,
+				907B1442F3F53CF9F337E424 /* Products */,
 			);
-			path = NavigationController;
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		AB2E797D25B2689D008B37B4 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E797F25B26B18008B37B4 /* Colors.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		D5A149489B3514AEB540439D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3CD31B7F9177C89437D51DF /* SimpleViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EE99487FB21F30BAE2CFD887 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				36DDF026850C3F78D13B563B /* Collection+Extension.swift */,
+				4F0EADD17469A8E113703FEA /* Date+Extension.swift */,
+				64B082016E5C51FCFD01C06B /* UIButton+Extension.swift */,
+				4895A81BAE10799A35A91E93 /* UIImage+Extension.swift */,
+				B35C4CCDE4DA69A35418758B /* UITableview+Extension.swift */,
+				9D984080EDD2F73A2A5E1CDD /* UITableviewCell+Extension.swift */,
+				3ED327D5DB0207A4B2940928 /* UIView+Extension.swift */,
+				8B31327A469D95C4B6CCE6F6 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA8936BB7FF9EE61E1743A88 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5C3B73742C91BBF067937552 /* CoreDataManager.swift */,
+				ABAC3454F5CCF34B9AA3E113 /* WellnessDiary.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AB2E790B25B22D7E008B37B4 /* WellnessDiary */ = {
+		036D3EF5B51861D370007DCA /* WellnessDiary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB2E792325B22D81008B37B4 /* Build configuration list for PBXNativeTarget "WellnessDiary" */;
+			buildConfigurationList = 11BEA8D9920A4156DDC21E07 /* Build configuration list for PBXNativeTarget "WellnessDiary" */;
 			buildPhases = (
-				AB2E790825B22D7E008B37B4 /* Sources */,
-				AB2E790925B22D7E008B37B4 /* Frameworks */,
-				AB2E790A25B22D7E008B37B4 /* Resources */,
+				AB2E798225B26B9D008B37B4 /* swiftgen */,
+				65EF255A9DD5F6AB97E253CE /* Sources */,
+				190507F8F6A7FDCE6E121B9D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -190,86 +193,101 @@
 			);
 			name = WellnessDiary;
 			productName = WellnessDiary;
-			productReference = AB2E790C25B22D7E008B37B4 /* WellnessDiary.app */;
+			productReference = 90DF4AF2A837E77B63A8BCCC /* WellnessDiary.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AB2E790425B22D7E008B37B4 /* Project object */ = {
+		9BDFC21C6C1C0F6256FCA8C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
-				TargetAttributes = {
-					AB2E790B25B22D7E008B37B4 = {
-						CreatedOnToolsVersion = 12.3;
-					};
-				};
+				LastUpgradeCheck = 1200;
 			};
-			buildConfigurationList = AB2E790725B22D7E008B37B4 /* Build configuration list for PBXProject "WellnessDiary" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = C816135A5D9A59F61F0CD6AD /* Build configuration list for PBXProject "WellnessDiary" */;
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = AB2E790325B22D7E008B37B4;
-			productRefGroup = AB2E790D25B22D7E008B37B4 /* Products */;
+			mainGroup = A6BEE39E06F8D72833A4CB3D;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB2E790B25B22D7E008B37B4 /* WellnessDiary */,
+				036D3EF5B51861D370007DCA /* WellnessDiary */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AB2E790A25B22D7E008B37B4 /* Resources */ = {
+		190507F8F6A7FDCE6E121B9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB2E794F25B239A2008B37B4 /* Colors.xcassets in Resources */,
-				AB2E791F25B22D81008B37B4 /* LaunchScreen.storyboard in Resources */,
-				AB2E791C25B22D81008B37B4 /* Assets.xcassets in Resources */,
+				0CE0E3C29E521838D919BDCD /* Assets.xcassets in Resources */,
+				633849EFA9C15F022D043884 /* Colors.xcassets in Resources */,
+				0B63969CE6C6A8C17208F5BB /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AB2E798225B26B9D008B37B4 /* swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftgen\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		AB2E790825B22D7E008B37B4 /* Sources */ = {
+		65EF255A9DD5F6AB97E253CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB2E795525B23B12008B37B4 /* UIView+Extension.swift in Sources */,
-				AB2E794925B2358D008B37B4 /* MainNavigationController.swift in Sources */,
-				AB2E793B25B23371008B37B4 /* SimpleTabViewController.swift in Sources */,
-				AB2E795A25B23B93008B37B4 /* UIImage+Extension.swift in Sources */,
-				AB2E793825B23337008B37B4 /* MainTabViewController.swift in Sources */,
-				AB2E796825B23CC1008B37B4 /* UIButton+Extension.swift in Sources */,
-				AB2E791A25B22D7E008B37B4 /* WellnessDiary.xcdatamodeld in Sources */,
-				AB2E791025B22D7E008B37B4 /* AppDelegate.swift in Sources */,
-				AB2E793F25B23424008B37B4 /* UIViewController+Extension.swift in Sources */,
-				AB2E796B25B23CF0008B37B4 /* Date+Extension.swift in Sources */,
-				AB2E796525B23C92008B37B4 /* UITableviewCell+Extension.swift in Sources */,
-				AB2E795F25B23C31008B37B4 /* Collection+Extension.swift in Sources */,
-				AB2E794C25B2359A008B37B4 /* SimpleNavigationViewController.swift in Sources */,
-				AB2E792E25B22F99008B37B4 /* CoreDataManager.swift in Sources */,
-				AB2E796225B23C59008B37B4 /* UITableview+Extension.swift in Sources */,
-				AB2E794325B234AB008B37B4 /* SimpleViewController.swift in Sources */,
-				AB2E791225B22D7E008B37B4 /* SceneDelegate.swift in Sources */,
+				5110AAD9810D5D5DF26F4B2C /* AppDelegate.swift in Sources */,
+				AB2E798025B26B18008B37B4 /* Colors.swift in Sources */,
+				CB69BCC8DB599350090E033A /* Collection+Extension.swift in Sources */,
+				E4F0112CB37B6387993FB2F5 /* CoreDataManager.swift in Sources */,
+				9D453B9F2066200353EAE1A9 /* Date+Extension.swift in Sources */,
+				8DBA154E687156E7BF6BBE01 /* MainNavigationController.swift in Sources */,
+				399A5E7BCCC509F02EB7852D /* MainTabViewController.swift in Sources */,
+				319FD4A22E01521C60F5C8E6 /* SceneDelegate.swift in Sources */,
+				AB350407E3CED47A2BF85B97 /* SimpleNavigationViewController.swift in Sources */,
+				8B62A7670B7460CED94AFF89 /* SimpleTabViewController.swift in Sources */,
+				DF8C40D43EB6893ACA99A816 /* SimpleViewController.swift in Sources */,
+				A992D6F6C9F0F33BF2AB02BD /* UIButton+Extension.swift in Sources */,
+				B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */,
+				D98BF8D0A77D93E31116D765 /* UITableview+Extension.swift in Sources */,
+				694725E4395CF97582E7EC3C /* UITableviewCell+Extension.swift in Sources */,
+				40AC6F2253711AD700AAA2C9 /* UIView+Extension.swift in Sources */,
+				9C29D62E2FFCE399C7AD2DB1 /* UIViewController+Extension.swift in Sources */,
+				9876E139F8A36926083460D5 /* WellnessDiary.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AB2E791D25B22D81008B37B4 /* LaunchScreen.storyboard */ = {
+		1CEC8B61A2B382A454DFB759 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AB2E791E25B22D81008B37B4 /* Base */,
+				AAC2558D975C5C64245E2372 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -277,7 +295,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AB2E792125B22D81008B37B4 /* Debug */ = {
+		3D3ABF750F71EA609D130E4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = WellnessDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HealthEssentialTechnologies.WellnessDiary.WellnessDiary;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		75401D21AD9429A32BF879E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -319,8 +354,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -328,17 +363,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		AB2E792225B22D81008B37B4 /* Release */ = {
+		BC5B917078E17F650EB17E11 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -383,48 +419,29 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		AB2E792425B22D81008B37B4 /* Debug */ = {
+		D1F378B9D8994A310F5AB291 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WellnessDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HealthEssentials.WellnessDiary;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		AB2E792525B22D81008B37B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WellnessDiary/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HealthEssentials.WellnessDiary;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HealthEssentialTechnologies.WellnessDiary.WellnessDiary;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -432,38 +449,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AB2E790725B22D7E008B37B4 /* Build configuration list for PBXProject "WellnessDiary" */ = {
+		11BEA8D9920A4156DDC21E07 /* Build configuration list for PBXNativeTarget "WellnessDiary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB2E792125B22D81008B37B4 /* Debug */,
-				AB2E792225B22D81008B37B4 /* Release */,
+				3D3ABF750F71EA609D130E4B /* Debug */,
+				D1F378B9D8994A310F5AB291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		AB2E792325B22D81008B37B4 /* Build configuration list for PBXNativeTarget "WellnessDiary" */ = {
+		C816135A5D9A59F61F0CD6AD /* Build configuration list for PBXProject "WellnessDiary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB2E792425B22D81008B37B4 /* Debug */,
-				AB2E792525B22D81008B37B4 /* Release */,
+				75401D21AD9429A32BF879E5 /* Debug */,
+				BC5B917078E17F650EB17E11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AB2E791825B22D7E008B37B4 /* WellnessDiary.xcdatamodeld */ = {
+		ABAC3454F5CCF34B9AA3E113 /* WellnessDiary.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AB2E791925B22D7E008B37B4 /* WellnessDiary.xcdatamodel */,
+				62828B4B2D7C7A8437472C6C /* WellnessDiary.xcdatamodel */,
 			);
-			currentVersion = AB2E791925B22D7E008B37B4 /* WellnessDiary.xcdatamodel */;
+			currentVersion = 62828B4B2D7C7A8437472C6C /* WellnessDiary.xcdatamodel */;
 			path = WellnessDiary.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = AB2E790425B22D7E008B37B4 /* Project object */;
+	rootObject = 9BDFC21C6C1C0F6256FCA8C8 /* Project object */;
 }

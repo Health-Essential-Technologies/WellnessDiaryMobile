@@ -1,0 +1,15 @@
+name: WellnessDiary # The name of the App
+options:
+  createIntermediateGroups: true # If the folders are nested, also nest the groups in Xcode
+  indentWidth: 2 # indent by 2 spaces
+  tabWidth: 2 # a tab is 2 spaces
+  bundleIdPrefix: "com.HealthEssentialTechnologies.WellnessDiary"
+targets: # The List of our targets
+    WellnessDiary:
+        type: application
+        platform: iOS
+        deploymentTarget: "14.3"
+        sources:
+            #Sources
+            - path: WellnessDiary
+
