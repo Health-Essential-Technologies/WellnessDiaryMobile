@@ -1,0 +1,11 @@
+{
+  "commitish" : "0.6.5",
+  "iOS" : [
+    {
+      "hash" : "f86838ff75e9322875f9fc6f58b6bb3134baee677edc1545747e025e9608cfbe",
+      "name" : "SwiftCharts",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+    }
+  ]
+}
