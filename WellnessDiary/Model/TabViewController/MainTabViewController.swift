@@ -27,9 +27,8 @@ class MainTabViewController: SimpleTabViewController, UITabBarControllerDelegate
         super.initialSetup()
         
         tabBarViewControllers = [
-          SimpleViewController()
-//            SummaryViewController(),
-//            CalendarViewController(),
+            SummaryViewController(),
+            SettingsViewController(),
 ////            PrescriptionViewController(),
 //            MealViewController(),
 //            ReminderViewController(),
@@ -48,8 +47,12 @@ class MainTabViewController: SimpleTabViewController, UITabBarControllerDelegate
     
     func setupTabBarItems(forViewController viewController: SimpleViewController) {
         
-      if viewController is SimpleViewController {
-        viewController.tabBarItem = SimpleTabBarItem(title: "Summary", image: Icons.summaryUnfilledIcon.image , selectedImage: Icons.summaryUnfilledIcon.image)
+      if viewController is SummaryViewController {
+        viewController.tabBarItem = SimpleTabBarItem(title: "Summary", image: Icons.unselectedSummaryIcon.image , selectedImage: Icons.selectedSummaryIcon.image)
+      }
+      
+      if viewController is SettingsViewController {
+        viewController.tabBarItem = SimpleTabBarItem(title: "Settings", image: Icons.unselectedSettingIcon.image , selectedImage: Icons.selectedSettingIcon.image)
       }
 //        if viewController is SummaryViewController {
 //            viewController.tabBarItem = SimpleTabBarItem(title: String.summaryViewControllerTitle,

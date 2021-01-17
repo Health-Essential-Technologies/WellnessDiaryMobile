@@ -25,6 +25,8 @@
 		AB2E79B425B4ED54008B37B4 /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E79B325B4ED54008B37B4 /* SwiftCharts.framework */; };
 		AB2E79B525B4ED54008B37B4 /* SwiftCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E79B325B4ED54008B37B4 /* SwiftCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB2E79B925B4ED69008B37B4 /* SimpleTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79B825B4ED69008B37B4 /* SimpleTabBarItem.swift */; };
+		AB2E79BC25B4F01A008B37B4 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79BB25B4F01A008B37B4 /* SummaryViewController.swift */; };
+		AB2E79BE25B4F025008B37B4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79BD25B4F025008B37B4 /* SettingsViewController.swift */; };
 		AB350407E3CED47A2BF85B97 /* SimpleNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250D3A2AD7B5613FEBDEED6 /* SimpleNavigationViewController.swift */; };
 		ABD496C77267D5D190E816A2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB5C3DA3C658768F741BF7 /* Colors.swift */; };
 		B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895A81BAE10799A35A91E93 /* UIImage+Extension.swift */; };
@@ -72,6 +74,8 @@
 		AB2E79AE25B4EC65008B37B4 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		AB2E79B325B4ED54008B37B4 /* SwiftCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCharts.framework; path = Carthage/Build/iOS/SwiftCharts.framework; sourceTree = "<group>"; };
 		AB2E79B825B4ED69008B37B4 /* SimpleTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabBarItem.swift; sourceTree = "<group>"; };
+		AB2E79BB25B4F01A008B37B4 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		AB2E79BD25B4F025008B37B4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B35C4CCDE4DA69A35418758B /* UITableview+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableview+Extension.swift"; sourceTree = "<group>"; };
 		BEE48FF325C580155FD62279 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C940C73299B37115E18DEC0A /* SimpleTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				A3CD31B7F9177C89437D51DF /* SimpleViewController.swift */,
+				AB2E79BB25B4F01A008B37B4 /* SummaryViewController.swift */,
+				AB2E79BD25B4F025008B37B4 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 				ABD496C77267D5D190E816A2 /* Colors.swift in Sources */,
 				E4F0112CB37B6387993FB2F5 /* CoreDataManager.swift in Sources */,
 				9D453B9F2066200353EAE1A9 /* Date+Extension.swift in Sources */,
+				AB2E79BC25B4F01A008B37B4 /* SummaryViewController.swift in Sources */,
 				8DBA154E687156E7BF6BBE01 /* MainNavigationController.swift in Sources */,
 				399A5E7BCCC509F02EB7852D /* MainTabViewController.swift in Sources */,
 				319FD4A22E01521C60F5C8E6 /* SceneDelegate.swift in Sources */,
@@ -307,6 +314,7 @@
 				8B62A7670B7460CED94AFF89 /* SimpleTabViewController.swift in Sources */,
 				DF8C40D43EB6893ACA99A816 /* SimpleViewController.swift in Sources */,
 				A992D6F6C9F0F33BF2AB02BD /* UIButton+Extension.swift in Sources */,
+				AB2E79BE25B4F025008B37B4 /* SettingsViewController.swift in Sources */,
 				B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */,
 				D98BF8D0A77D93E31116D765 /* UITableview+Extension.swift in Sources */,
 				AB2E79B925B4ED69008B37B4 /* SimpleTabBarItem.swift in Sources */,
