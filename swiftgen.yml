@@ -7,3 +7,9 @@ xcassets:
         output: Colors.swift
         params:
           enumName: Colors
+  - inputs: Icons.xcassets
+    outputs:
+      - templateName: swift5
+        output: Icons.swift
+        params:
+          enumName: Icons

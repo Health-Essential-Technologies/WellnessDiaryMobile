@@ -27,6 +27,7 @@ class MainTabViewController: SimpleTabViewController, UITabBarControllerDelegate
         super.initialSetup()
         
         tabBarViewControllers = [
+          SimpleViewController()
 //            SummaryViewController(),
 //            CalendarViewController(),
 ////            PrescriptionViewController(),
@@ -47,6 +48,9 @@ class MainTabViewController: SimpleTabViewController, UITabBarControllerDelegate
     
     func setupTabBarItems(forViewController viewController: SimpleViewController) {
         
+      if viewController is SimpleViewController {
+        viewController.tabBarItem = SimpleTabBarItem(title: "Summary", image: Icons.summaryUnfilledIcon.image , selectedImage: Icons.summaryUnfilledIcon.image)
+      }
 //        if viewController is SummaryViewController {
 //            viewController.tabBarItem = SimpleTabBarItem(title: String.summaryViewControllerTitle,
 //                                                         image: .summaryUnselectediconImage(),

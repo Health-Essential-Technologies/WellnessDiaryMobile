@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftCharts
 
 class SimpleViewController: UIViewController {
 
@@ -21,7 +22,7 @@ class SimpleViewController: UIViewController {
     
     override func initialSetup() {
         super.initialSetup()
-        
+      
         // Navigation items
 //        let userBtn = SimpleButton(type: .custom)
 //        userBtn.setImage(UIImage.userSelectedIconImage(), for: .highlighted)

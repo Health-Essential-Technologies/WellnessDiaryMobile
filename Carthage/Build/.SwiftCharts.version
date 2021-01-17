@@ -1,8 +1,22 @@
 {
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "hash" : "cc2ce7eb852a942a11447d161757aec53a0f2e49f7d2034705c98f60b36a80b3",
+      "name" : "SwiftCharts",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+    }
+  ],
   "commitish" : "0.6.5",
   "iOS" : [
     {
-      "hash" : "f86838ff75e9322875f9fc6f58b6bb3134baee677edc1545747e025e9608cfbe",
+      "hash" : "d3017b4d5f556c09347f1446dff5f33b3d6f349f2455f0ea0ac1b8cb72ee9467",
       "name" : "SwiftCharts",
       "linking" : "dynamic",
       "swiftToolchainVersion" : "5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
