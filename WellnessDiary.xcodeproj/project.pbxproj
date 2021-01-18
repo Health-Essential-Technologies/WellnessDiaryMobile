@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		AB2E79B925B4ED69008B37B4 /* SimpleTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79B825B4ED69008B37B4 /* SimpleTabBarItem.swift */; };
 		AB2E79BC25B4F01A008B37B4 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79BB25B4F01A008B37B4 /* SummaryViewController.swift */; };
 		AB2E79BE25B4F025008B37B4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79BD25B4F025008B37B4 /* SettingsViewController.swift */; };
+		AB2E79C125B60076008B37B4 /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB2E79C025B60076008B37B4 /* CareKit */; };
 		AB350407E3CED47A2BF85B97 /* SimpleNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250D3A2AD7B5613FEBDEED6 /* SimpleNavigationViewController.swift */; };
 		ABD496C77267D5D190E816A2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB5C3DA3C658768F741BF7 /* Colors.swift */; };
 		B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895A81BAE10799A35A91E93 /* UIImage+Extension.swift */; };
@@ -88,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2E79C125B60076008B37B4 /* CareKit in Frameworks */,
 				AB2E79B425B4ED54008B37B4 /* SwiftCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +255,9 @@
 			dependencies = (
 			);
 			name = WellnessDiary;
+			packageProductDependencies = (
+				AB2E79C025B60076008B37B4 /* CareKit */,
+			);
 			productName = WellnessDiary;
 			productReference = 90DF4AF2A837E77B63A8BCCC /* WellnessDiary.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +279,9 @@
 				en,
 			);
 			mainGroup = A6BEE39E06F8D72833A4CB3D;
+			packageReferences = (
+				AB2E79BF25B60076008B37B4 /* XCRemoteSwiftPackageReference "CareKit" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -523,6 +531,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB2E79BF25B60076008B37B4 /* XCRemoteSwiftPackageReference "CareKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/carekit-apple/CareKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB2E79C025B60076008B37B4 /* CareKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB2E79BF25B60076008B37B4 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		ABAC3454F5CCF34B9AA3E113 /* WellnessDiary.xcdatamodeld */ = {
