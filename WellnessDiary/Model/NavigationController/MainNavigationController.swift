@@ -21,8 +21,12 @@ class MainNavigationController: SimpleNavigationViewController {
     
     override func loadBasicTheme() {
       navigationBar.barTintColor = Colors.mainColor.color
-      navigationBar.tintColor = Colors.mainColor.color
-//        navigationBar.titleTextAttributes = StringAttributes.navigationBarTitleTitleAttributes()
+      navigationBar.tintColor = Colors.mainNavigationTint.color
+      navigationBar.isTranslucent = true
     }
+  
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
 
 }

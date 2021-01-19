@@ -28,6 +28,7 @@ class MainTabViewController: SimpleTabViewController, UITabBarControllerDelegate
         
         tabBarViewControllers = [
             SummaryViewController(),
+            MedicationViewController(),
             SettingsViewController(),
 ////            PrescriptionViewController(),
 //            MealViewController(),
@@ -54,6 +55,11 @@ class MainTabViewController: SimpleTabViewController, UITabBarControllerDelegate
       if viewController is SettingsViewController {
         viewController.tabBarItem = SimpleTabBarItem(title: "Settings", image: Icons.unselectedSettingIcon.image , selectedImage: Icons.selectedSettingIcon.image)
       }
+      
+      if viewController is MedicationViewController {
+        viewController.tabBarItem = SimpleTabBarItem(title: "Medication", image: Icons.unselectedMedicationIcon.image, selectedImage: Icons.selectedMedicationIcon.image)
+      }
+      
 //        if viewController is SummaryViewController {
 //            viewController.tabBarItem = SimpleTabBarItem(title: String.summaryViewControllerTitle,
 //                                                         image: .summaryUnselectediconImage(),
