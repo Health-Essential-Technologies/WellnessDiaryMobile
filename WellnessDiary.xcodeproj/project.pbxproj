@@ -32,7 +32,10 @@
 		AB2E79C925B7341B008B37B4 /* MedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79C825B7341B008B37B4 /* MedicationViewController.swift */; };
 		AB2E79CC25B73B3F008B37B4 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79CB25B73B3F008B37B4 /* SimpleButton.swift */; };
 		AB2E79CF25B73BF4008B37B4 /* SimpleBarButtomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79CE25B73BF4008B37B4 /* SimpleBarButtomItem.swift */; };
+		AB2E79D225B76495008B37B4 /* CarePlanStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79D125B76495008B37B4 /* CarePlanStoreManager.swift */; };
+		AB2E79D725B76A8F008B37B4 /* OCKStore+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79D625B76A8F008B37B4 /* OCKStore+Extension.swift */; };
 		AB350407E3CED47A2BF85B97 /* SimpleNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250D3A2AD7B5613FEBDEED6 /* SimpleNavigationViewController.swift */; };
+		AB3B514F25C1DD38008C5011 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB3B514E25C1DD38008C5011 /* Localizable.strings */; };
 		ABD496C77267D5D190E816A2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB5C3DA3C658768F741BF7 /* Colors.swift */; };
 		B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895A81BAE10799A35A91E93 /* UIImage+Extension.swift */; };
 		CB69BCC8DB599350090E033A /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DDF026850C3F78D13B563B /* Collection+Extension.swift */; };
@@ -85,6 +88,9 @@
 		AB2E79C825B7341B008B37B4 /* MedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationViewController.swift; sourceTree = "<group>"; };
 		AB2E79CB25B73B3F008B37B4 /* SimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
 		AB2E79CE25B73BF4008B37B4 /* SimpleBarButtomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBarButtomItem.swift; sourceTree = "<group>"; };
+		AB2E79D125B76495008B37B4 /* CarePlanStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlanStoreManager.swift; sourceTree = "<group>"; };
+		AB2E79D625B76A8F008B37B4 /* OCKStore+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCKStore+Extension.swift"; sourceTree = "<group>"; };
+		AB3B514E25C1DD38008C5011 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B35C4CCDE4DA69A35418758B /* UITableview+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableview+Extension.swift"; sourceTree = "<group>"; };
 		BEE48FF325C580155FD62279 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C940C73299B37115E18DEC0A /* SimpleTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				CB9E2895F53F79CC38FA56BC /* Info.plist */,
-				AB2E79C225B60123008B37B4 /* Localization */,
 				EE99487FB21F30BAE2CFD887 /* Extensions */,
 				FFF8928F2E2678269B014394 /* Generated */,
 				5C3BBAA04845D93BB672BE18 /* Model */,
@@ -139,6 +144,7 @@
 		5C3BBAA04845D93BB672BE18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AB2E79D025B76483008B37B4 /* CareKit */,
 				AB2E79CD25B73B45008B37B4 /* Button */,
 				AB2E79CA25B73A13008B37B4 /* BarButtonItem */,
 				AB2E79BA25B4ED72008B37B4 /* TabBarItem */,
@@ -153,6 +159,8 @@
 		658CD080FDA4F6F0E47A771E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AB3B514E25C1DD38008C5011 /* Localizable.strings */,
+				AB2E79C225B60123008B37B4 /* Localization */,
 				37FA7AACC16EFFB7AEA6D0F8 /* AppDelegate.swift */,
 				A8D6636D32350437B52BF16D /* Assets.xcassets */,
 				D0FA53C784A626E63E1648F9 /* Colors.xcassets */,
@@ -222,9 +230,25 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		AB2E79D025B76483008B37B4 /* CareKit */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E79D125B76495008B37B4 /* CarePlanStoreManager.swift */,
+			);
+			path = CareKit;
+			sourceTree = "<group>";
+		};
+		AB3B515025C1E634008C5011 /* SummaryVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SummaryVC;
+			sourceTree = "<group>";
+		};
 		D5A149489B3514AEB540439D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB3B515025C1E634008C5011 /* SummaryVC */,
 				A3CD31B7F9177C89437D51DF /* SimpleViewController.swift */,
 				AB2E79BB25B4F01A008B37B4 /* SummaryViewController.swift */,
 				AB2E79BD25B4F025008B37B4 /* SettingsViewController.swift */,
@@ -244,6 +268,7 @@
 				9D984080EDD2F73A2A5E1CDD /* UITableviewCell+Extension.swift */,
 				3ED327D5DB0207A4B2940928 /* UIView+Extension.swift */,
 				8B31327A469D95C4B6CCE6F6 /* UIViewController+Extension.swift */,
+				AB2E79D625B76A8F008B37B4 /* OCKStore+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CE0E3C29E521838D919BDCD /* Assets.xcassets in Resources */,
+				AB3B514F25C1DD38008C5011 /* Localizable.strings in Resources */,
 				AB2E79C325B60123008B37B4 /* Localization in Resources */,
 				633849EFA9C15F022D043884 /* Colors.xcassets in Resources */,
 				E8D7336E6C2BF972A7425841 /* Icons.xcassets in Resources */,
@@ -343,6 +369,8 @@
 				ABD496C77267D5D190E816A2 /* Colors.swift in Sources */,
 				E4F0112CB37B6387993FB2F5 /* CoreDataManager.swift in Sources */,
 				9D453B9F2066200353EAE1A9 /* Date+Extension.swift in Sources */,
+				AB2E79D225B76495008B37B4 /* CarePlanStoreManager.swift in Sources */,
+				AB2E79D725B76A8F008B37B4 /* OCKStore+Extension.swift in Sources */,
 				AB2E79BC25B4F01A008B37B4 /* SummaryViewController.swift in Sources */,
 				8DBA154E687156E7BF6BBE01 /* MainNavigationController.swift in Sources */,
 				399A5E7BCCC509F02EB7852D /* MainTabViewController.swift in Sources */,

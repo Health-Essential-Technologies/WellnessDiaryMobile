@@ -11,7 +11,7 @@ class MainTabViewController: SimpleTabViewController, UITabBarControllerDelegate
     
     // MARK: - Properties
     
-    var tabBarViewControllers = [SimpleViewController]()
+    var tabBarViewControllers = [UIViewController]()
 
     // MARK: - Lifecycle
     
@@ -27,13 +27,9 @@ class MainTabViewController: SimpleTabViewController, UITabBarControllerDelegate
         super.initialSetup()
         
         tabBarViewControllers = [
-            SummaryViewController(),
+          SummaryViewController(storeManager: CarePlanStoreManager.sharedCarePlanStoreManager.synchronizedStoreManager),
             MedicationViewController(),
             SettingsViewController(),
-////            PrescriptionViewController(),
-//            MealViewController(),
-//            ReminderViewController(),
-//            SettingsViewController()
         ]
         
         let _ = tabBarViewControllers.map {
@@ -46,7 +42,7 @@ class MainTabViewController: SimpleTabViewController, UITabBarControllerDelegate
         
     }
     
-    func setupTabBarItems(forViewController viewController: SimpleViewController) {
+    func setupTabBarItems(forViewController viewController: UIViewController) {
         
       if viewController is SummaryViewController {
         viewController.tabBarItem = SimpleTabBarItem(title: "Summary", image: Icons.unselectedSummaryIcon.image , selectedImage: Icons.selectedSummaryIcon.image)
