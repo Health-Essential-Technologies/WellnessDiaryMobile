@@ -36,6 +36,9 @@
 		AB2E79D725B76A8F008B37B4 /* OCKStore+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79D625B76A8F008B37B4 /* OCKStore+Extension.swift */; };
 		AB350407E3CED47A2BF85B97 /* SimpleNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250D3A2AD7B5613FEBDEED6 /* SimpleNavigationViewController.swift */; };
 		AB3B514F25C1DD38008C5011 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB3B514E25C1DD38008C5011 /* Localizable.strings */; };
+		AB3B515225C1E6EF008C5011 /* SummaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515125C1E6EF008C5011 /* SummaryDetailViewController.swift */; };
+		AB3B515425C1F775008C5011 /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515325C1F775008C5011 /* ActivityIndicatorViewController.swift */; };
+		AB3B515725C23E6C008C5011 /* SummaryAddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515625C23E6C008C5011 /* SummaryAddTaskViewController.swift */; };
 		ABD496C77267D5D190E816A2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB5C3DA3C658768F741BF7 /* Colors.swift */; };
 		B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895A81BAE10799A35A91E93 /* UIImage+Extension.swift */; };
 		CB69BCC8DB599350090E033A /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DDF026850C3F78D13B563B /* Collection+Extension.swift */; };
@@ -91,6 +94,9 @@
 		AB2E79D125B76495008B37B4 /* CarePlanStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlanStoreManager.swift; sourceTree = "<group>"; };
 		AB2E79D625B76A8F008B37B4 /* OCKStore+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCKStore+Extension.swift"; sourceTree = "<group>"; };
 		AB3B514E25C1DD38008C5011 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		AB3B515125C1E6EF008C5011 /* SummaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryDetailViewController.swift; sourceTree = "<group>"; };
+		AB3B515325C1F775008C5011 /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
+		AB3B515625C23E6C008C5011 /* SummaryAddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryAddTaskViewController.swift; sourceTree = "<group>"; };
 		B35C4CCDE4DA69A35418758B /* UITableview+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableview+Extension.swift"; sourceTree = "<group>"; };
 		BEE48FF325C580155FD62279 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C940C73299B37115E18DEC0A /* SimpleTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabViewController.swift; sourceTree = "<group>"; };
@@ -144,14 +150,9 @@
 		5C3BBAA04845D93BB672BE18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AB3B515525C1F7EE008C5011 /* UI */,
 				AB2E79D025B76483008B37B4 /* CareKit */,
-				AB2E79CD25B73B45008B37B4 /* Button */,
-				AB2E79CA25B73A13008B37B4 /* BarButtonItem */,
-				AB2E79BA25B4ED72008B37B4 /* TabBarItem */,
 				FA8936BB7FF9EE61E1743A88 /* CoreData */,
-				1844256F92E28A9BAC1C2FD5 /* NavigationController */,
-				A27CBFFC5BE9BC90E538B788 /* TabViewController */,
-				D5A149489B3514AEB540439D /* ViewControllers */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,8 +242,24 @@
 		AB3B515025C1E634008C5011 /* SummaryVC */ = {
 			isa = PBXGroup;
 			children = (
+				AB2E79BB25B4F01A008B37B4 /* SummaryViewController.swift */,
+				AB3B515125C1E6EF008C5011 /* SummaryDetailViewController.swift */,
+				AB3B515625C23E6C008C5011 /* SummaryAddTaskViewController.swift */,
 			);
 			path = SummaryVC;
+			sourceTree = "<group>";
+		};
+		AB3B515525C1F7EE008C5011 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E79BA25B4ED72008B37B4 /* TabBarItem */,
+				AB2E79CA25B73A13008B37B4 /* BarButtonItem */,
+				AB2E79CD25B73B45008B37B4 /* Button */,
+				1844256F92E28A9BAC1C2FD5 /* NavigationController */,
+				A27CBFFC5BE9BC90E538B788 /* TabViewController */,
+				D5A149489B3514AEB540439D /* ViewControllers */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		D5A149489B3514AEB540439D /* ViewControllers */ = {
@@ -250,9 +267,9 @@
 			children = (
 				AB3B515025C1E634008C5011 /* SummaryVC */,
 				A3CD31B7F9177C89437D51DF /* SimpleViewController.swift */,
-				AB2E79BB25B4F01A008B37B4 /* SummaryViewController.swift */,
 				AB2E79BD25B4F025008B37B4 /* SettingsViewController.swift */,
 				AB2E79C825B7341B008B37B4 /* MedicationViewController.swift */,
+				AB3B515325C1F775008C5011 /* ActivityIndicatorViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -368,6 +385,7 @@
 				CB69BCC8DB599350090E033A /* Collection+Extension.swift in Sources */,
 				ABD496C77267D5D190E816A2 /* Colors.swift in Sources */,
 				E4F0112CB37B6387993FB2F5 /* CoreDataManager.swift in Sources */,
+				AB3B515225C1E6EF008C5011 /* SummaryDetailViewController.swift in Sources */,
 				9D453B9F2066200353EAE1A9 /* Date+Extension.swift in Sources */,
 				AB2E79D225B76495008B37B4 /* CarePlanStoreManager.swift in Sources */,
 				AB2E79D725B76A8F008B37B4 /* OCKStore+Extension.swift in Sources */,
@@ -378,6 +396,7 @@
 				AB350407E3CED47A2BF85B97 /* SimpleNavigationViewController.swift in Sources */,
 				8B62A7670B7460CED94AFF89 /* SimpleTabViewController.swift in Sources */,
 				AB2E79CF25B73BF4008B37B4 /* SimpleBarButtomItem.swift in Sources */,
+				AB3B515425C1F775008C5011 /* ActivityIndicatorViewController.swift in Sources */,
 				AB2E79CC25B73B3F008B37B4 /* SimpleButton.swift in Sources */,
 				DF8C40D43EB6893ACA99A816 /* SimpleViewController.swift in Sources */,
 				A992D6F6C9F0F33BF2AB02BD /* UIButton+Extension.swift in Sources */,
@@ -386,6 +405,7 @@
 				D98BF8D0A77D93E31116D765 /* UITableview+Extension.swift in Sources */,
 				AB2E79B925B4ED69008B37B4 /* SimpleTabBarItem.swift in Sources */,
 				AB2E79C925B7341B008B37B4 /* MedicationViewController.swift in Sources */,
+				AB3B515725C23E6C008C5011 /* SummaryAddTaskViewController.swift in Sources */,
 				694725E4395CF97582E7EC3C /* UITableviewCell+Extension.swift in Sources */,
 				40AC6F2253711AD700AAA2C9 /* UIView+Extension.swift in Sources */,
 				AB2E79AF25B4EC65008B37B4 /* Icons.swift in Sources */,
@@ -413,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = XMT2YY599T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -552,6 +573,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = XMT2YY599T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
