@@ -23,6 +23,7 @@ class MainNavigationController: SimpleNavigationViewController {
       navigationBar.barTintColor = Colors.mainColor.color
       navigationBar.tintColor = Colors.mainNavigationTint.color
       navigationBar.isTranslucent = true
+      navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.navigationBarTitleTint.color]
     }
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
