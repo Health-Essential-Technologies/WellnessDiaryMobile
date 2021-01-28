@@ -9,4 +9,17 @@ import Foundation
 
 class SummaryAddTaskViewController: SimpleViewController {
   
+  // MARK: - Lifecycle
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  // MARK: - Methods
+  
+  override func initialSetup() {
+    super.initialSetup()
+    navigationItem.title = localLoc("ADD_TASK")
+  }
+  
 }
