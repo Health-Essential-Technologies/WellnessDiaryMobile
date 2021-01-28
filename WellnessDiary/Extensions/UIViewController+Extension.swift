@@ -15,6 +15,13 @@ extension UIViewController {
    Adds a child view controller with a given frame. If no frame given, child view will inherence the frame from parent view frame.
    */
   @nonobjc func add(_ child: UIViewController, frame: CGRect? = nil) {
+    add(child, frame: frame, autoResize: true)
+  }
+  
+  /**
+   Adds a child view controller with a given frame. If no frame given, child view will inherence the frame from parent view frame. autoResize will allow the view to keep its parent's autoresizing mask.
+   */
+  @nonobjc func add(_ child: UIViewController, frame: CGRect? = nil, autoResize: Bool = true) {
     addChild(child)
     if let frame = frame {
       child.view.frame = frame
@@ -23,6 +30,11 @@ extension UIViewController {
     }
     view.addSubview(child.view)
     child.didMove(toParent: self)
+    
+    if autoResize {
+      child.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
+    
   }
   
   /**
