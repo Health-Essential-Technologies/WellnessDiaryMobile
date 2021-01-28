@@ -1,18 +1,26 @@
 //
-//  SummaryViewController.swift
+//  SummaryDetailViewController.swift
 //  WellnessDiary
 //
-//  Created by luis flores on 1/17/21.
+//  Created by luis flores on 1/27/21.
 //
 
 import UIKit
 import CareKit
 
-class SummaryViewController: OCKDailyPageViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+class SummaryDetailViewController: OCKDailyPageViewController {
+  
+  // MARK: - Lifecycle
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  // MARK: - Methods
+  
+  override func initialSetup() {
+    super.initialSetup()
+  }
   
   override func dailyPageViewController(_ dailyPageViewController: OCKDailyPageViewController, prepare listViewController: OCKListViewController, for date: Date) {
     
@@ -28,9 +36,10 @@ class SummaryViewController: OCKDailyPageViewController {
         switch task.id {
         
         case TaskIdentifier.bloodSugarTest.rawValue:
-//          let bloodSugarCard = OCKInstructionsTaskViewController(taskID: task.id, eventQuery: .init(for: date), storeManager: self.storeManager)
-////          let bloodSugarCard = OCKButtonLogTaskViewController(taskID: task.id, eventQuery: .init(for: date), storeManager: self.storeManager)
-//          listViewController.appendViewController(bloodSugarCard, animated: true)
+          let bloodSugarCard = OCKInstructionsTaskViewController(taskID: task.id, eventQuery: .init(for: date), storeManager: self.storeManager)
+//          let bloodSugarCard = OCKButtonLogTaskViewController(taskID: task.id, eventQuery: .init(for: date), storeManager: self.storeManager)
+          bloodSugarCard.view.tintColor = Colors.mainColor.color
+          listViewController.appendViewController(bloodSugarCard, animated: true)
 
 //
 //          let chartView = OCKCartesianChartView(type: .line)
@@ -53,6 +62,4 @@ class SummaryViewController: OCKDailyPageViewController {
       
     }
   }
-    
 }
-

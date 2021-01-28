@@ -30,4 +30,6 @@ final class CarePlanStoreManager {
   // MARK: - Initializers
   
   private init() {}
+  
+  // MARK: - Methods
 }

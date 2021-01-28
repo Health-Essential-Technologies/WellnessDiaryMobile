@@ -15,8 +15,6 @@ class MedicationViewController: SimpleViewController {
   
   override func initialSetup() {
     super.initialSetup()
-    
-    let userBtn = SimpleButton(type: .contactAdd)
     navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add)
   }
 

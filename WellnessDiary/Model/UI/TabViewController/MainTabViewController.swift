@@ -27,7 +27,7 @@ class MainTabViewController: SimpleTabViewController, UITabBarControllerDelegate
         super.initialSetup()
         
         tabBarViewControllers = [
-          SummaryViewController(storeManager: CarePlanStoreManager.sharedCarePlanStoreManager.synchronizedStoreManager),
+          SummaryViewController(),
             MedicationViewController(),
             SettingsViewController(),
         ]
