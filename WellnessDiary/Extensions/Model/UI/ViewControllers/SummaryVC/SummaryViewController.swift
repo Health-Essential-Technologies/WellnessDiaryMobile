@@ -23,7 +23,6 @@ class SummaryViewController: SimpleViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    shouldDisplayEvents()
   }
   
   
