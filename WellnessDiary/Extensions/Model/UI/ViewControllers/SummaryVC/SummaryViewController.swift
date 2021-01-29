@@ -25,17 +25,20 @@ class SummaryViewController: SimpleViewController {
     super.viewDidLoad()
   }
   
+  // MARK: - Methods
   
   override func initialSetup() {
     super.initialSetup()
     if shouldDisplayEvents() {
       add(detailViewController)
     }
-    navigationItem.rightBarButtonItem = SimpleBarButtomItem(systemItem: .add)
+    navigationItem.rightBarButtonItem = SimpleBarButtomItem(barButtonSystemItem: .add, target: self, action: #selector(addNavBarBtnTapped(_:)))
     
   }
   
-  // MARK: - Methods
+  @objc private func addNavBarBtnTapped(_ sender: Any) {
+    navigationController?.pushViewController(SummaryAddTaskViewController(), animated: true)
+  }
   
   @discardableResult
   private func shouldDisplayEvents() -> Bool {

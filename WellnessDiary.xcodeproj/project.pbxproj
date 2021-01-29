@@ -494,7 +494,9 @@
 		9BDFC21C6C1C0F6256FCA8C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WDM;
 				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = "Health Essential Technologies";
 			};
 			buildConfigurationList = C816135A5D9A59F61F0CD6AD /* Build configuration list for PBXProject "WellnessDiary" */;
 			compatibilityVersion = "Xcode 10.0";
