@@ -11,8 +11,8 @@ struct TableViewSectionRowItem {
     
     // MARK: - Properties
     
-    var cellInfoProvider = CellInfoProvider()
-    var cellType: SimpleTableViewCell.Type = DefaultTableViewCell.self
+    var cellInfoProvider = WDMCellInfoProvider()
+    var cellType: WDMSimpleTableViewCell.Type = WDMDefaultTableViewCell.self
     var cellHeight: CGFloat = UITableView.automaticDimension
     
     var cellIdentifier: String {
@@ -20,7 +20,7 @@ struct TableViewSectionRowItem {
     }
     
     // MARK: - Initializer
-    init(WithtableView tableView: UITableView, cellInfoProvider: CellInfoProvider, cellType: SimpleTableViewCell.Type, cellHeight: CGFloat = UITableView.automaticDimension) {
+    init(WithtableView tableView: UITableView, cellInfoProvider: WDMCellInfoProvider, cellType: WDMSimpleTableViewCell.Type, cellHeight: CGFloat = UITableView.automaticDimension) {
         self.cellInfoProvider = cellInfoProvider
         self.cellType =  cellType
         self.cellHeight = cellHeight
