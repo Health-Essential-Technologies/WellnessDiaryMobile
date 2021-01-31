@@ -8,3 +8,21 @@
 
 "ADD" = "Add";
 "ADD_TASK" = "Add Task";
+"TASK_INFORMATION" = "Task Information";
+"ENTER_TASK_NAME" = "Enter Task Name";
+"NAME" = "Name";
+"SELECT_STARTING_DAY" = "Select Starting Day";
+"REPEATS" = "Repeats";
+"REPEAT_OPTIONS" = "Repeat Options";
+
+"TASK_FREQUENCY" = "Task Frequency";
+"OCCURENCE" = "Occurence";
+"EVERYDAY" = "Everyday";
+"NEVER" = "Never";
+"MONDAY" = "Monday";
+"TUESDAY" = "Tuesday";
+"WEDNESDAY" = "Wednesday";
+"THURSDAY" = "Thursday";
+"FRIDAY" = "Friday";
+"SATURDAY" = "Saturday";
+"SUNDAY" = "Sunday";
