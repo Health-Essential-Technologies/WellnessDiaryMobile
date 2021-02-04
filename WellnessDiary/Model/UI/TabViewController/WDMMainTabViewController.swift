@@ -27,7 +27,7 @@ class WDMMainTabViewController: WDMSimpleTabViewController, UITabBarControllerDe
         super.initialSetup()
         
         tabBarViewControllers = [
-          WDMSummaryViewController(),
+          WDMSummaryViewController(storeManager: CarePlanStoreManager.sharedCarePlanStoreManager.synchronizedStoreManager),
           WDMMedicationViewController(),
           WDMSettingsViewController(),
         ]
