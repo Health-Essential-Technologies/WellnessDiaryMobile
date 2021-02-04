@@ -29,7 +29,7 @@ class WDMSimpleCustomOCKLabelButton: OCKLabeledButton {
   }
   
   public func customSetup() {
-    label.text = localLoc("ADD")
+    label.text = "add".localize()
   }
   
 }

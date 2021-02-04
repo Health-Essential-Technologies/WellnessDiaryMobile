@@ -20,3 +20,16 @@ class WDMTableViewDelegateHandler: NSObject {
     }
     
 }
+
+extension WDMTableViewDelegateHandler: UITableViewDelegate {
+  
+  // MARK: - Methods
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return tableViewInfoHandler.tableView(tableView, heightForRowAt: indexPath)
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableViewInfoHandler.tableView(tableView, didSelectRowAt: indexPath)
+  }
+}

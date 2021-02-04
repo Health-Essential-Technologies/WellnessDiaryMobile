@@ -11,18 +11,6 @@ class WDMDefaultTableViewCell: WDMSimpleTableViewCell {
 
     // MARK: - Properties
     
-    var mainLabelText = "" {
-        didSet {
-            mainLabel.text = mainLabelText
-        }
-    }
-    
-    var detailLabelText = "" {
-        didSet {
-            detailLabel.text = detailLabelText
-        }
-    }
-    
     private let mainLabel: WDMSimpleLabel = {
         let lbl = WDMSimpleLabel()
         lbl.textAlignment = .left
@@ -32,16 +20,12 @@ class WDMDefaultTableViewCell: WDMSimpleTableViewCell {
     private let detailLabel: WDMSimpleLabel = {
         let lbl = WDMSimpleLabel()
         lbl.textAlignment = .right
+      lbl.adjustsFontSizeToFitWidth = true
+      
+      // TODO: need to add some default
+      lbl.minimumScaleFactor = 0.5
         return lbl
     }()
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     // MARK: - Methods
     
@@ -61,8 +45,14 @@ class WDMDefaultTableViewCell: WDMSimpleTableViewCell {
         mainLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         mainLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
         detailLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        detailLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
-        detailLabel.leadingAnchor.constraint(equalTo: mainLabel.trailingAnchor, constant: 50).isActive = true
+      detailLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor, constant: -8).isActive = true
+        detailLabel.leadingAnchor.constraint(equalTo: mainLabel.trailingAnchor, constant: 8).isActive = true
     }
+  
+  override func didSetcellInfoProvider() {
+    guard let provider = cellInfoProvider as? WDMDefaultCellInfoProvider else { return }
+    mainLabel.text = provider.mainLabelText
+    detailLabel.text = provider.detailLabelText
+  }
 
 }

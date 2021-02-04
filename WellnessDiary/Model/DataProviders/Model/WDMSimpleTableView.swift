@@ -16,6 +16,17 @@ import UIKit
 
 class WDMSimpleTableView: UITableView {
     
+  // MARK: - Initializers
+  
+  override init(frame: CGRect, style: UITableView.Style) {
+    super.init(frame: frame, style: style)
+    translatesAutoresizingMaskIntoConstraints = false
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
 }
 
 extension WDMSimpleTableView: SimpleTableViewDelegate {

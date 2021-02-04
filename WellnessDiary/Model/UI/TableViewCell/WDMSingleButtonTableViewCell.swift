@@ -20,8 +20,6 @@ class WDMSingleButtonTableViewCell: WDMSimpleTableViewCell {
     let mainButton: WDMSimpleButton = {
         let btn = WDMSimpleButton(type: .custom)
         btn.translatesAutoresizingMaskIntoConstraints = false
-        // TODO
-        btn.backgroundColor = .red
         return btn
     }()
     
@@ -30,12 +28,14 @@ class WDMSingleButtonTableViewCell: WDMSimpleTableViewCell {
     // MARK: - Methods
 
     override func initialSetup() {
+      super.initialSetup()
         contentView.addSubview(mainButton)
         
-        mainButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
-        mainButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8).isActive = true
-        mainButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
-        mainButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
+        mainButton.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        mainButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        mainButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        mainButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+      
     }
     
     override func didSetcellInfoProvider() {
