@@ -1,0 +1,83 @@
+
+
+// CareKit
+
+"ADDRESS" = "Address";
+"ANNOUNCE_EVENT_DELETED" = "Logged event was deleted";
+"CANCEL" = "Cancel";
+"CALL" = "Call";
+"COMPLETED" = "Completed";
+"CONTACTS" = "Contacts";
+"DELETE" = "Delete";
+"DONE" = "Done";
+"DOUBLE_TAP_MAP" = "Double-tap to open directions in Maps";
+"DOUBLE_TAP_TO_COMPLETE" = "Double-tap to mark as completed";
+"DOUBLE_TAP_TO_INCOMPLETE" = "Double-tap to mark as incomplete";
+"DOUBLE_TAP_TO_RECORD_EVENT" = "Double-tap to record an event";
+"DOUBLE_TAP_TO_REMOVE_EVENT" = "Double-tap to removed logged event";
+"EMAIL" = "E-mail";
+"EVENT" = "Event";
+"GOAL" = "Goal";
+"HIGH" = "High";
+"INCOMPLETE" = "Incomplete";
+"LOG" = "Log";
+"LOG_ENTRY" = "Log Entry";
+"LOGGING" = "Logging";
+"LOW" = "Low";
+"MARK_COMPLETE" = "Mark as Completed";
+"MESSAGE" = "Message";
+"NO_TASKS" = "No Tasks";
+"NO_EVENTS" = "No Events";
+"PROGRESS" = "Progress";
+"SEARCH" = "Search";
+"SELECTED" = "Selected";
+"TASKS" = "Tasks";
+"THREE_FINGER_SWIPE_DAY" = "Three-finger swipe to go to next or previous day";
+"THREE_FINGER_SWIPE_WEEK" = "Three-finger swipe to go to next or previous week";
+"TODAY" = "Today";
+
+// Custom
+
+"" = "";
+"ADD" = "Add";
+"ADD_TASK" = "Add Task";
+"TASK_INFORMATION" = "Task Information";
+"ENTER_TASK_NAME" = "Enter Task Name";
+"NAME" = "Name";
+"SELECT_STARTING_DAY" = "Select Starting Day";
+"REPEATS" = "Repeats";
+"REPEAT_OPTIONS" = "Repeat Options";
+
+"EVERY" = "Every";
+"FREQUENCY" = "Frequency";
+"TASK_FREQUENCY" = "Task Frequency";
+"OCCURENCE" = "Occurence";
+"EVERY_DAY" = "Every day";
+"NEVER" = "Never";
+"MONDAY" = "Monday";
+"TUESDAY" = "Tuesday";
+"WEDNESDAY" = "Wednesday";
+"THURSDAY" = "Thursday";
+"FRIDAY" = "Friday";
+"SATURDAY" = "Saturday";
+"SUNDAY" = "Sunday";
+
+"MON" = "Mon";
+"TUE" = "Tue";
+"WED" = "Wed";
+"THU" = "Thu";
+"FRI" = "Fri";
+"SAT" = "Sat";
+"SUN" = "Sun";
+
+"BEFORE" = "Before";
+"AFTER" = "After";
+"BREAKFAST" = "Breakfast";
+"LUNCH" = "Lunch";
+"DINNER" = "Dinner";
+
+"ONCE" = "Once";
+"TIMES" = "Times";
+"A" = "a";
+"DAY" = "Day";
+

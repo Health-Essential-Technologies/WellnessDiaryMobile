@@ -35,7 +35,8 @@
 		AB3B515225C1E6EF008C5011 /* WDMSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515125C1E6EF008C5011 /* WDMSummaryViewController.swift */; };
 		AB3B515425C1F775008C5011 /* WDMActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515325C1F775008C5011 /* WDMActivityIndicatorViewController.swift */; };
 		AB3B515725C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515625C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift */; };
-		AB9E648C25C347E8008CD933 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB9E648E25C347E8008CD933 /* Localizable.strings */; };
+		AB86F6E425CC68FB00A661A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB86F6E325CC68F700A661A1 /* Localizable.strings */; };
+		AB86F6E825CC693F00A661A1 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = AB86F6E725CC693C00A661A1 /* Localizable.stringsdict */; };
 		AB9E649225C49959008CD933 /* WDMSimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E649125C49959008CD933 /* WDMSimpleTableViewController.swift */; };
 		AB9E649525C4D13E008CD933 /* WDMTableViewDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E649325C4D13E008CD933 /* WDMTableViewDelegateHandler.swift */; };
 		AB9E649625C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E649425C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift */; };
@@ -51,7 +52,6 @@
 		AB9E64B325C8F27C008CD933 /* RawComparable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E64B225C8F27C008CD933 /* RawComparable+Extension.swift */; };
 		AB9E64B525CA13A9008CD933 /* DelegateSharedInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E64B425CA13A8008CD933 /* DelegateSharedInformationProtocol.swift */; };
 		AB9E64B825CA2E67008CD933 /* WDMInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E64B725CA2E67008CD933 /* WDMInfoProvider.swift */; };
-		AB9E64BC25CC5C51008CD933 /* Localization in Resources */ = {isa = PBXBuildFile; fileRef = AB9E64BB25CC5C51008CD933 /* Localization */; };
 		ABD496C77267D5D190E816A2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB5C3DA3C658768F741BF7 /* Colors.swift */; };
 		ABD8EB0025C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8EAFF25C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift */; };
 		ABD8EB0325C24E3C0002F902 /* LocalLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8EB0225C24E3C0002F902 /* LocalLocalizable.swift */; };
@@ -131,7 +131,8 @@
 		AB3B515125C1E6EF008C5011 /* WDMSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSummaryViewController.swift; sourceTree = "<group>"; };
 		AB3B515325C1F775008C5011 /* WDMActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		AB3B515625C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSummaryAddTaskViewController.swift; sourceTree = "<group>"; };
-		AB9E648D25C347E8008CD933 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AB86F6E225CC68F700A661A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AB86F6E625CC693C00A661A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		AB9E649125C49959008CD933 /* WDMSimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleTableViewController.swift; sourceTree = "<group>"; };
 		AB9E649325C4D13E008CD933 /* WDMTableViewDelegateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMTableViewDelegateHandler.swift; sourceTree = "<group>"; };
 		AB9E649425C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMTableViewDataSourceHandler.swift; sourceTree = "<group>"; };
@@ -147,7 +148,6 @@
 		AB9E64B225C8F27C008CD933 /* RawComparable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RawComparable+Extension.swift"; sourceTree = "<group>"; };
 		AB9E64B425CA13A8008CD933 /* DelegateSharedInformationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateSharedInformationProtocol.swift; sourceTree = "<group>"; };
 		AB9E64B725CA2E67008CD933 /* WDMInfoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMInfoProvider.swift; sourceTree = "<group>"; };
-		AB9E64BB25CC5C51008CD933 /* Localization */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Localization; sourceTree = "<group>"; };
 		ABD8EAFF25C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleCustomOCKLabelButton.swift; sourceTree = "<group>"; };
 		ABD8EB0225C24E3C0002F902 /* LocalLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLocalizable.swift; sourceTree = "<group>"; };
 		ABD8EB0625C2C8DD0002F902 /* WDMTableViewInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTableViewInfoProvider.swift; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 		658CD080FDA4F6F0E47A771E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AB9E648E25C347E8008CD933 /* Localizable.strings */,
+				AB86F6E925CC713A00A661A1 /* Localization */,
 				37FA7AACC16EFFB7AEA6D0F8 /* AppDelegate.swift */,
 				A8D6636D32350437B52BF16D /* Assets.xcassets */,
 				D0FA53C784A626E63E1648F9 /* Colors.xcassets */,
@@ -312,7 +312,6 @@
 		AB2E79D025B76483008B37B4 /* CareKit */ = {
 			isa = PBXGroup;
 			children = (
-				AB9E64BB25CC5C51008CD933 /* Localization */,
 				AB2E79D125B76495008B37B4 /* CarePlanStoreManager.swift */,
 			);
 			path = CareKit;
@@ -343,6 +342,23 @@
 				D5A149489B3514AEB540439D /* ViewControllers */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		AB86F6E925CC713A00A661A1 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				AB86F6EA25CC714D00A661A1 /* en.lproj */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		AB86F6EA25CC714D00A661A1 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				AB86F6E325CC68F700A661A1 /* Localizable.strings */,
+				AB86F6E725CC693C00A661A1 /* Localizable.stringsdict */,
+			);
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 		AB9E649B25C4ED6A008CD933 /* Textfield */ = {
@@ -567,7 +583,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = A6BEE39E06F8D72833A4CB3D;
 			packageReferences = (
@@ -586,11 +601,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB86F6E425CC68FB00A661A1 /* Localizable.strings in Resources */,
 				0CE0E3C29E521838D919BDCD /* Assets.xcassets in Resources */,
-				AB9E64BC25CC5C51008CD933 /* Localization in Resources */,
-				AB9E648C25C347E8008CD933 /* Localizable.strings in Resources */,
 				633849EFA9C15F022D043884 /* Colors.xcassets in Resources */,
 				E8D7336E6C2BF972A7425841 /* Icons.xcassets in Resources */,
+				AB86F6E825CC693F00A661A1 /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,12 +691,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AB9E648E25C347E8008CD933 /* Localizable.strings */ = {
+		AB86F6E325CC68F700A661A1 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AB9E648D25C347E8008CD933 /* en */,
+				AB86F6E225CC68F700A661A1 /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		AB86F6E725CC693C00A661A1 /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB86F6E625CC693C00A661A1 /* en */,
+			);
+			name = Localizable.stringsdict;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
