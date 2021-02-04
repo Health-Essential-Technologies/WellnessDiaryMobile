@@ -20,6 +20,7 @@ class WDMHealthEntryTableViewCell: WDMSimpleTableViewCell {
     // MARK: - Properties
     
     override func initialSetup() {
+      super.initialSetup()
         contentView.addSubview(mainLabel)
         
         // TODO: Needs to add more constraints as more UIItems are added.

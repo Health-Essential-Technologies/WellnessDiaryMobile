@@ -5,7 +5,7 @@
   Created by luis flores on 1/28/21.
   
 */
-
+"" = "";
 "ADD" = "Add";
 "ADD_TASK" = "Add Task";
 "TASK_INFORMATION" = "Task Information";
@@ -15,9 +15,11 @@
 "REPEATS" = "Repeats";
 "REPEAT_OPTIONS" = "Repeat Options";
 
+"EVERY" = "Every";
+"FREQUENCY" = "Frequency";
 "TASK_FREQUENCY" = "Task Frequency";
 "OCCURENCE" = "Occurence";
-"EVERYDAY" = "Everyday";
+"EVERY_DAY" = "Every day";
 "NEVER" = "Never";
 "MONDAY" = "Monday";
 "TUESDAY" = "Tuesday";
@@ -26,3 +28,23 @@
 "FRIDAY" = "Friday";
 "SATURDAY" = "Saturday";
 "SUNDAY" = "Sunday";
+
+"MON" = "Mon";
+"TUE" = "Tue";
+"WED" = "Wed";
+"THU" = "Thu";
+"FRI" = "Fri";
+"SAT" = "Sat";
+"SUN" = "Sun";
+
+"BEFORE" = "Before";
+"AFTER" = "After";
+"BREAKFAST" = "Breakfast";
+"LUNCH" = "Lunch";
+"DINNER" = "Dinner";
+
+"ONCE" = "Once";
+"TIMES" = "Times";
+"A" = "a";
+"DAY" = "Day";
+

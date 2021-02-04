@@ -20,4 +20,9 @@ class WDMDatePickerViewCellInfoProvider: WDMCellInfoProvider {
         self.mainLabelText = mainLabelText
         self.pickerStyle = pickerStyle
     }
+  
+}
+
+extension WDMDatePickerViewCellInfoProvider {
+  
 }

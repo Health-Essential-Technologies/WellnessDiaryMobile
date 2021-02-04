@@ -1,13 +1,14 @@
 //
-//  WDMSimpleButton.swift
+//  WDMSimpleTextField.swift
 //  WellnessDiary
 //
-//  Created by luis flores on 1/19/21.
+//  Created by luis flores on 1/29/21.
+//  Copyright © 2021 Health Essential Technologies. All rights reserved.
 //
 
 import UIKit
 
-class WDMSimpleButton: UIButton {
+class WDMSimpleTextField: UITextField {
 
     /*
     // Only override draw() if you perform custom drawing.

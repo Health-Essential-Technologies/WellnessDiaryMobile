@@ -37,7 +37,7 @@ class WDMSimpleTableViewCell: UITableViewCell {
     }
     
     func didSetcellInfoProvider() {
-        // Base class does nothing. Child class will override
+        fatalError("Base class does nothing. Child class will override")
     }
     
 }
