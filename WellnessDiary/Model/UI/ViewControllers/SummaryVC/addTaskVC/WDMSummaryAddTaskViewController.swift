@@ -5,22 +5,20 @@
 //  Created by luis flores on 1/27/21.
 //
 
-import Foundation
+import UIKit
 
 class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
   
   // MARK: - Properties
   
-  var frequency: Set<TaskFrequency> {
-    didSet {
-      createInfoProvider()
-    }
-  }
+  var taskName = ""
+  var taskInitialDate = Date()
+  var taskRecurrence: (frequency: Set<TaskFrequency>, occurence: Set<TaskOccurence>)
   
   // MARK: - Initializers
   
-  public init(frequency: Set<TaskFrequency> = Set<TaskFrequency>(TaskFrequency.allCases)) {
-    self.frequency = frequency
+  public init(with taskFrequency: (frequency: Set<TaskFrequency>, occurence: Set<TaskOccurence>) = (Set<TaskFrequency>(TaskFrequency.allCases), Set(arrayLiteral: TaskOccurence.beforeBreakfast))) {
+    self.taskRecurrence = taskFrequency
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -60,7 +58,7 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
     let selectDateRowInfoProvider = WDMDatePickerViewCellInfoProvider(mainLabelText: "\("SELECT_STARTING_DAY".localize()):", pickerStyle: .compact)
     let firstSectionSecondRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: selectDateRowInfoProvider, cellType: WDMDatePickerTableViewCell.self)
     
-    let repeatsRowInfoProvider = WDMDefaultCellInfoProvider(mainLabelText: "\("REPEATS".localize()):", detailLabelText: getDetailLabelTextForFrequency())
+    let repeatsRowInfoProvider = WDMDefaultCellInfoProvider(mainLabelText: "\("REPEATS".localize()):", detailLabelText: getDetailLabelTextForFrequency() + " | " + getDetailLabelTextForOccurence())
     repeatsRowInfoProvider.cellAccessoryType = .disclosureIndicator
     let firstSectionThirdRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: repeatsRowInfoProvider, cellType: WDMDefaultTableViewCell.self)
     
@@ -78,20 +76,54 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
     let  addBtnFirstRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: addBtnRowInfoProvider, cellType: WDMSingleButtonTableViewCell.self, cellHeight: 44)
     let addBtnSection = TableViewSectionItem(headerTitle: localLoc(" "), footerTitle: nil, sectionRowItems: [addBtnFirstRow])
     
-    return WDMTableViewInfoProvider(withSectionItems: [firstSection, addBtnSection], presenterViewController: self)
+    return WDMSummaryAddTaskInfoProvider(withSectionItems: [firstSection, addBtnSection], presenterViewController: self, frequency: taskRecurrence.frequency, occurence: taskRecurrence.occurence, delegate: self)
   }
   
   private func getDetailLabelTextForFrequency() -> String {
-    if frequency.count == TaskFrequency.allCases.count {
+    if taskRecurrence.frequency.count == TaskFrequency.allCases.count {
       return "Every Day".localize()
-    } else if frequency.isEmpty {
+    } else if taskRecurrence.frequency.isEmpty {
       return "Never".localize()
+    } else if taskRecurrence.frequency.count == 1 {
+      return "Every".localize() + " " + taskRecurrence.frequency.first!.description()
     } else {
       var str = ""
-      frequency.forEach { str = $0.rawValue + ","}
+      taskRecurrence.frequency.sorted().forEach { str += $0.description() + ","}
       str.removeLast()
       return str
     }
   }
   
+  private func getDetailLabelTextForOccurence() -> String {
+    if taskRecurrence.occurence.count > 1 {
+      return "\(taskRecurrence.occurence.count)" + " " + "times a Day".localize()
+    }
+    return "Once a day".localize()
+  }
+  
+}
+
+extension WDMSummaryAddTaskViewController: TaskRecurrenceSelectionProtocol {
+  
+  // MARK: - Properties
+  
+  func add(_ frequency: TaskFrequency) {
+    taskRecurrence.frequency.insert(frequency)
+    infoProvider = createInfoProvider()
+  }
+  
+  func add(_ occurence: TaskOccurence) {
+    taskRecurrence.occurence.insert(occurence)
+    infoProvider = createInfoProvider()
+  }
+  
+  func remove(_ frequency: TaskFrequency) {
+    taskRecurrence.frequency.remove(frequency)
+    infoProvider = createInfoProvider()
+  }
+  
+  func remove(_ occurence: TaskOccurence) {
+    taskRecurrence.occurence.remove(occurence)
+    infoProvider = createInfoProvider()
+  }
 }
