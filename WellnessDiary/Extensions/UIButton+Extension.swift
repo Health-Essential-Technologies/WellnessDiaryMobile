@@ -16,7 +16,7 @@ import UIKit
 typealias ButtonClosure = () -> ()
 
 
-typealias UIButtonTargetClosure = ((() -> Void)?) -> ()
+typealias UIButtonTargetClosure = () -> ()?
 
 class ButtonClosureWrapper: NSObject {
     
@@ -60,6 +60,6 @@ extension UIButton {
     
     @objc func runClosureTargetAction() {
         guard let targetclosure = targetClosure else { return }
-        targetclosure(nil)
+        targetclosure()
     }
 }
