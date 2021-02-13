@@ -43,14 +43,17 @@
 "ADD_TASK" = "Add Task";
 "TASK_INFORMATION" = "Task Information";
 "ENTER_TASK_NAME" = "Enter Task Name";
-"NAME" = "Name";
-"SELECT_STARTING_DAY" = "Select Starting Day";
-"REPEATS" = "Repeats";
+"NAME_:" = "Name:";
+"SELECT_STARTING_DAY_:" = "Select Starting Day:";
+"REPEATS_:" = "Repeats:";
 "REPEAT_OPTIONS" = "Repeat Options";
+"INSTRUCTIONS_:" = "Instructions:";
+"TAKE_WITH_A_MEAL" = "Take with a meal";
 
 "EVERY" = "Every";
 "FREQUENCY" = "Frequency";
 "TASK_FREQUENCY" = "Task Frequency";
+"TASK_INFORMATION" = "Task Information";
 "OCCURENCE" = "Occurence";
 "EVERY_DAY" = "Every day";
 "NEVER" = "Never";
@@ -70,14 +73,16 @@
 "SAT" = "Sat";
 "SUN" = "Sun";
 
-"BEFORE" = "Before";
-"AFTER" = "After";
-"BREAKFAST" = "Breakfast";
-"LUNCH" = "Lunch";
-"DINNER" = "Dinner";
+"BEFORE_BREAKFAST" = "Before Breakfast";
+"AFTER_BREAKFAST" = "After Breakfast";
+"BEFORE_LUNCH" = "Before Lunch";
+"AFTER_LUNCH" = "After Lunch";
+"BEFORE_DINNER" = "Before Dinner";
+"AFTER_DINNER" = "After Dinner";
 
-"ONCE" = "Once";
-"TIMES" = "Times";
-"A" = "a";
-"DAY" = "Day";
+"IMPACTS_ADHERENCE_:" = "Impacts Adherence:";
 
+"IMPACT_ADHERENCE_-_ALLOWS_USERS_TO_DECIDE_WHETHER_OR_NOT_A_TASK_SHOULD_AFFECT_THEIR_DAILY_GOALS" = "Impact Adherence - allows users to decide whether or not a task should affect their daily goals.";
+"INSTRUCTIONS_-_DESCRIBES_IMPORTANT_INFORMATION_ON_HOW_A_TASK_SHOULD_BE_COMPLETED_." = "Instructions - describes important information on how a task should be completed.";
+
+"ADD_NOTIFICATION_:" = "Add Notification:";

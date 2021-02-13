@@ -26,5 +26,21 @@
 			<string>%i remaining</string>
 		</dict>
 	</dict>
+	<key>TIMES_A_DAY</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@times_a_day@</string>
+		<key>times_a_day</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>i</string>
+			<key>one</key>
+			<string>Once a day</string>
+			<key>other</key>
+			<string>%i times a day</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

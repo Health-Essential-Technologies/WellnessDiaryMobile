@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="WDMCDNotes" representedClassName="WDMCDNotes" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDTask" inverseName="notes" inverseEntity="WDMCDTask"/>
+    </entity>
+    <entity name="WDMCDTask" representedClassName="WDMCDTask" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="groupIdentifier" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String" defaultValueString="&quot;NO_ID&quot;"/>
+        <attribute name="impactsAdherence" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="instructions" optional="YES" attributeType="String"/>
+        <attribute name="remoteID" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="notes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDNotes" inverseName="task" inverseEntity="WDMCDNotes"/>
+    </entity>
+    <elements>
+        <element name="WDMCDTask" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="WDMCDNotes" positionX="-45" positionY="45" width="128" height="118"/>
+    </elements>
 </model>
