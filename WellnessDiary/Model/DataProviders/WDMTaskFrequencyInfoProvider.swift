@@ -8,7 +8,22 @@
 
 import UIKit
 
-class WDMTaskFrequencyInfoProvider: WDMSummaryAddTaskInfoProvider {
+class WDMTaskFrequencyInfoProvider: WDMTableViewInfoProvider {
+  
+  // MARK: - Properties
+  
+  var frequency: Set<TaskFrequency>
+  var occurence: Set<TaskOccurence>
+  weak var delegate: TaskRecurrenceSelectionProtocol?
+  
+  // MARK: - Initallizers
+  
+  init(withSectionItems sectionItems: [TableViewSectionItem] = [], presenterViewController: WDMSimpleViewController? = nil, frequency: Set<TaskFrequency>, occurence: Set<TaskOccurence>, delegate: TaskRecurrenceSelectionProtocol?) {
+    self.frequency = frequency
+    self.occurence = occurence
+    self.delegate = delegate
+    super.init(withSectionItems: sectionItems, presenterViewController: presenterViewController)
+  }
   
   // MARK: - Methods
   

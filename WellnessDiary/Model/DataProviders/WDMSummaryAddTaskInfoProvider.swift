@@ -9,22 +9,21 @@
 import UIKit
 
 class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
-
-  // MARK: - Properties
-  private var taskName = ""
-  private var taskInitialDate = Date()
-  var frequency: Set<TaskFrequency> = Set<TaskFrequency>()
-  var occurence: Set<TaskOccurence> = Set<TaskOccurence>()
   
+  private let NAME_TEXTFIELD_TAG = 1
+  private let INSTRUCTIONS_TEXTFIELD_TAG = 2
+  
+  // MARK: - Properties
+  
+  var task: WDMTask
   weak var delegate: TaskRecurrenceSelectionProtocol?
   weak var textField: WDMSimpleTextField?
   
   // MARK: - Initializers
   
-  init(withSectionItems sectionItems: [TableViewSectionItem] = [], presenterViewController: WDMSimpleViewController? = nil, frequency: Set<TaskFrequency>, occurence: Set<TaskOccurence>, delegate: TaskRecurrenceSelectionProtocol?) {
+  init(withSectionItems sectionItems: [TableViewSectionItem] = [], presenterViewController: WDMSimpleViewController? = nil, task: WDMTask, delegate: TaskRecurrenceSelectionProtocol?) {
+    self.task = task
     super.init(withSectionItems: sectionItems, presenterViewController: presenterViewController)
-    self.frequency = frequency
-    self.occurence = occurence
     self.delegate = delegate
   }
   
@@ -39,6 +38,11 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
   override func getLabelTextfieldTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMLabelTextfieldTableViewCell {
     let castedCell = super.getLabelTextfieldTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
     castedCell.textfield.delegate = self
+    if castedCell.mainLabel.text == "Name:" {
+      castedCell.textfield.tag = NAME_TEXTFIELD_TAG
+    } else if castedCell.mainLabel.text == "Instructions:" {
+      castedCell.textfield.tag = INSTRUCTIONS_TEXTFIELD_TAG
+    }
     textField = castedCell.textfield
     return castedCell
   }
@@ -47,7 +51,7 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
     guard let infoProvider = sectionItems[safe: indexPath.section]?.sectionRowItems[safe: indexPath.row]?.cellInfoProvider else { return }
     
     if infoProvider.cellAccessoryType == .disclosureIndicator {
-      presenterViewController?.navigationController?.pushViewController(WDMTaskRecurrenceViewController(with: frequency, with: occurence, with: delegate), animated: true)
+      presenterViewController?.navigationController?.pushViewController(WDMTaskRecurrenceViewController(with: task.frequency, with: task.occurence, with: delegate), animated: true)
     }
     
     super.tableView(tableView, didSelectRowAt: indexPath)
@@ -55,31 +59,8 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
   
   @objc private func addBtnTapped(sender: Any) {
     textField?.resignFirstResponder()
-    CarePlanStoreManager.sharedCarePlanStoreManager.addTask(with: taskName, with: taskInitialDate, taskFrequency: Array(frequency).sorted(), taskOccurence: Array(occurence))
-  }
-  
-}
-
-// MARK: - Extension TaskRecurrenceSelectionProtocol
-
-extension WDMSummaryAddTaskInfoProvider: TaskRecurrenceSelectionProtocol {
-  
-  // MARK: - Functions
-  
-  func add(_ frequency: TaskFrequency) {
-    self.frequency.insert(frequency)
-  }
-  
-  func add(_ occurence: TaskOccurence) {
-    self.occurence.insert(occurence)
-  }
-  
-  func remove(_ frequency: TaskFrequency) {
-    self.frequency.remove(frequency)
-  }
-  
-  func remove(_ occurence: TaskOccurence) {
-    self.occurence.remove(occurence)
+    task.createScheduleBeforeSaving()
+    CarePlanStoreManager.sharedCarePlanStoreManager.add(task)
   }
   
 }
@@ -90,8 +71,19 @@ extension WDMSummaryAddTaskInfoProvider: UITextFieldDelegate {
   
   func textFieldDidEndEditing(_ textField: UITextField) {
     if let text = textField.text {
-      taskName = text
+      switch textField.tag {
+      
+      case NAME_TEXTFIELD_TAG:
+        task.title = text
+        delegate?.updateName(text)
+        
+      case INSTRUCTIONS_TEXTFIELD_TAG:
+        task.instructions = text
+        delegate?.updateInstructions(text)
+        
+      default:
+        break
+      }
     }
   }
-  
 }
