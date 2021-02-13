@@ -10,20 +10,7 @@ import UIKit
 class WDMDatePickerTableViewCell: WDMSimpleTableViewCell {
   
   // MARK: - Properties
-  
-  var mainLabelText: String = "" {
-    didSet {
-      mainLabel.text = mainLabelText
-    }
-  }
-  
-  private let mainLabel: WDMSimpleLabel = {
-    let lbl = WDMSimpleLabel()
-    lbl.textAlignment = .left
-    lbl.translatesAutoresizingMaskIntoConstraints = false
-    return lbl
-  }()
-  
+   
   let datePicker: WDMSimpleDatePicker = {
     let picker = WDMSimpleDatePicker()
     picker.datePickerMode = .date
@@ -37,12 +24,6 @@ class WDMDatePickerTableViewCell: WDMSimpleTableViewCell {
   
   override func initialSetup() {
     super.initialSetup()
-    
-    contentView.addSubview(mainLabel)
-    
-    // FIXME: - needs to add layout manager
-    mainLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
-    mainLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
     
     contentView.addSubview(datePicker)
     datePicker.leadingAnchor.constraint(equalTo: mainLabel.trailingAnchor, constant: 8).isActive = true
@@ -59,8 +40,8 @@ class WDMDatePickerTableViewCell: WDMSimpleTableViewCell {
   }
   
   override func didSetcellInfoProvider() {
+    super.didSetcellInfoProvider()
     guard let datePickerViewInfoProvider = cellInfoProvider as? WDMDatePickerViewCellInfoProvider else { return }
-    mainLabelText = datePickerViewInfoProvider.mainLabelText
     datePicker.preferredDatePickerStyle = datePickerViewInfoProvider.pickerStyle
     
     datePicker.addTarget(self, action: #selector(pickerValueChanged), for: .valueChanged)

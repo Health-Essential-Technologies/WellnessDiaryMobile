@@ -39,8 +39,9 @@ class WDMSingleButtonTableViewCell: WDMSimpleTableViewCell {
     }
     
     override func didSetcellInfoProvider() {
+      super.didSetcellInfoProvider()
         guard let infoProvider = cellInfoProvider as? WDMSingleButtonCellInfoProvider else { return }
-        mainBtnLabelText = infoProvider.mainBtnLabelText
+      mainButton.setTitle(infoProvider.mainBtnLabelText, for: .normal)
         mainButton.addTarget(WithClosure: infoProvider.btnActionTargetClosure.closure, forEvent: .touchUpInside)
     }
     

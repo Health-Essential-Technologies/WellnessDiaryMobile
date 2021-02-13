@@ -12,12 +12,6 @@ class WDMLabelTextfieldTableViewCell: WDMSimpleTableViewCell {
 
   // MARK: - Properties
   
-  var mainLabel: WDMSimpleLabel = {
-    let lbl = WDMSimpleLabel()
-    lbl.translatesAutoresizingMaskIntoConstraints = false
-    return lbl
-  }()
-  
   var textfield: WDMSimpleTextField = {
     let txtField = WDMSimpleTextField()
     txtField.translatesAutoresizingMaskIntoConstraints = false
@@ -50,13 +44,10 @@ class WDMLabelTextfieldTableViewCell: WDMSimpleTableViewCell {
   }
   
   override func didSetcellInfoProvider() {
+    super.didSetcellInfoProvider()
     guard let infoProvider = cellInfoProvider as? WDMLabelTextFieldCellInfoProvider else { return }
-    mainLabel.text = infoProvider.mainLabelText
     textfield.text = infoProvider.textfieldText
     textfield.placeholder = infoProvider.textfieldPlaceHolderText
   }
   
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    
-  }
 }

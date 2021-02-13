@@ -8,36 +8,48 @@
 import UIKit
 
 class WDMSimpleTableViewCell: UITableViewCell {
-    
-    // MARK: - Properties
-    
-    var cellInfoProvider: WDMCellInfoProvider? {
-        didSet {
-            didSetcellInfoProvider()
-        }
+  
+  // MARK: - Properties
+  
+  var cellInfoProvider: WDMCellInfoProvider? {
+    didSet {
+      didSetcellInfoProvider()
     }
-
-    // MARK: - Initializers
+  }
+  
+  public let mainLabel: WDMSimpleLabel = {
+    let lbl = WDMSimpleLabel()
+    lbl.textAlignment = .left
+    lbl.translatesAutoresizingMaskIntoConstraints = false
+    return lbl
+  }()
+  
+  // MARK: - Initializers
+  
+  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    super.init(style: style, reuseIdentifier: reuseIdentifier)
+    initialSetup()
+    loadTheme()
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  // MARK: - Methods
+  
+  override func initialSetup() {
+    super.initialSetup()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        initialSetup()
-        loadTheme()
-    }
+    contentView.addSubview(mainLabel)
+    mainLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+    mainLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    // MARK: - Methods
-
-    override func initialSetup() {
-        super.initialSetup()
-        selectionStyle = .none
-    }
-    
-    func didSetcellInfoProvider() {
-        fatalError("Base class does nothing. Child class will override")
-    }
-    
+    selectionStyle = .none
+  }
+  
+  func didSetcellInfoProvider() {
+    mainLabel.text = cellInfoProvider?.mainLabelText
+  }
+  
 }
