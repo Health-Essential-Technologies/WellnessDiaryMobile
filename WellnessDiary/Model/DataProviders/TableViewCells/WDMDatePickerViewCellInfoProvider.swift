@@ -10,15 +10,14 @@ import UIKit
 class WDMDatePickerViewCellInfoProvider: WDMCellInfoProvider {
     
     // MARK: Properties
-    
-    var mainLabelText: String
+
     var pickerStyle: UIDatePickerStyle
     
     // MARK: - Initializers
     
     init(mainLabelText: String = "", pickerStyle: UIDatePickerStyle = .automatic) {
-        self.mainLabelText = mainLabelText
         self.pickerStyle = pickerStyle
+      super.init(mainLabelText: mainLabelText)
     }
   
 }

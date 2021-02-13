@@ -10,19 +10,18 @@ import UIKit
 class WDMPickerViewInfoProvider: WDMCellInfoProvider {
     
     // MARK: - Properties
-    
-    let mainLabelText: String
+  
     var pickerComponents: [PickerViewComponentItem] = []
     var defaultValue = (row: 0, component: 0)
-    
-    // MARK: - Initializers
-    
-    init(mainLabelText: String = "", pickerComponents: [PickerViewComponentItem]) {
-        self.mainLabelText = mainLabelText
-        self.pickerComponents = pickerComponents
-    }
-    
-    // MARK: - Methods
+  
+  // MARK: - Initializers
+  
+  init(mainLabelText: String = "", pickerComponents: [PickerViewComponentItem]) {
+    self.pickerComponents = pickerComponents
+    super.init(mainLabelText: mainLabelText)
+  }
+  
+  // MARK: - Methods
     
     public static func createOunceData() -> [PickerViewRowItem] {
         var rowItems: [PickerViewRowItem] = []

@@ -11,16 +11,15 @@ import UIKit
 class WDMLabelTextFieldCellInfoProvider: WDMCellInfoProvider {
 
   // MARK: - Properties
-
-  var mainLabelText: String
+  
   var textfieldText: String?
   var textfieldPlaceHolderText: String?
   
   // MARK: - Initializers
   
   init(mainLabelText: String, textfieldText: String? = "", textfieldPlaceHolder: String? = "") {
-    self.mainLabelText = mainLabelText
     self.textfieldText = textfieldText
     self.textfieldPlaceHolderText = textfieldPlaceHolder
+    super.init(mainLabelText: mainLabelText)
   }
 }

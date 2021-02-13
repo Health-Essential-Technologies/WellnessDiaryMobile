@@ -17,5 +17,14 @@ enum TableViewCellIdentifier: String {
 
 class WDMCellInfoProvider: WDMInfoProvider {
   
+  // MARK: - Properties
+  
+  var mainLabelText: String?
   var cellAccessoryType: UITableViewCell.AccessoryType = .none
+  
+  // MARK: - Initializers
+  
+  public init(mainLabelText: String? = "") {
+    self.mainLabelText = mainLabelText
+  }
 }
