@@ -23,9 +23,12 @@ protocol TaskRecurrenceSelectionProtocol: AnyObject {
   func add(_ occurence: TaskOccurence)
   func remove(_ frequency: TaskFrequency)
   func remove(_ occurence: TaskOccurence)
+  func updateName(_ taskTitle: String)
+  func updateInstructions(_ taskInstructions: String)
+  func updateNotification(_ taskNotification: String?)
 }
 
-public enum TaskFrequency: Int, CaseIterable, RawComparable {
+public enum TaskFrequency: Int, CaseIterable, Codable, RawComparable {
   
   // MARK: - Cases
   
@@ -40,7 +43,7 @@ public enum TaskFrequency: Int, CaseIterable, RawComparable {
   // MARK: - Properties
   public func description(_ short: Bool = false) -> String {
     if !short {
-      return dateFormatter.weekdaySymbols[self.rawValue].localize()
+      return dateFormatter.weekdaySymbols[self.rawValue].uppercased().localize()
     } else {
       return dateFormatter.shortWeekdaySymbols[self.rawValue].localize()
     }
@@ -63,20 +66,14 @@ public enum TaskFrequency: Int, CaseIterable, RawComparable {
   
 }
 
-public enum TaskOccurence: String, CaseIterable {
-  case beforeBreakfast
-  case afterBreakfast
-  case beforeLunch
-  case afterLunch
-  case beforeDinner
-  case afterDinner
-  
-  func getStringLocalize() -> String {
-    let strCase = self.rawValue
-    let prefix = strCase.description.hasPrefix("after") ? "after" : "before"
-    let strArr = strCase.description.components(separatedBy: prefix)
-    return prefix.localize() + " " + strArr.last!.description.localize()
-  }
+public enum TaskOccurence: String, Codable, CaseIterable {
+  case beforeBreakfast = "BEFORE_BREAKFAST"
+  case afterBreakfast = "AFTER_BREAKFAST"
+  case beforeLunch = "BEFORE_LUNCH"
+  case afterLunch = "AFTER_LUNCH"
+  case beforeDinner = "BEFORE_DINNER"
+  case afterDinner = "AFTER_DINNER"
+
 }
 
 class WDMTaskRecurrenceViewController: WDMSimpleTableViewController {
@@ -111,7 +108,7 @@ class WDMTaskRecurrenceViewController: WDMSimpleTableViewController {
   
   override func initialSetup() {
     
-    navigationItem.title = "task frequency".localize()
+    navigationItem.title = "TASK_FREQUENCY".localize()
     
     tableView = WDMSimpleTableView(frame: view.bounds, style: .insetGrouped)
     tableView.isScrollEnabled = false
@@ -126,24 +123,24 @@ class WDMTaskRecurrenceViewController: WDMSimpleTableViewController {
     var frequencyRowItems: [TableViewSectionRowItem] = []
     
     for frequency in TaskFrequency.allCases {
-      let mainLblTxt = "Every".localize() + " " + frequency.description()
+      let mainLblTxt = "EVERY".localize() + " " + frequency.description()
       let provider = WDMTaskReccurenceCellInfoProvider(mainLabelText: mainLblTxt, frequency: frequency, occurence: nil)
       let rowItem = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: provider, cellType: WDMDefaultTableViewCell.self)
       frequencyRowItems.append(rowItem)
     }
     
-    let frequencySectionItem = TableViewSectionItem(headerTitle: "Frequency".localize(), footerTitle: nil, sectionRowItems: frequencyRowItems)
+    let frequencySectionItem = TableViewSectionItem(headerTitle: "FREQUENCY".localize(), footerTitle: nil, sectionRowItems: frequencyRowItems)
     
     var frequencyOccurenceItems: [TableViewSectionRowItem] = []
     
     TaskOccurence.allCases.forEach {
-      let mainLblTxt = $0.getStringLocalize()
+      let mainLblTxt = $0.rawValue.uppercased().localize()
       let provider = WDMTaskReccurenceCellInfoProvider(mainLabelText: mainLblTxt, frequency: nil, occurence: $0)
       let rowItem = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: provider, cellType: WDMDefaultTableViewCell.self)
       frequencyOccurenceItems.append(rowItem)
     }
     
-    let frequencyOccurenceSectonItem = TableViewSectionItem(headerTitle: "Occurence".localize(), footerTitle: nil, sectionRowItems: frequencyOccurenceItems)
+    let frequencyOccurenceSectonItem = TableViewSectionItem(headerTitle: "OCCURENCE".localize(), footerTitle: nil, sectionRowItems: frequencyOccurenceItems)
     
     return WDMTaskFrequencyInfoProvider(withSectionItems: [frequencySectionItem, frequencyOccurenceSectonItem], presenterViewController: self, frequency: frequency, occurence: occurence, delegate: delegate)
   }

@@ -63,11 +63,11 @@ class WDMTableViewInfoProvider: NSObject {
     case is WDMSingleButtonTableViewCell.Type:
       cell = getSingleButtonTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
       
-    case is WDMHealthEntryTableViewCell.Type:
-      cell = getHealthEntryTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
-      
     case is WDMLabelTextfieldTableViewCell.Type:
       cell = getLabelTextfieldTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
+      
+    case is WDMLabelSwitchTableViewCell.Type:
+      cell = getLabelSwitchTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
       
     default:
       cell = getDefaultTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
@@ -113,21 +113,22 @@ class WDMTableViewInfoProvider: NSObject {
     return castedCell
   }
   
-  private func getHealthEntryTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell {
-    let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMHealthEntryTableViewCell
-    castedCell.cellInfoProvider = cellItem.cellInfoProvider
-    return castedCell
-  }
-  
   func getLabelTextfieldTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMLabelTextfieldTableViewCell {
     let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMLabelTextfieldTableViewCell
     castedCell.cellInfoProvider = cellItem.cellInfoProvider
     return castedCell
   }
+  
   func getDefaultTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell  {
     let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMDefaultTableViewCell
     castedCell.cellInfoProvider = cellItem.cellInfoProvider
     castedCell.selectionStyle = .default
+    return castedCell
+  }
+  
+  func getLabelSwitchTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell {
+    let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMLabelSwitchTableViewCell
+    castedCell.cellInfoProvider = cellItem.cellInfoProvider
     return castedCell
   }
   
