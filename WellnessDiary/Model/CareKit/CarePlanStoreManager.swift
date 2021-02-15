@@ -34,7 +34,15 @@ final class CarePlanStoreManager {
   
   public func add(_ task: WDMTask) {
     synchronizedStoreManager.store.addAnyTask(OCKTask(with: task), callbackQueue: .main) { results in
-      
+      let result = results
+      switch result {
+      case .success( _):
+        NotificationCenter.default.post(name: .newTaskAdded, object: nil)
+        break
+      case .failure(let error):
+        fatalError("Unable to save due to \(error.localizedDescription)")
+        break
+      }
     }
   }
 
