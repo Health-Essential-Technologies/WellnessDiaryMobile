@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="OCKCDScheduleElement" representedClassName="CareKit.OCKCDScheduleElement" syncable="YES">
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDTask" inverseName="elements" inverseEntity="WDMCDTask"/>
+    </entity>
+    <entity name="WDMCDNotes" representedClassName="WDMCDNotes" parentEntity="WDMCDVersionObject" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="object" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDObject" inverseName="notes" inverseEntity="WDMCDObject"/>
+    </entity>
+    <entity name="WDMCDObject" representedClassName="WDMCDObject" syncable="YES">
+        <attribute name="asset" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="groupIdentifier" optional="YES" attributeType="String"/>
+        <attribute name="remoteID" optional="YES" attributeType="String"/>
+        <attribute name="schemaVersion" attributeType="String" defaultValueString="1"/>
+        <attribute name="source" optional="YES" attributeType="String"/>
+        <attribute name="tags" optional="YES" attributeType="Transformable"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="notes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDNotes" inverseName="object" inverseEntity="WDMCDNotes"/>
+    </entity>
+    <entity name="WDMCDTask" representedClassName="WDMCDTask" parentEntity="WDMCDVersionObject" syncable="YES">
+        <attribute name="impactsAdherence" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="instructions" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="elements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OCKCDScheduleElement" inverseName="task" inverseEntity="OCKCDScheduleElement"/>
+    </entity>
+    <entity name="WDMCDVersionObject" representedClassName="WDMCDVersionObject" parentEntity="WDMCDObject" syncable="YES">
+        <attribute name="deletedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="effectiveDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="String" defaultValueString="UUID().uuidString()"/>
+        <attribute name="next" optional="YES" attributeType="Transformable" customClassName="WDMCDVersionObject"/>
+        <attribute name="previous" optional="YES" attributeType="Transformable" customClassName="WDMCDVersionObject"/>
+    </entity>
+    <elements>
+        <element name="OCKCDScheduleElement" positionX="9" positionY="153" width="128" height="58"/>
+        <element name="WDMCDNotes" positionX="-45" positionY="45" width="128" height="103"/>
+        <element name="WDMCDObject" positionX="-27" positionY="90" width="128" height="178"/>
+        <element name="WDMCDTask" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="WDMCDVersionObject" positionX="-9" positionY="90" width="128" height="118"/>
+    </elements>
+</model>
