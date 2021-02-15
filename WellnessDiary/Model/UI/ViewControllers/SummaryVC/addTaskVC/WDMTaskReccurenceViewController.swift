@@ -15,7 +15,7 @@ private let dateFormatter: DateFormatter = {
   return formatter
 }()
 
-protocol TaskRecurrenceSelectionProtocol: AnyObject {
+protocol TaskModifierProtocol: AnyObject {
   
   // MARK: - Methods
   
@@ -25,7 +25,8 @@ protocol TaskRecurrenceSelectionProtocol: AnyObject {
   func remove(_ occurence: TaskOccurence)
   func updateName(_ taskTitle: String)
   func updateInstructions(_ taskInstructions: String)
-  func updateNotification(_ taskNotification: String?)
+  func updateAdherence(_ taskAdherence: Bool)
+  func updateNotification(_ hasNotification: Bool)
 }
 
 public enum TaskFrequency: Int, CaseIterable, Codable, RawComparable {
@@ -83,11 +84,11 @@ class WDMTaskRecurrenceViewController: WDMSimpleTableViewController {
   private var frequency: Set<TaskFrequency> = Set<TaskFrequency>()
   private var occurence: Set<TaskOccurence> = Set<TaskOccurence>()
   
-  weak var delegate: TaskRecurrenceSelectionProtocol?
+  weak var delegate: TaskModifierProtocol?
   
   // MARK: - Initializers
   
-  init(with frequency: Set<TaskFrequency> ,with occurence: Set<TaskOccurence>, with delegate: TaskRecurrenceSelectionProtocol?) {
+  init(with frequency: Set<TaskFrequency> ,with occurence: Set<TaskOccurence>, with delegate: TaskModifierProtocol?) {
     self.frequency = frequency
     self.occurence = occurence
     self.delegate = delegate
