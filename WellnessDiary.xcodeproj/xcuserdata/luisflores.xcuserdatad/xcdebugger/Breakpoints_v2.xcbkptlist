@@ -135,54 +135,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FD1F294A-A085-4E93-B72A-F49E4161C99F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/Model/CareKit/CarePlanStoreManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "add(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FD1F294A-A085-4E93-B72A-F49E4161C99F - 6bc71c86c3e5ab6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WellnessDiary.CarePlanStoreManager.add(WellnessDiary.WDMTask) -&gt; ()"
-                  moduleName = "WellnessDiary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luisflores/Desktop/WellnessDiary/WellnessDiary/Model/CareKit/CarePlanStoreManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "94">
-               </Location>
-               <Location
-                  uuid = "FD1F294A-A085-4E93-B72A-F49E4161C99F - 6aee3eb160716979"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;CareKitStore.OCKAnyTask, CareKitStore.OCKStoreError&gt;) -&gt; () in WellnessDiary.CarePlanStoreManager.add(WellnessDiary.WDMTask) -&gt; ()"
-                  moduleName = "WellnessDiary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luisflores/Desktop/WellnessDiary/WellnessDiary/Model/CareKit/CarePlanStoreManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "32B49D41-253E-413A-AA9A-3E852A5002C2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"

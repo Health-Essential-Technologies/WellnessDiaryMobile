@@ -18,9 +18,14 @@ class WDMSummaryViewController: WDMSimpleViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      NotificationCenter.default.addObserver(self, selector: #selector(update), name: NSNotification.Name(rawValue: "updated"), object: nil)
-      add(previousVC)
+
     }
+  
+  override func initialSetup() {
+    super.initialSetup()
+    add(previousVC)
+    NotificationCenter.default.addObserver(self, selector: #selector(update), name: .newTaskAdded, object: nil)
+  }
   
   @objc func update() {
     previousVC.remove()
