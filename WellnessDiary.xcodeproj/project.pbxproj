@@ -42,6 +42,12 @@
 		AB8A207025DAAFAA000986A5 /* WDMTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A206F25DAAFAA000986A5 /* WDMTask.swift */; };
 		AB8A207425DAB0BB000986A5 /* OCKTask+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A207325DAB0BB000986A5 /* OCKTask+Extension.swift */; };
 		AB8A207A25DAE48B000986A5 /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A207925DAE48B000986A5 /* NotificationCenter+Extension.swift */; };
+		AB8A207C25DAF5AF000986A5 /* WDMStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A207B25DAF5AF000986A5 /* WDMStore.swift */; };
+		AB8A207F25DAFF72000986A5 /* WellnessDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB8A207D25DAFF71000986A5 /* WellnessDiary.xcdatamodeld */; };
+		AB8A208425DB0572000986A5 /* WDMCDTaskID+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A208025DB0572000986A5 /* WDMCDTaskID+CoreDataClass.swift */; };
+		AB8A208525DB0572000986A5 /* WDMCDTaskID+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A208125DB0572000986A5 /* WDMCDTaskID+CoreDataProperties.swift */; };
+		AB8A208625DB0572000986A5 /* WDMCDObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A208225DB0572000986A5 /* WDMCDObject+CoreDataClass.swift */; };
+		AB8A208725DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A208325DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift */; };
 		AB9E649225C49959008CD933 /* WDMSimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E649125C49959008CD933 /* WDMSimpleTableViewController.swift */; };
 		AB9E649525C4D13E008CD933 /* WDMTableViewDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E649325C4D13E008CD933 /* WDMTableViewDelegateHandler.swift */; };
 		AB9E649625C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E649425C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift */; };
@@ -140,6 +146,12 @@
 		AB8A206F25DAAFAA000986A5 /* WDMTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMTask.swift; sourceTree = "<group>"; };
 		AB8A207325DAB0BB000986A5 /* OCKTask+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCKTask+Extension.swift"; sourceTree = "<group>"; };
 		AB8A207925DAE48B000986A5 /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
+		AB8A207B25DAF5AF000986A5 /* WDMStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMStore.swift; sourceTree = "<group>"; };
+		AB8A207E25DAFF71000986A5 /* WellnessDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WellnessDiary.xcdatamodel; sourceTree = "<group>"; };
+		AB8A208025DB0572000986A5 /* WDMCDTaskID+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTaskID+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AB8A208125DB0572000986A5 /* WDMCDTaskID+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTaskID+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AB8A208225DB0572000986A5 /* WDMCDObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AB8A208325DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AB9E649125C49959008CD933 /* WDMSimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleTableViewController.swift; sourceTree = "<group>"; };
 		AB9E649325C4D13E008CD933 /* WDMTableViewDelegateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMTableViewDelegateHandler.swift; sourceTree = "<group>"; };
 		AB9E649425C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMTableViewDataSourceHandler.swift; sourceTree = "<group>"; };
@@ -318,6 +330,7 @@
 		AB2E79D025B76483008B37B4 /* CareKit */ = {
 			isa = PBXGroup;
 			children = (
+				AB8A208825DB21E5000986A5 /* CustomCoreDataContainer */,
 				AB8A207225DAB0A5000986A5 /* extensions */,
 				AB8A207125DAAFDF000986A5 /* customModel */,
 				AB2E79D125B76495008B37B4 /* CarePlanStoreManager.swift */,
@@ -417,6 +430,19 @@
 				AB2E79C825B7341B008B37B4 /* WDMMedicationViewController.swift */,
 			);
 			path = Medication;
+			sourceTree = "<group>";
+		};
+		AB8A208825DB21E5000986A5 /* CustomCoreDataContainer */ = {
+			isa = PBXGroup;
+			children = (
+				AB8A207B25DAF5AF000986A5 /* WDMStore.swift */,
+				AB8A207D25DAFF71000986A5 /* WellnessDiary.xcdatamodeld */,
+				AB8A208025DB0572000986A5 /* WDMCDTaskID+CoreDataClass.swift */,
+				AB8A208125DB0572000986A5 /* WDMCDTaskID+CoreDataProperties.swift */,
+				AB8A208225DB0572000986A5 /* WDMCDObject+CoreDataClass.swift */,
+				AB8A208325DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift */,
+			);
+			path = CustomCoreDataContainer;
 			sourceTree = "<group>";
 		};
 		AB9E649B25C4ED6A008CD933 /* Textfield */ = {
@@ -676,6 +702,7 @@
 				CB69BCC8DB599350090E033A /* Collection+Extension.swift in Sources */,
 				ABD496C77267D5D190E816A2 /* Colors.swift in Sources */,
 				AB9E64A225C5B91F008CD933 /* WDMTaskReccurenceViewController.swift in Sources */,
+				AB8A208725DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift in Sources */,
 				ABD8EB2825C2CCC70002F902 /* TableViewSectionRowItem.swift in Sources */,
 				ABD8EB3E25C2CECF0002F902 /* WDMSimpleDatePicker.swift in Sources */,
 				AB3B515225C1E6EF008C5011 /* WDMSummaryContainerViewController.swift in Sources */,
@@ -711,10 +738,12 @@
 				AB9E649D25C4ED7C008CD933 /* WDMSimpleTextField.swift in Sources */,
 				B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */,
 				D98BF8D0A77D93E31116D765 /* UITableview+Extension.swift in Sources */,
+				AB8A208625DB0572000986A5 /* WDMCDObject+CoreDataClass.swift in Sources */,
 				AB8A207425DAB0BB000986A5 /* OCKTask+Extension.swift in Sources */,
 				AB2E79B925B4ED69008B37B4 /* WDMSimpleTabBarItem.swift in Sources */,
 				AB8A207025DAAFAA000986A5 /* WDMTask.swift in Sources */,
 				ABD8EB3125C2CE3E0002F902 /* WDMPickerTableViewCell.swift in Sources */,
+				AB8A208525DB0572000986A5 /* WDMCDTaskID+CoreDataProperties.swift in Sources */,
 				ABD8EB2B25C2CDFB0002F902 /* WDMSimpleTableViewCell.swift in Sources */,
 				ABD8EB1B25C2CAFB0002F902 /* PickerViewRowItem.swift in Sources */,
 				AB2E79C925B7341B008B37B4 /* WDMMedicationViewController.swift in Sources */,
@@ -722,7 +751,9 @@
 				AB9E64B525CA13A9008CD933 /* DelegateSharedInformationProtocol.swift in Sources */,
 				ABD8EB3C25C2CEB70002F902 /* WDMSimpleLabel.swift in Sources */,
 				AB8A202F25D611E7000986A5 /* WDMSimpleSwitch.swift in Sources */,
+				AB8A207C25DAF5AF000986A5 /* WDMStore.swift in Sources */,
 				ABD8EB0925C2C8FE0002F902 /* WDMMealAddTableViewInfoProvider.swift in Sources */,
+				AB8A207F25DAFF72000986A5 /* WellnessDiary.xcdatamodeld in Sources */,
 				AB9E649525C4D13E008CD933 /* WDMTableViewDelegateHandler.swift in Sources */,
 				ABD8EB2F25C2CE2F0002F902 /* WDMDefaultTableViewCell.swift in Sources */,
 				AB8A202825D58EE4000986A5 /* WDMSummaryViewController.swift in Sources */,
@@ -734,6 +765,7 @@
 				AB2E79AF25B4EC65008B37B4 /* Icons.swift in Sources */,
 				AB8A207A25DAE48B000986A5 /* NotificationCenter+Extension.swift in Sources */,
 				AB8A203125D61410000986A5 /* WDMLabelSwitchCellInfoProvider.swift in Sources */,
+				AB8A208425DB0572000986A5 /* WDMCDTaskID+CoreDataClass.swift in Sources */,
 				ABD8EB4025C2CEE90002F902 /* WDMSimplePickerView.swift in Sources */,
 				ABD8EB2425C2CCA60002F902 /* WDMSimpleTableView.swift in Sources */,
 				ABD8EB3525C2CE630002F902 /* WDMSingleButtonTableViewCell.swift in Sources */,
@@ -980,6 +1012,19 @@
 			productName = CareKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		AB8A207D25DAFF71000986A5 /* WellnessDiary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AB8A207E25DAFF71000986A5 /* WellnessDiary.xcdatamodel */,
+			);
+			currentVersion = AB8A207E25DAFF71000986A5 /* WellnessDiary.xcdatamodel */;
+			path = WellnessDiary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9BDFC21C6C1C0F6256FCA8C8 /* Project object */;
 }
