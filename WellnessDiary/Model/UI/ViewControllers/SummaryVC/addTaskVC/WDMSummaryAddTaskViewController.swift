@@ -11,12 +11,12 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
   
   // MARK: - Properties
   
-  var task: WDMTask
+  private var task: WDMTask
   
   // MARK: - Initializers
   
-  public init(with taskReccurence: (frequency: Set<TaskFrequency>, occurence: Set<TaskOccurence>) = (Set<TaskFrequency>(TaskFrequency.allCases), Set(arrayLiteral: TaskOccurence.beforeBreakfast))) {
-    self.task = WDMTask(frequency: taskReccurence.frequency, occurence: taskReccurence.occurence)
+  public init(with task: WDMTask = WDMTask()) {
+    self.task = task
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -52,6 +52,8 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
     // First row
     
     let nameRowInfoProvider = WDMLabelTextFieldCellInfoProvider(mainLabelText: "NAME_:".localize(), textfieldText: task.title, textfieldPlaceHolder: (localLoc("ENTER_TASK_NAME")))
+    nameRowInfoProvider.itemTag = CellInfoProviderTag.taskNameTextFieldTag
+    
     let nameRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: nameRowInfoProvider, cellType: WDMLabelTextfieldTableViewCell.self)
     
     // Second row
@@ -66,21 +68,28 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
     
     // Fourth row
     let adherenceInfoProvider = WDMLabelSwitchCellInfoProvider(mainLabelText: "IMPACTS_ADHERENCE_:".localize(), isOn: task.impactsAdherence)
+    adherenceInfoProvider.itemTag = CellInfoProviderTag.taskAdherenceSwitchTag
+    
     let adherenceRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: adherenceInfoProvider, cellType: WDMLabelSwitchTableViewCell.self)
     
     // Fifth row
     let notificationInfoProvider = WDMLabelSwitchCellInfoProvider(mainLabelText: "ADD_NOTIFICATION_:".localize(), isOn: task.hasNotification)
+    notificationInfoProvider.itemTag = CellInfoProviderTag.taskNotificationSwitchTag
+    
+    let notificationRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: notificationInfoProvider, cellType: WDMLabelSwitchTableViewCell.self)
     
     // Sixth row
     
     let instructionsInfoProvider = WDMLabelTextFieldCellInfoProvider(mainLabelText: "INSTRUCTIONS_:".localize(), textfieldText: "", textfieldPlaceHolder: "TAKE_WITH_A_MEAL".localize())
+    instructionsInfoProvider.itemTag = CellInfoProviderTag.taskInstructionsTextFieldTag
+    
     let instructionsRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: instructionsInfoProvider, cellType: WDMLabelTextfieldTableViewCell.self)
     
     var footer = "IMPACT_ADHERENCE_-_ALLOWS_USERS_TO_DECIDE_WHETHER_OR_NOT_A_TASK_SHOULD_AFFECT_THEIR_DAILY_GOALS".localize()
     footer.append("\n\n")
     footer.append("INSTRUCTIONS_-_DESCRIBES_IMPORTANT_INFORMATION_ON_HOW_A_TASK_SHOULD_BE_COMPLETED_.".localize())
     
-    let firstSection = TableViewSectionItem(headerTitle: "TASK_INFORMATION".localize(), footerTitle: footer, sectionRowItems: [nameRow, selectDateRow, repeatsRow, adherenceRow, instructionsRow])
+    let firstSection = TableViewSectionItem(headerTitle: "TASK_INFORMATION".localize(), footerTitle: footer, sectionRowItems: [nameRow, selectDateRow, repeatsRow, adherenceRow, notificationRow, instructionsRow])
     
     
     // ---Second section---
@@ -100,47 +109,47 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
   
   private func getDetailLabelTextForFrequency() -> String {
     // NEEDS TO FIX FOR LOCALE
-    if task.frequency.count == TaskFrequency.allCases.count {
+    if task.taskRecurrence.frequency.count == TaskFrequency.allCases.count {
       return "EVERY_DAY".localize()
-    } else if task.frequency.isEmpty {
+    } else if task.taskRecurrence.frequency.isEmpty {
       return "NEVER".localize()
-    } else if task.frequency.count == 1 {
-      return "Every".localize() + " " + task.frequency.first!.description()
+    } else if task.taskRecurrence.frequency.count == 1 {
+      return "Every".localize() + " " + task.taskRecurrence.frequency.first!.description()
     } else {
       var str = ""
-      task.frequency.sorted().forEach { str += $0.description() + ","}
+      task.taskRecurrence.frequency.sorted().forEach { str += $0.description() + ","}
       str.removeLast()
       return str
     }
   }
   
   private func getDetailLabelTextForOccurence() -> String {
-    return "TIMES_A_DAY".localize(comment: "Times of day a task is supposed to happen.", count: task.occurence.count)
+    return "TIMES_A_DAY".localize(comment: "Times of day a task is supposed to happen.", count: task.taskRecurrence.occurence.count)
   }
   
 }
 
-extension WDMSummaryAddTaskViewController: TaskRecurrenceSelectionProtocol {
+extension WDMSummaryAddTaskViewController: TaskModifierProtocol {
   
   // MARK: - Methods
   
   func add(_ frequency: TaskFrequency) {
-    task.frequency.insert(frequency)
+    task.taskRecurrence.frequency.insert(frequency)
     infoProvider = createInfoProvider()
   }
   
   func add(_ occurence: TaskOccurence) {
-    task.occurence.insert(occurence)
+    task.taskRecurrence.occurence.insert(occurence)
     infoProvider = createInfoProvider()
   }
   
   func remove(_ frequency: TaskFrequency) {
-    task.frequency.remove(frequency)
+    task.taskRecurrence.frequency.remove(frequency)
     infoProvider = createInfoProvider()
   }
   
   func remove(_ occurence: TaskOccurence) {
-    task.occurence.remove(occurence)
+    task.taskRecurrence.occurence.remove(occurence)
     infoProvider = createInfoProvider()
   }
   
@@ -152,8 +161,11 @@ extension WDMSummaryAddTaskViewController: TaskRecurrenceSelectionProtocol {
     task.instructions = taskInstructions
   }
   
-  func updateNotification(_ taskNotification: String?) {
-    task.notificationIdentifier = taskNotification
+  func updateAdherence(_ taskAdherence: Bool) {
+    task.impactsAdherence = taskAdherence
   }
   
+  func updateNotification(_ hasNotification: Bool) {
+    task.hasNotification = hasNotification
+  }
 }

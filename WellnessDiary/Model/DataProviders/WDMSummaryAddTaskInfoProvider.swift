@@ -10,18 +10,14 @@ import UIKit
 
 class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
   
-  private let NAME_TEXTFIELD_TAG = 1
-  private let INSTRUCTIONS_TEXTFIELD_TAG = 2
-  
   // MARK: - Properties
   
-  var task: WDMTask
-  weak var delegate: TaskRecurrenceSelectionProtocol?
-  weak var textField: WDMSimpleTextField?
+  var task = WDMTask()
+  weak var delegate: TaskModifierProtocol?
   
   // MARK: - Initializers
   
-  init(withSectionItems sectionItems: [TableViewSectionItem] = [], presenterViewController: WDMSimpleViewController? = nil, task: WDMTask, delegate: TaskRecurrenceSelectionProtocol?) {
+  init(withSectionItems sectionItems: [TableViewSectionItem] = [], presenterViewController: WDMSimpleViewController? = nil, task: WDMTask, delegate: TaskModifierProtocol?) {
     self.task = task
     super.init(withSectionItems: sectionItems, presenterViewController: presenterViewController)
     self.delegate = delegate
@@ -29,8 +25,8 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
   
   // MARK: - Functions
   
-  override func getSingleButtonTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell {
-    let cell = super.getSingleButtonTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem) as! WDMSingleButtonTableViewCell
+  override func getSingleButtonTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSingleButtonTableViewCell {
+    let cell = super.getSingleButtonTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
     cell.mainButton.addTarget(self, action: #selector(addBtnTapped(sender:)), for: .touchUpInside)
     return cell
   }
@@ -38,12 +34,13 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
   override func getLabelTextfieldTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMLabelTextfieldTableViewCell {
     let castedCell = super.getLabelTextfieldTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
     castedCell.textfield.delegate = self
-    if castedCell.mainLabel.text == "Name:" {
-      castedCell.textfield.tag = NAME_TEXTFIELD_TAG
-    } else if castedCell.mainLabel.text == "Instructions:" {
-      castedCell.textfield.tag = INSTRUCTIONS_TEXTFIELD_TAG
-    }
-    textField = castedCell.textfield
+    return castedCell
+  }
+  
+  override func getLabelSwitchTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMLabelSwitchTableViewCell {
+    let castedCell = super.getLabelSwitchTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
+  
+    castedCell.switchControl.addTarget(self, action: #selector(switchControlValueChanged(_:)), for: .valueChanged)
     return castedCell
   }
   
@@ -51,15 +48,13 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
     guard let infoProvider = sectionItems[safe: indexPath.section]?.sectionRowItems[safe: indexPath.row]?.cellInfoProvider else { return }
     
     if infoProvider.cellAccessoryType == .disclosureIndicator {
-      presenterViewController?.navigationController?.pushViewController(WDMTaskRecurrenceViewController(with: task.frequency, with: task.occurence, with: delegate), animated: true)
+      presenterViewController?.navigationController?.pushViewController(WDMTaskRecurrenceViewController(with: task.taskRecurrence.frequency, with: task.taskRecurrence.occurence, with: delegate), animated: true)
     }
     
     super.tableView(tableView, didSelectRowAt: indexPath)
   }
   
   @objc private func addBtnTapped(sender: Any) {
-    textField?.resignFirstResponder()
-    task.createScheduleBeforeSaving()
     CarePlanStoreManager.sharedCarePlanStoreManager.add(task)
   }
   
