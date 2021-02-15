@@ -7,6 +7,14 @@
 
 import UIKit
 
+public enum CellInfoProviderTag: Int {
+  case noTag
+  case taskNameTextFieldTag
+  case taskInstructionsTextFieldTag
+  case taskAdherenceSwitchTag
+  case taskNotificationSwitchTag
+}
+
 enum TableViewCellIdentifier: String {
   case defaultCellIdentifier = "defaultCellIdentifier"
   case pickerViewCellIdentifier = "pickerViewCellIdentifier"
@@ -20,6 +28,7 @@ class WDMCellInfoProvider: WDMInfoProvider {
   // MARK: - Properties
   
   var mainLabelText: String?
+  var itemTag: CellInfoProviderTag = .noTag
   var cellAccessoryType: UITableViewCell.AccessoryType = .none
   
   // MARK: - Initializers

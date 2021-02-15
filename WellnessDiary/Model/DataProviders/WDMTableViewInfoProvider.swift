@@ -102,7 +102,7 @@ class WDMTableViewInfoProvider: NSObject {
     return castedCell
   }
   
-  func getSingleButtonTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell {
+  func getSingleButtonTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSingleButtonTableViewCell {
     let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMSingleButtonTableViewCell
     castedCell.cellInfoProvider = cellItem.cellInfoProvider
     
@@ -126,7 +126,7 @@ class WDMTableViewInfoProvider: NSObject {
     return castedCell
   }
   
-  func getLabelSwitchTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell {
+  func getLabelSwitchTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMLabelSwitchTableViewCell {
     let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMLabelSwitchTableViewCell
     castedCell.cellInfoProvider = cellItem.cellInfoProvider
     return castedCell

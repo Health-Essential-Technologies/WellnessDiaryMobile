@@ -64,17 +64,39 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
 
 extension WDMSummaryAddTaskInfoProvider: UITextFieldDelegate {
   
-  func textFieldDidEndEditing(_ textField: UITextField) {
+  func textFieldDidChangeSelection(_ textField: UITextField) {
     if let text = textField.text {
       switch textField.tag {
-      
-      case NAME_TEXTFIELD_TAG:
+      case CellInfoProviderTag.taskNameTextFieldTag.rawValue :
         task.title = text
         delegate?.updateName(text)
         
-      case INSTRUCTIONS_TEXTFIELD_TAG:
+      case CellInfoProviderTag.taskInstructionsTextFieldTag.rawValue :
         task.instructions = text
         delegate?.updateInstructions(text)
+        
+      default:
+        break
+      }
+    }
+  }
+  
+}
+
+extension WDMSummaryAddTaskInfoProvider {
+  
+  // MARK: Methods
+  
+  @objc func switchControlValueChanged(_ sender: Any) {
+    if let control = sender as? WDMSimpleSwitch {
+      switch control.tag {
+      case CellInfoProviderTag.taskAdherenceSwitchTag.rawValue:
+        task.impactsAdherence = control.isOn
+        delegate?.updateAdherence(control.isOn)
+        
+      case CellInfoProviderTag.taskNotificationSwitchTag.rawValue:
+        task.hasNotification = control.isOn
+        delegate?.updateNotification(control.isOn)
         
       default:
         break

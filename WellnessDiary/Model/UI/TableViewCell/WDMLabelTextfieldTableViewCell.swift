@@ -48,6 +48,7 @@ class WDMLabelTextfieldTableViewCell: WDMSimpleTableViewCell {
     guard let infoProvider = cellInfoProvider as? WDMLabelTextFieldCellInfoProvider else { return }
     textfield.text = infoProvider.textfieldText
     textfield.placeholder = infoProvider.textfieldPlaceHolderText
+    textfield.tag = infoProvider.itemTag.rawValue
   }
   
 }

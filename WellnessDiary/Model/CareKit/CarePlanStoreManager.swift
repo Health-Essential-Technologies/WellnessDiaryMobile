@@ -16,26 +16,26 @@ enum TaskIdentifier: String, CaseIterable {
 
 final class CarePlanStoreManager {
   
-  // MARK: - Properties
+  // MARK: Properties
   
   static let sharedCarePlanStoreManager = CarePlanStoreManager()
   
   lazy var synchronizedStoreManager: OCKSynchronizedStoreManager = {
-    let store = WDMStore()
+    let store = OCKStore(name: "WellnessDiary")
     let ssm = OCKSynchronizedStoreManager(wrapping: store)
     return ssm
   }()
    
-  // MARK: - Initializers
+  // MARK: Initializers
   
   private init() {}
   
-  // MARK: - Methods
+  // MARK: Methods
   
-  func add(_ task: WDMTask) {
-    
-    synchronizedStoreManager.store.addAnyTask(task, callbackQueue: .main) { results in
-      NotificationCenter.default.post(name:NSNotification.Name(rawValue: "updated"), object: nil)
+  public func add(_ task: WDMTask) {
+    synchronizedStoreManager.store.addAnyTask(OCKTask(with: task), callbackQueue: .main) { results in
+      
     }
   }
+
 }

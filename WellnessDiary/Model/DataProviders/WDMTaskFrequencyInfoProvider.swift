@@ -14,11 +14,11 @@ class WDMTaskFrequencyInfoProvider: WDMTableViewInfoProvider {
   
   var frequency: Set<TaskFrequency>
   var occurence: Set<TaskOccurence>
-  weak var delegate: TaskRecurrenceSelectionProtocol?
+  weak var delegate: TaskModifierProtocol?
   
   // MARK: - Initallizers
   
-  init(withSectionItems sectionItems: [TableViewSectionItem] = [], presenterViewController: WDMSimpleViewController? = nil, frequency: Set<TaskFrequency>, occurence: Set<TaskOccurence>, delegate: TaskRecurrenceSelectionProtocol?) {
+  init(withSectionItems sectionItems: [TableViewSectionItem] = [], presenterViewController: WDMSimpleViewController? = nil, frequency: Set<TaskFrequency>, occurence: Set<TaskOccurence>, delegate: TaskModifierProtocol?) {
     self.frequency = frequency
     self.occurence = occurence
     self.delegate = delegate

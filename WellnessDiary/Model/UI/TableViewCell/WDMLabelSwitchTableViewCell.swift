@@ -12,7 +12,7 @@ class WDMLabelSwitchTableViewCell: WDMSimpleTableViewCell {
 
   // MARK: - Properties
   
-  private var switchControl: UISwitch = {
+  var switchControl: UISwitch = {
     let switchControl = WDMSimpleSwitch()
     switchControl.translatesAutoresizingMaskIntoConstraints = false
     switchControl.onTintColor = Colors.mainColor.color
@@ -40,7 +40,7 @@ class WDMLabelSwitchTableViewCell: WDMSimpleTableViewCell {
     super.didSetcellInfoProvider()
     let infoProvider = cellInfoProvider as! WDMLabelSwitchCellInfoProvider
     switchControl.setOn(infoProvider.isOn, animated: true)
-    
+    switchControl.tag = infoProvider.itemTag.rawValue
   }
   
 }
