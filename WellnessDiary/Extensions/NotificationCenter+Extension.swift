@@ -13,4 +13,6 @@ public extension Notification.Name {
   // MARK: Properties
   
   static let newTaskAdded = Notification.Name(rawValue:"newTaskAdded")
+  static let taskDeleted = Notification.Name(rawValue: "taskDeleted")
+  static let taskUpdated = Notification.Name(rawValue: "taskUpdated")
 }
