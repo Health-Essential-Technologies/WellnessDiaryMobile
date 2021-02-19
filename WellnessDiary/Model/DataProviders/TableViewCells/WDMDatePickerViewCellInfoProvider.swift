@@ -11,12 +11,14 @@ class WDMDatePickerViewCellInfoProvider: WDMCellInfoProvider {
     
     // MARK: Properties
 
-    var pickerStyle: UIDatePickerStyle
+  var pickerStyle: UIDatePickerStyle
+  var dateSelected: Date
     
     // MARK: - Initializers
     
-    init(mainLabelText: String = "", pickerStyle: UIDatePickerStyle = .automatic) {
+  init(mainLabelText: String = "", dateSelected: Date, pickerStyle: UIDatePickerStyle = .automatic) {
         self.pickerStyle = pickerStyle
+    self.dateSelected = dateSelected
       super.init(mainLabelText: mainLabelText)
     }
   
