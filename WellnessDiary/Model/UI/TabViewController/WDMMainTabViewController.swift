@@ -29,7 +29,7 @@ class WDMMainTabViewController: WDMSimpleTabViewController, UITabBarControllerDe
         tabBarViewControllers = [
           WDMSummaryViewController(),
           WDMMedicationViewController(),
-          WDMSettingsViewController(),
+//          WDMSettingsViewController(),
         ]
         
         let _ = tabBarViewControllers.map {

@@ -19,10 +19,14 @@ extension OCKTask {
     self.init(id: UUID().uuidString, title: task.title, carePlanID: nil, schedule: task.getSchedule())
     self.instructions = task.instructions
     self.impactsAdherence = task.impactsAdherence
+    self.schedule = task.getSchedule()
     
     if task.hasNotification {
       let notificationDic = [taskNotificationKey : self.id]
       self.userInfo = notificationDic
+    } else {
+      self.userInfo?.removeValue(forKey: taskNotificationKey)
     }
   }
+  
 }
