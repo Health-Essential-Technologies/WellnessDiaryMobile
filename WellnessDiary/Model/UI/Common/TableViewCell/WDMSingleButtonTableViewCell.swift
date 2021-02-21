@@ -42,6 +42,7 @@ class WDMSingleButtonTableViewCell: WDMSimpleTableViewCell {
       super.didSetcellInfoProvider()
         guard let infoProvider = cellInfoProvider as? WDMSingleButtonCellInfoProvider else { return }
       mainButton.setTitle(infoProvider.mainBtnLabelText, for: .normal)
+      mainButton.layerBackground = infoProvider.backgroundColor
         mainButton.addTarget(WithClosure: infoProvider.btnActionTargetClosure.closure, forEvent: .touchUpInside)
     }
     
