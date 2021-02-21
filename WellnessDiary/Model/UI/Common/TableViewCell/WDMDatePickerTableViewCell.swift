@@ -43,7 +43,7 @@ class WDMDatePickerTableViewCell: WDMSimpleTableViewCell {
     super.didSetcellInfoProvider()
     guard let datePickerViewInfoProvider = cellInfoProvider as? WDMDatePickerViewCellInfoProvider else { return }
     datePicker.preferredDatePickerStyle = datePickerViewInfoProvider.pickerStyle
-    
+    datePicker.setDate(datePickerViewInfoProvider.dateSelected, animated: false)
     datePicker.addTarget(self, action: #selector(pickerValueChanged), for: .valueChanged)
   }
   
