@@ -32,7 +32,7 @@ final class CarePlanStoreManager {
   
   // MARK: Methods
   
-  public func add(_ task: WDMTask) {
+  public func add(_ task: WDMTask, completion: (() -> Void)?) {
     
     synchronizedStoreManager.store.addAnyTask(OCKTask(with: task), callbackQueue: .main) { results in
       let result = results
@@ -43,6 +43,9 @@ final class CarePlanStoreManager {
           let store = self.synchronizedStoreManager.store as! WDMStore
           store.addTaskID(addedTask.id)
           NotificationCenter.default.post(name: .newTaskAdded, object: nil)
+          if let completion = completion {
+            completion()
+          }
         } catch {
           fatalError("Unable to get saved results. This should never be called!")
         }
