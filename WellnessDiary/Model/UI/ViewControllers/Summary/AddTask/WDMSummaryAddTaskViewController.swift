@@ -12,11 +12,13 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
   // MARK: - Properties
   
   private var task: WDMTask
+  private var editMode: Bool
   
   // MARK: - Initializers
   
-  public init(with task: WDMTask = WDMTask()) {
+  public init(with task: WDMTask = WDMTask(), editMode: Bool = false) {
     self.task = task
+    self.editMode = editMode
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -30,10 +32,18 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
     super.viewDidLoad()
   }
   
+  deinit {
+    print("Remove add task view")
+  }
+  
   // MARK: - Methods
   
   override func initialSetup() {
-    navigationItem.title = localLoc("ADD_TASK")
+    if !editMode {
+      navigationItem.title = localLoc("ADD_TASK")
+    } else {
+      navigationItem.title = "EDIT_TASK".localize()
+    }
     
     tableView = WDMSimpleTableView(frame: view.bounds, style: .insetGrouped)
     tableView.isScrollEnabled = false
@@ -58,11 +68,11 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
     
     // Second row
     
-    let selectDateRowInfoProvider = WDMDatePickerViewCellInfoProvider(mainLabelText: "SELECT_STARTING_DAY_:".localize(), pickerStyle: .compact)
+    let selectDateRowInfoProvider = WDMDatePickerViewCellInfoProvider(mainLabelText: "SELECT_STARTING_DAY_:".localize(),dateSelected: task.startDate, pickerStyle: .compact)
     let selectDateRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: selectDateRowInfoProvider, cellType: WDMDatePickerTableViewCell.self)
     
     // Third row
-    let repeatsRowInfoProvider = WDMDefaultCellInfoProvider(mainLabelText: "REPEATS_:".localize(), detailLabelText: getDetailLabelTextForFrequency() + " | " + getDetailLabelTextForOccurence())
+    let repeatsRowInfoProvider = WDMDefaultCellInfoProvider(mainLabelText: "REPEATS_:".localize(), detailLabelText: task.detailLabelFrequencyText + " | " + task.detailLabelOccurenceText)
     repeatsRowInfoProvider.cellAccessoryType = .disclosureIndicator
     let repeatsRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: repeatsRowInfoProvider, cellType: WDMDefaultTableViewCell.self)
     
@@ -99,32 +109,29 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
       self?.navigationController?.popViewController(animated: true)
     }
     
-    let addBtnRowInfoProvider = WDMSingleButtonCellInfoProvider(mainBtnLabelText: "ADD_TASK".localize(), btnActionTargetClosure:
-                                                                ButtonClosureWrapper(dismissClosure))
-    let  addBtnFirstRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: addBtnRowInfoProvider, cellType: WDMSingleButtonTableViewCell.self, cellHeight: 44)
-    let addBtnSection = TableViewSectionItem(headerTitle: localLoc(" "), footerTitle: nil, sectionRowItems: [addBtnFirstRow])
+    var sections = [firstSection]
     
-    return WDMSummaryAddTaskInfoProvider(withSectionItems: [firstSection, addBtnSection], presenterViewController: self, task: task, delegate: self)
-  }
-  
-  private func getDetailLabelTextForFrequency() -> String {
-    // NEEDS TO FIX FOR LOCALE
-    if task.taskRecurrence.frequency.count == TaskFrequency.allCases.count {
-      return "EVERY_DAY".localize()
-    } else if task.taskRecurrence.frequency.isEmpty {
-      return "NEVER".localize()
-    } else if task.taskRecurrence.frequency.count == 1 {
-      return "Every".localize() + " " + task.taskRecurrence.frequency.first!.description()
+    if !editMode {
+      let addBtnRowInfoProvider = WDMSingleButtonCellInfoProvider(mainBtnLabelText: "ADD_TASK".localize(), btnActionTargetClosure:
+                                                                    ButtonClosureWrapper(dismissClosure))
+      let  addBtnFirstRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: addBtnRowInfoProvider, cellType: WDMSingleButtonTableViewCell.self, cellHeight: 44)
+      let addBtnSection = TableViewSectionItem(headerTitle: localLoc(" "), footerTitle: nil, sectionRowItems: [addBtnFirstRow])
+      sections.append(addBtnSection)
     } else {
-      var str = ""
-      task.taskRecurrence.frequency.sorted().forEach { str += $0.description() + ","}
-      str.removeLast()
-      return str
+      let editButtonInfoProvider = WDMSingleButtonCellInfoProvider(mainBtnLabelText: "UPDATE_TASK".localize(), btnActionTargetClosure:
+                                                                    ButtonClosureWrapper(dismissClosure))
+      let  editBtnFirstRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: editButtonInfoProvider, cellType: WDMSingleButtonTableViewCell.self, cellHeight: 44)
+      let editBtnSection = TableViewSectionItem(headerTitle: "", footerTitle: "", sectionRowItems: [editBtnFirstRow])
+      sections.append(editBtnSection)
+      
+      
+      let deleteButtonInfoProvider = WDMSingleButtonCellInfoProvider(mainBtnLabelText: "DELETE_TASK".localize(), backgroundColor: Colors.deleteButtonEditTask.color, btnActionTargetClosure: ButtonClosureWrapper(dismissClosure))
+      let deleteBtnSecondRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: deleteButtonInfoProvider, cellType: WDMSingleButtonTableViewCell.self, cellHeight: 44)
+      let editDeleteSection = TableViewSectionItem(headerTitle: localLoc(""), footerTitle: nil, sectionRowItems: [deleteBtnSecondRow])
+      sections.append(editDeleteSection)
     }
-  }
-  
-  private func getDetailLabelTextForOccurence() -> String {
-    return "TIMES_A_DAY".localize(comment: "Times of day a task is supposed to happen.", count: task.taskRecurrence.occurence.count)
+    
+    return WDMSummaryAddTaskInfoProvider(withSectionItems: sections, presenterViewController: self, task: task, delegate: self)
   }
   
 }
