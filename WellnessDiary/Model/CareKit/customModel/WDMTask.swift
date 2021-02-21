@@ -19,41 +19,57 @@ public struct WDMTask {
   var impactsAdherence: Bool = true
   var hasNotification: Bool = true
   var instructions: String? = ""
-  var effectiveDate: Date = Date()
+  var startDate: Date = Date()
+ 
+  public var detailLabelFrequencyText: String {
+    // NEEDS TO FIX FOR LOCALE
+    if taskRecurrence.frequency.count == TaskFrequency.allCases.count {
+      return "EVERY_DAY".localize()
+    } else if taskRecurrence.frequency.isEmpty {
+      return "NEVER".localize()
+    } else if taskRecurrence.frequency.count == 1 {
+      return "EVERY".localize() + " " + taskRecurrence.frequency.first!.description()
+    } else {
+      var str = ""
+      taskRecurrence.frequency.sorted().forEach { str += $0.description() + ","}
+      str.removeLast()
+      return str
+    }
+  }
   
+  public var detailLabelOccurenceText: String {
+    return "TIMES_A_DAY".localize(comment: "Times of day a task is supposed to happen.", count: taskRecurrence.occurence.count)
+  }
+  
+  // MARK: Initializers
+  
+  public init() { }
+  
+  public init(with task: OCKTask) {
+    self.uniqueIdentifier = task.id
+    self.title = task.title
+    self.impactsAdherence = task.impactsAdherence
+    self.hasNotification = (task.userInfo?[taskNotificationKey] != nil)
+    self.instructions = task.instructions
+    self.startDate = task.schedule.startDate()
+    getTaskRecurrence(from: task)
+  }
 }
 
 extension WDMTask {
   
-  
-  // TODO: needs to add ockscheule or ockscheduleleement instead instead of having frequency and occurence apart.
-    private func get(_ occurence: TaskOccurence) -> Int {
-      switch occurence {
-      case .beforeBreakfast:
-        return 7
-      case .afterBreakfast:
-        return 9
-      case .beforeLunch:
-        return 11
-      case .afterLunch:
-        return 13
-      case .beforeDinner:
-        return 18
-      case .afterDinner:
-        return 20
-      }
-    }
+  // MARK: Methods
   
     public func getSchedule() -> OCKSchedule {
       var schedules: [OCKSchedule] = []
       if !taskRecurrence.frequency.isEmpty {
         for frequency in taskRecurrence.frequency {
           for occurence in taskRecurrence.occurence {
-            schedules.append(OCKSchedule.weeklyAtTime(weekday: frequency.rawValue + 1, hours: get(occurence), minutes: 0, start: effectiveDate, end: nil, targetValues: [], text: title ?? "" + " " + occurence.rawValue.uppercased().localize()))
+            schedules.append(OCKSchedule.weeklyAtTime(weekday: frequency.rawValue + 1, hours: occurence.rawValue, minutes: 0, start: startDate, end: nil, targetValues: [], text: title ?? "" + " " + TaskOccurence.getTaskAsStringFrom(occurence).localize()))
           }
         }
       } else {
-        let scheduleElement = OCKScheduleElement(start: effectiveDate, end: effectiveDate, interval: DateComponents(day:0), text: title, targetValues: [], duration: .allDay)
+        let scheduleElement = OCKScheduleElement(start: startDate, end: startDate, interval: DateComponents(day:0), text: title, targetValues: [], duration: .allDay)
         schedules.append(OCKSchedule(composing: [scheduleElement]))
       }
       
