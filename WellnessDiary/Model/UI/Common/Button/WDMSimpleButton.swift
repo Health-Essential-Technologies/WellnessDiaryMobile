@@ -11,6 +11,8 @@ class WDMSimpleButton: UIButton {
   
   // MARK: - Properties
   
+  public var layerBackground: UIColor?
+  
   override func draw(_ rect: CGRect) {
     initialSetup()
   }
@@ -21,7 +23,7 @@ class WDMSimpleButton: UIButton {
     super.initialSetup()
     // TODO
     layer.cornerRadius = 12
-    layer.backgroundColor = Colors.mainColor.color.cgColor
+    layer.backgroundColor = layerBackground?.cgColor ?? Colors.mainColor.color.cgColor
   }
   
 }
