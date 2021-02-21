@@ -12,10 +12,7 @@ class WDMSummaryContainerViewController: OCKDailyPageViewController {
   
   // MARK: - Properties
   
-  var listNavigationBarItem: WDMSimpleBarButtomItem = {
-    let item = WDMSimpleBarButtomItem(image: Icons.listIcon.image, style: .plain, target: self, action: #selector(listNavBarBtnTapped(_:)))
-    return item
-  }()
+  var listNavigationBarItem: WDMSimpleBarButtomItem!
   
   // MARK: - Lifecycle
   
@@ -26,10 +23,13 @@ class WDMSummaryContainerViewController: OCKDailyPageViewController {
   
   override func initialSetup() {
     super.initialSetup()
-    
+    listNavigationBarItem = WDMSimpleBarButtomItem(image: Icons.listIcon.image, style: .plain, target: self, action: #selector(listNavBarBtnTapped(_:)))
     self.parent?.navigationItem.rightBarButtonItems = [
-      WDMSimpleBarButtomItem(barButtonSystemItem: .add, target: self, action: #selector(addNavBarBtnTapped(_:)))
+      WDMSimpleBarButtomItem(barButtonSystemItem: .add, target: self, action: #selector(addNavBarBtnTapped(_:))),
+      listNavigationBarItem
     ]
+    
+    shouldDisplayListItemBar()
     
   }
   
@@ -83,17 +83,37 @@ class WDMSummaryContainerViewController: OCKDailyPageViewController {
   
   @objc private func listNavBarBtnTapped(_ sender: Any) {
     
-    let entityQuery = OCKTaskQuery(for: Date())
-    CarePlanStoreManager.sharedCarePlanStoreManager.synchronizedStoreManager.store.fetchAnyTasks(query: entityQuery, callbackQueue: .main) {
-      results in
-      guard let task = try? results.get() else { return }
-      
-      CarePlanStoreManager.sharedCarePlanStoreManager.synchronizedStoreManager.store.deleteAnyTask(task.first!, callbackQueue: .main) { (results) in
-        
-      }
+    let store = storeManager.store as! WDMStore
+    let ids = store.fetchAllTaskIDs()
+    
+    var query = OCKTaskQuery()
+    query.excludesTasksWithNoEvents = true
+    ids.forEach {
+      query.ids.append($0.uniqueIdentifier)
     }
     
-
+    var castedTasks = [WDMTask]()
+    
+    storeManager.store.fetchAnyTasks(query: query, callbackQueue: .main) { results in
+      let result = try? results.get()
+      guard let tasks = result as? [OCKTask] else { return }
+      for index in 0..<tasks.count {
+        // Because carekit produces a new task with the same identifier when a task is updated
+        // Need to check for repeats and keep assigning until find the last one (the most recent updated one).
+        let castedTask = WDMTask(with: tasks[index])
+        if castedTasks.contains(castedTask) {
+          if let duplicateObjectIndex = castedTasks.firstIndex(of: castedTask) {
+            castedTasks[duplicateObjectIndex] = castedTask
+            continue
+          }
+        }
+        castedTasks.append(castedTask)
+        
+      }
+      
+      self.parent?.navigationController?.pushViewController(WDMTaskDetailsViewController(with: castedTasks), animated: true)
+    }
+    
   }
   
   @objc private func addNavBarBtnTapped(_ sender: Any) {
@@ -101,11 +121,23 @@ class WDMSummaryContainerViewController: OCKDailyPageViewController {
   }
 
   private func shouldDisplayListItemBar() {
-    if true {
-      navigationItem.rightBarButtonItems?.append(listNavigationBarItem)
-    } else {
-      navigationItem.rightBarButtonItems?.removeLast()
+    guard let parentRightBarItems = parent?.navigationItem.rightBarButtonItems else {
+      return
     }
+    
+    let store = storeManager.store as! WDMStore
+    let ids = store.fetchAllTaskIDs()
+    
+    if ids.count > 0 {
+      if !parentRightBarItems.contains(listNavigationBarItem) {
+        self.parent?.navigationItem.rightBarButtonItems?.append(listNavigationBarItem)
+      }
+    } else {
+      if parentRightBarItems.contains(listNavigationBarItem) {
+        self.parent?.navigationItem.rightBarButtonItems?.removeLast()
+      }
+    }
+    
   }
   
 }
