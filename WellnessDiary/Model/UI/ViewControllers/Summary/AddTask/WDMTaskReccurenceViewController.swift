@@ -29,9 +29,9 @@ protocol TaskModifierProtocol: AnyObject {
   func updateNotification(_ hasNotification: Bool)
 }
 
-public enum TaskFrequency: Int, CaseIterable, Codable, RawComparable {
-  
-  // MARK: - Cases
+public enum TaskFrequency: Int, CaseIterable, Codable {
+
+  // MARK: Cases
   
   case firstDay
   case secondDay
@@ -40,8 +40,9 @@ public enum TaskFrequency: Int, CaseIterable, Codable, RawComparable {
   case fifthDay
   case sixthDay
   case seventhDay
+
+  // MARK: - Methods
   
-  // MARK: - Properties
   public func description(_ short: Bool = false) -> String {
     if !short {
       return dateFormatter.weekdaySymbols[self.rawValue].uppercased().localize()
@@ -49,8 +50,6 @@ public enum TaskFrequency: Int, CaseIterable, Codable, RawComparable {
       return dateFormatter.shortWeekdaySymbols[self.rawValue].localize()
     }
   }
-  
-  // MARK: - Methods
   
   func getString(from daysOfWeek: TaskFrequency...) -> String {
     if daysOfWeek.count > 1 {
@@ -65,18 +64,99 @@ public enum TaskFrequency: Int, CaseIterable, Codable, RawComparable {
     }
   }
   
+  static public func getFrequency(from date: Date) -> TaskFrequency {
+    let dateComponent = Calendar.current.component(.weekday, from: date)
+    
+    switch dateComponent {
+    case 1:
+      return TaskFrequency.firstDay
+    case 2:
+      return TaskFrequency.secondDay
+    case 3:
+      return TaskFrequency.thirdDay
+    case 4:
+      return TaskFrequency.fourthDay
+    case 5:
+      return TaskFrequency.fifthDay
+    case 6:
+      return TaskFrequency.sixthDay
+    default:
+      return TaskFrequency.seventhDay
+    }
+  }
 }
 
-public enum TaskOccurence: String, Codable, CaseIterable {
-  case beforeBreakfast = "BEFORE_BREAKFAST"
-  case afterBreakfast = "AFTER_BREAKFAST"
-  case beforeLunch = "BEFORE_LUNCH"
-  case afterLunch = "AFTER_LUNCH"
-  case beforeDinner = "BEFORE_DINNER"
-  case afterDinner = "AFTER_DINNER"
-
+extension TaskFrequency: Comparable {
+  
+  // MARK: Methods
+  
+  public static func < (lhs: TaskFrequency, rhs: TaskFrequency) -> Bool {
+    return lhs.rawValue < rhs.rawValue
+  }
+  
 }
 
+public enum TaskOccurence: Int, Codable, CaseIterable {
+  
+  // MARK: Cases
+  case beforeBreakfast = 7
+  case afterBreakfast = 9
+  case beforeLunch = 12
+  case afterLunch = 14
+  case beforeDinner = 19
+  case afterDinner = 20
+  
+  // MARK: Methods
+  
+  static public func getTaskAsStringFrom(_ occurence: TaskOccurence) -> String {
+    switch occurence {
+    case .beforeBreakfast:
+      return "BEFORE_BREAKFAST"
+    case .afterBreakfast:
+      return "AFTER_BREAKFAST"
+    case .beforeLunch:
+      return "BEFORE_LUNCH"
+    case .afterLunch:
+      return "AFTER_LUNCH"
+    case .beforeDinner:
+      return "BEFORE_DINNER"
+    case .afterDinner:
+      return "AFTER_LUNCH"
+    }
+  }
+  
+  static public func getOccurence(from date: Date) -> TaskOccurence {
+    
+    let dateComponent = Calendar.current.component(.hour, from: date)
+  
+    switch dateComponent {
+    case TaskOccurence.beforeBreakfast.rawValue:
+      return .beforeBreakfast
+    case TaskOccurence.afterBreakfast.rawValue:
+      return .afterBreakfast
+    case TaskOccurence.beforeLunch.rawValue:
+      return .beforeLunch
+    case TaskOccurence.afterLunch.rawValue:
+      return .afterLunch
+    case TaskOccurence.beforeDinner.rawValue:
+    return beforeDinner
+    case TaskOccurence.afterDinner.rawValue:
+      return .afterDinner
+    default:
+      fatalError("This should never be called. Occurence is not part of the enum.")
+    }
+  }
+}
+
+extension TaskOccurence: Comparable {
+  
+  // MARK: Methods
+  
+  public static func < (lhs: TaskOccurence, rhs: TaskOccurence) -> Bool {
+    return lhs.rawValue < rhs.rawValue
+  }
+  
+}
 class WDMTaskRecurrenceViewController: WDMSimpleTableViewController {
   
   // MARK: - Properties
@@ -135,7 +215,7 @@ class WDMTaskRecurrenceViewController: WDMSimpleTableViewController {
     var frequencyOccurenceItems: [TableViewSectionRowItem] = []
     
     TaskOccurence.allCases.forEach {
-      let mainLblTxt = $0.rawValue.uppercased().localize()
+      let mainLblTxt = TaskOccurence.getTaskAsStringFrom($0).localize()
       let provider = WDMTaskReccurenceCellInfoProvider(mainLabelText: mainLblTxt, frequency: nil, occurence: $0)
       let rowItem = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: provider, cellType: WDMDefaultTableViewCell.self)
       frequencyOccurenceItems.append(rowItem)
