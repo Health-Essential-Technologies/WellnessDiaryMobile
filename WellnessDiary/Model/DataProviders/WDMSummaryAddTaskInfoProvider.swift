@@ -27,7 +27,8 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
   
   override func getSingleButtonTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSingleButtonTableViewCell {
     let cell = super.getSingleButtonTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
-    cell.mainButton.addTarget(self, action: #selector(addBtnTapped(sender:)), for: .touchUpInside)
+    // Will let the tableview selection handle the action
+    cell.mainButton.isEnabled = false
     return cell
   }
   
@@ -51,11 +52,22 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
       presenterViewController?.navigationController?.pushViewController(WDMTaskRecurrenceViewController(with: task.taskRecurrence.frequency, with: task.taskRecurrence.occurence, with: delegate), animated: true)
     }
     
+    let dismissClosure: () -> () = {
+      self.presenterViewController?.navigationController?.popViewController(animated: true)
+    }
+    
+    if indexPath.section == 1 {
+      if tableView.numberOfSections == 3 {
+        CarePlanStoreManager.sharedCarePlanStoreManager.update(task, completion: dismissClosure)
+      } else {
+        CarePlanStoreManager.sharedCarePlanStoreManager.add(task, completion: dismissClosure)
+      }
+    } else if indexPath.section == 2 {
+      CarePlanStoreManager.sharedCarePlanStoreManager.delete(task, completion: dismissClosure)
+    }
+    
+
     super.tableView(tableView, didSelectRowAt: indexPath)
-  }
-  
-  @objc private func addBtnTapped(sender: Any) {
-    CarePlanStoreManager.sharedCarePlanStoreManager.add(task)
   }
   
 }
