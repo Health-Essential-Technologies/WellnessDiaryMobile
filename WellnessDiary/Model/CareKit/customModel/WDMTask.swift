@@ -13,6 +13,7 @@ public struct WDMTask {
   
   // MARK: Properties
   
+  var uniqueIdentifier: String = ""
   var title: String? = ""
   var taskRecurrence: (frequency: Set<TaskFrequency>, occurence: Set<TaskOccurence>) = (Set(TaskFrequency.allCases), Set(arrayLiteral: TaskOccurence.beforeBreakfast))
   var impactsAdherence: Bool = true
@@ -58,4 +59,29 @@ extension WDMTask {
       
       return OCKSchedule(composing: schedules)
     }
+  
+  private mutating func getTaskRecurrence(from task: OCKTask) {
+    var hourComponent = DateComponents()
+    var taskFrequency = Set<TaskFrequency>()
+    var taskOccurence = Set<TaskOccurence>()
+    
+    task.schedule.elements.forEach { element in
+      let currentOccurence = TaskOccurence.getOccurence(from: element.start)
+      taskOccurence.insert(currentOccurence)
+      hourComponent.hour = currentOccurence.rawValue
+      let date = Calendar.current.date(byAdding: hourComponent, to: element.start)!
+      taskFrequency.insert(TaskFrequency.getFrequency(from: date))
+    }
+    
+    self.taskRecurrence.frequency = Set(taskFrequency.sorted())
+    self.taskRecurrence.occurence = taskOccurence
+  }
+}
+
+extension WDMTask: Equatable {
+  public static func == (lhs: WDMTask, rhs: WDMTask) -> Bool {
+    return lhs.uniqueIdentifier == rhs.uniqueIdentifier
+  }
+  
+  
 }
