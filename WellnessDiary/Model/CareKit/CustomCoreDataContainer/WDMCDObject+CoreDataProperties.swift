@@ -12,15 +12,16 @@ import CoreData
 
 
 extension WDMCDObject {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<WDMCDObject> {
-        return NSFetchRequest<WDMCDObject>(entityName: "WDMCDObject")
-    }
-
-    @NSManaged public var createdDate: Date?
-
+  
+  @nonobjc public class func fetchRequest() -> NSFetchRequest<WDMCDObject> {
+    return NSFetchRequest<WDMCDObject>(entityName: "WDMCDObject")
+  }
+  
+  @NSManaged public var createdDate: Date?
+  @NSManaged public var uniqueIdentifier: String
+  
 }
 
 extension WDMCDObject : Identifiable {
-
+  
 }

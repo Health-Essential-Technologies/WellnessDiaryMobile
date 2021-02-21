@@ -2,12 +2,11 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="WDMCDObject" representedClassName="WDMCDObject" syncable="YES">
         <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="uniqueIdentifier" attributeType="String" defaultValueString="&quot;&quot;"/>
     </entity>
-    <entity name="WDMCDTaskID" representedClassName="WDMCDTaskID" parentEntity="WDMCDObject" syncable="YES">
-        <attribute name="id" attributeType="String" defaultValueString="0"/>
-    </entity>
+    <entity name="WDMCDTaskID" representedClassName="WDMCDTaskID" parentEntity="WDMCDObject" syncable="YES"/>
     <elements>
-        <element name="WDMCDObject" positionX="-9" positionY="45" width="128" height="58"/>
-        <element name="WDMCDTaskID" positionX="-9" positionY="36" width="128" height="58"/>
+        <element name="WDMCDObject" positionX="-9" positionY="45" width="128" height="73"/>
+        <element name="WDMCDTaskID" positionX="-9" positionY="36" width="128" height="43"/>
     </elements>
 </model>

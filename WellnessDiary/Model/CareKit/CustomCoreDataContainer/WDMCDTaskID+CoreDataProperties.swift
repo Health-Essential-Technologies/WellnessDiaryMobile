@@ -12,11 +12,9 @@ import CoreData
 
 
 extension WDMCDTaskID {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<WDMCDTaskID> {
-        return NSFetchRequest<WDMCDTaskID>(entityName: "WDMCDTaskID")
-    }
-
-    @NSManaged public var id: String?
-
+  
+  @nonobjc public class func fetchRequest() -> NSFetchRequest<WDMCDTaskID> {
+    return NSFetchRequest<WDMCDTaskID>(entityName: "WDMCDTaskID")
+  }
+  
 }
