@@ -25,6 +25,8 @@ class WDMSummaryViewController: WDMSimpleViewController {
     super.initialSetup()
     add(previousVC)
     NotificationCenter.default.addObserver(self, selector: #selector(update), name: .newTaskAdded, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(update), name: .taskDeleted, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(update), name: .taskUpdated, object: nil)
   }
   
   @objc func update() {
