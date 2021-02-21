@@ -41,6 +41,9 @@
 "" = "";
 "ADD" = "Add";
 "ADD_TASK" = "Add Task";
+"EDIT_TASK" = "Edit Task";
+"UPDATE_TASK" = "Update Task";
+"DELETE_TASK" = "Delete Task";
 "TASK_INFORMATION" = "Task Information";
 "ENTER_TASK_NAME" = "Enter Task Name";
 "NAME_:" = "Name:";
@@ -86,3 +89,4 @@
 "INSTRUCTIONS_-_DESCRIBES_IMPORTANT_INFORMATION_ON_HOW_A_TASK_SHOULD_BE_COMPLETED_." = "Instructions - describes important information on how a task should be completed.";
 
 "ADD_NOTIFICATION_:" = "Add Notification:";
+"TASK_LIST" = "Task List";
