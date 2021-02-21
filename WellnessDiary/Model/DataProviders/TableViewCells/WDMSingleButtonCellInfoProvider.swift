@@ -12,12 +12,14 @@ class WDMSingleButtonCellInfoProvider: WDMCellInfoProvider {
     // MARK: - Properties
     
     let mainBtnLabelText: String
+  let backgroundColor: UIColor
     let btnActionTargetClosure: ButtonClosureWrapper
     
     // MARK: - Initializers
     
-    init(mainBtnLabelText: String, btnActionTargetClosure: ButtonClosureWrapper) {
+  init(mainBtnLabelText: String, backgroundColor: UIColor = Colors.mainColor.color, btnActionTargetClosure: ButtonClosureWrapper) {
         self.mainBtnLabelText = mainBtnLabelText
+    self.backgroundColor = backgroundColor
         self.btnActionTargetClosure = btnActionTargetClosure
     }
     
