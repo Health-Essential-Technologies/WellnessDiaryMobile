@@ -16,7 +16,7 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
   
   // MARK: - Initializers
   
-  public init(with task: WDMTask = WDMTask(), editMode: Bool = false) {
+  public init(with task: WDMTask, editMode: Bool = false) {
     self.task = task
     self.editMode = editMode
     super.init(nibName: nil, bundle: nil)
@@ -90,7 +90,7 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
     
     // Sixth row
     
-    let instructionsInfoProvider = WDMLabelTextFieldCellInfoProvider(mainLabelText: "INSTRUCTIONS_:".localize(), textfieldText: "", textfieldPlaceHolder: "TAKE_WITH_A_MEAL".localize())
+    let instructionsInfoProvider = WDMLabelTextFieldCellInfoProvider(mainLabelText: "INSTRUCTIONS_:".localize(), textfieldText: task.instructions, textfieldPlaceHolder: "TAKE_WITH_A_MEAL".localize())
     instructionsInfoProvider.itemTag = CellInfoProviderTag.taskInstructionsTextFieldTag
     
     let instructionsRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: instructionsInfoProvider, cellType: WDMLabelTextfieldTableViewCell.self)
@@ -174,5 +174,9 @@ extension WDMSummaryAddTaskViewController: TaskModifierProtocol {
   
   func updateNotification(_ hasNotification: Bool) {
     task.hasNotification = hasNotification
+  }
+  
+  func updateEffectiveDate(_ effectiveDate: Date) {
+    task.startDate = effectiveDate
   }
 }

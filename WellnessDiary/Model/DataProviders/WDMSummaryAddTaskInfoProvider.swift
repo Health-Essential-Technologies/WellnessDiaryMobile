@@ -12,7 +12,7 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
   
   // MARK: - Properties
   
-  var task = WDMTask()
+  var task: WDMTask
   weak var delegate: TaskModifierProtocol?
   
   // MARK: - Initializers
@@ -24,6 +24,12 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
   }
   
   // MARK: - Functions
+  
+  override func getDatePickerTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMDatePickerTableViewCell {
+    let cell = super.getDatePickerTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
+    cell.datePicker.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: .valueChanged)
+    return cell
+  }
   
   override func getSingleButtonTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSingleButtonTableViewCell {
     let cell = super.getSingleButtonTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
@@ -44,6 +50,7 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
     castedCell.switchControl.addTarget(self, action: #selector(switchControlValueChanged(_:)), for: .valueChanged)
     return castedCell
   }
+  
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     guard let infoProvider = sectionItems[safe: indexPath.section]?.sectionRowItems[safe: indexPath.row]?.cellInfoProvider else { return }
@@ -72,7 +79,16 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
   
 }
 
-// MARK: - Extension UITextFieldDelegate
+// MARK: Extension DatePicker
+
+extension WDMSummaryAddTaskInfoProvider {
+  @objc func datePickerValueChanged(sender: UIDatePicker) {
+    task.startDate = sender.date
+    delegate?.updateEffectiveDate(sender.date)
+  }
+}
+
+// MARK: Extension UITextFieldDelegate
 
 extension WDMSummaryAddTaskInfoProvider: UITextFieldDelegate {
   

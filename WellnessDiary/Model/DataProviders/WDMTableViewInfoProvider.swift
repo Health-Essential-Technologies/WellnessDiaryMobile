@@ -80,7 +80,7 @@ class WDMTableViewInfoProvider: NSObject {
     return cell
   }
   
-  private func getDatePickerTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell {
+  func getDatePickerTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMDatePickerTableViewCell {
     
     let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMDatePickerTableViewCell
     castedCell.cellInfoProvider = cellItem.cellInfoProvider
@@ -88,7 +88,7 @@ class WDMTableViewInfoProvider: NSObject {
     return castedCell
   }
   
-  private func getPickerTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell {
+  func getPickerTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell {
     
     let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMPickerTableViewCell
     
