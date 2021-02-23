@@ -20,8 +20,6 @@
 		9D453B9F2066200353EAE1A9 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0EADD17469A8E113703FEA /* Date+Extension.swift */; };
 		A992D6F6C9F0F33BF2AB02BD /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B082016E5C51FCFD01C06B /* UIButton+Extension.swift */; };
 		AB2E79AF25B4EC65008B37B4 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79AE25B4EC65008B37B4 /* Icons.swift */; };
-		AB2E79B425B4ED54008B37B4 /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E79B325B4ED54008B37B4 /* SwiftCharts.framework */; };
-		AB2E79B525B4ED54008B37B4 /* SwiftCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E79B325B4ED54008B37B4 /* SwiftCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB2E79B925B4ED69008B37B4 /* WDMSimpleTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79B825B4ED69008B37B4 /* WDMSimpleTabBarItem.swift */; };
 		AB2E79BE25B4F025008B37B4 /* WDMSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79BD25B4F025008B37B4 /* WDMSettingsViewController.swift */; };
 		AB2E79C125B60076008B37B4 /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB2E79C025B60076008B37B4 /* CareKit */; };
@@ -69,6 +67,8 @@
 		AB9E64B825CA2E67008CD933 /* WDMInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E64B725CA2E67008CD933 /* WDMInfoProvider.swift */; };
 		ABB1C5D725E331FF003CA06E /* LocalNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */; };
 		ABC467B325E47E0200CA03DF /* WDMTaskReccurence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC467B225E47E0200CA03DF /* WDMTaskReccurence.swift */; };
+		ABC467C225E5A6AA00CA03DF /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC467C125E5A6AA00CA03DF /* ResearchKit.framework */; };
+		ABC467C325E5A6AA00CA03DF /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABC467C125E5A6AA00CA03DF /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ABD496C77267D5D190E816A2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB5C3DA3C658768F741BF7 /* Colors.swift */; };
 		ABD8EB0025C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8EAFF25C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift */; };
 		ABD8EB0325C24E3C0002F902 /* LocalLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8EB0225C24E3C0002F902 /* LocalLocalizable.swift */; };
@@ -108,7 +108,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AB2E79B525B4ED54008B37B4 /* SwiftCharts.framework in Embed Frameworks */,
+				ABC467C325E5A6AA00CA03DF /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +133,6 @@
 		A3CD31B7F9177C89437D51DF /* WDMSimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleViewController.swift; sourceTree = "<group>"; };
 		A8D6636D32350437B52BF16D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB2E79AE25B4EC65008B37B4 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
-		AB2E79B325B4ED54008B37B4 /* SwiftCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCharts.framework; path = Carthage/Build/iOS/SwiftCharts.framework; sourceTree = "<group>"; };
 		AB2E79B825B4ED69008B37B4 /* WDMSimpleTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleTabBarItem.swift; sourceTree = "<group>"; };
 		AB2E79BD25B4F025008B37B4 /* WDMSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSettingsViewController.swift; sourceTree = "<group>"; };
 		AB2E79C825B7341B008B37B4 /* WDMMedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMMedicationViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +178,7 @@
 		AB9E64B725CA2E67008CD933 /* WDMInfoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMInfoProvider.swift; sourceTree = "<group>"; };
 		ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsManager.swift; sourceTree = "<group>"; };
 		ABC467B225E47E0200CA03DF /* WDMTaskReccurence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTaskReccurence.swift; sourceTree = "<group>"; };
+		ABC467C125E5A6AA00CA03DF /* ResearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResearchKit.framework; path = Carthage/Build/iOS/ResearchKit.framework; sourceTree = "<group>"; };
 		ABD8EAFF25C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleCustomOCKLabelButton.swift; sourceTree = "<group>"; };
 		ABD8EB0225C24E3C0002F902 /* LocalLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLocalizable.swift; sourceTree = "<group>"; };
 		ABD8EB0625C2C8DD0002F902 /* WDMTableViewInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTableViewInfoProvider.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB2E79C125B60076008B37B4 /* CareKit in Frameworks */,
-				AB2E79B425B4ED54008B37B4 /* SwiftCharts.framework in Frameworks */,
+				ABC467C225E5A6AA00CA03DF /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,9 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				ABB1C5D525E331E1003CA06E /* WDMLocalNotifications */,
-				ABB1C5D425E331D3003CA06E /* Classes */,
-				ABB1C5D325E331C8003CA06E /* Structs */,
-				ABB1C5D225E331C0003CA06E /* UI */,
 				CB9E2895F53F79CC38FA56BC /* Info.plist */,
 				5C3BBAA04845D93BB672BE18 /* Model */,
 				EE99487FB21F30BAE2CFD887 /* Extensions */,
@@ -313,7 +310,7 @@
 		AB2E79B225B4ED54008B37B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E79B325B4ED54008B37B4 /* SwiftCharts.framework */,
+				ABC467C125E5A6AA00CA03DF /* ResearchKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -495,27 +492,6 @@
 				AB9E649125C49959008CD933 /* WDMSimpleTableViewController.swift */,
 			);
 			name = Base;
-			sourceTree = "<group>";
-		};
-		ABB1C5D225E331C0003CA06E /* UI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		ABB1C5D325E331C8003CA06E /* Structs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Structs;
-			sourceTree = "<group>";
-		};
-		ABB1C5D425E331D3003CA06E /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		ABB1C5D525E331E1003CA06E /* WDMLocalNotifications */ = {

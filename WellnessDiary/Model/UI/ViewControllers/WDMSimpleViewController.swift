@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftCharts
 
 class WDMSimpleViewController: UIViewController {
 
