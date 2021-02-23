@@ -117,7 +117,7 @@ class WDMSummaryContainerViewController: OCKDailyPageViewController {
   }
   
   @objc private func addNavBarBtnTapped(_ sender: Any) {
-    self.parent?.navigationController?.pushViewController(WDMSummaryAddTaskViewController(), animated: true)
+    self.parent?.navigationController?.pushViewController(WDMSummaryAddTaskViewController(with: WDMTask(Date())), animated: true)
   }
 
   private func shouldDisplayListItemBar() {

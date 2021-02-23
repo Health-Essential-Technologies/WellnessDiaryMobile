@@ -24,12 +24,22 @@ class WDMTaskDetailsTableViewCell: WDMSimpleTableViewCell {
     return lbl
   }()
   
+  private var instructionLabel: WDMSimpleLabel = {
+    let lbl = WDMSimpleLabel()
+    lbl.translatesAutoresizingMaskIntoConstraints = false
+    return lbl
+  }()
+  
   // MARK: Methods
   
   override func initialSetup() {
     contentView.addSubview(mainLabel)
+    
+    mainLabel.font = UIFont.boldSystemFont(ofSize: 24)
+    
     contentView.addSubview(effectiveDateLabel)
     contentView.addSubview(frequencyOccurenceLabel)
+    contentView.addSubview(instructionLabel)
     
     
     NSLayoutConstraint.activate([
@@ -42,9 +52,13 @@ class WDMTaskDetailsTableViewCell: WDMSimpleTableViewCell {
       effectiveDateLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 8),
       
       frequencyOccurenceLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 8),
-      frequencyOccurenceLabel.topAnchor.constraint(equalTo: effectiveDateLabel.bottomAnchor, constant: 8),
+      frequencyOccurenceLabel.topAnchor.constraint(equalTo: effectiveDateLabel.bottomAnchor, constant: 0),
       frequencyOccurenceLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor, constant: -8),
-      frequencyOccurenceLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -8)
+      
+      instructionLabel.topAnchor.constraint(equalTo: frequencyOccurenceLabel.bottomAnchor, constant: 0),
+      instructionLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 8),
+      instructionLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
+      instructionLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -8)
     ])
     
   }
@@ -52,8 +66,9 @@ class WDMTaskDetailsTableViewCell: WDMSimpleTableViewCell {
   override func didSetcellInfoProvider() {
     let infoProvider = cellInfoProvider as! WDMTaskDetailsCellInfoProvider
     mainLabel.text = infoProvider.task.title
-    effectiveDateLabel.text = DateFormatter().string(from: infoProvider.task.startDate)
-    frequencyOccurenceLabel.text = DateFormatter().string(from: infoProvider.task.startDate)
+    effectiveDateLabel.text = infoProvider.task.detailLabelFrequencyText
+    frequencyOccurenceLabel.text = infoProvider.task.detailLabelOccurenceText
+    instructionLabel.text = infoProvider.task.instructions
     
   }
 

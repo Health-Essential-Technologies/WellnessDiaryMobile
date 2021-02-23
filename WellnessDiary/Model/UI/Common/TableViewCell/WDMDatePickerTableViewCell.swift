@@ -14,8 +14,6 @@ class WDMDatePickerTableViewCell: WDMSimpleTableViewCell {
   let datePicker: WDMSimpleDatePicker = {
     let picker = WDMSimpleDatePicker()
     picker.datePickerMode = .date
-    picker.maximumDate = Date(timeIntervalSinceNow: 0)
-    picker.backgroundColor = .none
     picker.translatesAutoresizingMaskIntoConstraints  = false
     return picker
   }()

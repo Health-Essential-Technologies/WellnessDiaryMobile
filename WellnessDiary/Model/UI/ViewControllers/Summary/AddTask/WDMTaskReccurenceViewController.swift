@@ -24,6 +24,7 @@ protocol TaskModifierProtocol: AnyObject {
   func remove(_ frequency: TaskFrequency)
   func remove(_ occurence: TaskOccurence)
   func updateName(_ taskTitle: String)
+  func updateEffectiveDate(_ effectiveDate: Date)
   func updateInstructions(_ taskInstructions: String)
   func updateAdherence(_ taskAdherence: Bool)
   func updateNotification(_ hasNotification: Bool)
@@ -33,7 +34,7 @@ public enum TaskFrequency: Int, CaseIterable, Codable {
 
   // MARK: Cases
   
-  case firstDay
+  case firstDay = 1
   case secondDay
   case thirdDay
   case fourthDay
@@ -45,9 +46,9 @@ public enum TaskFrequency: Int, CaseIterable, Codable {
   
   public func description(_ short: Bool = false) -> String {
     if !short {
-      return dateFormatter.weekdaySymbols[self.rawValue].uppercased().localize()
+      return dateFormatter.weekdaySymbols[self.rawValue - 1].uppercased().localize()
     } else {
-      return dateFormatter.shortWeekdaySymbols[self.rawValue].localize()
+      return dateFormatter.shortWeekdaySymbols[self.rawValue - 1].localize()
     }
   }
   
@@ -65,7 +66,7 @@ public enum TaskFrequency: Int, CaseIterable, Codable {
   }
   
   static public func getFrequency(from date: Date) -> TaskFrequency {
-    let dateComponent = Calendar.current.component(.weekday, from: date)
+    let dateComponent = Calendar.current.component(.weekday, from: Calendar.current.startOfDay(for: date))
     
     switch dateComponent {
     case 1:
