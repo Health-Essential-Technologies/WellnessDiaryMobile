@@ -15,7 +15,7 @@ public struct WDMTask {
   
   var uniqueIdentifier: String = ""
   var title: String? = ""
-  var taskRecurrence: (frequency: Set<TaskFrequency>, occurence: Set<TaskOccurence>) = (Set(TaskFrequency.allCases), Set(arrayLiteral: TaskOccurence.beforeBreakfast))
+  var taskRecurrence: WDMTaskReccurence = WDMTaskReccurence()
   var impactsAdherence: Bool = true
   var hasNotification: Bool = true
   var instructions: String? = ""
@@ -41,9 +41,17 @@ public struct WDMTask {
     return "TIMES_A_DAY".localize(comment: "Times of day a task is supposed to happen.", count: taskRecurrence.occurence.count)
   }
   
+  private var dateFormatter: DateFormatter = {
+    var df = DateFormatter()
+    df.dateStyle = .full
+    return df
+  }()
+  
   // MARK: Initializers
   
-  public init() { }
+  public init(_ startDate: Date) {
+    self.startDate = startDate
+  }
   
   public init(with task: OCKTask) {
     self.uniqueIdentifier = task.id
@@ -65,7 +73,7 @@ extension WDMTask {
       if !taskRecurrence.frequency.isEmpty {
         for frequency in taskRecurrence.frequency {
           for occurence in taskRecurrence.occurence {
-            schedules.append(OCKSchedule.weeklyAtTime(weekday: frequency.rawValue + 1, hours: occurence.rawValue, minutes: 0, start: startDate, end: nil, targetValues: [], text: title ?? "" + " " + TaskOccurence.getTaskAsStringFrom(occurence).localize()))
+            schedules.append(OCKSchedule.weeklyAtTime(weekday: frequency.rawValue, hours: occurence.rawValue, minutes: 0, start: Calendar.current.startOfDay(for: startDate), end: nil, targetValues: [], text: title ?? "" + " " + TaskOccurence.getTaskAsStringFrom(occurence).localize()))
           }
         }
       } else {
@@ -77,22 +85,20 @@ extension WDMTask {
     }
   
   private mutating func getTaskRecurrence(from task: OCKTask) {
-    var hourComponent = DateComponents()
-    var taskFrequency = Set<TaskFrequency>()
-    var taskOccurence = Set<TaskOccurence>()
+    taskRecurrence.frequency.removeAll()
+    taskRecurrence.occurence.removeAll()
     
     task.schedule.elements.forEach { element in
-      let currentOccurence = TaskOccurence.getOccurence(from: element.start)
-      taskOccurence.insert(currentOccurence)
-      hourComponent.hour = currentOccurence.rawValue
-      let date = Calendar.current.date(byAdding: hourComponent, to: element.start)!
-      taskFrequency.insert(TaskFrequency.getFrequency(from: date))
+      self.taskRecurrence.occurence.insert(TaskOccurence.getOccurence(from: element.start))
+      self.taskRecurrence.frequency.insert(TaskFrequency.getFrequency(from: element.start))
     }
     
-    self.taskRecurrence.frequency = Set(taskFrequency.sorted())
-    self.taskRecurrence.occurence = taskOccurence
+    self.taskRecurrence.frequency = Set(self.taskRecurrence.frequency.sorted())
   }
+  
 }
+
+// MARK: Equatable
 
 extension WDMTask: Equatable {
   public static func == (lhs: WDMTask, rhs: WDMTask) -> Bool {
