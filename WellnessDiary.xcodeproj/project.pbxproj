@@ -67,6 +67,8 @@
 		AB9E64B325C8F27C008CD933 /* RawComparable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E64B225C8F27C008CD933 /* RawComparable+Extension.swift */; };
 		AB9E64B525CA13A9008CD933 /* DelegateSharedInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E64B425CA13A8008CD933 /* DelegateSharedInformationProtocol.swift */; };
 		AB9E64B825CA2E67008CD933 /* WDMInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E64B725CA2E67008CD933 /* WDMInfoProvider.swift */; };
+		ABB1C5D725E331FF003CA06E /* LocalNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */; };
+		ABC467B325E47E0200CA03DF /* WDMTaskReccurence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC467B225E47E0200CA03DF /* WDMTaskReccurence.swift */; };
 		ABD496C77267D5D190E816A2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB5C3DA3C658768F741BF7 /* Colors.swift */; };
 		ABD8EB0025C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8EAFF25C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift */; };
 		ABD8EB0325C24E3C0002F902 /* LocalLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8EB0225C24E3C0002F902 /* LocalLocalizable.swift */; };
@@ -175,6 +177,8 @@
 		AB9E64B225C8F27C008CD933 /* RawComparable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RawComparable+Extension.swift"; sourceTree = "<group>"; };
 		AB9E64B425CA13A8008CD933 /* DelegateSharedInformationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateSharedInformationProtocol.swift; sourceTree = "<group>"; };
 		AB9E64B725CA2E67008CD933 /* WDMInfoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMInfoProvider.swift; sourceTree = "<group>"; };
+		ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsManager.swift; sourceTree = "<group>"; };
+		ABC467B225E47E0200CA03DF /* WDMTaskReccurence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTaskReccurence.swift; sourceTree = "<group>"; };
 		ABD8EAFF25C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleCustomOCKLabelButton.swift; sourceTree = "<group>"; };
 		ABD8EB0225C24E3C0002F902 /* LocalLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLocalizable.swift; sourceTree = "<group>"; };
 		ABD8EB0625C2C8DD0002F902 /* WDMTableViewInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTableViewInfoProvider.swift; sourceTree = "<group>"; };
@@ -222,6 +226,10 @@
 		0B5DEA200C24B945B777F787 /* WellnessDiary */ = {
 			isa = PBXGroup;
 			children = (
+				ABB1C5D525E331E1003CA06E /* WDMLocalNotifications */,
+				ABB1C5D425E331D3003CA06E /* Classes */,
+				ABB1C5D325E331C8003CA06E /* Structs */,
+				ABB1C5D225E331C0003CA06E /* UI */,
 				CB9E2895F53F79CC38FA56BC /* Info.plist */,
 				5C3BBAA04845D93BB672BE18 /* Model */,
 				EE99487FB21F30BAE2CFD887 /* Extensions */,
@@ -397,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				AB8A206F25DAAFAA000986A5 /* WDMTask.swift */,
+				ABC467B225E47E0200CA03DF /* WDMTaskReccurence.swift */,
 			);
 			path = customModel;
 			sourceTree = "<group>";
@@ -486,6 +495,35 @@
 				AB9E649125C49959008CD933 /* WDMSimpleTableViewController.swift */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		ABB1C5D225E331C0003CA06E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		ABB1C5D325E331C8003CA06E /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		ABB1C5D425E331D3003CA06E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		ABB1C5D525E331E1003CA06E /* WDMLocalNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */,
+			);
+			path = WDMLocalNotifications;
 			sourceTree = "<group>";
 		};
 		ABD8EB0525C2C8C00002F902 /* DataProviders */ = {
@@ -760,6 +798,7 @@
 				AB9E649D25C4ED7C008CD933 /* WDMSimpleTextField.swift in Sources */,
 				B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */,
 				D98BF8D0A77D93E31116D765 /* UITableview+Extension.swift in Sources */,
+				ABB1C5D725E331FF003CA06E /* LocalNotificationsManager.swift in Sources */,
 				AB8A208625DB0572000986A5 /* WDMCDObject+CoreDataClass.swift in Sources */,
 				AB8A207425DAB0BB000986A5 /* OCKTask+Extension.swift in Sources */,
 				AB2E79B925B4ED69008B37B4 /* WDMSimpleTabBarItem.swift in Sources */,
@@ -768,6 +807,7 @@
 				AB8A208B25DB268F000986A5 /* WDMTaskDetailsViewController.swift in Sources */,
 				ABD8EB2B25C2CDFB0002F902 /* WDMSimpleTableViewCell.swift in Sources */,
 				ABD8EB1B25C2CAFB0002F902 /* PickerViewRowItem.swift in Sources */,
+				ABC467B325E47E0200CA03DF /* WDMTaskReccurence.swift in Sources */,
 				AB2E79C925B7341B008B37B4 /* WDMMedicationViewController.swift in Sources */,
 				AB3B515725C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift in Sources */,
 				AB9E64B525CA13A9008CD933 /* DelegateSharedInformationProtocol.swift in Sources */,

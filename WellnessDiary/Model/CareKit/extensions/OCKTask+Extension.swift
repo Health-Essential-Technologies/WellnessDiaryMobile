@@ -13,6 +13,12 @@ public let taskNotificationKey = "Notification"
 
 extension OCKTask {
   
+  // MARK: Properties
+  
+  public var hasNotification: Bool {
+    userInfo?[taskNotificationKey] != nil ? true : false
+  }
+  
   // MARK: Initializers
   
   init(with task: WDMTask) {
