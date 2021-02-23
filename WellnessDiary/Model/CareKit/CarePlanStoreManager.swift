@@ -37,18 +37,16 @@ final class CarePlanStoreManager {
     synchronizedStoreManager.store.addAnyTask(OCKTask(with: task), callbackQueue: .main) { results in
       let result = results
       switch result {
-      case .success( _):
-        do {
-          let addedTask = try result.get()
+      case .success(let addedTask):
           let store = self.synchronizedStoreManager.store as! WDMStore
           store.addTaskID(addedTask.id)
           NotificationCenter.default.post(name: .newTaskAdded, object: nil)
           if let completion = completion {
+            if task.hasNotification {
+              LocalNotificationsManager.sharedInstance.add(task)
+            }
             completion()
           }
-        } catch {
-          fatalError("Unable to get saved results. This should never be called!")
-        }
         break
       case .failure(let error):
         fatalError("Unable to save due to \(error.localizedDescription)")
@@ -65,7 +63,12 @@ final class CarePlanStoreManager {
       
       switch fetchedTasksResults {
       case .success(let fetchedTasks):
+        
         var fetchedCastedTask = fetchedTasks.first as! OCKTask
+        
+        let previousSchedule = fetchedCastedTask.schedule
+        let previousHasNotification = fetchedCastedTask.hasNotification
+        
         fetchedCastedTask.instructions = task.instructions
         fetchedCastedTask.title = task.title
         fetchedCastedTask.schedule = task.getSchedule()
@@ -107,6 +110,16 @@ final class CarePlanStoreManager {
                             case .success( _):
                               NotificationCenter.default.post(name: .taskUpdated, object: task)
                               if let completion = completion {
+                                
+                                // Need to check if previous schedule is still the same if not remove them
+                                if !(previousSchedule == task.getSchedule()) {
+                                  LocalNotificationsManager.sharedInstance.remove(with: task.uniqueIdentifier, taskRecurrence: task.taskRecurrence)
+                                }
+                              
+                                if !(previousHasNotification == fetchedCastedTask.hasNotification) || !(previousSchedule == task.getSchedule()) {
+                                  LocalNotificationsManager.sharedInstance.update(task)
+                                }
+                                
                                 completion()
                               }
                             case .failure(let addedOutcomesError):
@@ -133,6 +146,7 @@ final class CarePlanStoreManager {
                 case .success( _):
                   NotificationCenter.default.post(name: .taskUpdated, object: task)
                   if let completion = completion {
+                    LocalNotificationsManager.sharedInstance.update(task)
                     completion()
                   }
                 case .failure(let fetchedTasksError):
@@ -169,6 +183,7 @@ final class CarePlanStoreManager {
               store.delete(taskToDelete)
               NotificationCenter.default.post(name: .taskDeleted, object: taskToDelete)
               if let completion = completion {
+                LocalNotificationsManager.sharedInstance.remove(taskToDelete)
                 completion()
               }
             case .failure(let error):
