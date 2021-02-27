@@ -40,6 +40,7 @@ public class LocalNotificationsManager: NSObject, UNUserNotificationCenterDelega
     let content = UNMutableNotificationContent()
     content.title = task.title ?? ""
     content.body = task.instructions ?? ""
+    content.sound = UNNotificationSound.defaultCritical
     let repeatNotifications = task.taskRecurrence.frequency.count > 0 ? true : false
     
     for frequency in task.taskRecurrence.frequency {
@@ -47,7 +48,7 @@ public class LocalNotificationsManager: NSObject, UNUserNotificationCenterDelega
         
         
         let identifier = task.uniqueIdentifier + "_" + self.dateFormatter.string(from: task.startDate) + "_" + frequency.description() + "_" + TaskOccurence.getTaskAsStringFrom(occurence)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: DateComponents(hour: Calendar.current.dateComponents([.hour], from: Date()).hour, minute: Calendar.current.component(.minute, from: Date()), second: Calendar.current.component(.second, from: Date()) + 10, weekday: Calendar.current.dateComponents([.weekday], from: Date()).weekday), repeats: repeatNotifications)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: DateComponents(hour: occurence.rawValue, weekday: frequency.rawValue), repeats: repeatNotifications)
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
           if error != nil {

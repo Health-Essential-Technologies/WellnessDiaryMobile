@@ -174,8 +174,8 @@
             filePath = "WellnessDiary/Model/UI/ViewControllers/Summary/AddTask/WDMSummaryAddTaskViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "updateEffectiveDate(_:)"
             landmarkType = "7">
          </BreakpointContent>
