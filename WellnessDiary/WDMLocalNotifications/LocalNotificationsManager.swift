@@ -31,15 +31,12 @@ public class LocalNotificationsManager: NSObject, UNUserNotificationCenterDelega
   
   // MARK: Methods
   
+  public func getPermision(with completionHandler: @escaping (Bool, Error?) -> Void) {
+    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound,. badge], completionHandler: completionHandler)
+  }
+  
   public func add(_ task: WDMTask) {
     
-    UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert,.sound]) { (success, error) in
-      if error != nil {
-        print(error?.localizedDescription)
-      } else {
-        print(success)
-      }
-    }
     let content = UNMutableNotificationContent()
     content.title = task.title ?? ""
     content.body = task.instructions ?? ""
@@ -49,8 +46,8 @@ public class LocalNotificationsManager: NSObject, UNUserNotificationCenterDelega
       for occurence in task.taskRecurrence.occurence {
         
         
-        let identifier = task.uniqueIdentifier + "_" + dateFormatter.string(from: task.startDate) + "_" + frequency.description() + "_" + TaskOccurence.getTaskAsStringFrom(occurence)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: DateComponents(hour: Calendar.current.dateComponents([.hour], from: Date()).hour, minute: 43, weekday: Calendar.current.dateComponents([.weekday], from: Date()).weekday), repeats: repeatNotifications)
+        let identifier = task.uniqueIdentifier + "_" + self.dateFormatter.string(from: task.startDate) + "_" + frequency.description() + "_" + TaskOccurence.getTaskAsStringFrom(occurence)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: DateComponents(hour: Calendar.current.dateComponents([.hour], from: Date()).hour, minute: Calendar.current.component(.minute, from: Date()), second: Calendar.current.component(.second, from: Date()) + 10, weekday: Calendar.current.dateComponents([.weekday], from: Date()).weekday), repeats: repeatNotifications)
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
           if error != nil {
@@ -59,6 +56,7 @@ public class LocalNotificationsManager: NSObject, UNUserNotificationCenterDelega
         }
       }
     }
+
   }
   
   public func remove(_ task: WDMTask) {
