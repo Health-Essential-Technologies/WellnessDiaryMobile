@@ -19,6 +19,7 @@ internal typealias AssetColorTypeAlias = ColorAsset.Color
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Colors {
+  internal static let deleteButtonEditTask = ColorAsset(name: "deleteButtonEditTask")
   internal static let mainColor = ColorAsset(name: "mainColor")
   internal static let mainNavigationBarTint = ColorAsset(name: "mainNavigationBarTint")
   internal static let mainNavigationTint = ColorAsset(name: "mainNavigationTint")

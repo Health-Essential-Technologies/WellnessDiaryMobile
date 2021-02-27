@@ -11,9 +11,6 @@ class WDMMealAddTableViewInfoProvider: WDMTableViewInfoProvider {
 
     // MARK: - Properties
     
-    var liquidValue = 0.0
-    var dateCreated = Date()
-    
     private var pickerCellInfoProvider: WDMPickerViewInfoProvider?
     
     // MARK: - Methods
@@ -25,7 +22,7 @@ class WDMMealAddTableViewInfoProvider: WDMTableViewInfoProvider {
         
         case is WDMDatePickerTableViewCell :
             let castedCell = cell as! WDMDatePickerTableViewCell
-            castedCell.datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
+//            castedCell.datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
             cell = castedCell
             break
             
@@ -46,7 +43,6 @@ class WDMMealAddTableViewInfoProvider: WDMTableViewInfoProvider {
         case is WDMSingleButtonTableViewCell:
             let castedCell = cell as! WDMSingleButtonTableViewCell
             castedCell.mainButton.addTarget(tableView, action: #selector(tableView.reloadData), for: .touchUpInside)
-            castedCell.mainButton.addTarget(self, action: #selector(saveLiquid), for: .touchUpInside)
             cell = castedCell
             break
             
@@ -64,18 +60,7 @@ class WDMMealAddTableViewInfoProvider: WDMTableViewInfoProvider {
         cell.unitLabel.text = "oz"
         return cell
     }
-    
-    @objc func datePickerValueChanged(sender: UIDatePicker) {
-        dateCreated = sender.date
-    }
-    
-    @objc func saveLiquid() {
-        if liquidValue == 0.0 {
-            liquidValue = 1
-        }
-        
-//        CoreDataManager.sharedManager.saveFLuidEntry(WithLiquidValue: liquidValue, ForDate: dateCreated)
-    }
+  
     
 }
 
@@ -86,9 +71,7 @@ extension WDMMealAddTableViewInfoProvider: UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        guard let pickerValue = pickerCellInfoProvider?.pickerView(pickerView, didSelectRow: row, inComponent: component) else { return }
-        
-        liquidValue = Double(pickerValue) ?? 0
+        guard let _ = pickerCellInfoProvider?.pickerView(pickerView, didSelectRow: row, inComponent: component) else { return }
         
     }
     

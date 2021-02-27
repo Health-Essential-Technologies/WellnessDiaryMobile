@@ -28,8 +28,8 @@ class WDMMainTabViewController: WDMSimpleTabViewController, UITabBarControllerDe
         
         tabBarViewControllers = [
           WDMSummaryViewController(),
-          WDMMedicationViewController(),
-          WDMSettingsViewController(),
+          WDMDailySurveyViewController(),
+          WDMSettingsViewController()
         ]
         
         let _ = tabBarViewControllers.map {
@@ -45,15 +45,15 @@ class WDMMainTabViewController: WDMSimpleTabViewController, UITabBarControllerDe
     func setupTabBarItems(forViewController viewController: UIViewController) {
         
       if viewController is WDMSummaryViewController {
-        viewController.tabBarItem = WDMSimpleTabBarItem(title: "Summary", image: Icons.unselectedSummaryIcon.image , selectedImage: Icons.selectedSummaryIcon.image)
+        viewController.tabBarItem = WDMSimpleTabBarItem(title: "DAILY_TASKS".localize(), image: Icons.unselectedSummaryIcon.image , selectedImage: Icons.selectedSummaryIcon.image)
       }
       
       if viewController is WDMSettingsViewController {
-        viewController.tabBarItem = WDMSimpleTabBarItem(title: "Settings", image: Icons.unselectedSettingIcon.image , selectedImage: Icons.selectedSettingIcon.image)
+        viewController.tabBarItem = WDMSimpleTabBarItem(title: "SETTINGS".localize(), image: Icons.unselectedSettingIcon.image , selectedImage: Icons.selectedSettingIcon.image)
       }
       
-      if viewController is WDMMedicationViewController {
-        viewController.tabBarItem = WDMSimpleTabBarItem(title: "Medication", image: Icons.unselectedMedicationIcon.image, selectedImage: Icons.selectedMedicationIcon.image)
+      if viewController is WDMDailySurveyViewController {
+        viewController.tabBarItem = WDMSimpleTabBarItem(title: "DAILY_SURVEY".localize(), image: Icons.unselectedSurveyIcon.image, selectedImage: Icons.selectedSurveyIcon.image)
       }
       
 //        if viewController is SummaryViewController {

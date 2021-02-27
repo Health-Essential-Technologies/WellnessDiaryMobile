@@ -41,6 +41,9 @@
 "" = "";
 "ADD" = "Add";
 "ADD_TASK" = "Add Task";
+"EDIT_TASK" = "Edit Task";
+"UPDATE_TASK" = "Update Task";
+"DELETE_TASK" = "Delete Task";
 "TASK_INFORMATION" = "Task Information";
 "ENTER_TASK_NAME" = "Enter Task Name";
 "NAME_:" = "Name:";
@@ -73,6 +76,9 @@
 "SAT" = "Sat";
 "SUN" = "Sun";
 
+"DAILY_TASKS" = "Daily Tasks";
+"DAILY_SURVEY" = "Daily Survey";
+"SETTINGS" = "Settings";
 "BEFORE_BREAKFAST" = "Before Breakfast";
 "AFTER_BREAKFAST" = "After Breakfast";
 "BEFORE_LUNCH" = "Before Lunch";
@@ -86,3 +92,7 @@
 "INSTRUCTIONS_-_DESCRIBES_IMPORTANT_INFORMATION_ON_HOW_A_TASK_SHOULD_BE_COMPLETED_." = "Instructions - describes important information on how a task should be completed.";
 
 "ADD_NOTIFICATION_:" = "Add Notification:";
+"TASKS_LIST" = "Tasks List";
+"PERMISION_RESTRICTED" = "Permision Restricted";
+"UNABLE_TO_SAVE_YOUR_TASK_DUE_TO_FAIL_TO_OBTAIN_PERMISION_TO_PUSH_NOTIFICATION._GO_TO_SETTINGS->WELLNESS_DIARY->NOTIFICATIONS_AND_TURN_ON_ALLOW_NOTIFICATIONS_OR_TURN_OFF_NOTIFICATIONS_FOR_THIS_TASK." = "Unable to save your task due to failt to obtaion permision to push notification. Go to settings->Wellness Diary->Notifications and turn on allow notifications or turn off notifications for this task.";
+"OK" = "Ok";

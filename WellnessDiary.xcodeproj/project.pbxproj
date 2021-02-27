@@ -20,19 +20,16 @@
 		9D453B9F2066200353EAE1A9 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0EADD17469A8E113703FEA /* Date+Extension.swift */; };
 		A992D6F6C9F0F33BF2AB02BD /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B082016E5C51FCFD01C06B /* UIButton+Extension.swift */; };
 		AB2E79AF25B4EC65008B37B4 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79AE25B4EC65008B37B4 /* Icons.swift */; };
-		AB2E79B425B4ED54008B37B4 /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E79B325B4ED54008B37B4 /* SwiftCharts.framework */; };
-		AB2E79B525B4ED54008B37B4 /* SwiftCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E79B325B4ED54008B37B4 /* SwiftCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB2E79B925B4ED69008B37B4 /* WDMSimpleTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79B825B4ED69008B37B4 /* WDMSimpleTabBarItem.swift */; };
 		AB2E79BE25B4F025008B37B4 /* WDMSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79BD25B4F025008B37B4 /* WDMSettingsViewController.swift */; };
 		AB2E79C125B60076008B37B4 /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB2E79C025B60076008B37B4 /* CareKit */; };
-		AB2E79C925B7341B008B37B4 /* WDMMedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79C825B7341B008B37B4 /* WDMMedicationViewController.swift */; };
+		AB2E79C925B7341B008B37B4 /* WDMDailySurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79C825B7341B008B37B4 /* WDMDailySurveyViewController.swift */; };
 		AB2E79CC25B73B3F008B37B4 /* WDMSimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79CB25B73B3F008B37B4 /* WDMSimpleButton.swift */; };
 		AB2E79CF25B73BF4008B37B4 /* WDMSimpleBarButtomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79CE25B73BF4008B37B4 /* WDMSimpleBarButtomItem.swift */; };
 		AB2E79D225B76495008B37B4 /* CarePlanStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79D125B76495008B37B4 /* CarePlanStoreManager.swift */; };
 		AB2E79D725B76A8F008B37B4 /* OCKStore+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79D625B76A8F008B37B4 /* OCKStore+Extension.swift */; };
 		AB350407E3CED47A2BF85B97 /* WDMSimpleNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250D3A2AD7B5613FEBDEED6 /* WDMSimpleNavigationViewController.swift */; };
 		AB3B515225C1E6EF008C5011 /* WDMSummaryContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515125C1E6EF008C5011 /* WDMSummaryContainerViewController.swift */; };
-		AB3B515425C1F775008C5011 /* WDMActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515325C1F775008C5011 /* WDMActivityIndicatorViewController.swift */; };
 		AB3B515725C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515625C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift */; };
 		AB86F6E425CC68FB00A661A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB86F6E325CC68F700A661A1 /* Localizable.strings */; };
 		AB86F6E825CC693F00A661A1 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = AB86F6E725CC693C00A661A1 /* Localizable.stringsdict */; };
@@ -42,6 +39,17 @@
 		AB8A203125D61410000986A5 /* WDMLabelSwitchCellInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A203025D61410000986A5 /* WDMLabelSwitchCellInfoProvider.swift */; };
 		AB8A207025DAAFAA000986A5 /* WDMTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A206F25DAAFAA000986A5 /* WDMTask.swift */; };
 		AB8A207425DAB0BB000986A5 /* OCKTask+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A207325DAB0BB000986A5 /* OCKTask+Extension.swift */; };
+		AB8A207A25DAE48B000986A5 /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A207925DAE48B000986A5 /* NotificationCenter+Extension.swift */; };
+		AB8A207C25DAF5AF000986A5 /* WDMStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A207B25DAF5AF000986A5 /* WDMStore.swift */; };
+		AB8A207F25DAFF72000986A5 /* WellnessDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB8A207D25DAFF71000986A5 /* WellnessDiary.xcdatamodeld */; };
+		AB8A208625DB0572000986A5 /* WDMCDObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A208225DB0572000986A5 /* WDMCDObject+CoreDataClass.swift */; };
+		AB8A208725DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A208325DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift */; };
+		AB8A208B25DB268F000986A5 /* WDMTaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A208A25DB268F000986A5 /* WDMTaskDetailsViewController.swift */; };
+		AB8A208D25DB2AC4000986A5 /* WDMTaskDetailsInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A208C25DB2AC4000986A5 /* WDMTaskDetailsInfoProvider.swift */; };
+		AB8A208F25DB2B83000986A5 /* WDMTaskDetailsCellInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A208E25DB2B83000986A5 /* WDMTaskDetailsCellInfoProvider.swift */; };
+		AB8A209125DB2CA5000986A5 /* WDMTaskDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A209025DB2CA5000986A5 /* WDMTaskDetailsTableViewCell.swift */; };
+		AB8A209425DB4AB7000986A5 /* WDMCDTaskID+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A209225DB4AB7000986A5 /* WDMCDTaskID+CoreDataClass.swift */; };
+		AB8A209525DB4AB7000986A5 /* WDMCDTaskID+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A209325DB4AB7000986A5 /* WDMCDTaskID+CoreDataProperties.swift */; };
 		AB9E649225C49959008CD933 /* WDMSimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E649125C49959008CD933 /* WDMSimpleTableViewController.swift */; };
 		AB9E649525C4D13E008CD933 /* WDMTableViewDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E649325C4D13E008CD933 /* WDMTableViewDelegateHandler.swift */; };
 		AB9E649625C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E649425C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift */; };
@@ -57,6 +65,10 @@
 		AB9E64B325C8F27C008CD933 /* RawComparable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E64B225C8F27C008CD933 /* RawComparable+Extension.swift */; };
 		AB9E64B525CA13A9008CD933 /* DelegateSharedInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E64B425CA13A8008CD933 /* DelegateSharedInformationProtocol.swift */; };
 		AB9E64B825CA2E67008CD933 /* WDMInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E64B725CA2E67008CD933 /* WDMInfoProvider.swift */; };
+		ABB1C5D725E331FF003CA06E /* LocalNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */; };
+		ABC467B325E47E0200CA03DF /* WDMTaskReccurence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC467B225E47E0200CA03DF /* WDMTaskReccurence.swift */; };
+		ABC467C225E5A6AA00CA03DF /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC467C125E5A6AA00CA03DF /* ResearchKit.framework */; };
+		ABC467C325E5A6AA00CA03DF /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABC467C125E5A6AA00CA03DF /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ABD496C77267D5D190E816A2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB5C3DA3C658768F741BF7 /* Colors.swift */; };
 		ABD8EB0025C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8EAFF25C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift */; };
 		ABD8EB0325C24E3C0002F902 /* LocalLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8EB0225C24E3C0002F902 /* LocalLocalizable.swift */; };
@@ -89,6 +101,23 @@
 		E8D7336E6C2BF972A7425841 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 394F3D32123A83EE9C544890 /* Icons.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ABC467CA25E5BEDC00CA03DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC467C425E5BEDB00CA03DF /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		ABC467CC25E5BEDC00CA03DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC467C425E5BEDB00CA03DF /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		AB2E79B725B4ED54008B37B4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -96,7 +125,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AB2E79B525B4ED54008B37B4 /* SwiftCharts.framework in Embed Frameworks */,
+				ABC467C325E5A6AA00CA03DF /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,16 +150,14 @@
 		A3CD31B7F9177C89437D51DF /* WDMSimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleViewController.swift; sourceTree = "<group>"; };
 		A8D6636D32350437B52BF16D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB2E79AE25B4EC65008B37B4 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
-		AB2E79B325B4ED54008B37B4 /* SwiftCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCharts.framework; path = Carthage/Build/iOS/SwiftCharts.framework; sourceTree = "<group>"; };
 		AB2E79B825B4ED69008B37B4 /* WDMSimpleTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleTabBarItem.swift; sourceTree = "<group>"; };
 		AB2E79BD25B4F025008B37B4 /* WDMSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSettingsViewController.swift; sourceTree = "<group>"; };
-		AB2E79C825B7341B008B37B4 /* WDMMedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMMedicationViewController.swift; sourceTree = "<group>"; };
+		AB2E79C825B7341B008B37B4 /* WDMDailySurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMDailySurveyViewController.swift; sourceTree = "<group>"; };
 		AB2E79CB25B73B3F008B37B4 /* WDMSimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleButton.swift; sourceTree = "<group>"; };
 		AB2E79CE25B73BF4008B37B4 /* WDMSimpleBarButtomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleBarButtomItem.swift; sourceTree = "<group>"; };
 		AB2E79D125B76495008B37B4 /* CarePlanStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlanStoreManager.swift; sourceTree = "<group>"; };
 		AB2E79D625B76A8F008B37B4 /* OCKStore+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCKStore+Extension.swift"; sourceTree = "<group>"; };
 		AB3B515125C1E6EF008C5011 /* WDMSummaryContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSummaryContainerViewController.swift; sourceTree = "<group>"; };
-		AB3B515325C1F775008C5011 /* WDMActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		AB3B515625C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSummaryAddTaskViewController.swift; sourceTree = "<group>"; };
 		AB86F6E225CC68F700A661A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB86F6E625CC693C00A661A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -140,6 +167,18 @@
 		AB8A203025D61410000986A5 /* WDMLabelSwitchCellInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMLabelSwitchCellInfoProvider.swift; sourceTree = "<group>"; };
 		AB8A206F25DAAFAA000986A5 /* WDMTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMTask.swift; sourceTree = "<group>"; };
 		AB8A207325DAB0BB000986A5 /* OCKTask+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCKTask+Extension.swift"; sourceTree = "<group>"; };
+		AB8A207925DAE48B000986A5 /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
+		AB8A207B25DAF5AF000986A5 /* WDMStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMStore.swift; sourceTree = "<group>"; };
+		AB8A207E25DAFF71000986A5 /* WellnessDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WellnessDiary.xcdatamodel; sourceTree = "<group>"; };
+		AB8A208225DB0572000986A5 /* WDMCDObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AB8A208325DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AB8A208A25DB268F000986A5 /* WDMTaskDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTaskDetailsViewController.swift; sourceTree = "<group>"; };
+		AB8A208C25DB2AC4000986A5 /* WDMTaskDetailsInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTaskDetailsInfoProvider.swift; sourceTree = "<group>"; };
+		AB8A208E25DB2B83000986A5 /* WDMTaskDetailsCellInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTaskDetailsCellInfoProvider.swift; sourceTree = "<group>"; };
+		AB8A209025DB2CA5000986A5 /* WDMTaskDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTaskDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		AB8A209225DB4AB7000986A5 /* WDMCDTaskID+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTaskID+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AB8A209325DB4AB7000986A5 /* WDMCDTaskID+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTaskID+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AB93124A25E97F2B0066B62E /* WellnessDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WellnessDiary.entitlements; sourceTree = "<group>"; };
 		AB9E649125C49959008CD933 /* WDMSimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleTableViewController.swift; sourceTree = "<group>"; };
 		AB9E649325C4D13E008CD933 /* WDMTableViewDelegateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMTableViewDelegateHandler.swift; sourceTree = "<group>"; };
 		AB9E649425C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMTableViewDataSourceHandler.swift; sourceTree = "<group>"; };
@@ -155,6 +194,10 @@
 		AB9E64B225C8F27C008CD933 /* RawComparable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RawComparable+Extension.swift"; sourceTree = "<group>"; };
 		AB9E64B425CA13A8008CD933 /* DelegateSharedInformationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateSharedInformationProtocol.swift; sourceTree = "<group>"; };
 		AB9E64B725CA2E67008CD933 /* WDMInfoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMInfoProvider.swift; sourceTree = "<group>"; };
+		ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsManager.swift; sourceTree = "<group>"; };
+		ABC467B225E47E0200CA03DF /* WDMTaskReccurence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTaskReccurence.swift; sourceTree = "<group>"; };
+		ABC467C125E5A6AA00CA03DF /* ResearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResearchKit.framework; path = Carthage/Build/iOS/ResearchKit.framework; sourceTree = "<group>"; };
+		ABC467C425E5BEDB00CA03DF /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = Carthage/Checkouts/ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		ABD8EAFF25C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleCustomOCKLabelButton.swift; sourceTree = "<group>"; };
 		ABD8EB0225C24E3C0002F902 /* LocalLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLocalizable.swift; sourceTree = "<group>"; };
 		ABD8EB0625C2C8DD0002F902 /* WDMTableViewInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTableViewInfoProvider.swift; sourceTree = "<group>"; };
@@ -192,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB2E79C125B60076008B37B4 /* CareKit in Frameworks */,
-				AB2E79B425B4ED54008B37B4 /* SwiftCharts.framework in Frameworks */,
+				ABC467C225E5A6AA00CA03DF /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +245,7 @@
 		0B5DEA200C24B945B777F787 /* WellnessDiary */ = {
 			isa = PBXGroup;
 			children = (
+				ABB1C5D525E331E1003CA06E /* WDMLocalNotifications */,
 				CB9E2895F53F79CC38FA56BC /* Info.plist */,
 				5C3BBAA04845D93BB672BE18 /* Model */,
 				EE99487FB21F30BAE2CFD887 /* Extensions */,
@@ -242,6 +286,7 @@
 		658CD080FDA4F6F0E47A771E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AB93124A25E97F2B0066B62E /* WellnessDiary.entitlements */,
 				ABD8EB0225C24E3C0002F902 /* LocalLocalizable.swift */,
 				AB86F6E925CC713A00A661A1 /* Localization */,
 				37FA7AACC16EFFB7AEA6D0F8 /* AppDelegate.swift */,
@@ -273,6 +318,7 @@
 		A6BEE39E06F8D72833A4CB3D = {
 			isa = PBXGroup;
 			children = (
+				ABC467C425E5BEDB00CA03DF /* ResearchKit.xcodeproj */,
 				0B5DEA200C24B945B777F787 /* WellnessDiary */,
 				907B1442F3F53CF9F337E424 /* Products */,
 				AB2E79B225B4ED54008B37B4 /* Frameworks */,
@@ -285,7 +331,7 @@
 		AB2E79B225B4ED54008B37B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E79B325B4ED54008B37B4 /* SwiftCharts.framework */,
+				ABC467C125E5A6AA00CA03DF /* ResearchKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -318,6 +364,7 @@
 		AB2E79D025B76483008B37B4 /* CareKit */ = {
 			isa = PBXGroup;
 			children = (
+				AB8A208825DB21E5000986A5 /* CustomCoreDataContainer */,
 				AB8A207225DAB0A5000986A5 /* extensions */,
 				AB8A207125DAAFDF000986A5 /* customModel */,
 				AB2E79D125B76495008B37B4 /* CarePlanStoreManager.swift */,
@@ -325,28 +372,21 @@
 			path = CareKit;
 			sourceTree = "<group>";
 		};
-		AB3B515025C1E634008C5011 /* SummaryVC */ = {
+		AB3B515025C1E634008C5011 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
 				AB8A202725D58EE4000986A5 /* WDMSummaryViewController.swift */,
 				AB3B515125C1E6EF008C5011 /* WDMSummaryContainerViewController.swift */,
-				AB9E64A025C5B8CE008CD933 /* addTaskVC */,
+				AB9E64A025C5B8CE008CD933 /* AddTask */,
+				AB8A208925DB263E000986A5 /* Details */,
 			);
-			path = SummaryVC;
+			path = Summary;
 			sourceTree = "<group>";
 		};
 		AB3B515525C1F7EE008C5011 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				AB8A202D25D611D3000986A5 /* Switch */,
-				AB9E649B25C4ED6A008CD933 /* Textfield */,
-				ABD8EB3A25C2CE910002F902 /* PickerView */,
-				ABD8EB3925C2CE8E0002F902 /* DatePicker */,
-				ABD8EB3825C2CE8C0002F902 /* Label */,
-				ABD8EB2925C2CDDE0002F902 /* TableViewCell */,
-				AB2E79BA25B4ED72008B37B4 /* TabBarItem */,
-				AB2E79CA25B73A13008B37B4 /* BarButtonItem */,
-				AB2E79CD25B73B45008B37B4 /* Button */,
+				AB8A207525DAE309000986A5 /* Common */,
 				1844256F92E28A9BAC1C2FD5 /* NavigationController */,
 				A27CBFFC5BE9BC90E538B788 /* TabViewController */,
 				D5A149489B3514AEB540439D /* ViewControllers */,
@@ -383,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				AB8A206F25DAAFAA000986A5 /* WDMTask.swift */,
+				ABC467B225E47E0200CA03DF /* WDMTaskReccurence.swift */,
 			);
 			path = customModel;
 			sourceTree = "<group>";
@@ -395,6 +436,59 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		AB8A207525DAE309000986A5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E79BA25B4ED72008B37B4 /* TabBarItem */,
+				AB2E79CA25B73A13008B37B4 /* BarButtonItem */,
+				AB2E79CD25B73B45008B37B4 /* Button */,
+				ABD8EB2925C2CDDE0002F902 /* TableViewCell */,
+				AB8A202D25D611D3000986A5 /* Switch */,
+				AB9E649B25C4ED6A008CD933 /* Textfield */,
+				ABD8EB3A25C2CE910002F902 /* PickerView */,
+				ABD8EB3925C2CE8E0002F902 /* DatePicker */,
+				ABD8EB3825C2CE8C0002F902 /* Label */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AB8A207625DAE39C000986A5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E79BD25B4F025008B37B4 /* WDMSettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AB8A207725DAE3AB000986A5 /* Medication */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E79C825B7341B008B37B4 /* WDMDailySurveyViewController.swift */,
+			);
+			path = Medication;
+			sourceTree = "<group>";
+		};
+		AB8A208825DB21E5000986A5 /* CustomCoreDataContainer */ = {
+			isa = PBXGroup;
+			children = (
+				AB8A207B25DAF5AF000986A5 /* WDMStore.swift */,
+				AB8A207D25DAFF71000986A5 /* WellnessDiary.xcdatamodeld */,
+				AB8A209225DB4AB7000986A5 /* WDMCDTaskID+CoreDataClass.swift */,
+				AB8A209325DB4AB7000986A5 /* WDMCDTaskID+CoreDataProperties.swift */,
+				AB8A208225DB0572000986A5 /* WDMCDObject+CoreDataClass.swift */,
+				AB8A208325DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift */,
+			);
+			path = CustomCoreDataContainer;
+			sourceTree = "<group>";
+		};
+		AB8A208925DB263E000986A5 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				AB8A208A25DB268F000986A5 /* WDMTaskDetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		AB9E649B25C4ED6A008CD933 /* Textfield */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,13 +497,13 @@
 			path = Textfield;
 			sourceTree = "<group>";
 		};
-		AB9E64A025C5B8CE008CD933 /* addTaskVC */ = {
+		AB9E64A025C5B8CE008CD933 /* AddTask */ = {
 			isa = PBXGroup;
 			children = (
 				AB3B515625C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift */,
 				AB9E64A125C5B91F008CD933 /* WDMTaskReccurenceViewController.swift */,
 			);
-			path = addTaskVC;
+			path = AddTask;
 			sourceTree = "<group>";
 		};
 		AB9E64AF25C8B075008CD933 /* Base */ = {
@@ -421,6 +515,23 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		ABB1C5D525E331E1003CA06E /* WDMLocalNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */,
+			);
+			path = WDMLocalNotifications;
+			sourceTree = "<group>";
+		};
+		ABC467C525E5BEDB00CA03DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABC467CB25E5BEDC00CA03DF /* ResearchKit.framework */,
+				ABC467CD25E5BEDC00CA03DF /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		ABD8EB0525C2C8C00002F902 /* DataProviders */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +539,7 @@
 				ABD8EB0625C2C8DD0002F902 /* WDMTableViewInfoProvider.swift */,
 				AB9E64AD25C70D5E008CD933 /* WDMSummaryAddTaskInfoProvider.swift */,
 				AB9E64A725C6576D008CD933 /* WDMTaskFrequencyInfoProvider.swift */,
+				AB8A208C25DB2AC4000986A5 /* WDMTaskDetailsInfoProvider.swift */,
 				ABD8EB2225C2CC9C0002F902 /* Model */,
 				ABD8EB1D25C2CB540002F902 /* Handlers */,
 				ABD8EB1C25C2CB0C0002F902 /* PickerView */,
@@ -456,6 +568,7 @@
 				AB9E649E25C5AF0B008CD933 /* WDMDefaultCellInfoProvider.swift */,
 				AB9E64B025C8C35B008CD933 /* WDMTaskReccurenceCellInfoProvider.swift */,
 				AB8A203025D61410000986A5 /* WDMLabelSwitchCellInfoProvider.swift */,
+				AB8A208E25DB2B83000986A5 /* WDMTaskDetailsCellInfoProvider.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -501,6 +614,7 @@
 				ABD8EB3425C2CE630002F902 /* WDMSingleButtonTableViewCell.swift */,
 				AB9E649925C4ECB5008CD933 /* WDMLabelTextfieldTableViewCell.swift */,
 				AB8A202B25D611A3000986A5 /* WDMLabelSwitchTableViewCell.swift */,
+				AB8A209025DB2CA5000986A5 /* WDMTaskDetailsTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -533,10 +647,9 @@
 			isa = PBXGroup;
 			children = (
 				AB9E64AF25C8B075008CD933 /* Base */,
-				AB3B515025C1E634008C5011 /* SummaryVC */,
-				AB2E79BD25B4F025008B37B4 /* WDMSettingsViewController.swift */,
-				AB2E79C825B7341B008B37B4 /* WDMMedicationViewController.swift */,
-				AB3B515325C1F775008C5011 /* WDMActivityIndicatorViewController.swift */,
+				AB3B515025C1E634008C5011 /* Summary */,
+				AB8A207725DAE3AB000986A5 /* Medication */,
+				AB8A207625DAE39C000986A5 /* Settings */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -555,6 +668,7 @@
 				AB2E79D625B76A8F008B37B4 /* OCKStore+Extension.swift */,
 				AB9E64A525C60E15008CD933 /* String+Extension.swift */,
 				AB9E64B225C8F27C008CD933 /* RawComparable+Extension.swift */,
+				AB8A207925DAE48B000986A5 /* NotificationCenter+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -619,12 +733,35 @@
 				AB2E79BF25B60076008B37B4 /* XCRemoteSwiftPackageReference "CareKit" */,
 			);
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = ABC467C525E5BEDB00CA03DF /* Products */;
+					ProjectRef = ABC467C425E5BEDB00CA03DF /* ResearchKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				036D3EF5B51861D370007DCA /* WellnessDiary */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		ABC467CB25E5BEDC00CA03DF /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = ABC467CA25E5BEDC00CA03DF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABC467CD25E5BEDC00CA03DF /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = ABC467CC25E5BEDC00CA03DF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		190507F8F6A7FDCE6E121B9D /* Resources */ = {
@@ -652,6 +789,7 @@
 				CB69BCC8DB599350090E033A /* Collection+Extension.swift in Sources */,
 				ABD496C77267D5D190E816A2 /* Colors.swift in Sources */,
 				AB9E64A225C5B91F008CD933 /* WDMTaskReccurenceViewController.swift in Sources */,
+				AB8A208725DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift in Sources */,
 				ABD8EB2825C2CCC70002F902 /* TableViewSectionRowItem.swift in Sources */,
 				ABD8EB3E25C2CECF0002F902 /* WDMSimpleDatePicker.swift in Sources */,
 				AB3B515225C1E6EF008C5011 /* WDMSummaryContainerViewController.swift in Sources */,
@@ -659,6 +797,7 @@
 				9D453B9F2066200353EAE1A9 /* Date+Extension.swift in Sources */,
 				AB2E79D225B76495008B37B4 /* CarePlanStoreManager.swift in Sources */,
 				AB9E64B825CA2E67008CD933 /* WDMInfoProvider.swift in Sources */,
+				AB8A208F25DB2B83000986A5 /* WDMTaskDetailsCellInfoProvider.swift in Sources */,
 				ABD8EB2625C2CCB80002F902 /* TableViewSectionItem.swift in Sources */,
 				AB9E649F25C5AF0D008CD933 /* WDMDefaultCellInfoProvider.swift in Sources */,
 				ABD8EB0025C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift in Sources */,
@@ -670,10 +809,10 @@
 				399A5E7BCCC509F02EB7852D /* WDMMainTabViewController.swift in Sources */,
 				319FD4A22E01521C60F5C8E6 /* SceneDelegate.swift in Sources */,
 				AB350407E3CED47A2BF85B97 /* WDMSimpleNavigationViewController.swift in Sources */,
+				AB8A209125DB2CA5000986A5 /* WDMTaskDetailsTableViewCell.swift in Sources */,
 				AB9E649625C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift in Sources */,
 				8B62A7670B7460CED94AFF89 /* WDMSimpleTabViewController.swift in Sources */,
 				AB2E79CF25B73BF4008B37B4 /* WDMSimpleBarButtomItem.swift in Sources */,
-				AB3B515425C1F775008C5011 /* WDMActivityIndicatorViewController.swift in Sources */,
 				AB9E64B125C8C35B008CD933 /* WDMTaskReccurenceCellInfoProvider.swift in Sources */,
 				AB8A202C25D611A4000986A5 /* WDMLabelSwitchTableViewCell.swift in Sources */,
 				AB2E79CC25B73B3F008B37B4 /* WDMSimpleButton.swift in Sources */,
@@ -688,20 +827,28 @@
 				AB9E649D25C4ED7C008CD933 /* WDMSimpleTextField.swift in Sources */,
 				B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */,
 				D98BF8D0A77D93E31116D765 /* UITableview+Extension.swift in Sources */,
+				ABB1C5D725E331FF003CA06E /* LocalNotificationsManager.swift in Sources */,
+				AB8A208625DB0572000986A5 /* WDMCDObject+CoreDataClass.swift in Sources */,
 				AB8A207425DAB0BB000986A5 /* OCKTask+Extension.swift in Sources */,
 				AB2E79B925B4ED69008B37B4 /* WDMSimpleTabBarItem.swift in Sources */,
 				AB8A207025DAAFAA000986A5 /* WDMTask.swift in Sources */,
 				ABD8EB3125C2CE3E0002F902 /* WDMPickerTableViewCell.swift in Sources */,
+				AB8A208B25DB268F000986A5 /* WDMTaskDetailsViewController.swift in Sources */,
 				ABD8EB2B25C2CDFB0002F902 /* WDMSimpleTableViewCell.swift in Sources */,
 				ABD8EB1B25C2CAFB0002F902 /* PickerViewRowItem.swift in Sources */,
-				AB2E79C925B7341B008B37B4 /* WDMMedicationViewController.swift in Sources */,
+				ABC467B325E47E0200CA03DF /* WDMTaskReccurence.swift in Sources */,
+				AB2E79C925B7341B008B37B4 /* WDMDailySurveyViewController.swift in Sources */,
 				AB3B515725C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift in Sources */,
 				AB9E64B525CA13A9008CD933 /* DelegateSharedInformationProtocol.swift in Sources */,
+				AB8A208D25DB2AC4000986A5 /* WDMTaskDetailsInfoProvider.swift in Sources */,
 				ABD8EB3C25C2CEB70002F902 /* WDMSimpleLabel.swift in Sources */,
 				AB8A202F25D611E7000986A5 /* WDMSimpleSwitch.swift in Sources */,
+				AB8A207C25DAF5AF000986A5 /* WDMStore.swift in Sources */,
 				ABD8EB0925C2C8FE0002F902 /* WDMMealAddTableViewInfoProvider.swift in Sources */,
+				AB8A207F25DAFF72000986A5 /* WellnessDiary.xcdatamodeld in Sources */,
 				AB9E649525C4D13E008CD933 /* WDMTableViewDelegateHandler.swift in Sources */,
 				ABD8EB2F25C2CE2F0002F902 /* WDMDefaultTableViewCell.swift in Sources */,
+				AB8A209425DB4AB7000986A5 /* WDMCDTaskID+CoreDataClass.swift in Sources */,
 				AB8A202825D58EE4000986A5 /* WDMSummaryViewController.swift in Sources */,
 				694725E4395CF97582E7EC3C /* UITableviewCell+Extension.swift in Sources */,
 				ABD8EB0F25C2C9550002F902 /* WDMSingleButtonCellInfoProvider.swift in Sources */,
@@ -709,7 +856,9 @@
 				AB9E64B325C8F27C008CD933 /* RawComparable+Extension.swift in Sources */,
 				ABD8EB1925C2CAEC0002F902 /* PickerViewComponentItem.swift in Sources */,
 				AB2E79AF25B4EC65008B37B4 /* Icons.swift in Sources */,
+				AB8A207A25DAE48B000986A5 /* NotificationCenter+Extension.swift in Sources */,
 				AB8A203125D61410000986A5 /* WDMLabelSwitchCellInfoProvider.swift in Sources */,
+				AB8A209525DB4AB7000986A5 /* WDMCDTaskID+CoreDataProperties.swift in Sources */,
 				ABD8EB4025C2CEE90002F902 /* WDMSimplePickerView.swift in Sources */,
 				ABD8EB2425C2CCA60002F902 /* WDMSimpleTableView.swift in Sources */,
 				ABD8EB3525C2CE630002F902 /* WDMSingleButtonTableViewCell.swift in Sources */,
@@ -748,6 +897,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WellnessDiary/Resources/WellnessDiary.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 54GBA7H7D2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -894,6 +1044,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WellnessDiary/Resources/WellnessDiary.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 54GBA7H7D2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -956,6 +1107,19 @@
 			productName = CareKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		AB8A207D25DAFF71000986A5 /* WellnessDiary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AB8A207E25DAFF71000986A5 /* WellnessDiary.xcdatamodel */,
+			);
+			currentVersion = AB8A207E25DAFF71000986A5 /* WellnessDiary.xcdatamodel */;
+			path = WellnessDiary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9BDFC21C6C1C0F6256FCA8C8 /* Project object */;
 }

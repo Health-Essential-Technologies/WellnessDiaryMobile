@@ -69,6 +69,9 @@ class WDMTableViewInfoProvider: NSObject {
     case is WDMLabelSwitchTableViewCell.Type:
       cell = getLabelSwitchTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
       
+    case is WDMTaskDetailsTableViewCell.Type:
+      cell = getTaskDetailsTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
+      
     default:
       cell = getDefaultTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
     }
@@ -77,7 +80,7 @@ class WDMTableViewInfoProvider: NSObject {
     return cell
   }
   
-  private func getDatePickerTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell {
+  func getDatePickerTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMDatePickerTableViewCell {
     
     let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMDatePickerTableViewCell
     castedCell.cellInfoProvider = cellItem.cellInfoProvider
@@ -85,7 +88,7 @@ class WDMTableViewInfoProvider: NSObject {
     return castedCell
   }
   
-  private func getPickerTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell {
+  func getPickerTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSimpleTableViewCell {
     
     let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMPickerTableViewCell
     
@@ -131,6 +134,14 @@ class WDMTableViewInfoProvider: NSObject {
     castedCell.cellInfoProvider = cellItem.cellInfoProvider
     return castedCell
   }
+  
+  
+  func getTaskDetailsTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMTaskDetailsTableViewCell {
+    let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMTaskDetailsTableViewCell
+    castedCell.cellInfoProvider = cellItem.cellInfoProvider
+    return castedCell
+  }
+  
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
