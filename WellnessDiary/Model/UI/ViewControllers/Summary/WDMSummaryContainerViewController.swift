@@ -19,6 +19,7 @@ class WDMSummaryContainerViewController: OCKDailyPageViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     initialSetup()
+    self.parent?.navigationItem.title = "DAILY_TASKS".localize()
   }
   
   override func initialSetup() {
