@@ -77,6 +77,8 @@
 "SUN" = "Sun";
 
 "DAILY_TASKS" = "Daily Tasks";
+"DAILY_SURVEY" = "Daily Survey";
+"SETTINGS" = "Settings";
 "BEFORE_BREAKFAST" = "Before Breakfast";
 "AFTER_BREAKFAST" = "After Breakfast";
 "BEFORE_LUNCH" = "Before Lunch";

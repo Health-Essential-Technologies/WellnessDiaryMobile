@@ -32,10 +32,6 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
     super.viewDidLoad()
   }
   
-  deinit {
-    print("Remove add task view")
-  }
-  
   // MARK: - Methods
   
   override func initialSetup() {

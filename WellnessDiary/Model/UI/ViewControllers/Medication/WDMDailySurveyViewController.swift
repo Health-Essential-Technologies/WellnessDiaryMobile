@@ -1,5 +1,5 @@
 //
-//  MedicationViewController.swift
+//  WDMDailySurveyViewController.swift
 //  WellnessDiary
 //
 //  Created by luis flores on 1/19/21.
@@ -8,7 +8,7 @@
 import UIKit
 import CareKit
 
-class WDMMedicationViewController: WDMSimpleViewController {
+class WDMDailySurveyViewController: WDMSimpleViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +16,7 @@ class WDMMedicationViewController: WDMSimpleViewController {
   
   override func initialSetup() {
     super.initialSetup()
+    navigationItem.title = "DAILY_SURVEY".localize()
     navigationItem.rightBarButtonItem = WDMSimpleBarButtomItem(systemItem: .add)
   }
 

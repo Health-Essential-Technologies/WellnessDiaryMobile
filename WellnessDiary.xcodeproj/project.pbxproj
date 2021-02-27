@@ -23,7 +23,7 @@
 		AB2E79B925B4ED69008B37B4 /* WDMSimpleTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79B825B4ED69008B37B4 /* WDMSimpleTabBarItem.swift */; };
 		AB2E79BE25B4F025008B37B4 /* WDMSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79BD25B4F025008B37B4 /* WDMSettingsViewController.swift */; };
 		AB2E79C125B60076008B37B4 /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB2E79C025B60076008B37B4 /* CareKit */; };
-		AB2E79C925B7341B008B37B4 /* WDMMedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79C825B7341B008B37B4 /* WDMMedicationViewController.swift */; };
+		AB2E79C925B7341B008B37B4 /* WDMDailySurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79C825B7341B008B37B4 /* WDMDailySurveyViewController.swift */; };
 		AB2E79CC25B73B3F008B37B4 /* WDMSimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79CB25B73B3F008B37B4 /* WDMSimpleButton.swift */; };
 		AB2E79CF25B73BF4008B37B4 /* WDMSimpleBarButtomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79CE25B73BF4008B37B4 /* WDMSimpleBarButtomItem.swift */; };
 		AB2E79D225B76495008B37B4 /* CarePlanStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79D125B76495008B37B4 /* CarePlanStoreManager.swift */; };
@@ -152,7 +152,7 @@
 		AB2E79AE25B4EC65008B37B4 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		AB2E79B825B4ED69008B37B4 /* WDMSimpleTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleTabBarItem.swift; sourceTree = "<group>"; };
 		AB2E79BD25B4F025008B37B4 /* WDMSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSettingsViewController.swift; sourceTree = "<group>"; };
-		AB2E79C825B7341B008B37B4 /* WDMMedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMMedicationViewController.swift; sourceTree = "<group>"; };
+		AB2E79C825B7341B008B37B4 /* WDMDailySurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMDailySurveyViewController.swift; sourceTree = "<group>"; };
 		AB2E79CB25B73B3F008B37B4 /* WDMSimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleButton.swift; sourceTree = "<group>"; };
 		AB2E79CE25B73BF4008B37B4 /* WDMSimpleBarButtomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleBarButtomItem.swift; sourceTree = "<group>"; };
 		AB2E79D125B76495008B37B4 /* CarePlanStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlanStoreManager.swift; sourceTree = "<group>"; };
@@ -463,7 +463,7 @@
 		AB8A207725DAE3AB000986A5 /* Medication */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E79C825B7341B008B37B4 /* WDMMedicationViewController.swift */,
+				AB2E79C825B7341B008B37B4 /* WDMDailySurveyViewController.swift */,
 			);
 			path = Medication;
 			sourceTree = "<group>";
@@ -837,7 +837,7 @@
 				ABD8EB2B25C2CDFB0002F902 /* WDMSimpleTableViewCell.swift in Sources */,
 				ABD8EB1B25C2CAFB0002F902 /* PickerViewRowItem.swift in Sources */,
 				ABC467B325E47E0200CA03DF /* WDMTaskReccurence.swift in Sources */,
-				AB2E79C925B7341B008B37B4 /* WDMMedicationViewController.swift in Sources */,
+				AB2E79C925B7341B008B37B4 /* WDMDailySurveyViewController.swift in Sources */,
 				AB3B515725C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift in Sources */,
 				AB9E64B525CA13A9008CD933 /* DelegateSharedInformationProtocol.swift in Sources */,
 				AB8A208D25DB2AC4000986A5 /* WDMTaskDetailsInfoProvider.swift in Sources */,
