@@ -65,9 +65,28 @@ class WDMSummaryAddTaskInfoProvider: WDMTableViewInfoProvider {
     
     if indexPath.section == 1 {
       if tableView.numberOfSections == 3 {
-        CarePlanStoreManager.sharedCarePlanStoreManager.update(task, completion: dismissClosure)
+        LocalNotificationsManager.sharedInstance.getPermision { [weak self] success, error in
+          guard let self = self else { return }
+          if success || !self.task.hasNotification {
+            CarePlanStoreManager.sharedCarePlanStoreManager.update(self.task, completion: dismissClosure)
+          } else {
+            self.showAlertForFailedPermision()
+            return
+          }
+        }
+
       } else {
-        CarePlanStoreManager.sharedCarePlanStoreManager.add(task, completion: dismissClosure)
+        LocalNotificationsManager.sharedInstance.getPermision { [weak self] success, error in
+          guard let self = self else { return }
+          if success || !self.task.hasNotification {
+            CarePlanStoreManager.sharedCarePlanStoreManager.add(self.task, completion: dismissClosure)
+          } else {
+            self.showAlertForFailedPermision()
+            return
+          }
+        }
+        
+
       }
     } else if indexPath.section == 2 {
       CarePlanStoreManager.sharedCarePlanStoreManager.delete(task, completion: dismissClosure)
@@ -129,6 +148,21 @@ extension WDMSummaryAddTaskInfoProvider {
       default:
         break
       }
+    }
+  }
+}
+
+extension WDMSummaryAddTaskInfoProvider {
+  
+  // MARK: Methods
+  
+  private func showAlertForFailedPermision() {
+    DispatchQueue.main.async {
+      let alert = UIAlertController(title: "PERMISION_RESTRICTED".localize(), message: "UNABLE_TO_SAVE_YOUR_TASK_DUE_TO_FAIL_TO_OBTAIN_PERMISION_TO_PUSH_NOTIFICATION._GO_TO_SETTINGS->WELLNESS_DIARY->NOTIFICATIONS_AND_TURN_ON_ALLOW_NOTIFICATIONS_OR_TURN_OFF_NOTIFICATIONS_FOR_THIS_TASK.".localize(), preferredStyle: .alert)
+      let cancelAction = UIAlertAction(title: "OK".localize(), style: .cancel)
+      alert.addAction(cancelAction)
+      
+      self.presenterViewController?.present(alert, animated: true)
     }
   }
 }
