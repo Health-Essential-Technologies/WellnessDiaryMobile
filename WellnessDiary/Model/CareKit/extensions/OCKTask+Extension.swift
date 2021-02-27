@@ -22,7 +22,7 @@ extension OCKTask {
   // MARK: Initializers
   
   init(with task: WDMTask) {
-    self.init(id: UUID().uuidString, title: task.title, carePlanID: nil, schedule: task.getSchedule())
+    self.init(id: task.uniqueIdentifier, title: task.title, carePlanID: nil, schedule: task.getSchedule())
     self.instructions = task.instructions
     self.impactsAdherence = task.impactsAdherence
     self.schedule = task.getSchedule()
