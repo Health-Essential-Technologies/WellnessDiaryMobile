@@ -21,10 +21,6 @@ class WDMTaskDetailsViewController: WDMSimpleTableViewController {
     super.init(nibName: nil, bundle: nil)
   }
   
-  deinit {
-    print("Remove task detail\n")
-  }
-  
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
@@ -39,7 +35,7 @@ class WDMTaskDetailsViewController: WDMSimpleTableViewController {
   
   override func initialSetup() {
     
-    navigationItem.title = "TASK_LIST".localize()
+    navigationItem.title = "TASKS_LIST".localize()
     
     tableView = WDMSimpleTableView(frame: view.bounds, style: .insetGrouped)
     tableView.isScrollEnabled = false

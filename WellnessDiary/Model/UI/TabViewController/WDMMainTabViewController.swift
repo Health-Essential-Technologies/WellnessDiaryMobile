@@ -45,7 +45,7 @@ class WDMMainTabViewController: WDMSimpleTabViewController, UITabBarControllerDe
     func setupTabBarItems(forViewController viewController: UIViewController) {
         
       if viewController is WDMSummaryViewController {
-        viewController.tabBarItem = WDMSimpleTabBarItem(title: "Summary", image: Icons.unselectedSummaryIcon.image , selectedImage: Icons.selectedSummaryIcon.image)
+        viewController.tabBarItem = WDMSimpleTabBarItem(title: "DAILY_TASKS".localize(), image: Icons.unselectedSummaryIcon.image , selectedImage: Icons.selectedSummaryIcon.image)
       }
       
       if viewController is WDMSettingsViewController {

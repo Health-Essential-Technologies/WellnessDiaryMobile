@@ -101,6 +101,23 @@
 		E8D7336E6C2BF972A7425841 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 394F3D32123A83EE9C544890 /* Icons.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ABC467CA25E5BEDC00CA03DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC467C425E5BEDB00CA03DF /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		ABC467CC25E5BEDC00CA03DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC467C425E5BEDB00CA03DF /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		AB2E79B725B4ED54008B37B4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -161,6 +178,7 @@
 		AB8A209025DB2CA5000986A5 /* WDMTaskDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTaskDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		AB8A209225DB4AB7000986A5 /* WDMCDTaskID+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTaskID+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AB8A209325DB4AB7000986A5 /* WDMCDTaskID+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTaskID+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AB93124A25E97F2B0066B62E /* WellnessDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WellnessDiary.entitlements; sourceTree = "<group>"; };
 		AB9E649125C49959008CD933 /* WDMSimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleTableViewController.swift; sourceTree = "<group>"; };
 		AB9E649325C4D13E008CD933 /* WDMTableViewDelegateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMTableViewDelegateHandler.swift; sourceTree = "<group>"; };
 		AB9E649425C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDMTableViewDataSourceHandler.swift; sourceTree = "<group>"; };
@@ -179,6 +197,7 @@
 		ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsManager.swift; sourceTree = "<group>"; };
 		ABC467B225E47E0200CA03DF /* WDMTaskReccurence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTaskReccurence.swift; sourceTree = "<group>"; };
 		ABC467C125E5A6AA00CA03DF /* ResearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResearchKit.framework; path = Carthage/Build/iOS/ResearchKit.framework; sourceTree = "<group>"; };
+		ABC467C425E5BEDB00CA03DF /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = Carthage/Checkouts/ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		ABD8EAFF25C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleCustomOCKLabelButton.swift; sourceTree = "<group>"; };
 		ABD8EB0225C24E3C0002F902 /* LocalLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLocalizable.swift; sourceTree = "<group>"; };
 		ABD8EB0625C2C8DD0002F902 /* WDMTableViewInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMTableViewInfoProvider.swift; sourceTree = "<group>"; };
@@ -267,6 +286,7 @@
 		658CD080FDA4F6F0E47A771E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AB93124A25E97F2B0066B62E /* WellnessDiary.entitlements */,
 				ABD8EB0225C24E3C0002F902 /* LocalLocalizable.swift */,
 				AB86F6E925CC713A00A661A1 /* Localization */,
 				37FA7AACC16EFFB7AEA6D0F8 /* AppDelegate.swift */,
@@ -298,6 +318,7 @@
 		A6BEE39E06F8D72833A4CB3D = {
 			isa = PBXGroup;
 			children = (
+				ABC467C425E5BEDB00CA03DF /* ResearchKit.xcodeproj */,
 				0B5DEA200C24B945B777F787 /* WellnessDiary */,
 				907B1442F3F53CF9F337E424 /* Products */,
 				AB2E79B225B4ED54008B37B4 /* Frameworks */,
@@ -502,6 +523,15 @@
 			path = WDMLocalNotifications;
 			sourceTree = "<group>";
 		};
+		ABC467C525E5BEDB00CA03DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABC467CB25E5BEDC00CA03DF /* ResearchKit.framework */,
+				ABC467CD25E5BEDC00CA03DF /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		ABD8EB0525C2C8C00002F902 /* DataProviders */ = {
 			isa = PBXGroup;
 			children = (
@@ -703,12 +733,35 @@
 				AB2E79BF25B60076008B37B4 /* XCRemoteSwiftPackageReference "CareKit" */,
 			);
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = ABC467C525E5BEDB00CA03DF /* Products */;
+					ProjectRef = ABC467C425E5BEDB00CA03DF /* ResearchKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				036D3EF5B51861D370007DCA /* WellnessDiary */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		ABC467CB25E5BEDC00CA03DF /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = ABC467CA25E5BEDC00CA03DF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABC467CD25E5BEDC00CA03DF /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = ABC467CC25E5BEDC00CA03DF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		190507F8F6A7FDCE6E121B9D /* Resources */ = {
@@ -844,6 +897,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WellnessDiary/WellnessDiary.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 54GBA7H7D2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -990,6 +1044,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WellnessDiary/WellnessDiary.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 54GBA7H7D2;
 				FRAMEWORK_SEARCH_PATHS = (
