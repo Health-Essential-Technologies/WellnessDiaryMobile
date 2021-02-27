@@ -50,6 +50,7 @@ public struct WDMTask {
   // MARK: Initializers
   
   public init(_ startDate: Date) {
+    self.uniqueIdentifier = UUID().uuidString
     self.startDate = startDate
   }
   
@@ -105,5 +106,15 @@ extension WDMTask: Equatable {
     return lhs.uniqueIdentifier == rhs.uniqueIdentifier
   }
   
+  
+}
+
+extension WDMTask {
+  
+  // MARK: Methods
+  
+  static func getNotificationIdentifier(with uniqueIdentifier: String, with frequency: TaskFrequency, with occurence: TaskOccurence) -> String {
+   return uniqueIdentifier + "_" + frequency.description() + "_" + TaskOccurence.getTaskAsStringFrom(occurence)
+  }
   
 }
