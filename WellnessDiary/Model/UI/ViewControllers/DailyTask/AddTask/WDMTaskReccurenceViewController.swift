@@ -122,7 +122,7 @@ public enum TaskOccurence: Int, Codable, CaseIterable {
     case .beforeDinner:
       return "BEFORE_DINNER"
     case .afterDinner:
-      return "AFTER_LUNCH"
+      return "AFTER_DINNER"
     }
   }
   
