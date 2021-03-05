@@ -27,8 +27,9 @@ class WDMMainTabViewController: WDMSimpleTabViewController, UITabBarControllerDe
         super.initialSetup()
         
         tabBarViewControllers = [
-          WDMSummaryViewController(),
-          WDMDailySurveyViewController(),
+          WDMSummaryTableViewController(),
+          WDMDailyTasksViewController(),
+          WDMDailySurveyMainViewController(),
           WDMSettingsViewController()
         ]
         
@@ -44,43 +45,26 @@ class WDMMainTabViewController: WDMSimpleTabViewController, UITabBarControllerDe
     
     func setupTabBarItems(forViewController viewController: UIViewController) {
         
-      if viewController is WDMSummaryViewController {
-        viewController.tabBarItem = WDMSimpleTabBarItem(title: "DAILY_TASKS".localize(), image: Icons.unselectedSummaryIcon.image , selectedImage: Icons.selectedSummaryIcon.image)
+      if viewController is WDMDailyTasksViewController {
+        viewController.tabBarItem = WDMSimpleTabBarItem(title: "DAILY_TASKS".localize(), image: Icons.unselectedDailyTaskIcon.image , selectedImage: Icons.selectedDailyTaskIcon.image)
+        return
       }
       
       if viewController is WDMSettingsViewController {
         viewController.tabBarItem = WDMSimpleTabBarItem(title: "SETTINGS".localize(), image: Icons.unselectedSettingIcon.image , selectedImage: Icons.selectedSettingIcon.image)
+        return
       }
       
-      if viewController is WDMDailySurveyViewController {
+      if viewController is WDMDailySurveyMainViewController {
         viewController.tabBarItem = WDMSimpleTabBarItem(title: "DAILY_SURVEY".localize(), image: Icons.unselectedSurveyIcon.image, selectedImage: Icons.selectedSurveyIcon.image)
+        return
       }
       
-//        if viewController is SummaryViewController {
-//            viewController.tabBarItem = SimpleTabBarItem(title: String.summaryViewControllerTitle,
-//                                                         image: .summaryUnselectediconImage(),
-//                                                         selectedImage: .summarySelectedIconImage())
-//        } else if viewController is CalendarViewController {
-//            viewController.tabBarItem = SimpleTabBarItem(title: String.calendarViewControllerTitle,
-//                                                         image: .calendarUnselectedIconImage(),
-//                                                         selectedImage: .calendarSelectedIconImage())
-//        } else if viewController is ReminderViewController {
-//            viewController.tabBarItem = SimpleTabBarItem(title: String.reminderViewControllerTitle,
-//                                                         image: .reminderUnselectedIconImage(),
-//                                                         selectedImage: .reminderSelectedIconImage())
-//        } else if viewController is MealViewController {
-//            viewController.tabBarItem = SimpleTabBarItem(title: String.mealViewControllerTitle,
-//                                                         image: .mealUnselectedIconImage(),
-//                                                         selectedImage: .mealSelectedIconImage())
-//        } else if viewController is PrescriptionViewController {
-//            viewController.tabBarItem = SimpleTabBarItem(title: String.prescriptionViewControllerTitle,
-//                                                         image: .prescriptionUnselectedIconImage(),
-//                                                      selectedImage: .prescriptionSelectedIconImage())
-//        } else if viewController is SettingsViewController {
-//            viewController.tabBarItem = SimpleTabBarItem(title: String.settingsViewControllerTitle,
-//                                                         image: .settingsUnselectedIconImage(),
-//                                                      selectedImage: .settingsSelectedIconImage())
-//        }
+      if viewController is WDMSummaryTableViewController {
+        viewController.tabBarItem = WDMSimpleTabBarItem(title: "SUMMARY".localize(), image: Icons.unselectedSummaryIcon.image, selectedImage: Icons.selectedSummaryIcon.image)
+        return
+      }
+      
     }
 
 }

@@ -13,6 +13,14 @@ public enum CellInfoProviderTag: Int {
   case taskInstructionsTextFieldTag
   case taskAdherenceSwitchTag
   case taskNotificationSwitchTag
+  case sleepTimeSwitchTag
+  case sleepQualitySwitchTag
+  case temperatureSwitchTag
+  case bloodPressureSwitchTag
+  case heartBeatSwitchTag
+  case weightSwitchTag
+  case bloodSugarSwitchTag
+  case painlevelSwitchTag
 }
 
 enum TableViewCellIdentifier: String {
