@@ -40,7 +40,6 @@
 
 "" = "";
 "ADD" = "Add";
-"SUMMARY" = "Summary";
 "ADD_TASK" = "Add Task";
 "EDIT_TASK" = "Edit Task";
 "UPDATE_TASK" = "Update Task";
@@ -98,35 +97,18 @@
 "UNABLE_TO_SAVE_YOUR_TASK_DUE_TO_FAIL_TO_OBTAIN_PERMISION_TO_PUSH_NOTIFICATION._GO_TO_SETTINGS->WELLNESS_DIARY->NOTIFICATIONS_AND_TURN_ON_ALLOW_NOTIFICATIONS_OR_TURN_OFF_NOTIFICATIONS_FOR_THIS_TASK." = "Unable to save your task due to failt to obtaion permision to push notification. Go to settings->Wellness Diary->Notifications and turn on allow notifications or turn off notifications for this task.";
 "OK" = "Ok";
 
-// If adding new options for survey, need to the settings bundle and change the localization string there as well
-
-"daily_survey_questions" = "Daily Survey Questions";
-"SLEEP_TIME" = "Sleep Time";
+"SLEEP_TIME" = "Sleep EWFWEFTime";
 "SLEEP_QUALITY" = "Sleep Quality";
 "TEMPERATURE" = "Temperature";
 "BLOOD_PRESSURE" = "Blood Pressure";
 "HEART_BEAT" = "Heart Beat";
 "WEIGHT" = "Weight";
 "BLOOD_SUGAR" = "Blood Sugar";
-"PAIN_LEVEL" = "Pain Level";
+"PAIN_LEVELS" = "Pain Levels";
 
 "EDIT_SURVEY" = "Edit Survey";
-"GET_STARTED" = "Get Started";
 
 
-"TOLERABLE" = "Tolerable";
-"UNTOLERABLE" = "Untolerable";
-"ON_A_SCALE_OF_1_TO_10_,_WHAT_IS_YOUR_PAIN_LEVEL_?" = "On a scale of 1 to 10, what is your pain level?";
-"HOW_MANY_HOURS_OF_SLEEP_DID_YOU-GET_LAST_NIGHT_?"= "How many hours of sleep did you get last night?";
-"HOURS" = "Hours";
-"ON_A_SCALE_OF_1_TO_10_,_HOW_WAS_YOUR_SLEEP_QUALITY?" = "On a scale of 1 to 10, how was your sleep quality?";
-"EXCELLENT" = "Excellent";
-"NO_PAIN" = "No Pain";
-"POOR" = "Poor";
-"WHAT_IS_YOUR_BODY_TEMPERATURE_?" = "What is your body temperature?";
-"WHAT_IS_YOUR_BLOOD_PRESSURE_?" = "What is your blood pressure?";
-"WHAT_IS_YOUR_HEART_BEAT_?" = "What is your heart beat?";
-"WHAT_IS_YOUR_BODY_WEIGHT_?" = "What is your body weight?";
-"WHAT_IS_YOUR_BLOOD_SUGAR_LEVEL_?" = "What is your blood sugar level";
 
-"THANKS_FOR_COMPLETING_YOUR_DAILY_SURVEY_.\n\nHEAD_BACK_TO_THE_SUMMARY'S_PAGE_TO_LOOK_AT_YOUR_WEEKLY_OR_MONTHLY_TRENDS_." = "Thanks for completing your daily survey.\n\nHead over to the summary's page to look at your weekly or monthly trends.";
+
+
