@@ -6,17 +6,30 @@
 //
 
 import UIKit
+import InAppSettingsKit
 
-class WDMSettingsViewController: WDMSimpleViewController {
-
+class WDMSettingsViewController: IASKAppSettingsViewController {
+  
     override func viewDidLoad() {
+      showDoneButton = false
+      showCreditsFooter = false
+      title = "SETTINGS".localize()
+      
+    
+      view.tintColor = Colors.mainColor.color
         super.viewDidLoad()
     }
     
   // MARK: Methods
-  
-  override func initialSetup() {
-    navigationItem.title = "SETTINGS".localize()
-  }
 
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = super.tableView(tableView, cellForRowAt: indexPath)
+    let specifier = settingsReader?.specifier(for: indexPath)!
+    if specifier?.toggleStyle == IASKToggleStyle.switch {
+      guard let toggle = cell.accessoryView as? IASKSwitch else { return cell }
+      toggle.onTintColor = Colors.mainColor.color
+    }
+    return cell
+  }
+  
 }

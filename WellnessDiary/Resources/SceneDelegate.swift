@@ -14,10 +14,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     guard let windowScene = scene as? UIWindowScene else { return }
     let mainBarVC = WDMMainTabViewController()
-    window = UIWindow(windowScene: windowScene)
-    window?.rootViewController = mainBarVC
-    window?.tintColor = Colors.mainColor.color
-    window?.makeKeyAndVisible()
+    self.window = UIWindow(windowScene: windowScene)
+    self.window?.rootViewController = mainBarVC
+    self.window?.tintColor = Colors.mainColor.color
+    self.window?.makeKeyAndVisible()
   }
 }
 
