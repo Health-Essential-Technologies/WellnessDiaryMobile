@@ -18,7 +18,7 @@ class WDMDailySurveyManager: NSObject {
   public lazy var introStep: ORKInstructionStep = {
     let intro = ORKInstructionStep(identifier: "intro")
     intro.title = "DAILY_SURVEY".localize()
-    intro.text = "This survey its aimed at helping you record vital signs in order to further help your healthcare provider, as well as yourself, with insight information of your daily vitals, which will result in noticing a downward trend in your health and act accordingly.\n\n\nRest assure that your information is never saved in any web server and that it is safely secure by your own device encryption and that none of your data is ever sold."
+    intro.text = "THIS_SURVEY_ITS_AIMED_AT_HELPING_YOU_RECORD_VITAL_SIGNS_IN_ORDER_TO_FURTHER_HELP_YOUR_HEALTHCARE_PROVIDER,_AS_WELL_AS_YOURSELF,_WITH_INSIGHT_INFORMATION_OF_YOUR_DAILY_VITALS,_WHICH_WIL_RESULT_IN_NOTICING_A_DOWNARD_TREND_IN_YOUR_HEALTH_AND_ACT_ACCORDINGLY.\n\n\nREST_ASSURE_THAT_YOUR_INFORMATION_IS_NEVER_SAVED_IN_ANY_WEB_SERVER_AND_THAT_IT_IS_SAFELY_SECURE_BY_YOUR_OWN_DEVICE_ENCRYPTION_TECHNOLOGY_AND_THAT_NONE_OF_YOUR_DATA_IS_EVER_SOLD.\n\nYOU_CAN_SKIP_ANY_QUESTION,_BUT_THE_MORE_INFORMATION_YOU_PROVIDE,_THE_BETTER_WILL_BE_FOR_YOU_AND_YOUR_DOCTOR_TO_DETERMINE_MEANINGFUL_CHANGES_IN_YOUR_HEALTH.".localize()
     return intro
   }()
   
