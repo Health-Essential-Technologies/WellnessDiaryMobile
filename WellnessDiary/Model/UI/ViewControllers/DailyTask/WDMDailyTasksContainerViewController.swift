@@ -1,5 +1,5 @@
 //
-//  WDMSummaryContainerViewController.swift
+//  WDMDailyTasksContainerViewController.swift
 //  WellnessDiary
 //
 //  Created by luis flores on 1/27/21.
@@ -8,7 +8,7 @@
 import UIKit
 import CareKit
 
-class WDMSummaryContainerViewController: OCKDailyPageViewController {
+class WDMDailyTasksContainerViewController: OCKDailyPageViewController {
   
   // MARK: - Properties
   

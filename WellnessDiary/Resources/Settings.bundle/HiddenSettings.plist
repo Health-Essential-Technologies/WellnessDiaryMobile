@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key></key>
+	<string></string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>DefaultValue</key>
+			<date>1999-03-05T03:46:26Z</date>
+			<key>identifier</key>
+			<string>DAILY_SURVEY_DATE_KEY</string>
+			<key>Key</key>
+			<string>DAILY_SURVEY_DATE_KEY</string>
+		</dict>
+	</array>
+</dict>
+</plist>

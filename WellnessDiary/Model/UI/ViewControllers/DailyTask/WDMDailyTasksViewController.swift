@@ -1,5 +1,5 @@
 //
-//  WDMSummaryViewController.swift
+//  WDMDailyTasksViewController.swift
 //  WellnessDiary
 //
 //  Created by luis flores on 2/11/21.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class WDMSummaryViewController: WDMSimpleViewController {
+class WDMDailyTasksViewController: WDMSimpleViewController {
 
   // MARK: - Properties
   
-  var previousVC = WDMSummaryContainerViewController(storeManager: CarePlanStoreManager.sharedCarePlanStoreManager.synchronizedStoreManager)
+  var previousVC = WDMDailyTasksContainerViewController(storeManager: CarePlanStoreManager.sharedCarePlanStoreManager.synchronizedStoreManager)
   
   // MARK: - Initializers
   
@@ -31,7 +31,7 @@ class WDMSummaryViewController: WDMSimpleViewController {
   
   @objc func update() {
     previousVC.remove()
-    previousVC = WDMSummaryContainerViewController(storeManager: CarePlanStoreManager.sharedCarePlanStoreManager.synchronizedStoreManager)
+    previousVC = WDMDailyTasksContainerViewController(storeManager: CarePlanStoreManager.sharedCarePlanStoreManager.synchronizedStoreManager)
     add(previousVC)
   }
 
