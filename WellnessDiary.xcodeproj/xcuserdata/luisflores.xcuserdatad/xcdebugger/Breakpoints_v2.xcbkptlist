@@ -199,70 +199,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "95FA21DA-F3C0-4533-9E50-D2D83D4B99D8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/UserDefaults/UserPreference.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "setupDefaults(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "85224869-635D-4471-B768-3DAF66E43633"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/UserDefaults/UserPreference.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "setDefaults(for:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "85224869-635D-4471-B768-3DAF66E43633 - a0e2aa6dd1e54e8f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WellnessDiary.UserPreference.(setDefaults in _BD5DCF0EF0B7AE170A76659569B83AF0)(for: Foundation.URL) -&gt; ()"
-                  moduleName = "WellnessDiary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luisflores/Desktop/WellnessDiary/WellnessDiary/UserDefaults/UserPreference.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "1775">
-               </Location>
-               <Location
-                  uuid = "85224869-635D-4471-B768-3DAF66E43633 - a0e2aa6dd1e54e8f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WellnessDiary.UserPreference.(setDefaults in _BD5DCF0EF0B7AE170A76659569B83AF0)(for: Foundation.URL) -&gt; ()"
-                  moduleName = "WellnessDiary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luisflores/Desktop/WellnessDiary/WellnessDiary/UserDefaults/UserPreference.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "1928">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "D69C80D9-9846-45C0-B9DD-18DA0E2C193F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -274,6 +210,54 @@
             endingLineNumber = "49"
             landmarkName = "initialSetup()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA313FCF-5763-4F4F-9AA6-764DB45615CE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/WellnessDiary-cerdovzfhhdssraizkonvqjxcixd/SourcePackages/checkouts/CareKit/CareKitUI/CareKitUI/Components/Charts/OCKGraphAxisView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "redrawLabels()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BA313FCF-5763-4F4F-9AA6-764DB45615CE - 9693db913b31eec1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CareKitUI.OCKGraphAxisView.(redrawLabels in _3F6F5C0CF7941B1B8009FC14EBB1F832)() -&gt; ()"
+                  moduleName = "WellnessDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisflores/Library/Developer/Xcode/DerivedData/WellnessDiary-cerdovzfhhdssraizkonvqjxcixd/SourcePackages/checkouts/CareKit/CareKitUI/CareKitUI/Components/Charts/OCKGraphAxisView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  uuid = "BA313FCF-5763-4F4F-9AA6-764DB45615CE - 6dfb80970c5802f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CareKitUI.(OCKCircleLabelView in _3F6F5C0CF7941B1B8009FC14EBB1F832)) -&gt; () in CareKitUI.OCKGraphAxisView.(redrawLabels in _3F6F5C0CF7941B1B8009FC14EBB1F832)() -&gt; ()"
+                  moduleName = "WellnessDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisflores/Library/Developer/Xcode/DerivedData/WellnessDiary-cerdovzfhhdssraizkonvqjxcixd/SourcePackages/checkouts/CareKit/CareKitUI/CareKitUI/Components/Charts/OCKGraphAxisView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

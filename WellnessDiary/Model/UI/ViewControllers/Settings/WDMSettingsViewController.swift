@@ -8,13 +8,13 @@
 import UIKit
 import InAppSettingsKit
 
-class WDMSettingsViewController: IASKAppSettingsViewController {
+class WDMSettingsViewController: IASKAppSettingsViewController, IASKSettingsDelegate {
   
     override func viewDidLoad() {
       showDoneButton = false
       showCreditsFooter = false
       title = "SETTINGS".localize()
-      
+      self.delegate = self
     
       view.tintColor = Colors.mainColor.color
         super.viewDidLoad()
@@ -32,4 +32,13 @@ class WDMSettingsViewController: IASKAppSettingsViewController {
     return cell
   }
   
+  func settingsViewController(_ settingsViewController: IASKAppSettingsViewController, buttonTappedFor specifier: IASKSpecifier) {
+    if specifier.key == RESET_DAILY_SURVEY_LAST_DATE_KEY {
+      UserPreference.sharedUserPreferences.setSystemPreferences(for: DAILY_SURVEY_DATE_KEY, with: Date.getYearAgoFromToday())
+    }
+  }
+  
+  func settingsViewControllerDidEnd(_ settingsViewController: IASKAppSettingsViewController) {
+    
+  }
 }

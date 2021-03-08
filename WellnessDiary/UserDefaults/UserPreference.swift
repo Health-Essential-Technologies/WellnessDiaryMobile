@@ -11,6 +11,7 @@ import UIKit
 
 public let ACCOUNT_UUID_KEY = "ACCOUNT_UUID_KEY"
 public let DAILY_SURVEY_DATE_KEY = "DAILY_SURVEY_DATE_KEY"
+public let RESET_DAILY_SURVEY_LAST_DATE_KEY = "reset_daily_survey_last_date_key"
 
 class UserPreference  {
   
@@ -31,8 +32,10 @@ class UserPreference  {
     
     let bundleURL = Bundle.main.bundleURL
     let settingsBundlePath = bundleURL.appendingPathComponent("Settings").appendingPathExtension("bundle")
+    let hiddenSettingsPlist = settingsBundlePath.appendingPathComponent("HiddenSettings").appendingPathExtension("plist")
     let dailyStepsPlist = settingsBundlePath.appendingPathComponent("DailySteps").appendingPathExtension("plist")
     
+    setDefaults(for: hiddenSettingsPlist)
     setDefaults(for: dailyStepsPlist)
     UserDefaults.standard.synchronize()
     
@@ -61,7 +64,7 @@ class UserPreference  {
     }
   }
   
-  public func setSystemPreferences(for key: String, with object: Any) {
+  public func setSystemPreferences(for key: String, with object: Any?) {
     UserDefaults.standard.setValue(object, forKey: key)
     UserDefaults.standard.synchronize()
   }

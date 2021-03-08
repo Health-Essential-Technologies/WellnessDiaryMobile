@@ -38,7 +38,6 @@ class WDMTaskDetailsViewController: WDMSimpleTableViewController {
     navigationItem.title = "TASKS_LIST".localize()
     
     tableView = WDMSimpleTableView(frame: view.bounds, style: .insetGrouped)
-    tableView.isScrollEnabled = false
     
     infoProvider = createInfoProvider()
     
