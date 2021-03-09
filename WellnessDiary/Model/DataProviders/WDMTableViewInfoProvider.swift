@@ -72,6 +72,9 @@ class WDMTableViewInfoProvider: NSObject {
     case is WDMTaskDetailsTableViewCell.Type:
       cell = getTaskDetailsTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
       
+    case is WDMSummaryTableViewCell.Type:
+      cell = getSummaryTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
+      
     default:
       cell = getDefaultTableViewCell(forTableView: tableView, withIndexPath: indexPath, forCellItem: cellItem)
     }
@@ -142,6 +145,11 @@ class WDMTableViewInfoProvider: NSObject {
     return castedCell
   }
   
+  func getSummaryTableViewCell(forTableView tableView: UITableView, withIndexPath indexPath: IndexPath, forCellItem cellItem: TableViewSectionRowItem) -> WDMSummaryTableViewCell {
+    let castedCell = tableView.dequeueReusableCell(withIdentifier: cellItem.cellIdentifier, for: indexPath) as! WDMSummaryTableViewCell
+    castedCell.cellInfoProvider = cellItem.cellInfoProvider
+    return castedCell
+  }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
