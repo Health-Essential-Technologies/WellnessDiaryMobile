@@ -72,65 +72,8 @@ public enum WDMDailyStepType: String, CaseIterable {
     return self.rawValue.lowercased() + "_" + "key"
   }
   
-  public var chart: OCKCartesianGraphView {
-    switch self {
-    case .sleepTimeStep:
-      return sleepTimeChart
-    case .sleepQualityStep:
-      return sleepQualityChart
-    case .temperatureStep:
-      return temperatureChart
-    case .bloodPressureStep:
-      return bloodPressureChart
-    case .heartBeatStep:
-      return heartBeatChart
-    case .weightStep:
-      return weightChart
-    case .bloodSugarStep:
-      return bloodSugarChart
-    case .painLevelStep:
-      return painLevelChart
-    }
-  }
-  
-  private var sleepTimeChart: OCKCartesianGraphView {
-    let chart = OCKCartesianGraphView(type: .line)
-    return chart
-  }
-  
-  private var sleepQualityChart: OCKCartesianGraphView {
-    let chart = OCKCartesianGraphView(type: .line)
-    return chart
-  }
-  
-  private var temperatureChart: OCKCartesianGraphView {
-    let chart = OCKCartesianGraphView(type: .line)
-    return chart
-  }
-  
-  private var bloodPressureChart: OCKCartesianGraphView {
-    let chart = OCKCartesianGraphView(type: .line)
-    return chart
-  }
-  
-  private var heartBeatChart: OCKCartesianGraphView {
-    let chart = OCKCartesianGraphView(type: .line)
-    return chart
-  }
-  
-  private var weightChart: OCKCartesianGraphView {
-    let chart = OCKCartesianGraphView(type: .line)
-    return chart
-  }
-  
-  private var bloodSugarChart: OCKCartesianGraphView {
-    let chart = OCKCartesianGraphView(type: .line)
-    return chart
-  }
-  
-  private var painLevelChart: OCKCartesianGraphView {
-    let chart = OCKCartesianGraphView(type: .line)
-    return chart
+  public var chartType: OCKCartesianGraphView.PlotType {
+    return OCKCartesianGraphView.PlotType.line
   }
   
 }
