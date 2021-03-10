@@ -9,7 +9,7 @@
 import UIKit
 import CareKit
 
-private enum FrequencySegmentSelected: Int {
+public enum DailySurveySummaryFrequencySegmentSelected: Int {
   case lastSevenDays
   case lastThirtyDays
   case lastNinetyDays
@@ -21,9 +21,9 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
   
   private var frequencySegment: WDMSimpleSegmentControl = {
     let segment = WDMSimpleSegmentControl()
-    segment.insertSegment(withTitle: "LAST_7_DAYS".localize(), at: FrequencySegmentSelected.lastSevenDays.rawValue, animated: true)
-    segment.insertSegment(withTitle: "LAST_30_DAYS".localize(), at: FrequencySegmentSelected.lastThirtyDays.rawValue, animated: true)
-    segment.insertSegment(withTitle: "LAST_90_DAYS".localize(), at: FrequencySegmentSelected.lastNinetyDays.rawValue, animated: true)
+    segment.insertSegment(withTitle: "LAST_7_DAYS".localize(), at: DailySurveySummaryFrequencySegmentSelected.lastSevenDays.rawValue, animated: true)
+    segment.insertSegment(withTitle: "LAST_30_DAYS".localize(), at: DailySurveySummaryFrequencySegmentSelected.lastThirtyDays.rawValue, animated: true)
+    segment.insertSegment(withTitle: "LAST_90_DAYS".localize(), at: DailySurveySummaryFrequencySegmentSelected.lastNinetyDays.rawValue, animated: true)
     segment.translatesAutoresizingMaskIntoConstraints = false
     segment.backgroundColor = Colors.mainColor.color
     let color = NSAttributedString()
@@ -91,8 +91,8 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
       frequencySegment.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
       frequencySegment.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
       
-      tableView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-      tableView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+      tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       tableView.topAnchor.constraint(equalTo: frequencySegment.bottomAnchor, constant: 8),
       tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
     ])
@@ -101,12 +101,19 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
     tableView.delegate = tableviewDelegateHandler
     
     frequencySegment.addTarget(self, action: #selector(frequencySegmentTapped(_:)), for: .valueChanged)
+    infoProvider = createInfoProvider()
     
   }
   
   override func createInfoProvider() -> WDMTableViewInfoProvider {
     
     var sectionItems = [TableViewSectionItem]()
+    WDMDailyStepType.allCases.forEach {
+      let infoProvider = WDMSummaryCellInfoProvider(with: $0.chartType)
+      let row = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: infoProvider, cellType: WDMSummaryTableViewCell.self)
+      sectionItems.append(TableViewSectionItem(headerTitle: $0.rawValue.localize(), footerTitle: nil, sectionRowItems: [row]))
+      
+    }
     return WDMSummaryInfoProvider(withSectionItems: sectionItems, presenterViewController: self)
   }
   

@@ -14,8 +14,8 @@ class WDMStore: OCKStore {
   
   // MARK: Properties
   
-  internal lazy var customPersistentContainer: NSPersistentContainer = {
-    let container = NSPersistentContainer(name: "WellnessDiary")
+  internal lazy var customCareKitPersistentContainer: NSPersistentContainer = {
+    let container = NSPersistentContainer(name: "WellnessDiaryCareKit")
     container.loadPersistentStores { description, error in
       if let error = error {
         fatalError("Unable to load persistent storage \(error.localizedDescription)")
@@ -24,15 +24,29 @@ class WDMStore: OCKStore {
     return container
   }()
   
-  internal lazy var customContext: NSManagedObjectContext = {
-    return customPersistentContainer.newBackgroundContext()
+  internal lazy var customCareKitContext: NSManagedObjectContext = {
+    return customCareKitPersistentContainer.newBackgroundContext()
+  }()
+
+  internal lazy var customResearchKitPersistentContainer: NSPersistentContainer = {
+    let container = NSPersistentContainer(name: "WellnessDiaryResearchKit")
+    container.loadPersistentStores { description, error in
+      if let error = error {
+        fatalError("Unable to load persistent storage \(error.localizedDescription)")
+      }
+    }
+    return container
+  }()
+
+  internal lazy var customResearchKitContext: NSManagedObjectContext = {
+    return customResearchKitPersistentContainer.newBackgroundContext()
   }()
   
   // MARK: Methods
   
   public func addTaskID(_ id: String) {
-    customContext.perform {
-        let idObject = WDMCDTaskID(context: self.customContext)
+    customCareKitContext.perform {
+        let idObject = WDMCDTaskID(context: self.customCareKitContext)
         idObject.uniqueIdentifier = id
       self.save()
     }
@@ -44,7 +58,7 @@ class WDMStore: OCKStore {
       request.sortDescriptors = []
       do {
         
-        let idObjects = try self.customContext.fetch(request)
+        let idObjects = try self.customCareKitContext.fetch(request)
         return idObjects.first
       } catch {
         print("Unable to fetch task with id: \(id). Error: \(error.localizedDescription)")
@@ -56,7 +70,7 @@ class WDMStore: OCKStore {
     let request: NSFetchRequest<WDMCDTaskID> = WDMCDTaskID.fetchRequest()
     request.sortDescriptors = []
     do {
-      return try customContext.fetch(request)
+      return try customCareKitContext.fetch(request)
     }
     catch {
       fatalError("Unable to load any ids.")
@@ -64,18 +78,18 @@ class WDMStore: OCKStore {
   }
   
   public func delete(_ task: WDMTask) {
-    customContext.perform {
+    customCareKitContext.perform {
       guard let idObject = self.fetchTask(with: task.uniqueIdentifier) else { return }
-      self.customContext.delete(idObject)
+      self.customCareKitContext.delete(idObject)
       self.save()
     }
   }
   
   public func save() {
-    customContext.perform {
-      if self.customContext.hasChanges {
+    customCareKitContext.perform {
+      if self.customCareKitContext.hasChanges {
         do {
-          try self.customContext.save()
+          try self.customCareKitContext.save()
         } catch {
           fatalError("Unable to save: Error: \(error.localizedDescription)")
         }
