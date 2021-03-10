@@ -8,6 +8,7 @@
 
 import UIKit
 import ResearchKit
+import CareKitUI
 
 class WDMDailySurveyManager: NSObject {
   
@@ -104,7 +105,45 @@ class WDMDailySurveyManager: NSObject {
   
   // MARK: Methods
   
-  private func sortJsonStepsForCurrentSteps() {
-    
+  public func getSleepTimeChart(for frequency: DailySurveySummaryFrequencySegmentSelected) -> OCKCartesianChartView {
+    let  chart = OCKCartesianChartView(type: .line)
+    return chart
   }
+  
+  public func getSleepQualityChart(for frequency: DailySurveySummaryFrequencySegmentSelected) -> OCKCartesianChartView {
+    let  chart = OCKCartesianChartView(type: .line)
+    return chart
+  }
+  
+  public func getTemperatureChart(for frequency: DailySurveySummaryFrequencySegmentSelected) -> OCKCartesianChartView {
+    let  chart = OCKCartesianChartView(type: .line)
+    return chart
+  }
+  
+  public func getBloodPressureChart(for frequency: DailySurveySummaryFrequencySegmentSelected) -> OCKCartesianChartView {
+    let  chart = OCKCartesianChartView(type: .line)
+    return chart
+  }
+  
+  public func getHeartBeatChart(for frequency: DailySurveySummaryFrequencySegmentSelected) -> OCKCartesianChartView {
+    let  chart = OCKCartesianChartView(type: .line)
+    return chart
+  }
+  
+  public func getWeightChart(for frequency: DailySurveySummaryFrequencySegmentSelected) -> OCKCartesianChartView {
+    let  chart = OCKCartesianChartView(type: .line)
+    return chart
+  }
+  
+  public func getBloodSugarChart(for frequency: DailySurveySummaryFrequencySegmentSelected) -> OCKCartesianChartView {
+    let  chart = OCKCartesianChartView(type: .line)
+    return chart
+  }
+  
+  public func getPainLevelChart(for frequency: DailySurveySummaryFrequencySegmentSelected) -> OCKCartesianChartView {
+    let  chart = OCKCartesianChartView(type: .line)
+    return chart
+  }
+  
+  
 }
