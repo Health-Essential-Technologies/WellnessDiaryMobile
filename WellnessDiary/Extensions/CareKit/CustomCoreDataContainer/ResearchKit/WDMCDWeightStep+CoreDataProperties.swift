@@ -21,7 +21,3 @@ extension WDMCDWeightStep {
     @NSManaged public var survey: WDMCDSurvey?
 
 }
-
-extension WDMCDWeightStep : Identifiable {
-
-}

@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(WDMCDTemperatureStep)
-public class WDMCDTemperatureStep: NSManagedObject {
+public class WDMCDTemperatureStep: WDMCDCustomResearchObject {
 
 }

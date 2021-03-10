@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(WDMCDSugarLevelStep)
-public class WDMCDSugarLevelStep: NSManagedObject {
+public class WDMCDSugarLevelStep: WDMCDCustomResearchObject {
 
 }

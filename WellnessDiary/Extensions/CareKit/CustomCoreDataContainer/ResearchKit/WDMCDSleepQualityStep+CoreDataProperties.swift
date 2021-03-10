@@ -21,7 +21,3 @@ extension WDMCDSleepQualityStep {
     @NSManaged public var survey: WDMCDSurvey?
 
 }
-
-extension WDMCDSleepQualityStep : Identifiable {
-
-}

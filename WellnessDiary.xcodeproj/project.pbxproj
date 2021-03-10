@@ -78,24 +78,26 @@
 		ABA3814825F5C7FE003F64B2 /* WDMSummaryCellInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3814725F5C7FE003F64B2 /* WDMSummaryCellInfoProvider.swift */; };
 		ABA3814C25F5D9AE003F64B2 /* WDMSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3814B25F5D9AE003F64B2 /* WDMSummaryTableViewCell.swift */; };
 		ABA3815425F851FA003F64B2 /* WellnessDiaryResearchKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815225F851FA003F64B2 /* WellnessDiaryResearchKit.xcdatamodeld */; };
-		ABA3816725F85A3B003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815525F85A3A003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift */; };
-		ABA3816825F85A3B003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815625F85A3A003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift */; };
-		ABA3816925F85A3B003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815725F85A3B003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift */; };
-		ABA3816A25F85A3B003F64B2 /* WDMCDSugarLevelStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815825F85A3B003F64B2 /* WDMCDSugarLevelStep+CoreDataProperties.swift */; };
-		ABA3816B25F85A3B003F64B2 /* WDMCDSleepQuantityStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815925F85A3B003F64B2 /* WDMCDSleepQuantityStep+CoreDataClass.swift */; };
-		ABA3816C25F85A3B003F64B2 /* WDMCDSleepQuantityStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815A25F85A3B003F64B2 /* WDMCDSleepQuantityStep+CoreDataProperties.swift */; };
-		ABA3816D25F85A3B003F64B2 /* WDMCDSurvey+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815B25F85A3B003F64B2 /* WDMCDSurvey+CoreDataClass.swift */; };
-		ABA3816E25F85A3B003F64B2 /* WDMCDSurvey+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815C25F85A3B003F64B2 /* WDMCDSurvey+CoreDataProperties.swift */; };
-		ABA3816F25F85A3B003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815D25F85A3B003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift */; };
-		ABA3817025F85A3B003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815E25F85A3B003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift */; };
-		ABA3817125F85A3B003F64B2 /* WDMCDPainLevelStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3815F25F85A3B003F64B2 /* WDMCDPainLevelStep+CoreDataClass.swift */; };
-		ABA3817225F85A3B003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3816025F85A3B003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift */; };
-		ABA3817325F85A3B003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3816125F85A3B003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift */; };
-		ABA3817425F85A3B003F64B2 /* WDMCDBloodPressureStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3816225F85A3B003F64B2 /* WDMCDBloodPressureStep+CoreDataProperties.swift */; };
-		ABA3817525F85A3B003F64B2 /* WDMCDWeightStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3816325F85A3B003F64B2 /* WDMCDWeightStep+CoreDataClass.swift */; };
-		ABA3817625F85A3B003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3816425F85A3B003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift */; };
-		ABA3817725F85A3B003F64B2 /* WDMCDHeartBeatStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3816525F85A3B003F64B2 /* WDMCDHeartBeatStep+CoreDataClass.swift */; };
-		ABA3817825F85A3B003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3816625F85A3B003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift */; };
+		ABA3818D25F860B1003F64B2 /* WDMCDSleepQuantityStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3817925F860B0003F64B2 /* WDMCDSleepQuantityStep+CoreDataClass.swift */; };
+		ABA3818E25F860B1003F64B2 /* WDMCDSleepQuantityStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3817A25F860B1003F64B2 /* WDMCDSleepQuantityStep+CoreDataProperties.swift */; };
+		ABA3818F25F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3817B25F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift */; };
+		ABA3819025F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3817C25F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataProperties.swift */; };
+		ABA3819125F860B1003F64B2 /* WDMCDSurvey+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3817D25F860B1003F64B2 /* WDMCDSurvey+CoreDataClass.swift */; };
+		ABA3819225F860B1003F64B2 /* WDMCDSurvey+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3817E25F860B1003F64B2 /* WDMCDSurvey+CoreDataProperties.swift */; };
+		ABA3819325F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3817F25F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataClass.swift */; };
+		ABA3819425F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818025F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift */; };
+		ABA3819525F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818125F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift */; };
+		ABA3819625F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818225F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift */; };
+		ABA3819725F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818325F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift */; };
+		ABA3819825F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818425F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift */; };
+		ABA3819925F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818525F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift */; };
+		ABA3819A25F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818625F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift */; };
+		ABA3819B25F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818725F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift */; };
+		ABA3819C25F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818825F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataProperties.swift */; };
+		ABA3819D25F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818925F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataClass.swift */; };
+		ABA3819E25F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818A25F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift */; };
+		ABA3819F25F860B1003F64B2 /* WDMCDWeightStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818B25F860B1003F64B2 /* WDMCDWeightStep+CoreDataClass.swift */; };
+		ABA381A025F860B1003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818C25F860B1003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift */; };
 		ABB1C5D725E331FF003CA06E /* LocalNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */; };
 		ABB1E4A125EB3D0200F66083 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1E4A025EB3D0200F66083 /* UserPreference.swift */; };
 		ABB1E4AD25EC285000F66083 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ABB1E4AC25EC285000F66083 /* Settings.bundle */; };
@@ -242,24 +244,26 @@
 		ABA3814725F5C7FE003F64B2 /* WDMSummaryCellInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSummaryCellInfoProvider.swift; sourceTree = "<group>"; };
 		ABA3814B25F5D9AE003F64B2 /* WDMSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSummaryTableViewCell.swift; sourceTree = "<group>"; };
 		ABA3815325F851FA003F64B2 /* WellnessDiaryResearchKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WellnessDiaryResearchKit.xcdatamodel; sourceTree = "<group>"; };
-		ABA3815525F85A3A003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTemperatureStep+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ABA3815625F85A3A003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTemperatureStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ABA3815725F85A3B003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSugarLevelStep+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ABA3815825F85A3B003F64B2 /* WDMCDSugarLevelStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSugarLevelStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ABA3815925F85A3B003F64B2 /* WDMCDSleepQuantityStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSleepQuantityStep+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ABA3815A25F85A3B003F64B2 /* WDMCDSleepQuantityStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSleepQuantityStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ABA3815B25F85A3B003F64B2 /* WDMCDSurvey+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSurvey+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ABA3815C25F85A3B003F64B2 /* WDMCDSurvey+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSurvey+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ABA3815D25F85A3B003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSleepQualityStep+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ABA3815E25F85A3B003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSleepQualityStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ABA3815F25F85A3B003F64B2 /* WDMCDPainLevelStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDPainLevelStep+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ABA3816025F85A3B003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDPainLevelStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ABA3816125F85A3B003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDBloodPressureStep+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ABA3816225F85A3B003F64B2 /* WDMCDBloodPressureStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDBloodPressureStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ABA3816325F85A3B003F64B2 /* WDMCDWeightStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDWeightStep+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ABA3816425F85A3B003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDWeightStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ABA3816525F85A3B003F64B2 /* WDMCDHeartBeatStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDHeartBeatStep+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ABA3816625F85A3B003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDHeartBeatStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABA3817925F860B0003F64B2 /* WDMCDSleepQuantityStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSleepQuantityStep+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABA3817A25F860B1003F64B2 /* WDMCDSleepQuantityStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSleepQuantityStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABA3817B25F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSugarLevelStep+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABA3817C25F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSugarLevelStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABA3817D25F860B1003F64B2 /* WDMCDSurvey+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSurvey+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABA3817E25F860B1003F64B2 /* WDMCDSurvey+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSurvey+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABA3817F25F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDHeartBeatStep+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABA3818025F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDHeartBeatStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABA3818125F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTemperatureStep+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABA3818225F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTemperatureStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABA3818325F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDCustomResearchObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABA3818425F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDCustomResearchObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABA3818525F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSleepQualityStep+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABA3818625F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSleepQualityStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABA3818725F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDBloodPressureStep+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABA3818825F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDBloodPressureStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABA3818925F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDPainLevelStep+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABA3818A25F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDPainLevelStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABA3818B25F860B1003F64B2 /* WDMCDWeightStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDWeightStep+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABA3818C25F860B1003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDWeightStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsManager.swift; sourceTree = "<group>"; };
 		ABB1E4A025EB3D0200F66083 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 		ABB1E4AC25EC285000F66083 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -640,24 +644,26 @@
 			isa = PBXGroup;
 			children = (
 				ABA3815225F851FA003F64B2 /* WellnessDiaryResearchKit.xcdatamodeld */,
-				ABA3815525F85A3A003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift */,
-				ABA3815625F85A3A003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift */,
-				ABA3815725F85A3B003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift */,
-				ABA3815825F85A3B003F64B2 /* WDMCDSugarLevelStep+CoreDataProperties.swift */,
-				ABA3815925F85A3B003F64B2 /* WDMCDSleepQuantityStep+CoreDataClass.swift */,
-				ABA3815A25F85A3B003F64B2 /* WDMCDSleepQuantityStep+CoreDataProperties.swift */,
-				ABA3815B25F85A3B003F64B2 /* WDMCDSurvey+CoreDataClass.swift */,
-				ABA3815C25F85A3B003F64B2 /* WDMCDSurvey+CoreDataProperties.swift */,
-				ABA3815D25F85A3B003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift */,
-				ABA3815E25F85A3B003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift */,
-				ABA3815F25F85A3B003F64B2 /* WDMCDPainLevelStep+CoreDataClass.swift */,
-				ABA3816025F85A3B003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift */,
-				ABA3816125F85A3B003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift */,
-				ABA3816225F85A3B003F64B2 /* WDMCDBloodPressureStep+CoreDataProperties.swift */,
-				ABA3816325F85A3B003F64B2 /* WDMCDWeightStep+CoreDataClass.swift */,
-				ABA3816425F85A3B003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift */,
-				ABA3816525F85A3B003F64B2 /* WDMCDHeartBeatStep+CoreDataClass.swift */,
-				ABA3816625F85A3B003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift */,
+				ABA3817925F860B0003F64B2 /* WDMCDSleepQuantityStep+CoreDataClass.swift */,
+				ABA3817A25F860B1003F64B2 /* WDMCDSleepQuantityStep+CoreDataProperties.swift */,
+				ABA3817B25F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift */,
+				ABA3817C25F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataProperties.swift */,
+				ABA3817D25F860B1003F64B2 /* WDMCDSurvey+CoreDataClass.swift */,
+				ABA3817E25F860B1003F64B2 /* WDMCDSurvey+CoreDataProperties.swift */,
+				ABA3817F25F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataClass.swift */,
+				ABA3818025F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift */,
+				ABA3818125F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift */,
+				ABA3818225F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift */,
+				ABA3818325F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift */,
+				ABA3818425F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift */,
+				ABA3818525F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift */,
+				ABA3818625F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift */,
+				ABA3818725F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift */,
+				ABA3818825F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataProperties.swift */,
+				ABA3818925F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataClass.swift */,
+				ABA3818A25F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift */,
+				ABA3818B25F860B1003F64B2 /* WDMCDWeightStep+CoreDataClass.swift */,
+				ABA3818C25F860B1003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift */,
 			);
 			path = ResearchKit;
 			sourceTree = "<group>";
@@ -958,13 +964,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA3819625F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift in Sources */,
 				5110AAD9810D5D5DF26F4B2C /* AppDelegate.swift in Sources */,
-				ABA3817025F85A3B003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift in Sources */,
 				ABD8EB0B25C2C91C0002F902 /* WDMPickerViewInfoProvider.swift in Sources */,
 				ABD8EB1525C2CAC00002F902 /* WDMPickerViewDelegateHandler.swift in Sources */,
 				CB69BCC8DB599350090E033A /* Collection+Extension.swift in Sources */,
 				ABD496C77267D5D190E816A2 /* Colors.swift in Sources */,
-				ABA3817725F85A3B003F64B2 /* WDMCDHeartBeatStep+CoreDataClass.swift in Sources */,
 				AB9E64A225C5B91F008CD933 /* WDMTaskReccurenceViewController.swift in Sources */,
 				AB8A208725DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift in Sources */,
 				ABD8EB2825C2CCC70002F902 /* TableViewSectionRowItem.swift in Sources */,
@@ -973,68 +978,72 @@
 				ABD8EB1325C2CA800002F902 /* WDMTableViewCellIdentifier.swift in Sources */,
 				9D453B9F2066200353EAE1A9 /* Date+Extension.swift in Sources */,
 				AB2E79D225B76495008B37B4 /* CarePlanStoreManager.swift in Sources */,
+				ABA3819825F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift in Sources */,
 				AB9E64B825CA2E67008CD933 /* WDMInfoProvider.swift in Sources */,
 				ABA3815425F851FA003F64B2 /* WellnessDiaryResearchKit.xcdatamodeld in Sources */,
 				AB31280A25EB093300F459D4 /* WDMDailySurveyManager.swift in Sources */,
-				ABA3816C25F85A3B003F64B2 /* WDMCDSleepQuantityStep+CoreDataProperties.swift in Sources */,
 				AB8A208F25DB2B83000986A5 /* WDMTaskDetailsCellInfoProvider.swift in Sources */,
 				ABD8EB2625C2CCB80002F902 /* TableViewSectionItem.swift in Sources */,
-				ABA3817525F85A3B003F64B2 /* WDMCDWeightStep+CoreDataClass.swift in Sources */,
 				AB9E649F25C5AF0D008CD933 /* WDMDefaultCellInfoProvider.swift in Sources */,
 				ABD8EB0025C248AD0002F902 /* WDMSimpleCustomOCKLabelButton.swift in Sources */,
-				ABA3817825F85A3B003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift in Sources */,
 				AB2E79D725B76A8F008B37B4 /* OCKStore+Extension.swift in Sources */,
 				AB9E64AE25C70D5F008CD933 /* WDMSummaryAddTaskInfoProvider.swift in Sources */,
+				ABA3819425F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift in Sources */,
 				ABD8EB0725C2C8DD0002F902 /* WDMTableViewInfoProvider.swift in Sources */,
 				8DBA154E687156E7BF6BBE01 /* WDMMainNavigationController.swift in Sources */,
 				ABD8EB0D25C2C92F0002F902 /* WDMDatePickerViewCellInfoProvider.swift in Sources */,
 				399A5E7BCCC509F02EB7852D /* WDMMainTabViewController.swift in Sources */,
 				319FD4A22E01521C60F5C8E6 /* SceneDelegate.swift in Sources */,
 				AB350407E3CED47A2BF85B97 /* WDMSimpleNavigationViewController.swift in Sources */,
+				ABA3819B25F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift in Sources */,
 				AB8A209125DB2CA5000986A5 /* WDMTaskDetailsTableViewCell.swift in Sources */,
+				ABA3819D25F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataClass.swift in Sources */,
 				AB9E649625C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift in Sources */,
 				8B62A7670B7460CED94AFF89 /* WDMSimpleTabViewController.swift in Sources */,
 				AB2E79CF25B73BF4008B37B4 /* WDMSimpleBarButtomItem.swift in Sources */,
+				ABA3819525F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift in Sources */,
 				AB115D6E25EAEB1800E8F802 /* WDMStep.swift in Sources */,
 				AB9E64B125C8C35B008CD933 /* WDMTaskReccurenceCellInfoProvider.swift in Sources */,
 				AB8A202C25D611A4000986A5 /* WDMLabelSwitchTableViewCell.swift in Sources */,
 				AB2E79CC25B73B3F008B37B4 /* WDMSimpleButton.swift in Sources */,
-				ABA3816725F85A3B003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift in Sources */,
 				ABD8EB2D25C2CE1C0002F902 /* WDMDatePickerTableViewCell.swift in Sources */,
-				ABA3817225F85A3B003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift in Sources */,
-				ABA3817425F85A3B003F64B2 /* WDMCDBloodPressureStep+CoreDataProperties.swift in Sources */,
 				DF8C40D43EB6893ACA99A816 /* WDMSimpleViewController.swift in Sources */,
 				AB9E64A625C60E15008CD933 /* String+Extension.swift in Sources */,
 				A992D6F6C9F0F33BF2AB02BD /* UIButton+Extension.swift in Sources */,
 				AB9E649225C49959008CD933 /* WDMSimpleTableViewController.swift in Sources */,
 				AB3127FE25EAF9BF00F459D4 /* WDMDailySurveyEditViewController.swift in Sources */,
+				ABA3819925F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift in Sources */,
 				AB2E79BE25B4F025008B37B4 /* WDMSettingsViewController.swift in Sources */,
 				ABD8EB1725C2CAD70002F902 /* WDMPickerViewDataSourceHandler.swift in Sources */,
 				AB9E649A25C4ECB5008CD933 /* WDMLabelTextfieldTableViewCell.swift in Sources */,
-				ABA3816B25F85A3B003F64B2 /* WDMCDSleepQuantityStep+CoreDataClass.swift in Sources */,
 				AB9E649D25C4ED7C008CD933 /* WDMSimpleTextField.swift in Sources */,
-				ABA3816E25F85A3B003F64B2 /* WDMCDSurvey+CoreDataProperties.swift in Sources */,
-				ABA3816A25F85A3B003F64B2 /* WDMCDSugarLevelStep+CoreDataProperties.swift in Sources */,
 				B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */,
+				ABA3819025F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataProperties.swift in Sources */,
 				D98BF8D0A77D93E31116D765 /* UITableview+Extension.swift in Sources */,
 				ABB1C5D725E331FF003CA06E /* LocalNotificationsManager.swift in Sources */,
 				AB900A3825F15C8D00D5BF61 /* WDMDailySurveyCompletedChildViewController.swift in Sources */,
-				ABA3817125F85A3B003F64B2 /* WDMCDPainLevelStep+CoreDataClass.swift in Sources */,
+				ABA3818D25F860B1003F64B2 /* WDMCDSleepQuantityStep+CoreDataClass.swift in Sources */,
 				AB8A208625DB0572000986A5 /* WDMCDObject+CoreDataClass.swift in Sources */,
-				ABA3816825F85A3B003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift in Sources */,
 				AB8A207425DAB0BB000986A5 /* OCKTask+Extension.swift in Sources */,
 				AB2E79B925B4ED69008B37B4 /* WDMSimpleTabBarItem.swift in Sources */,
 				AB8A207025DAAFAA000986A5 /* WDMTask.swift in Sources */,
 				ABD8EB3125C2CE3E0002F902 /* WDMPickerTableViewCell.swift in Sources */,
 				AB8A208B25DB268F000986A5 /* WDMTaskDetailsViewController.swift in Sources */,
 				AB900A4825F1A51E00D5BF61 /* WDMSummaryTableViewController.swift in Sources */,
+				ABA3819C25F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataProperties.swift in Sources */,
 				ABD8EB2B25C2CDFB0002F902 /* WDMSimpleTableViewCell.swift in Sources */,
+				ABA3819E25F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift in Sources */,
+				ABA3819A25F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift in Sources */,
 				ABD8EB1B25C2CAFB0002F902 /* PickerViewRowItem.swift in Sources */,
+				ABA3819325F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataClass.swift in Sources */,
 				ABC467B325E47E0200CA03DF /* WDMTaskReccurence.swift in Sources */,
 				AB2E79C925B7341B008B37B4 /* WDMDailySurveyMainViewController.swift in Sources */,
+				ABA3819225F860B1003F64B2 /* WDMCDSurvey+CoreDataProperties.swift in Sources */,
 				AB115D6C25EAE9FF00E8F802 /* WDMDailyTask.swift in Sources */,
 				AB3B515725C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift in Sources */,
+				ABA3818E25F860B1003F64B2 /* WDMCDSleepQuantityStep+CoreDataProperties.swift in Sources */,
 				AB9E64B525CA13A9008CD933 /* DelegateSharedInformationProtocol.swift in Sources */,
+				ABA3819F25F860B1003F64B2 /* WDMCDWeightStep+CoreDataClass.swift in Sources */,
 				ABA3814C25F5D9AE003F64B2 /* WDMSummaryTableViewCell.swift in Sources */,
 				AB8A208D25DB2AC4000986A5 /* WDMTaskDetailsInfoProvider.swift in Sources */,
 				AB31280325EAFBE200F459D4 /* WDMDailySurveyEditInfoProvider.swift in Sources */,
@@ -1043,29 +1052,27 @@
 				AB8A207C25DAF5AF000986A5 /* WDMStore.swift in Sources */,
 				ABD8EB0925C2C8FE0002F902 /* WDMMealAddTableViewInfoProvider.swift in Sources */,
 				AB8A207F25DAFF72000986A5 /* WellnessDiaryCareKit.xcdatamodeld in Sources */,
-				ABA3817625F85A3B003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift in Sources */,
 				AB9E649525C4D13E008CD933 /* WDMTableViewDelegateHandler.swift in Sources */,
 				ABD8EB2F25C2CE2F0002F902 /* WDMDefaultTableViewCell.swift in Sources */,
 				AB8A209425DB4AB7000986A5 /* WDMCDTaskID+CoreDataClass.swift in Sources */,
 				AB8A202825D58EE4000986A5 /* WDMDailyTasksViewController.swift in Sources */,
+				ABA3819725F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift in Sources */,
 				694725E4395CF97582E7EC3C /* UITableviewCell+Extension.swift in Sources */,
 				ABD8EB0F25C2C9550002F902 /* WDMSingleButtonCellInfoProvider.swift in Sources */,
 				AB9F190B25EEE87900467F39 /* WDMDailySurveyViewController.swift in Sources */,
-				ABA3816D25F85A3B003F64B2 /* WDMCDSurvey+CoreDataClass.swift in Sources */,
 				40AC6F2253711AD700AAA2C9 /* UIView+Extension.swift in Sources */,
 				AB9E64B325C8F27C008CD933 /* RawComparable+Extension.swift in Sources */,
-				ABA3817325F85A3B003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift in Sources */,
 				ABD8EB1925C2CAEC0002F902 /* PickerViewComponentItem.swift in Sources */,
 				ABA3814825F5C7FE003F64B2 /* WDMSummaryCellInfoProvider.swift in Sources */,
 				AB2E79AF25B4EC65008B37B4 /* Icons.swift in Sources */,
 				AB8A207A25DAE48B000986A5 /* NotificationCenter+Extension.swift in Sources */,
 				AB8A203125D61410000986A5 /* WDMLabelSwitchCellInfoProvider.swift in Sources */,
 				AB8A209525DB4AB7000986A5 /* WDMCDTaskID+CoreDataProperties.swift in Sources */,
+				ABA3819125F860B1003F64B2 /* WDMCDSurvey+CoreDataClass.swift in Sources */,
 				ABD8EB4025C2CEE90002F902 /* WDMSimplePickerView.swift in Sources */,
 				ABD8EB2425C2CCA60002F902 /* WDMSimpleTableView.swift in Sources */,
 				ABD8EB3525C2CE630002F902 /* WDMSingleButtonTableViewCell.swift in Sources */,
-				ABA3816F25F85A3B003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift in Sources */,
-				ABA3816925F85A3B003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift in Sources */,
+				ABA3818F25F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift in Sources */,
 				9C29D62E2FFCE399C7AD2DB1 /* UIViewController+Extension.swift in Sources */,
 				ABC85F0B25F2EE2200B963AD /* WDMSimpleSegmentControl.swift in Sources */,
 				AB9E64A825C6576D008CD933 /* WDMTaskFrequencyInfoProvider.swift in Sources */,
@@ -1074,6 +1081,7 @@
 				ABA3814625F5C7A6003F64B2 /* WDMSummaryInfoProvider.swift in Sources */,
 				ABD8EB3325C2CE4E0002F902 /* WDMMealAddPickerViewTableViewCell.swift in Sources */,
 				AB9E649825C4EAC1008CD933 /* WDMLabelTextFieldCellInfoProvider.swift in Sources */,
+				ABA381A025F860B1003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

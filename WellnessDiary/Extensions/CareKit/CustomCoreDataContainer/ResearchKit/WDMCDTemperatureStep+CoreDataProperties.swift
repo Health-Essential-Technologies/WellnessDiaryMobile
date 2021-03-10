@@ -21,7 +21,3 @@ extension WDMCDTemperatureStep {
     @NSManaged public var survey: WDMCDSurvey?
 
 }
-
-extension WDMCDTemperatureStep : Identifiable {
-
-}

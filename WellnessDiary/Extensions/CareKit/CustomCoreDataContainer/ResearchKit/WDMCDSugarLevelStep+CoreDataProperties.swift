@@ -21,7 +21,3 @@ extension WDMCDSugarLevelStep {
     @NSManaged public var survey: WDMCDSurvey?
 
 }
-
-extension WDMCDSugarLevelStep : Identifiable {
-
-}

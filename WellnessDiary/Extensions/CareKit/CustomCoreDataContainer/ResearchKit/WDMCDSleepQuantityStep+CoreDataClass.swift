@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(WDMCDSleepQuantityStep)
-public class WDMCDSleepQuantityStep: NSManagedObject {
+public class WDMCDSleepQuantityStep: WDMCDCustomResearchObject {
 
 }

@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(WDMCDSurvey)
-public class WDMCDSurvey: NSManagedObject {
+public class WDMCDSurvey: WDMCDCustomResearchObject {
 
 }

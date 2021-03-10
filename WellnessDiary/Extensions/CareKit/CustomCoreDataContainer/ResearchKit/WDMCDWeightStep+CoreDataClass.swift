@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(WDMCDWeightStep)
-public class WDMCDWeightStep: NSManagedObject {
+public class WDMCDWeightStep: WDMCDCustomResearchObject {
 
 }

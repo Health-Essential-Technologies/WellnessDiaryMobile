@@ -1,5 +1,5 @@
 //
-//  WDMCDPainLevelStep+CoreDataClass.swift
+//  WDMCDCustomResearchObject+CoreDataClass.swift
 //  WellnessDiary
 //
 //  Created by luis flores on 3/9/21.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(WDMCDPainLevelStep)
-public class WDMCDPainLevelStep: WDMCDCustomResearchObject {
+@objc(WDMCDCustomResearchObject)
+public class WDMCDCustomResearchObject: NSManagedObject {
 
 }

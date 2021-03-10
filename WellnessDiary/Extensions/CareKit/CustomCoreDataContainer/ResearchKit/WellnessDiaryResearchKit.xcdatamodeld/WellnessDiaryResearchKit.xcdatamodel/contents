@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="WDMCDBloodPressureStep" representedClassName="WDMCDBloodPressureStep" syncable="YES">
+    <entity name="WDMCDBloodPressureStep" representedClassName="WDMCDBloodPressureStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
+        <attribute name="attribute" optional="YES"/>
+        <attribute name="attribute1" optional="YES"/>
+        <attribute name="attribute2" optional="YES"/>
         <attribute name="diastolicValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="systolicValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="bloodPressureStep" inverseEntity="WDMCDSurvey"/>
     </entity>
-    <entity name="WDMCDHeartBeatStep" representedClassName="WDMCDHeartBeatStep" syncable="YES">
+    <entity name="WDMCDCustomResearchObject" representedClassName="WDMCDCustomResearchObject" syncable="YES" codeGenerationType="class">
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="WDMCDHeartBeatStep" representedClassName="WDMCDHeartBeatStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
         <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="heartBeatStep" inverseEntity="WDMCDSurvey"/>
     </entity>
-    <entity name="WDMCDPainLevelStep" representedClassName="WDMCDPainLevelStep" syncable="YES">
+    <entity name="WDMCDPainLevelStep" representedClassName="WDMCDPainLevelStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
         <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="painLevelStep" inverseEntity="WDMCDSurvey"/>
     </entity>
-    <entity name="WDMCDSleepQualityStep" representedClassName="WDMCDSleepQualityStep" syncable="YES">
+    <entity name="WDMCDSleepQualityStep" representedClassName="WDMCDSleepQualityStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
         <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="sleepQualityStep" inverseEntity="WDMCDSurvey"/>
     </entity>
-    <entity name="WDMCDSleepQuantityStep" representedClassName="WDMCDSleepQuantityStep" syncable="YES">
+    <entity name="WDMCDSleepQuantityStep" representedClassName="WDMCDSleepQuantityStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
         <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="sleepQuantityStep" inverseEntity="WDMCDSurvey"/>
     </entity>
-    <entity name="WDMCDSugarLevelStep" representedClassName="WDMCDSugarLevelStep" syncable="YES">
+    <entity name="WDMCDSugarLevelStep" representedClassName="WDMCDSugarLevelStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
         <attribute name="attribute" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="sugarLevelStep" inverseEntity="WDMCDSurvey"/>
     </entity>
-    <entity name="WDMCDSurvey" representedClassName="WDMCDSurvey" syncable="YES">
-        <attribute name="createdDate" attributeType="Date" usesScalarValueType="NO"/>
+    <entity name="WDMCDSurvey" representedClassName="WDMCDSurvey" parentEntity="WDMCDCustomResearchObject" syncable="YES">
         <relationship name="bloodPressureStep" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDBloodPressureStep" inverseName="survey" inverseEntity="WDMCDBloodPressureStep"/>
         <relationship name="heartBeatStep" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDHeartBeatStep" inverseName="survey" inverseEntity="WDMCDHeartBeatStep"/>
         <relationship name="painLevelStep" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDPainLevelStep" inverseName="survey" inverseEntity="WDMCDPainLevelStep"/>
@@ -36,23 +41,24 @@
         <relationship name="temperatureStep" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDTemperatureStep" inverseName="survey" inverseEntity="WDMCDTemperatureStep"/>
         <relationship name="weightStep" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDWeightStep" inverseName="survey" inverseEntity="WDMCDWeightStep"/>
     </entity>
-    <entity name="WDMCDTemperatureStep" representedClassName="WDMCDTemperatureStep" syncable="YES">
+    <entity name="WDMCDTemperatureStep" representedClassName="WDMCDTemperatureStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
         <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="temperatureStep" inverseEntity="WDMCDSurvey"/>
     </entity>
-    <entity name="WDMCDWeightStep" representedClassName="WDMCDWeightStep" syncable="YES">
+    <entity name="WDMCDWeightStep" representedClassName="WDMCDWeightStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
         <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="weightStep" inverseEntity="WDMCDSurvey"/>
     </entity>
     <elements>
-        <element name="WDMCDSurvey" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="WDMCDBloodPressureStep" positionX="-9" positionY="36" width="128" height="133"/>
+        <element name="WDMCDHeartBeatStep" positionX="0" positionY="45" width="128" height="73"/>
+        <element name="WDMCDPainLevelStep" positionX="0" positionY="45" width="128" height="73"/>
         <element name="WDMCDSleepQualityStep" positionX="-54" positionY="0" width="128" height="73"/>
         <element name="WDMCDSleepQuantityStep" positionX="-36" positionY="9" width="128" height="73"/>
-        <element name="WDMCDWeightStep" positionX="-18" positionY="27" width="128" height="73"/>
-        <element name="WDMCDPainLevelStep" positionX="0" positionY="45" width="128" height="73"/>
-        <element name="WDMCDTemperatureStep" positionX="18" positionY="63" width="128" height="73"/>
         <element name="WDMCDSugarLevelStep" positionX="36" positionY="81" width="128" height="73"/>
-        <element name="WDMCDBloodPressureStep" positionX="-9" positionY="36" width="128" height="88"/>
-        <element name="WDMCDHeartBeatStep" positionX="0" positionY="45" width="128" height="73"/>
+        <element name="WDMCDSurvey" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="WDMCDTemperatureStep" positionX="18" positionY="63" width="128" height="73"/>
+        <element name="WDMCDWeightStep" positionX="-18" positionY="27" width="128" height="73"/>
+        <element name="WDMCDCustomResearchObject" positionX="9" positionY="72" width="128" height="58"/>
     </elements>
 </model>

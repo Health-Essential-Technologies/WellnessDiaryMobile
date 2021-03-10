@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(WDMCDBloodPressureStep)
-public class WDMCDBloodPressureStep: NSManagedObject {
+public class WDMCDBloodPressureStep: WDMCDCustomResearchObject {
 
 }

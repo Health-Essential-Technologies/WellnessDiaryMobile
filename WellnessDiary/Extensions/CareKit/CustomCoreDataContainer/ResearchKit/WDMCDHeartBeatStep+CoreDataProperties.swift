@@ -21,7 +21,3 @@ extension WDMCDHeartBeatStep {
     @NSManaged public var survey: WDMCDSurvey?
 
 }
-
-extension WDMCDHeartBeatStep : Identifiable {
-
-}

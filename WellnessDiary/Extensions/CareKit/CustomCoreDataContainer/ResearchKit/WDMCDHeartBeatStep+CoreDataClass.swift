@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(WDMCDHeartBeatStep)
-public class WDMCDHeartBeatStep: NSManagedObject {
+public class WDMCDHeartBeatStep: WDMCDCustomResearchObject {
 
 }

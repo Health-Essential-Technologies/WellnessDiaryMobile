@@ -21,7 +21,3 @@ extension WDMCDPainLevelStep {
     @NSManaged public var survey: WDMCDSurvey?
 
 }
-
-extension WDMCDPainLevelStep : Identifiable {
-
-}
