@@ -19,9 +19,6 @@ extension WDMCDBloodPressureStep {
 
     @NSManaged public var diastolicValue: Int16
     @NSManaged public var systolicValue: Int16
-    @NSManaged public var attribute: NSObject?
-    @NSManaged public var attribute1: NSObject?
-    @NSManaged public var attribute2: NSObject?
     @NSManaged public var survey: WDMCDSurvey?
 
 }

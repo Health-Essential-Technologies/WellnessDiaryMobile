@@ -88,8 +88,6 @@
 		ABA3819425F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818025F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift */; };
 		ABA3819525F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818125F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift */; };
 		ABA3819625F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818225F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift */; };
-		ABA3819725F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818325F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift */; };
-		ABA3819825F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818425F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift */; };
 		ABA3819925F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818525F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift */; };
 		ABA3819A25F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818625F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift */; };
 		ABA3819B25F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818725F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift */; };
@@ -98,6 +96,8 @@
 		ABA3819E25F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818A25F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift */; };
 		ABA3819F25F860B1003F64B2 /* WDMCDWeightStep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818B25F860B1003F64B2 /* WDMCDWeightStep+CoreDataClass.swift */; };
 		ABA381A025F860B1003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3818C25F860B1003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift */; };
+		ABA381AA25F8624E003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA381A825F8624D003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift */; };
+		ABA381AB25F8624E003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA381A925F8624E003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift */; };
 		ABB1C5D725E331FF003CA06E /* LocalNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */; };
 		ABB1E4A125EB3D0200F66083 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1E4A025EB3D0200F66083 /* UserPreference.swift */; };
 		ABB1E4AD25EC285000F66083 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ABB1E4AC25EC285000F66083 /* Settings.bundle */; };
@@ -254,8 +254,6 @@
 		ABA3818025F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDHeartBeatStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ABA3818125F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTemperatureStep+CoreDataClass.swift"; sourceTree = "<group>"; };
 		ABA3818225F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDTemperatureStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ABA3818325F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDCustomResearchObject+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ABA3818425F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDCustomResearchObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ABA3818525F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSleepQualityStep+CoreDataClass.swift"; sourceTree = "<group>"; };
 		ABA3818625F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSleepQualityStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ABA3818725F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDBloodPressureStep+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -264,6 +262,8 @@
 		ABA3818A25F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDPainLevelStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ABA3818B25F860B1003F64B2 /* WDMCDWeightStep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDWeightStep+CoreDataClass.swift"; sourceTree = "<group>"; };
 		ABA3818C25F860B1003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDWeightStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABA381A825F8624D003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDCustomResearchObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABA381A925F8624E003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDCustomResearchObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsManager.swift; sourceTree = "<group>"; };
 		ABB1E4A025EB3D0200F66083 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 		ABB1E4AC25EC285000F66083 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -644,6 +644,8 @@
 			isa = PBXGroup;
 			children = (
 				ABA3815225F851FA003F64B2 /* WellnessDiaryResearchKit.xcdatamodeld */,
+				ABA381A825F8624D003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift */,
+				ABA381A925F8624E003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift */,
 				ABA3817925F860B0003F64B2 /* WDMCDSleepQuantityStep+CoreDataClass.swift */,
 				ABA3817A25F860B1003F64B2 /* WDMCDSleepQuantityStep+CoreDataProperties.swift */,
 				ABA3817B25F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift */,
@@ -654,8 +656,6 @@
 				ABA3818025F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataProperties.swift */,
 				ABA3818125F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataClass.swift */,
 				ABA3818225F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift */,
-				ABA3818325F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift */,
-				ABA3818425F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift */,
 				ABA3818525F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift */,
 				ABA3818625F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift */,
 				ABA3818725F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataClass.swift */,
@@ -964,6 +964,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA381AB25F8624E003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift in Sources */,
 				ABA3819625F860B1003F64B2 /* WDMCDTemperatureStep+CoreDataProperties.swift in Sources */,
 				5110AAD9810D5D5DF26F4B2C /* AppDelegate.swift in Sources */,
 				ABD8EB0B25C2C91C0002F902 /* WDMPickerViewInfoProvider.swift in Sources */,
@@ -978,7 +979,6 @@
 				ABD8EB1325C2CA800002F902 /* WDMTableViewCellIdentifier.swift in Sources */,
 				9D453B9F2066200353EAE1A9 /* Date+Extension.swift in Sources */,
 				AB2E79D225B76495008B37B4 /* CarePlanStoreManager.swift in Sources */,
-				ABA3819825F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift in Sources */,
 				AB9E64B825CA2E67008CD933 /* WDMInfoProvider.swift in Sources */,
 				ABA3815425F851FA003F64B2 /* WellnessDiaryResearchKit.xcdatamodeld in Sources */,
 				AB31280A25EB093300F459D4 /* WDMDailySurveyManager.swift in Sources */,
@@ -1012,6 +1012,7 @@
 				A992D6F6C9F0F33BF2AB02BD /* UIButton+Extension.swift in Sources */,
 				AB9E649225C49959008CD933 /* WDMSimpleTableViewController.swift in Sources */,
 				AB3127FE25EAF9BF00F459D4 /* WDMDailySurveyEditViewController.swift in Sources */,
+				ABA381AA25F8624E003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift in Sources */,
 				ABA3819925F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataClass.swift in Sources */,
 				AB2E79BE25B4F025008B37B4 /* WDMSettingsViewController.swift in Sources */,
 				ABD8EB1725C2CAD70002F902 /* WDMPickerViewDataSourceHandler.swift in Sources */,
@@ -1056,7 +1057,6 @@
 				ABD8EB2F25C2CE2F0002F902 /* WDMDefaultTableViewCell.swift in Sources */,
 				AB8A209425DB4AB7000986A5 /* WDMCDTaskID+CoreDataClass.swift in Sources */,
 				AB8A202825D58EE4000986A5 /* WDMDailyTasksViewController.swift in Sources */,
-				ABA3819725F860B1003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift in Sources */,
 				694725E4395CF97582E7EC3C /* UITableviewCell+Extension.swift in Sources */,
 				ABD8EB0F25C2C9550002F902 /* WDMSingleButtonCellInfoProvider.swift in Sources */,
 				AB9F190B25EEE87900467F39 /* WDMDailySurveyViewController.swift in Sources */,

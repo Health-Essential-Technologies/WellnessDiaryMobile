@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="WDMCDBloodPressureStep" representedClassName="WDMCDBloodPressureStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
-        <attribute name="attribute" optional="YES"/>
-        <attribute name="attribute1" optional="YES"/>
-        <attribute name="attribute2" optional="YES"/>
         <attribute name="diastolicValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="systolicValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="bloodPressureStep" inverseEntity="WDMCDSurvey"/>
     </entity>
-    <entity name="WDMCDCustomResearchObject" representedClassName="WDMCDCustomResearchObject" syncable="YES" codeGenerationType="class">
+    <entity name="WDMCDCustomResearchObject" representedClassName="WDMCDCustomResearchObject" syncable="YES">
         <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="WDMCDHeartBeatStep" representedClassName="WDMCDHeartBeatStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
@@ -50,7 +47,8 @@
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="weightStep" inverseEntity="WDMCDSurvey"/>
     </entity>
     <elements>
-        <element name="WDMCDBloodPressureStep" positionX="-9" positionY="36" width="128" height="133"/>
+        <element name="WDMCDBloodPressureStep" positionX="-9" positionY="36" width="128" height="88"/>
+        <element name="WDMCDCustomResearchObject" positionX="9" positionY="72" width="128" height="58"/>
         <element name="WDMCDHeartBeatStep" positionX="0" positionY="45" width="128" height="73"/>
         <element name="WDMCDPainLevelStep" positionX="0" positionY="45" width="128" height="73"/>
         <element name="WDMCDSleepQualityStep" positionX="-54" positionY="0" width="128" height="73"/>
@@ -59,6 +57,5 @@
         <element name="WDMCDSurvey" positionX="-63" positionY="-18" width="128" height="163"/>
         <element name="WDMCDTemperatureStep" positionX="18" positionY="63" width="128" height="73"/>
         <element name="WDMCDWeightStep" positionX="-18" positionY="27" width="128" height="73"/>
-        <element name="WDMCDCustomResearchObject" positionX="9" positionY="72" width="128" height="58"/>
     </elements>
 </model>
