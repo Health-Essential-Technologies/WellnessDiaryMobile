@@ -12,5 +12,5 @@ import CoreData
 
 @objc(WDMCDSurvey)
 public class WDMCDSurvey: WDMCDCustomResearchObject {
-
+  
 }

@@ -170,7 +170,7 @@ final class CarePlanStoreManager {
     
     var query = OCKTaskQuery(for: taskToDelete.startDate)
     query.ids = [taskToDelete.uniqueIdentifier]
-    
+
     synchronizedStoreManager.store.fetchAnyTasks(query: query, callbackQueue: .main) { taskResults in
       switch taskResults {
       

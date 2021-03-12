@@ -33,7 +33,7 @@ class WDMSummaryTableViewCell: WDMSimpleTableViewCell {
   
   override func didSetcellInfoProvider() {
     guard let infoProvider = cellInfoProvider as? WDMSummaryCellInfoProvider else { return }
-    chart = OCKCartesianChartView(type: infoProvider.chartType)
+    chart = infoProvider.chart
     initialSetup()
   }
 

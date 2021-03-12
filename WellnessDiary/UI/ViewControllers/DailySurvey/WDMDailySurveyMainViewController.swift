@@ -141,6 +141,7 @@ extension WDMDailySurveyMainViewController: ORKTaskViewControllerDelegate {
       UserPreference.sharedUserPreferences.setSystemPreferences(for: DAILY_SURVEY_DATE_KEY, with: Date())
       checkSurveyAvailability()
       createDailySurveyVC()
+      ResearchKitStoreManager.shared.addSurvey(from: taskViewController.result)
     }
     
     

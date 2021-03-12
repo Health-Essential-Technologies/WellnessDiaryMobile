@@ -72,10 +72,6 @@ public enum WDMDailyStepType: String, CaseIterable {
     return self.rawValue.lowercased() + "_" + "key"
   }
   
-  public var chartType: OCKCartesianGraphView.PlotType {
-    return OCKCartesianGraphView.PlotType.line
-  }
-  
 }
 
 extension WDMDailyStepType: Comparable {

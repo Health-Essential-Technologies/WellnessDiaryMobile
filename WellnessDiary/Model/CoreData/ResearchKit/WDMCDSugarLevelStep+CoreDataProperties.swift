@@ -17,7 +17,7 @@ extension WDMCDSugarLevelStep {
         return NSFetchRequest<WDMCDSugarLevelStep>(entityName: "WDMCDSugarLevelStep")
     }
 
-    @NSManaged public var attribute: Float
+    @NSManaged public var value: Float
     @NSManaged public var survey: WDMCDSurvey?
 
 }

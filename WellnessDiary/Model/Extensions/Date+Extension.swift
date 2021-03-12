@@ -17,6 +17,27 @@ extension Date {
     }
   
   /**
+   - Returns: a date object from three months ago.
+   */
+  static func getThreeMonthsAgoFromToday() -> Date {
+      return Calendar.current.date(byAdding: .month, value: -3, to: Date())!
+  }
+  
+  /**
+   - Returns: a date object from one months ago.
+   */
+  static func getOneMonthAgoFromToday() -> Date {
+      return Calendar.current.date(byAdding: .month, value: -1, to: Date())!
+  }
+  
+  /**
+   - Returns: a date object from seven days ago.
+   */
+  static func getAWeekAgoFromToday() -> Date {
+      return Calendar.current.date(byAdding: .day, value: -7, to: Date())!
+  }
+  
+  /**
    - Returns: Tomorrows' day
    */
   

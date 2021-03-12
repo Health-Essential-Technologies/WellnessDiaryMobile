@@ -16,4 +16,6 @@ public extension Notification.Name {
   static let taskDeleted = Notification.Name(rawValue: "taskDeleted")
   static let taskUpdated = Notification.Name(rawValue: "taskUpdated")
   
+  static let surveyAdded = Notification.Name("surveyAdded")
+  
 }

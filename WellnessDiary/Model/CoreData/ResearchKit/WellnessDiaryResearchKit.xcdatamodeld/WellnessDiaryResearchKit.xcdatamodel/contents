@@ -6,7 +6,7 @@
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="bloodPressureStep" inverseEntity="WDMCDSurvey"/>
     </entity>
     <entity name="WDMCDCustomResearchObject" representedClassName="WDMCDCustomResearchObject" syncable="YES">
-        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="createdDate" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="WDMCDHeartBeatStep" representedClassName="WDMCDHeartBeatStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
         <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -25,7 +25,7 @@
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="sleepQuantityStep" inverseEntity="WDMCDSurvey"/>
     </entity>
     <entity name="WDMCDSugarLevelStep" representedClassName="WDMCDSugarLevelStep" parentEntity="WDMCDCustomResearchObject" syncable="YES">
-        <attribute name="attribute" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WDMCDSurvey" inverseName="sugarLevelStep" inverseEntity="WDMCDSurvey"/>
     </entity>
     <entity name="WDMCDSurvey" representedClassName="WDMCDSurvey" parentEntity="WDMCDCustomResearchObject" syncable="YES">

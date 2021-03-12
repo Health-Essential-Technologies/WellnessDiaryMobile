@@ -17,7 +17,7 @@ extension WDMCDCustomResearchObject {
         return NSFetchRequest<WDMCDCustomResearchObject>(entityName: "WDMCDCustomResearchObject")
     }
 
-    @NSManaged public var createdDate: Date?
+    @NSManaged public var createdDate: Date
 
 }
 
