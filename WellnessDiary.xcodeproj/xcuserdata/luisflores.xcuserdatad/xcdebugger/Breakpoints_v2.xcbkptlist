@@ -5,257 +5,152 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.RuntimeIssueBreakpoint">
+         <BreakpointContent
+            uuid = "D9E7BC70-FE5C-4336-9B65-573FE9FA284F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            type = "65535">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "1DDDEAA4-A4C0-491E-89AB-0EC028D1FD8D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1304ED48-2235-4B09-ADE0-AD0E36EE39EB"
+            uuid = "7097B3EF-4633-4983-B97D-9630A1C9F800"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/WellnessDiary-cerdovzfhhdssraizkonvqjxcixd/SourcePackages/checkouts/CareKit/CareKitUI/CareKitUI/Components/Charts/OCKGridView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "xMaximum"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58074C09-DD82-470A-8325-5A3FBEE14392"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WellnessDiary/Model/DataProviders/Handlers/WDMSummaryDelegateHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "tableView(_:viewForFooterInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B814DBE-6EF5-48D7-84CA-41AE855BEDBE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WellnessDiary/Model/WDMHyperLinkTappableLabel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(with:text:url:hyperLinkRange:fontSize:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56A77D4E-F34F-42DA-92AC-6C5A0412AE14"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/Extensions/UITableview+Extension.swift"
+            filePath = "WellnessDiary/UI/ViewControllers/Summary/WDMSummaryTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "dequeue(cellClass:)"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
+            landmarkName = "loadChartData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "89CA6986-026C-448A-A9E3-F23B31A9BA25"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/Extensions/UITableview+Extension.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "dequeue(cellClass:indexPath:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DDB99DA7-FCAF-4072-9A63-F9216AD1BB04"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../Library/Developer/Xcode/DerivedData/WellnessDiary-cerdovzfhhdssraizkonvqjxcixd/SourcePackages/checkouts/CareKit/CareKit/CareKit/Lists/Controller/OCKDailyTasksPageViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "dailyTasksPageViewController(_:viewControllerForTask:events:eventQuery:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "04AC99E6-2D55-496A-9DE3-DFD8F930F6D6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../Library/Developer/Xcode/DerivedData/WellnessDiary-cerdovzfhhdssraizkonvqjxcixd/SourcePackages/checkouts/CareKit/CareKit/CareKit/Lists/Controller/OCKDailyTasksPageViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "dailyTasksPageViewController(_:viewControllerForTask:events:eventQuery:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6CBF5007-0125-4193-8AFF-08760BE4C238"
+            uuid = "1C3BF518-F066-4DCD-B7CC-545CA3C00ED9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/Model/UI/ViewControllers/SummaryVC/WDMSummaryDetailViewController.swift"
+            filePath = "Carthage/Checkouts/ResearchKit/ResearchKit/Common/ORKAnswerFormat.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "dailyPageViewController(_:prepare:for:)"
+            startingLineNumber = "1623"
+            endingLineNumber = "1623"
+            landmarkName = "-localizedInvalidValueStringWithAnswerString:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DC51C27A-F4EF-4B45-9311-C2AB20311CDB"
+            uuid = "4FF40AFE-3AE8-474F-AB17-A1181B7907A1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/Model/UI/ViewControllers/SummaryVC/WDMTestingViewController.swift"
+            filePath = "WellnessDiary/UI/ViewControllers/Summary/WDMSummaryTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "update()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "714C14CD-912E-4C8B-98BA-B1A12F59DA56"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../Library/Developer/Xcode/DerivedData/WellnessDiary-cerdovzfhhdssraizkonvqjxcixd/SourcePackages/checkouts/CareKit/CareKit/CareKit/Lists/Controller/OCKDailyPageViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "selectDate(_:animated:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "88925FDD-27A3-4920-8882-07C39CDDA73E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/Model/CareKit/CustomCoreDataContainer/WDMStore.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "save()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CD47578F-7E0D-4D85-90FD-4F276A82C1AD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/Model/CareKit/CarePlanStoreManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2C23B76B-8C04-4CE8-A1AA-F5EC68DBAC30"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/Model/DataProviders/WDMTableViewInfoProvider.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "getPickerTableViewCell(forTableView:withIndexPath:forCellItem:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8A9D23CF-9944-48D6-9981-07AB730E3FC3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/Model/UI/ViewControllers/Summary/AddTask/WDMSummaryAddTaskViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "updateEffectiveDate(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C9277868-BE82-4928-A890-D3E1ABD0AB45"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/Model/UI/ViewControllers/Summary/AddTask/WDMTaskReccurenceViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
-            landmarkName = "createInfoProvider()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D69C80D9-9846-45C0-B9DD-18DA0E2C193F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WellnessDiary/Model/UI/ViewControllers/Summary/AddTask/WDMSummaryAddTaskViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "initialSetup()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BA313FCF-5763-4F4F-9AA6-764DB45615CE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../Library/Developer/Xcode/DerivedData/WellnessDiary-cerdovzfhhdssraizkonvqjxcixd/SourcePackages/checkouts/CareKit/CareKitUI/CareKitUI/Components/Charts/OCKGraphAxisView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "redrawLabels()"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
+            landmarkName = "loadChartData()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "BA313FCF-5763-4F4F-9AA6-764DB45615CE - 9693db913b31eec1"
+                  uuid = "4FF40AFE-3AE8-474F-AB17-A1181B7907A1 - 4026a4657a4a34d8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CareKitUI.OCKGraphAxisView.(redrawLabels in _3F6F5C0CF7941B1B8009FC14EBB1F832)() -&gt; ()"
+                  symbolName = "WellnessDiary.WDMSummaryTableViewController.(loadChartData in _4F8DC343DB4936E63DFC09B2D6D90265)() -&gt; ()"
                   moduleName = "WellnessDiary"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luisflores/Library/Developer/Xcode/DerivedData/WellnessDiary-cerdovzfhhdssraizkonvqjxcixd/SourcePackages/checkouts/CareKit/CareKitUI/CareKitUI/Components/Charts/OCKGraphAxisView.swift"
+                  urlString = "file:///Users/luisflores/Desktop/WellnessDiary/WellnessDiary/UI/ViewControllers/Summary/WDMSummaryTableViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "47">
+                  startingLineNumber = "315"
+                  endingLineNumber = "315"
+                  offsetFromSymbolStart = "6530">
                </Location>
                <Location
-                  uuid = "BA313FCF-5763-4F4F-9AA6-764DB45615CE - 6dfb80970c5802f2"
+                  uuid = "4FF40AFE-3AE8-474F-AB17-A1181B7907A1 - de49f721e6c49fe0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (CareKitUI.(OCKCircleLabelView in _3F6F5C0CF7941B1B8009FC14EBB1F832)) -&gt; () in CareKitUI.OCKGraphAxisView.(redrawLabels in _3F6F5C0CF7941B1B8009FC14EBB1F832)() -&gt; ()"
+                  symbolName = "closure #4 (CareKitUI.OCKCartesianChartView) -&gt; () in WellnessDiary.WDMSummaryTableViewController.(loadChartData in _4F8DC343DB4936E63DFC09B2D6D90265)() -&gt; ()"
                   moduleName = "WellnessDiary"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luisflores/Library/Developer/Xcode/DerivedData/WellnessDiary-cerdovzfhhdssraizkonvqjxcixd/SourcePackages/checkouts/CareKit/CareKitUI/CareKitUI/Components/Charts/OCKGraphAxisView.swift"
+                  urlString = "file:///Users/luisflores/Desktop/WellnessDiary/WellnessDiary/UI/ViewControllers/Summary/WDMSummaryTableViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "20">
+                  startingLineNumber = "316"
+                  endingLineNumber = "316"
+                  offsetFromSymbolStart = "38">
                </Location>
             </Locations>
          </BreakpointContent>
