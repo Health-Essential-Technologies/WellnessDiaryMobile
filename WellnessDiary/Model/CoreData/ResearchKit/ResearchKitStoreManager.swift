@@ -25,6 +25,7 @@ final class ResearchKitStoreManager {
   
   private init() {
     NotificationCenter.default.addObserver(self, selector: #selector(calendarDayChanged), name: .NSCalendarDayChanged, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(calendarDayChanged), name: .surveyAdded, object: nil)
   }
   
   // MARK: Methods
@@ -57,9 +58,11 @@ final class ResearchKitStoreManager {
     }
     
     if let bloodPressureResult = taskResult.stepResult(forStepIdentifier: WDMDailyStepType.bloodPressureStep.rawValue) {
-      if let result = bloodPressureResult.firstResult as? ORKNumericQuestionResult, let answer = result.answer as? Int {
-//         need to add two answer
-        survey.bloodPressureStep = store.addBloodPressure(with: 0, systolicValue: 0, createdDate: today)
+      if let result = bloodPressureResult.firstResult as? ORKTextQuestionResult, let answer = result.answer as? String {
+        let splitAnswer = answer.components(separatedBy: "/")
+        if let splitAnswerFirst = splitAnswer.first, let splitAnswerLast = splitAnswer.last, let systolicValue = Int(splitAnswerFirst), let distolicValue = Int(splitAnswerLast) {
+          survey.bloodPressureStep = store.addBloodPressure(withsystolicValue: systolicValue, diastolicValue: distolicValue, createdDate: today)
+        }
       }
     }
     
@@ -96,18 +99,15 @@ final class ResearchKitStoreManager {
   }
   
   @discardableResult
-  private func fetchSurvey(with selectedSegment: DailySurveySummaryFrequencySegmentSelected, forceFetch: Bool) -> [WDMCDSurvey]? {
+  public func fetchSurvey(with selectedSegment: DailySurveySummaryFrequencySegmentSelected, forceFetch: Bool) -> [WDMCDSurvey]? {
     if !dailySurveys.isEmpty && forceFetch == false {
-      if dailySurveys.count < selectedSegment.rawValue {
-        return dailySurveys
-      }
-      return Array(dailySurveys[0..<selectedSegment.rawValue])
+      return getDailySurvey(for: selectedSegment)
     }
     
     let fetchRequest = WDMCDSurvey.fetchRequest(with: selectedSegment)
     do {
       dailySurveys =  try store.customResearchKitContext.fetch(fetchRequest)
-      return Array(dailySurveys[0..<selectedSegment.rawValue])
+      return getDailySurvey(for: selectedSegment)
     } catch {
       print("Unable to fetch surveys. Error: \(error.localizedDescription)")
       return nil
@@ -115,9 +115,19 @@ final class ResearchKitStoreManager {
   }
   
   @objc private func calendarDayChanged() {
-    DispatchQueue.global(qos: .utility).async { [unowned self] in
-      self.fetchSurvey(with: .lastNinetyDays, forceFetch: true)
+    self.fetchSurvey(with: .lastNinetyDays, forceFetch: true)
+  }
+  
+  private func getDailySurvey(for selectedSegment: DailySurveySummaryFrequencySegmentSelected) -> [WDMCDSurvey]? {
+    
+    var selectedSegmentSurveys: [WDMCDSurvey]
+    
+    if dailySurveys.count < selectedSegment.rawValue {
+      selectedSegmentSurveys = dailySurveys
+    } else {
+      selectedSegmentSurveys = Array(dailySurveys[0..<selectedSegment.rawValue])
     }
+    return selectedSegmentSurveys.reversed()
   }
   
   
