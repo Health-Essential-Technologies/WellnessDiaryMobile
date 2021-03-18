@@ -148,7 +148,7 @@ class WDMStore: OCKStore {
     return object
   }
   
-  public func addBloodPressure(with diastolicValue: Int, systolicValue: Int, createdDate: Date) -> WDMCDBloodPressureStep {
+  public func addBloodPressure(withsystolicValue systolicValue: Int, diastolicValue: Int, createdDate: Date) -> WDMCDBloodPressureStep {
     
     let object = WDMCDBloodPressureStep(context: self.customResearchKitContext)
     
