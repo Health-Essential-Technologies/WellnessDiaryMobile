@@ -12,12 +12,12 @@ public class WDMSummarySectionItem: TableViewSectionItem {
 
   // MARK: Properties
   
-  public var learnMoreLabel: WDMHyperLinkTappableLabel
+  public var footerURL: URL?
   
   // MARK: Initializers
   
-  public init(headerTitle: String? = "", footerTitle: String? = "", sectionRowItems: [TableViewSectionRowItem] = [], learnMoreLabel: WDMHyperLinkTappableLabel) {
-    self.learnMoreLabel = learnMoreLabel
+  public init(withHeaderTitle headerTitle: String? = nil, footerTitle: String? = nil, sectionRowItems: [TableViewSectionRowItem], footerURL: URL?) {
+    self.footerURL = footerURL
     super.init(headerTitle: headerTitle, footerTitle: footerTitle, sectionRowItems: sectionRowItems)
   }
 }
