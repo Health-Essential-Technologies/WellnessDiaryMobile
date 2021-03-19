@@ -141,3 +141,28 @@
 "LAST_7_DAYS" = "Last 7 Days";
 "LAST_30_DAYS" = "Last 30 Days";
 "LAST_90_DAYS" = "Last 90 Days";
+
+"LEARN_MORE" = "Learn More";
+"SLEEP_TIME_QUANTITY_PER_DAY" = "Sleep Time Quantity per Day";
+"SLEEP_QUALITY_PER_DAY" = "Sleep Quality per Day";
+"TEMPERATURE_LEVELS_PER_DAY" = "Temperature Levels per Day";
+"SYSTOLIC_LEVELS_PER_DAY" = "Systolic Levels per Day";
+"DIASTOLIC_LEVELS_PER_DAY" = "Diastolic Levels per Day";
+"HEART_BEAT_RATE_PER_DAY" = "Heart Beats Rate per Day";
+"WEIGHT_PER_DAY" = "Weight per Day";
+"SUGAR_LEVELS_PER_DAY" = "Sugar Levels per Day";
+"PAIN_LEVELS_PER_DAY" = "Pain Levels per Day";
+
+"HOURS." = "Hours.";
+"YOUR_AVERAGE_SLEEP_TIME_HAS_BEEN:" = "Your average sleep time has been:";
+"YOUR_AVERAGE_SLEEP_QUALITY_HAS_BEEN:" = "Your average sleep quality has been:";
+"YOUR_AVERAGE_BODY_TEMPERATURE_HAS_BEEN:" = "Your average body temperature has been:";
+"YOUR_SYSTOLIC_AVERAGE_LEVELS_HAVE_BEEN:" = "Your systolic average levels have been:";
+"YOUR_DIASTOLIC_AVERAGE_LEVELS_HAVE_BEEN:" = "Your diastolic average levels have been:";
+"YOUR_AVERAGE_HEART_BEAT_HAS_BEEN:" = "Your average heart beat has been:";
+"YOUR_AVERAGE_WEIGHT_HAS_BEEN:" = "Your average weight has been:";
+"YOUR_AVERAGE_BLOOD_SUGAR_LEVELS_HAVE_BEEN:" = "Your average blood sugar levels have been:";
+"YOUR_AVERAGE_PAIN_LEVELS_HAVE_BEEN:" = "Your average pain levels have been:";
+
+"PLEASE_ENTER_THE_BLOOD_PRESSURE_READING_WITH_FORMAT_120/70" = "Please enter the blood pressure reading with format \"120/70\"";
+"FORMAT:_120/70" = "Format: 120/70 (mmHg)";

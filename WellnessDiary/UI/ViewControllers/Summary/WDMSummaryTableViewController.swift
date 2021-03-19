@@ -77,16 +77,6 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
   // MARK: Sections
   
   private let learnMoreText = "LEARN_MORE".localize()
-  private lazy var learnMoreLabel = WDMHyperLinkTappableLabel(text: learnMoreText, url: nil, hyperLinkRange: NSRange(location: 0, length: learnMoreText.count), fontSize: 11)
-  
-  private var sleepTimeSection: WDMSummarySectionItem {
-    let headerTitle = WDMDailyStepType.sleepTimeStep.rawValue.localize()
-    let infoProvider = WDMSummaryCellInfoProvider(with: sleepTimeChart)
-    let sectionRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: infoProvider, cellType: WDMSummaryTableViewCell.self)
-    learnMoreLabel.url = URL(string: "https://mantasleep.com/blogs/sleep/sleep-quantity-vs-sleep-quality-which-one-makes-the-biggest-difference")
-    return WDMSummarySectionItem(headerTitle: headerTitle, footerTitle: "", sectionRowItems: [sectionRow], learnMoreLabel: learnMoreLabel)
-  }
-  
   
   // MARK: Charts
   
@@ -142,6 +132,7 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
   override func initialSetup() {
     
     tableView = WDMSimpleTableView(frame: view.bounds, style: .insetGrouped)
+    tableView.register(WDMSummaryLearnMoreFooterView.self, forHeaderFooterViewReuseIdentifier: WDMSummaryLearnMoreFooterView.reuseIdentifier)
     
     title = "SUMMARY".localize()
     
@@ -167,12 +158,24 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
     infoProvider = createInfoProvider()
   }
   
+  private func clearData(withChart chart: OCKCartesianChartView) {
+    chart.graphView.dataSeries.removeAll()
+    chart.headerView.detailLabel.text = ""
+
+  }
+  
   private func loadChartData() {
     
     let selectedSegment = DailySurveySummaryFrequencySegmentSelected.getDailySurveySummaryFrequencySegmentSelected(from: frequencySegment.selectedSegmentIndex)
-    guard let surveys = ResearchKitStoreManager.shared.fetchSurvey(with: selectedSegment) else { return }
     
     let charts =    [sleepTimeChart, sleepQualityChart, temperatureChart, bloodPressureChart, heartBeatChart, weightChart, sugarLevelChart, painLevelChart]
+    
+    charts.forEach {
+      clearData(withChart: $0)
+    }
+    
+    guard let surveys = ResearchKitStoreManager.shared.fetchSurvey(with: selectedSegment) else { return }
+    
     charts.forEach { chart in
       chart.graphView.xMinimum = 1
       chart.graphView.xMaximum = CGFloat(selectedSegment.rawValue)
@@ -294,8 +297,8 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
             $0.headerView.detailLabel.text = "YOUR_AVERAGE_BODY_TEMPERATURE_HAS_BEEN:".localize() + " " + "\(dataSeriesAverage)"
             break
           case bloodPressureChart:
-            $0.headerView.detailLabel.text = "YOUR_SYSTOLIC_LEVELS_HAVE_BEEN:".localize() + " " + "\(dataSeriesAverage)"
-            $0.headerView.detailLabel.text?.append("\n" + "YOUR_DIASTOLIC_LEVELS_HAVE_BEEN:".localize() + " " + "\(dataSeriesAverage)")
+            $0.headerView.detailLabel.text = "YOUR_SYSTOLIC_AVERAGE_LEVELS_HAVE_BEEN:".localize() + " " + "\(dataSeriesAverage)"
+            $0.headerView.detailLabel.text?.append("\n" + "YOUR_DIASTOLIC_AVERAGE_LEVELS_HAVE_BEEN:".localize() + " " + "\(dataSeriesAverage)")
             break
           case heartBeatChart:
             $0.headerView.detailLabel.text = "YOUR_AVERAGE_HEART_BEAT_HAS_BEEN:".localize() + " " + "\(dataSeriesAverage)"
@@ -318,13 +321,22 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
 
     // Set the minimums for each graph
     
-      charts.forEach {
-        if $0 == bloodPressureChart {
-          $0.graphView.yMinimum = 20
-        } else {
-          $0.graphView.yMinimum = $0.graphView.dataSeries.first?.dataPoints.min { a, b in a.y < b.y }?.y
-        }
+    charts.forEach {
+      $0.graphView.yMinimum = $0.graphView.dataSeries.first?.dataPoints.min { a, b in a.y < b.y }?.y
+      
+      let yMinimum = $0.graphView.yMinimum ?? 0
+      let yMaximum = $0.graphView.dataSeries.first?.dataPoints.min { a, b in a.y > b.y }?.y ?? 0
+      
+      if $0 == sugarLevelChart || $0 == weightChart || $0 == heartBeatChart {
+        $0.graphView.yMinimum = yMinimum - 5
+        $0.graphView.yMaximum = yMaximum + 5
+      } else if $0 == bloodPressureChart {
+        $0.graphView.yMinimum = 0
+      }else if $0 == painLevelChart || $0 == temperatureChart || $0 == sleepQualityChart {
+        $0.graphView.yMinimum = yMinimum - 1
+        $0.graphView.yMaximum = yMaximum + 1
       }
+    }
   }
   
   override func createInfoProvider() -> WDMTableViewInfoProvider {
@@ -334,58 +346,68 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
     var sectionItems = [TableViewSectionItem]()
     
     // ---Sleep Time Quantity---
+    
+      var learnMoreURL = URL(string: "https://mantasleep.com/blogs/sleep/sleep-quantity-vs-sleep-quality-which-one-makes-the-biggest-difference")
+    let learnMoreStr = "LEARN_MORE".localize()
+    
     let sleepTimeInfoProvider = WDMSummaryCellInfoProvider(with: sleepTimeChart)
     let sleepTimeRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: sleepTimeInfoProvider, cellType: WDMSummaryTableViewCell.self)
-    let sleepTimeSection = TableViewSectionItem(headerTitle: WDMDailyStepType.sleepTimeStep.rawValue.localize(), sectionRowItems: [sleepTimeRow])
+    let sleepTimeSection = WDMSummarySectionItem(withHeaderTitle: WDMDailyStepType.sleepTimeStep.rawValue.localize(), footerTitle: learnMoreText, sectionRowItems: [sleepTimeRow], footerURL: learnMoreURL)
     sectionItems.append(sleepTimeSection)
     
     // ---Sleep Quality---
     let sleepQualityInfoProvider = WDMSummaryCellInfoProvider(with: sleepQualityChart)
     let sleepQualityRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: sleepQualityInfoProvider, cellType: WDMSummaryTableViewCell.self)
-    let sleepQualitySection = TableViewSectionItem(headerTitle: WDMDailyStepType.sleepQualityStep.rawValue.localize(), footerTitle: nil, sectionRowItems: [sleepQualityRow])
+    let sleepQualitySection = WDMSummarySectionItem(withHeaderTitle: WDMDailyStepType.sleepQualityStep.rawValue.localize(), footerTitle: learnMoreText, sectionRowItems: [sleepQualityRow], footerURL: learnMoreURL)
     sectionItems.append(sleepQualitySection)
     
     // ---Temperature---
     let temperatureInfoProvider = WDMSummaryCellInfoProvider(with: temperatureChart)
     let temperatureRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: temperatureInfoProvider, cellType: WDMSummaryTableViewCell.self)
-    let temperatureSection = TableViewSectionItem(headerTitle: WDMDailyStepType.temperatureStep.rawValue.localize(), footerTitle: nil, sectionRowItems: [temperatureRow])
+    learnMoreURL = URL(string: "https://www.webmd.com/first-aid/normal-body-temperature")
+    let temperatureSection = WDMSummarySectionItem(withHeaderTitle: WDMDailyStepType.temperatureStep.rawValue.localize(), footerTitle: learnMoreText, sectionRowItems: [temperatureRow], footerURL: learnMoreURL)
     sectionItems.append(temperatureSection)
     
     // ---Blood Pressure---
     let bloodPressureInfoProvider = WDMSummaryCellInfoProvider(with: bloodPressureChart)
     let bloodPressureRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: bloodPressureInfoProvider, cellType: WDMSummaryTableViewCell.self)
-    let bloodPressureSection = TableViewSectionItem(headerTitle: WDMDailyStepType.bloodPressureStep.rawValue.localize(), footerTitle: nil, sectionRowItems: [bloodPressureRow])
+    learnMoreURL = URL(string: "https://www.webmd.com/hypertension-high-blood-pressure/qa/what-is-blood-pressure")
+    let bloodPressureSection = WDMSummarySectionItem(withHeaderTitle: WDMDailyStepType.bloodPressureStep.rawValue.localize(), footerTitle: learnMoreText, sectionRowItems: [bloodPressureRow], footerURL: learnMoreURL)
     sectionItems.append(bloodPressureSection)
     
     // ---Heart Beat---
     let heartBeatInfoProvider = WDMSummaryCellInfoProvider(with: heartBeatChart)
     let heartBeatRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: heartBeatInfoProvider, cellType: WDMSummaryTableViewCell.self)
-    let heartBeatSection = TableViewSectionItem(headerTitle: WDMDailyStepType.heartBeatStep.rawValue.localize(), footerTitle: nil, sectionRowItems: [heartBeatRow])
+    learnMoreURL = URL(string: "https://www.webmd.com/heart-disease/atrial-fibrillation/your-beating-heart")
+    let heartBeatSection = WDMSummarySectionItem(withHeaderTitle: WDMDailyStepType.heartBeatStep.rawValue.localize(), footerTitle: learnMoreText, sectionRowItems: [heartBeatRow], footerURL: learnMoreURL)
     sectionItems.append(heartBeatSection)
     
     // ---Weight---
     let weightInfoProvider = WDMSummaryCellInfoProvider(with: weightChart)
     let weightRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: weightInfoProvider, cellType: WDMSummaryTableViewCell.self)
-    let weightSection = TableViewSectionItem(headerTitle: WDMDailyStepType.weightStep.rawValue.localize(), footerTitle: nil, sectionRowItems: [weightRow])
+    learnMoreURL = URL(string: "https://www.webmd.com/diet/obesity/default.htm")
+    let weightSection = WDMSummarySectionItem(withHeaderTitle: WDMDailyStepType.weightStep.rawValue.localize(), footerTitle: learnMoreText, sectionRowItems: [weightRow], footerURL: learnMoreURL)
     sectionItems.append(weightSection)
     
     // ---Blood Sugar---
     let sugarLevelInfoProvier = WDMSummaryCellInfoProvider(with: sugarLevelChart)
     let sugarlevelRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: sugarLevelInfoProvier, cellType: WDMSummaryTableViewCell.self)
-    let sugarLevelSection = TableViewSectionItem(headerTitle: WDMDailyStepType.bloodSugarStep.rawValue.localize(), footerTitle: nil, sectionRowItems: [sugarlevelRow])
+    learnMoreURL = URL(string: "https://www.webmd.com/diabetes/qa/what-is-my-target-blood-sugar-level")
+    let sugarLevelSection = WDMSummarySectionItem(withHeaderTitle: WDMDailyStepType.bloodSugarStep.rawValue.localize(), footerTitle: learnMoreText, sectionRowItems: [sugarlevelRow], footerURL: learnMoreURL)
     sectionItems.append(sugarLevelSection)
     
     // ---Pain Level---
     let painLevelInfoProvider = WDMSummaryCellInfoProvider(with: painLevelChart)
     let painLevelRow = TableViewSectionRowItem(WithtableView: tableView, cellInfoProvider: painLevelInfoProvider, cellType: WDMSummaryTableViewCell.self)
-    let painLevelSection = TableViewSectionItem(headerTitle: WDMDailyStepType.painLevelStep.rawValue.localize(), footerTitle: nil, sectionRowItems: [painLevelRow])
+    learnMoreURL = URL(string: "https://www.healthline.com/health/pain")
+    let painLevelSection = WDMSummarySectionItem(withHeaderTitle: WDMDailyStepType.painLevelStep.rawValue.localize(), footerTitle: learnMoreText, sectionRowItems: [painLevelRow], footerURL: learnMoreURL)
     sectionItems.append(painLevelSection)
     
     return WDMSummaryInfoProvider(withSectionItems: sectionItems, presenterViewController: self)
   }
   
   @objc private func frequencySegmentTapped(_ segmentControl: WDMSimpleSegmentControl) {
-    infoProvider = createInfoProvider()
+    loadChartData()
   }
   
   @objc private func surveyAdded(notification: Notification) {
