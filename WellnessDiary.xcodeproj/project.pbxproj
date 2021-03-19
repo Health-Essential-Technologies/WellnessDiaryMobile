@@ -21,6 +21,8 @@
 		A992D6F6C9F0F33BF2AB02BD /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B082016E5C51FCFD01C06B /* UIButton+Extension.swift */; };
 		AB115D6C25EAE9FF00E8F802 /* WDMDailyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB115D6B25EAE9FF00E8F802 /* WDMDailyTask.swift */; };
 		AB115D6E25EAEB1800E8F802 /* WDMStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB115D6D25EAEB1800E8F802 /* WDMStep.swift */; };
+		AB27C2D926027CD8000718DD /* WDMSummaryLearnMoreFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB27C2D826027CD7000718DD /* WDMSummaryLearnMoreFooterView.swift */; };
+		AB27C2DB2603FCAD000718DD /* DailySurveyMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = AB27C2DA2603FCAD000718DD /* DailySurveyMockData.json */; };
 		AB2E79AF25B4EC65008B37B4 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79AE25B4EC65008B37B4 /* Icons.swift */; };
 		AB2E79B925B4ED69008B37B4 /* WDMSimpleTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79B825B4ED69008B37B4 /* WDMSimpleTabBarItem.swift */; };
 		AB2E79BE25B4F025008B37B4 /* WDMSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E79BD25B4F025008B37B4 /* WDMSettingsViewController.swift */; };
@@ -192,6 +194,8 @@
 		A8D6636D32350437B52BF16D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB115D6B25EAE9FF00E8F802 /* WDMDailyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMDailyTask.swift; sourceTree = "<group>"; };
 		AB115D6D25EAEB1800E8F802 /* WDMStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMStep.swift; sourceTree = "<group>"; };
+		AB27C2D826027CD7000718DD /* WDMSummaryLearnMoreFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSummaryLearnMoreFooterView.swift; sourceTree = "<group>"; };
+		AB27C2DA2603FCAD000718DD /* DailySurveyMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DailySurveyMockData.json; sourceTree = "<group>"; };
 		AB2E79AE25B4EC65008B37B4 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		AB2E79B825B4ED69008B37B4 /* WDMSimpleTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleTabBarItem.swift; sourceTree = "<group>"; };
 		AB2E79BD25B4F025008B37B4 /* WDMSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSettingsViewController.swift; sourceTree = "<group>"; };
@@ -375,6 +379,7 @@
 				AB6257E825FAA19700B202F4 /* Bundles */,
 				AB6257E725FAA18400B202F4 /* Localizable */,
 				AB6257E225FAA08500B202F4 /* AssetsCatalog */,
+				AB27C2DA2603FCAD000718DD /* DailySurveyMockData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -416,6 +421,21 @@
 				AB115D6D25EAEB1800E8F802 /* WDMStep.swift */,
 			);
 			path = ResearchKit;
+			sourceTree = "<group>";
+		};
+		AB27C2D626027CA2000718DD /* UITableViewHeaders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITableViewHeaders;
+			sourceTree = "<group>";
+		};
+		AB27C2D726027CAE000718DD /* UITableViewFooters */ = {
+			isa = PBXGroup;
+			children = (
+				AB27C2D826027CD7000718DD /* WDMSummaryLearnMoreFooterView.swift */,
+			);
+			path = UITableViewFooters;
 			sourceTree = "<group>";
 		};
 		AB2E79B225B4ED54008B37B4 /* Frameworks */ = {
@@ -483,6 +503,8 @@
 		AB3B515525C1F7EE008C5011 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AB27C2D726027CAE000718DD /* UITableViewFooters */,
+				AB27C2D626027CA2000718DD /* UITableViewHeaders */,
 				AB8A207525DAE309000986A5 /* Common */,
 				1844256F92E28A9BAC1C2FD5 /* NavigationController */,
 				A27CBFFC5BE9BC90E538B788 /* TabViewController */,
@@ -982,6 +1004,7 @@
 				AB86F6E425CC68FB00A661A1 /* Localizable.strings in Resources */,
 				0CE0E3C29E521838D919BDCD /* Assets.xcassets in Resources */,
 				633849EFA9C15F022D043884 /* Colors.xcassets in Resources */,
+				AB27C2DB2603FCAD000718DD /* DailySurveyMockData.json in Resources */,
 				E8D7336E6C2BF972A7425841 /* Icons.xcassets in Resources */,
 				AB86F6E825CC693F00A661A1 /* Localizable.stringsdict in Resources */,
 				ABB1E4AD25EC285000F66083 /* Settings.bundle in Resources */,
@@ -1088,6 +1111,7 @@
 				ABD8EB0925C2C8FE0002F902 /* WDMMealAddTableViewInfoProvider.swift in Sources */,
 				AB8A207F25DAFF72000986A5 /* WellnessDiaryCareKit.xcdatamodeld in Sources */,
 				AB9E649525C4D13E008CD933 /* WDMTableViewDelegateHandler.swift in Sources */,
+				AB27C2D926027CD8000718DD /* WDMSummaryLearnMoreFooterView.swift in Sources */,
 				ABD8EB2F25C2CE2F0002F902 /* WDMDefaultTableViewCell.swift in Sources */,
 				AB8A209425DB4AB7000986A5 /* WDMCDTaskID+CoreDataClass.swift in Sources */,
 				AB8A202825D58EE4000986A5 /* WDMDailyTasksViewController.swift in Sources */,
