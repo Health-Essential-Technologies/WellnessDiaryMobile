@@ -4,10 +4,44 @@
 <dict>
 	<key>StringsTable</key>
 	<string>Root</string>
-	<key></key>
-	<string></string>
 	<key>PreferenceSpecifiers</key>
 	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>daily_survey</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>IASKButtonSpecifier</string>
+			<key>Title</key>
+			<string>Clear Store</string>
+			<key>identifier</key>
+			<string>CLEAR_STORE_KEY</string>
+			<key>Key</key>
+			<string>CLEAR_STORE_KEY</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>IASKButtonSpecifier</string>
+			<key>Title</key>
+			<string>Load Sample Data (json)</string>
+			<key>identifier</key>
+			<string>LOAD_JSON_DAILY_SURVEY_SAMPLE_DATA_KEY</string>
+			<key>Key</key>
+			<string>LOAD_JSON_DAILY_SURVEY_SAMPLE_DATA_KEY</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>IASKButtonSpecifier</string>
+			<key>Title</key>
+			<string>Load Sample Data (random)</string>
+			<key>identifier</key>
+			<string>LOAD_RANDOM_DAILY_SURVEY_SAMPLE_DATA_KEY</string>
+			<key>Key</key>
+			<string>LOAD_RANDOM_DAILY_SURVEY_SAMPLE_DATA_KEY</string>
+		</dict>
 		<dict>
 			<key>Type</key>
 			<string>IASKButtonSpecifier</string>
