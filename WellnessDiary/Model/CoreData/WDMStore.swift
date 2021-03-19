@@ -109,7 +109,28 @@ class WDMStore: OCKStore {
     }
   }
   
-  public func addSleepQuantity(with value: Float, createdDate: Date) -> WDMCDSleepQuantityStep {
+  public func clearResearchKitStore(withObjects objects:[NSManagedObject]) {
+    
+    var ids: [NSManagedObjectID] = []
+    objects.forEach {
+      ids.append($0.objectID)
+    }
+    clearStore(withObjectsIDs: ids)
+  }
+  public func clearStore(withObjectsIDs objectIDs: [NSManagedObjectID])  {
+  
+    if objectIDs.count == 0 {
+     return
+    }
+    let surveyBatchRequest = NSBatchDeleteRequest(objectIDs: objectIDs)
+    do {
+      try customResearchKitContext.execute(surveyBatchRequest)
+    } catch {
+      print("Unable to clear store with error: \(error.localizedDescription)")
+    }
+  }
+  
+  public func addSleepQuantity(with value: Double, createdDate: Date) -> WDMCDSleepQuantityStep {
     
     let object = WDMCDSleepQuantityStep(context: self.customResearchKitContext)
     
@@ -135,7 +156,7 @@ class WDMStore: OCKStore {
     return object
   }
   
-  public func addTemperature(with value: Float, createdDate: Date) -> WDMCDTemperatureStep {
+  public func addTemperature(with value: Double, createdDate: Date) -> WDMCDTemperatureStep {
     
     let object = WDMCDTemperatureStep(context: self.customResearchKitContext)
     
@@ -162,12 +183,12 @@ class WDMStore: OCKStore {
     return object
   }
   
-  public func addHeartBeat(with value: Float, createdDate: Date) -> WDMCDHeartBeatStep {
+  public func addHeartBeat(with value: Int, createdDate: Date) -> WDMCDHeartBeatStep {
     
     let object = WDMCDHeartBeatStep(context: self.customResearchKitContext)
     
     customResearchKitContext.performAndWait {
-      object.value = value
+      object.value = Int16(value)
       object.createdDate = createdDate
       self.save()
     }
@@ -175,7 +196,7 @@ class WDMStore: OCKStore {
     return object
   }
   
-  public func addWeight(with value: Float, createdDate: Date) -> WDMCDWeightStep {
+  public func addWeight(with value: Double, createdDate: Date) -> WDMCDWeightStep {
     
     let object = WDMCDWeightStep(context: self.customResearchKitContext)
     
@@ -188,12 +209,12 @@ class WDMStore: OCKStore {
     return object
   }
   
-  public func addBloodSugar(with value: Float, createdDate: Date) -> WDMCDSugarLevelStep {
+  public func addBloodSugar(with value: Int, createdDate: Date) -> WDMCDSugarLevelStep {
     
     let object = WDMCDSugarLevelStep(context: self.customResearchKitContext)
     
     customResearchKitContext.performAndWait {
-      object.value = value
+      object.value = Int16(value)
       object.createdDate = createdDate
       self.save()
     }
