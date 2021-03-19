@@ -17,7 +17,7 @@ extension WDMCDHeartBeatStep {
         return NSFetchRequest<WDMCDHeartBeatStep>(entityName: "WDMCDHeartBeatStep")
     }
 
-    @NSManaged public var value: Float
+    @NSManaged public var value: Int16
     @NSManaged public var survey: WDMCDSurvey?
 
 }

@@ -17,7 +17,7 @@ extension WDMCDWeightStep {
         return NSFetchRequest<WDMCDWeightStep>(entityName: "WDMCDWeightStep")
     }
 
-    @NSManaged public var value: Float
+    @NSManaged public var value: Double
     @NSManaged public var survey: WDMCDSurvey?
 
 }

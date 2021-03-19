@@ -17,7 +17,7 @@ extension WDMCDTemperatureStep {
         return NSFetchRequest<WDMCDTemperatureStep>(entityName: "WDMCDTemperatureStep")
     }
 
-    @NSManaged public var value: Float
+    @NSManaged public var value: Double
     @NSManaged public var survey: WDMCDSurvey?
 
 }
