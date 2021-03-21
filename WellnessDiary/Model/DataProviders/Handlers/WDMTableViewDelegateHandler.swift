@@ -32,4 +32,8 @@ extension WDMTableViewDelegateHandler: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableViewInfoHandler.tableView(tableView, didSelectRowAt: indexPath)
   }
+  
+  func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    return tableViewInfoHandler.tableView(tableView, viewForFooterInSection: section)
+  }
 }

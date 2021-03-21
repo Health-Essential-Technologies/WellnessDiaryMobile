@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct TableViewSectionRowItem {
+public struct TableViewSectionRowItem {
     
     // MARK: - Properties
     

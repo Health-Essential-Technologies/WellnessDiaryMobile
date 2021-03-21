@@ -13,12 +13,12 @@ class WDMSummaryCellInfoProvider: WDMCellInfoProvider {
   
   // MARK: Properties
   
-  public let graph: OCKGridTaskView
+  public let chart: OCKCartesianChartView
   
   // MARK: Initializers
   
-  public init(with graph: OCKGridTaskView) {
-    self.graph = graph
+  public init(with chart: OCKCartesianChartView) {
+    self.chart = chart
     super.init()
   }
 

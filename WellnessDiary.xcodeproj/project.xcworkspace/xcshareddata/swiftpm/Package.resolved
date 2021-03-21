@@ -5,9 +5,9 @@
         "package": "CareKit",
         "repositoryURL": "https://github.com/carekit-apple/CareKit",
         "state": {
-          "branch": null,
-          "revision": "51cef0b8e88b3c47c183fe36e8afc1f695bae44f",
-          "version": "2.0.1"
+          "branch": "stable",
+          "revision": "b97fa7b3c97aa5a99da98cee481eecc51aa90765",
+          "version": null
         }
       },
       {
