@@ -32,11 +32,6 @@ final class ResearchKitStoreManager {
   
   public func addSurvey(from taskResult: ORKTaskResult) {
     
-    let today = Date()
-  
-    let survey = WDMCDSurvey(context: store.customResearchKitContext)
-    survey.createdDate = today
-    
     var sleepQuantity: Double?
     var sleepQuality: Int?
     var temperature: Double?
@@ -169,14 +164,16 @@ final class ResearchKitStoreManager {
       return getDailySurvey(for: selectedSegment)
     }
     
-    let fetchRequest = WDMCDSurvey.fetchRequest(with: selectedSegment)
-    do {
-      dailySurveys =  try store.customResearchKitContext.fetch(fetchRequest)
-      return getDailySurvey(for: selectedSegment)
-    } catch {
-      print("Unable to fetch surveys. Error: \(error.localizedDescription)")
-      return nil
+    store.customResearchKitContext.performAndWait {
+      let fetchRequest = WDMCDSurvey.fetchRequest(with: selectedSegment)
+      do {
+        dailySurveys =  try fetchRequest.execute()
+      } catch {
+        print("Unable to fetch surveys. Error: \(error.localizedDescription)")
+      }
     }
+    
+    return getDailySurvey(for: selectedSegment)
   }
   
   @objc private func calendarDayChanged() {
