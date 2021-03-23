@@ -423,13 +423,6 @@
 			path = ResearchKit;
 			sourceTree = "<group>";
 		};
-		AB27C2D626027CA2000718DD /* UITableViewHeaders */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UITableViewHeaders;
-			sourceTree = "<group>";
-		};
 		AB27C2D726027CAE000718DD /* UITableViewFooters */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,7 +497,6 @@
 			isa = PBXGroup;
 			children = (
 				AB27C2D726027CAE000718DD /* UITableViewFooters */,
-				AB27C2D626027CA2000718DD /* UITableViewHeaders */,
 				AB8A207525DAE309000986A5 /* Common */,
 				1844256F92E28A9BAC1C2FD5 /* NavigationController */,
 				A27CBFFC5BE9BC90E538B788 /* TabViewController */,
@@ -680,7 +672,6 @@
 			isa = PBXGroup;
 			children = (
 				AB900A4725F1A51E00D5BF61 /* WDMSummaryTableViewController.swift */,
-				ABA3814125F5C648003F64B2 /* DetailSummary */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -710,13 +701,6 @@
 				AB9E649125C49959008CD933 /* WDMSimpleTableViewController.swift */,
 			);
 			name = Base;
-			sourceTree = "<group>";
-		};
-		ABA3814125F5C648003F64B2 /* DetailSummary */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DetailSummary;
 			sourceTree = "<group>";
 		};
 		ABB1C5D525E331E1003CA06E /* WDMLocalNotifications */ = {
