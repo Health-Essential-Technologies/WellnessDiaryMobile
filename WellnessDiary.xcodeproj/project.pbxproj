@@ -37,6 +37,7 @@
 		AB350407E3CED47A2BF85B97 /* WDMSimpleNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250D3A2AD7B5613FEBDEED6 /* WDMSimpleNavigationViewController.swift */; };
 		AB3B515225C1E6EF008C5011 /* WDMDailyTasksContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515125C1E6EF008C5011 /* WDMDailyTasksContainerViewController.swift */; };
 		AB3B515725C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515625C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift */; };
+		AB52C4752623641B005DA001 /* UserAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB52C4742623641B005DA001 /* UserAccountManager.swift */; };
 		AB6257DF25F9C35400B202F4 /* WDMCDSurvey+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6257DE25F9C35400B202F4 /* WDMCDSurvey+Utils.swift */; };
 		AB6257E125FA7C4600B202F4 /* OCKCartesianChartView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6257E025FA7C4600B202F4 /* OCKCartesianChartView + Extension.swift */; };
 		AB62586125FCDE5200B202F4 /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = AB62586025FCDE5200B202F4 /* CareKitStore */; };
@@ -209,6 +210,7 @@
 		AB31280925EB093300F459D4 /* WDMDailySurveyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMDailySurveyManager.swift; sourceTree = "<group>"; };
 		AB3B515125C1E6EF008C5011 /* WDMDailyTasksContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMDailyTasksContainerViewController.swift; sourceTree = "<group>"; };
 		AB3B515625C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSummaryAddTaskViewController.swift; sourceTree = "<group>"; };
+		AB52C4742623641B005DA001 /* UserAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountManager.swift; sourceTree = "<group>"; };
 		AB6257DE25F9C35400B202F4 /* WDMCDSurvey+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSurvey+Utils.swift"; sourceTree = "<group>"; };
 		AB6257E025FA7C4600B202F4 /* OCKCartesianChartView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCKCartesianChartView + Extension.swift"; sourceTree = "<group>"; };
 		AB62585025FC031E00B202F4 /* CareKitStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CareKitStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,6 +358,7 @@
 		5C3BBAA04845D93BB672BE18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AB52C47026236411005DA001 /* User */,
 				AB6257EC25FAA55300B202F4 /* Utils */,
 				AB6257E925FAA42B00B202F4 /* CoreData */,
 				AB115D6A25EAE96B00E8F802 /* ResearchKit */,
@@ -503,6 +506,14 @@
 				D5A149489B3514AEB540439D /* ViewControllers */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		AB52C47026236411005DA001 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AB52C4742623641B005DA001 /* UserAccountManager.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		AB6257E225FAA08500B202F4 /* AssetsCatalog */ = {
@@ -1017,6 +1028,7 @@
 				ABD8EB1325C2CA800002F902 /* WDMTableViewCellIdentifier.swift in Sources */,
 				AB62587025FDA21B00B202F4 /* WDMHyperLinkTappableLabel.swift in Sources */,
 				9D453B9F2066200353EAE1A9 /* Date+Extension.swift in Sources */,
+				AB52C4752623641B005DA001 /* UserAccountManager.swift in Sources */,
 				AB2E79D225B76495008B37B4 /* CarePlanStoreManager.swift in Sources */,
 				AB9E64B825CA2E67008CD933 /* WDMInfoProvider.swift in Sources */,
 				AB6257E125FA7C4600B202F4 /* OCKCartesianChartView + Extension.swift in Sources */,

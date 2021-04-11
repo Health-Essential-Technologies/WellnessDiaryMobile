@@ -198,4 +198,7 @@ final class ResearchKitStoreManager {
     NotificationCenter.default.post(name: .surveyAdded, object: nil)
   }
   
+  public func removePasscodeFromKeychain() {
+    ORKPasscodeViewController.removePasscodeFromKeychain()
+  }
 }

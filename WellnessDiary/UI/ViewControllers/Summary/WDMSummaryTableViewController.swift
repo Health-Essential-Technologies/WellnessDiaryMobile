@@ -119,6 +119,7 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
     let chart = OCKCartesianChartView(type: .line)
     return chart
   }()
+  
 
   // MARK: Lifecycle
   

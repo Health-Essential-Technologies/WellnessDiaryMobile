@@ -73,6 +73,11 @@ class WDMSettingsViewController: IASKAppSettingsViewController, IASKSettingsDele
     if specifier.key == CLEAR_STORE_KEY {
       ResearchKitStoreManager.shared.clearDailySurveys()
     }
+    
+    if specifier.key == REMOVE_PASSCODE_FROM_KEYCHAIN_KEY {
+      UserAccountManager.shared.removePasscodeFromKeychain()
+    }
+    
   }
   
   func settingsViewControllerDidEnd(_ settingsViewController: IASKAppSettingsViewController) {

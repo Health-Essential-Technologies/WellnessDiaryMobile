@@ -10,6 +10,22 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
+			<string>user account</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>IASKButtonSpecifier</string>
+			<key>Title</key>
+			<string>Remove passcode from keychain</string>
+			<key>identifier</key>
+			<string>REMOVE_PASSCODE_FROM_KEYCHAIN_KEY</string>
+			<key>Key</key>
+			<string>REMOVE_PASSCODE_FROM_KEYCHAIN_KEY</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
 			<string>daily_survey</string>
 		</dict>
 		<dict>
