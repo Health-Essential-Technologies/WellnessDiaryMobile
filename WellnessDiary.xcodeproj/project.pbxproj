@@ -38,6 +38,8 @@
 		AB3B515225C1E6EF008C5011 /* WDMDailyTasksContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515125C1E6EF008C5011 /* WDMDailyTasksContainerViewController.swift */; };
 		AB3B515725C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B515625C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift */; };
 		AB52C4752623641B005DA001 /* UserAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB52C4742623641B005DA001 /* UserAccountManager.swift */; };
+		AB52C4852624BAB1005DA001 /* WDMFrequencySegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB52C4842624BAB1005DA001 /* WDMFrequencySegmentControl.swift */; };
+		AB52C4882624BDA8005DA001 /* DailySurveySummaryFrequencySegmentSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB52C4872624BDA8005DA001 /* DailySurveySummaryFrequencySegmentSelected.swift */; };
 		AB6257DF25F9C35400B202F4 /* WDMCDSurvey+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6257DE25F9C35400B202F4 /* WDMCDSurvey+Utils.swift */; };
 		AB6257E125FA7C4600B202F4 /* OCKCartesianChartView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6257E025FA7C4600B202F4 /* OCKCartesianChartView + Extension.swift */; };
 		AB62586125FCDE5200B202F4 /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = AB62586025FCDE5200B202F4 /* CareKitStore */; };
@@ -105,6 +107,8 @@
 		ABA381AA25F8624E003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA381A825F8624D003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift */; };
 		ABA381AB25F8624E003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA381A925F8624E003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift */; };
 		ABA381AE25F86D51003F64B2 /* ResearchKitStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA381AD25F86D51003F64B2 /* ResearchKitStoreManager.swift */; };
+		ABB12F2A2624FA540094FEA3 /* WDMSimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB12F292624FA540094FEA3 /* WDMSimpleView.swift */; };
+		ABB12F2C2624FA9C0094FEA3 /* WDMSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB12F2B2624FA9C0094FEA3 /* WDMSummaryView.swift */; };
 		ABB1C5D725E331FF003CA06E /* LocalNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */; };
 		ABB1E4A125EB3D0200F66083 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1E4A025EB3D0200F66083 /* UserPreference.swift */; };
 		ABB1E4AD25EC285000F66083 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ABB1E4AC25EC285000F66083 /* Settings.bundle */; };
@@ -211,6 +215,8 @@
 		AB3B515125C1E6EF008C5011 /* WDMDailyTasksContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMDailyTasksContainerViewController.swift; sourceTree = "<group>"; };
 		AB3B515625C23E6C008C5011 /* WDMSummaryAddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSummaryAddTaskViewController.swift; sourceTree = "<group>"; };
 		AB52C4742623641B005DA001 /* UserAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountManager.swift; sourceTree = "<group>"; };
+		AB52C4842624BAB1005DA001 /* WDMFrequencySegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMFrequencySegmentControl.swift; sourceTree = "<group>"; };
+		AB52C4872624BDA8005DA001 /* DailySurveySummaryFrequencySegmentSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySurveySummaryFrequencySegmentSelected.swift; sourceTree = "<group>"; };
 		AB6257DE25F9C35400B202F4 /* WDMCDSurvey+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDSurvey+Utils.swift"; sourceTree = "<group>"; };
 		AB6257E025FA7C4600B202F4 /* OCKCartesianChartView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCKCartesianChartView + Extension.swift"; sourceTree = "<group>"; };
 		AB62585025FC031E00B202F4 /* CareKitStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CareKitStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,6 +284,8 @@
 		ABA381A825F8624D003F64B2 /* WDMCDCustomResearchObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDCustomResearchObject+CoreDataClass.swift"; sourceTree = "<group>"; };
 		ABA381A925F8624E003F64B2 /* WDMCDCustomResearchObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WDMCDCustomResearchObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ABA381AD25F86D51003F64B2 /* ResearchKitStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchKitStoreManager.swift; sourceTree = "<group>"; };
+		ABB12F292624FA540094FEA3 /* WDMSimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleView.swift; sourceTree = "<group>"; };
+		ABB12F2B2624FA9C0094FEA3 /* WDMSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSummaryView.swift; sourceTree = "<group>"; };
 		ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsManager.swift; sourceTree = "<group>"; };
 		ABB1E4A025EB3D0200F66083 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 		ABB1E4AC25EC285000F66083 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -358,6 +366,7 @@
 		5C3BBAA04845D93BB672BE18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AB52C4862624BD9B005DA001 /* Enums */,
 				AB52C47026236411005DA001 /* User */,
 				AB6257EC25FAA55300B202F4 /* Utils */,
 				AB6257E925FAA42B00B202F4 /* CoreData */,
@@ -516,6 +525,14 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		AB52C4862624BD9B005DA001 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				AB52C4872624BDA8005DA001 /* DailySurveySummaryFrequencySegmentSelected.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		AB6257E225FAA08500B202F4 /* AssetsCatalog */ = {
 			isa = PBXGroup;
 			children = (
@@ -639,6 +656,7 @@
 		AB8A207525DAE309000986A5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				ABB12F252624FA2C0094FEA3 /* Views */,
 				ABC85F0625F2EE0800B963AD /* SegmentControl */,
 				AB2E79BA25B4ED72008B37B4 /* TabBarItem */,
 				AB2E79CA25B73A13008B37B4 /* BarButtonItem */,
@@ -714,6 +732,15 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		ABB12F252624FA2C0094FEA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABB12F292624FA540094FEA3 /* WDMSimpleView.swift */,
+				ABB12F2B2624FA9C0094FEA3 /* WDMSummaryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		ABB1C5D525E331E1003CA06E /* WDMLocalNotifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +770,7 @@
 			isa = PBXGroup;
 			children = (
 				ABC85F0A25F2EE2200B963AD /* WDMSimpleSegmentControl.swift */,
+				AB52C4842624BAB1005DA001 /* WDMFrequencySegmentControl.swift */,
 			);
 			path = SegmentControl;
 			sourceTree = "<group>";
@@ -1024,6 +1052,7 @@
 				AB8A208725DB0572000986A5 /* WDMCDObject+CoreDataProperties.swift in Sources */,
 				ABD8EB2825C2CCC70002F902 /* TableViewSectionRowItem.swift in Sources */,
 				ABD8EB3E25C2CECF0002F902 /* WDMSimpleDatePicker.swift in Sources */,
+				AB52C4882624BDA8005DA001 /* DailySurveySummaryFrequencySegmentSelected.swift in Sources */,
 				AB3B515225C1E6EF008C5011 /* WDMDailyTasksContainerViewController.swift in Sources */,
 				ABD8EB1325C2CA800002F902 /* WDMTableViewCellIdentifier.swift in Sources */,
 				AB62587025FDA21B00B202F4 /* WDMHyperLinkTappableLabel.swift in Sources */,
@@ -1087,6 +1116,7 @@
 				ABA3819C25F860B1003F64B2 /* WDMCDBloodPressureStep+CoreDataProperties.swift in Sources */,
 				ABD8EB2B25C2CDFB0002F902 /* WDMSimpleTableViewCell.swift in Sources */,
 				ABA3819E25F860B1003F64B2 /* WDMCDPainLevelStep+CoreDataProperties.swift in Sources */,
+				ABB12F2A2624FA540094FEA3 /* WDMSimpleView.swift in Sources */,
 				ABA3819A25F860B1003F64B2 /* WDMCDSleepQualityStep+CoreDataProperties.swift in Sources */,
 				ABD8EB1B25C2CAFB0002F902 /* PickerViewRowItem.swift in Sources */,
 				ABA3819325F860B1003F64B2 /* WDMCDHeartBeatStep+CoreDataClass.swift in Sources */,
@@ -1125,8 +1155,10 @@
 				ABD8EB4025C2CEE90002F902 /* WDMSimplePickerView.swift in Sources */,
 				ABD8EB2425C2CCA60002F902 /* WDMSimpleTableView.swift in Sources */,
 				ABD8EB3525C2CE630002F902 /* WDMSingleButtonTableViewCell.swift in Sources */,
+				ABB12F2C2624FA9C0094FEA3 /* WDMSummaryView.swift in Sources */,
 				ABA3818F25F860B1003F64B2 /* WDMCDSugarLevelStep+CoreDataClass.swift in Sources */,
 				9C29D62E2FFCE399C7AD2DB1 /* UIViewController+Extension.swift in Sources */,
+				AB52C4852624BAB1005DA001 /* WDMFrequencySegmentControl.swift in Sources */,
 				ABC85F0B25F2EE2200B963AD /* WDMSimpleSegmentControl.swift in Sources */,
 				AB9E64A825C6576D008CD933 /* WDMTaskFrequencyInfoProvider.swift in Sources */,
 				ABB1E4A125EB3D0200F66083 /* UserPreference.swift in Sources */,
