@@ -56,19 +56,7 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
   
   // MARK: Properties
   
-  private var frequencySegment: WDMSimpleSegmentControl = {
-    let segment = WDMSimpleSegmentControl()
-    segment.insertSegment(withTitle: DailySurveySummaryFrequencySegmentSelected.lastSevenDays.title .localize(), at: DailySurveySummaryFrequencySegmentSelected.lastSevenDays.segmentControlIndex(), animated: true)
-    segment.insertSegment(withTitle: DailySurveySummaryFrequencySegmentSelected.lastThirtyDays.title.localize(), at: DailySurveySummaryFrequencySegmentSelected.lastThirtyDays.segmentControlIndex(), animated: true)
-    segment.insertSegment(withTitle: DailySurveySummaryFrequencySegmentSelected.lastNinetyDays.title.localize(), at: DailySurveySummaryFrequencySegmentSelected.lastNinetyDays.segmentControlIndex(), animated: true)
-    segment.translatesAutoresizingMaskIntoConstraints = false
-    segment.backgroundColor = Colors.mainColor.color
-    let color = NSAttributedString()
-    segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.white], for: .normal)
-    segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : Colors.mainColor.color], for: .selected)
-    segment.selectedSegmentIndex = 0
-    return segment
-  }()
+  private var frequencySegment = WDMFrequencySegmentControl()
   
   private var lastSevenDaysAvg: CGFloat = -1.0
   private var lastNinetyDaysAvg: CGFloat = -1.0
