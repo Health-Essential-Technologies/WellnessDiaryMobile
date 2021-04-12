@@ -9,49 +9,6 @@
 import UIKit
 import CareKit
 
-public enum DailySurveySummaryFrequencySegmentSelected: Int {
-
-  case lastSevenDays = 7
-  case lastThirtyDays = 30
-  case lastNinetyDays = 90
-  
-  public var title: String {
-    switch self {
-    case .lastSevenDays:
-      return "LAST_7_DAYS"
-    case .lastThirtyDays:
-      return "LAST_30_DAYS"
-    case .lastNinetyDays:
-      return "LAST_90_DAYS"
-    }
-  }
-  
-  // MARK: Methods
-  
-  public static func getDailySurveySummaryFrequencySegmentSelected(from segmentIndex: Int) -> DailySurveySummaryFrequencySegmentSelected {
-    switch segmentIndex {
-    case 1:
-      return .lastThirtyDays
-    case 2:
-      return .lastNinetyDays
-    default:
-      return .lastSevenDays
-    }
-  }
-  
-  public func segmentControlIndex() -> Int {
-    switch self {
-    case .lastSevenDays:
-      return 0
-    case .lastThirtyDays:
-      return 1
-    case .lastNinetyDays:
-      return 2
-    }
-  }
-
-}
-
 class WDMSummaryTableViewController: WDMSimpleTableViewController {
   
   // MARK: Properties
