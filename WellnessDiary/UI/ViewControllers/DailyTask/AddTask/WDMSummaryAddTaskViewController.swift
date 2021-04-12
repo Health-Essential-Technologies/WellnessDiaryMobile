@@ -44,14 +44,14 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
     tableView = WDMSimpleTableView(frame: view.bounds, style: .insetGrouped)
     tableView.isScrollEnabled = false
     
-    infoProvider = createInfoProvider()
+    createInfoProvider()
     
     super.initialSetup()
     
   }
   
   @discardableResult
-  override func createInfoProvider() -> WDMTableViewInfoProvider {
+  override func createInfoProvider() {
     
     // ---First section---
     
@@ -127,7 +127,7 @@ class WDMSummaryAddTaskViewController: WDMSimpleTableViewController {
       sections.append(editDeleteSection)
     }
     
-    return WDMSummaryAddTaskInfoProvider(withSectionItems: sections, presenterViewController: self, task: task, delegate: self)
+    infoProvider = WDMSummaryAddTaskInfoProvider(withSectionItems: sections, presenterViewController: self, task: task, delegate: self)
   }
   
 }
@@ -138,22 +138,22 @@ extension WDMSummaryAddTaskViewController: TaskModifierProtocol {
   
   func add(_ frequency: TaskFrequency) {
     task.taskRecurrence.frequency.insert(frequency)
-    infoProvider = createInfoProvider()
+    createInfoProvider()
   }
   
   func add(_ occurence: TaskOccurence) {
     task.taskRecurrence.occurence.insert(occurence)
-    infoProvider = createInfoProvider()
+    createInfoProvider()
   }
   
   func remove(_ frequency: TaskFrequency) {
     task.taskRecurrence.frequency.remove(frequency)
-    infoProvider = createInfoProvider()
+    createInfoProvider()
   }
   
   func remove(_ occurence: TaskOccurence) {
     task.taskRecurrence.occurence.remove(occurence)
-    infoProvider = createInfoProvider()
+    createInfoProvider()
   }
   
   func updateName(_ taskTitle: String) {

@@ -61,7 +61,7 @@ class WDMSimpleTableViewController: WDMSimpleViewController {
     tableView.delegate = tableviewDelegateHandler
   }
   
-  public func createInfoProvider() -> WDMTableViewInfoProvider {
+  public func createInfoProvider() {
     fatalError("Base class does nothing. Child needs to override.")
   }
   

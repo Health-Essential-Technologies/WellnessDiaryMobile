@@ -195,12 +195,11 @@ class WDMTaskRecurrenceViewController: WDMSimpleTableViewController {
     tableView = WDMSimpleTableView(frame: view.bounds, style: .insetGrouped)
     tableView.isScrollEnabled = false
     
-    
-    infoProvider = createInfoProvider()
+    createInfoProvider()
     super.initialSetup()
   }
   
-  override func createInfoProvider() -> WDMTableViewInfoProvider {
+  override func createInfoProvider() {
     
     var frequencyRowItems: [TableViewSectionRowItem] = []
     
@@ -224,7 +223,7 @@ class WDMTaskRecurrenceViewController: WDMSimpleTableViewController {
     
     let frequencyOccurenceSectonItem = TableViewSectionItem(headerTitle: "OCCURENCE".localize(), footerTitle: nil, sectionRowItems: frequencyOccurenceItems)
     
-    return WDMTaskFrequencyInfoProvider(withSectionItems: [frequencySectionItem, frequencyOccurenceSectonItem], presenterViewController: self, frequency: frequency, occurence: occurence, delegate: delegate)
+    infoProvider = WDMTaskFrequencyInfoProvider(withSectionItems: [frequencySectionItem, frequencyOccurenceSectonItem], presenterViewController: self, frequency: frequency, occurence: occurence, delegate: delegate)
   }
   
 }
