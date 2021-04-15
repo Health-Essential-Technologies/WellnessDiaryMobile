@@ -30,22 +30,18 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
   // MARK: Methods
   
   override func initialSetup() {
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(surveyAdded(notification:)), name: .surveyAdded, object: nil)
+    
     title = "SUMMARY".localize()
     summaryView.frequencySegment.addTarget(self, action: #selector(frequencySegmentTapped(_:)), for: .valueChanged)
     tableView = summaryView.tableView
     tableView.dataSource = tableViewDataSourceHandler
     tableView.delegate = tableviewDelegateHandler
-    createInfoProvider()
   }
   
   override func createInfoProvider() {
-    
-//    let passcodeStep = ORKPasscodeStep(identifier: "CreatePasscode", passcodeFlow: .create)
-//    let passcodeStepVC = ORKPasscodeStepViewController(step: passcodeStep)
-//    passcodeStepVC.hidesBottomBarWhenPushed = true
-//    passcodeStepVC.navigationItem.setHidesBackButton(true, animated: false)
-//    navigationController?.pushViewController(passcodeStepVC, animated: false)
-//    
+ 
     summaryView.loadChartData()
     
     var sectionItems = [TableViewSectionItem]()
