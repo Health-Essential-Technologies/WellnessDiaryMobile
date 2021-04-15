@@ -9,7 +9,7 @@
 import UIKit
 import CareKit
 
-class WDMSummaryView: WDMSimpleView {
+class WDMSummaryView: UIView {
   
   // MARK: Properties
   
@@ -92,6 +92,8 @@ class WDMSummaryView: WDMSimpleView {
       tableView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor)
     ])
     
+    // Bug: https://github.com/maxsokolov/TableKit/issues/84
+    tableView.tableHeaderView = WDMSimpleView(frame: CGRect(x: 0, y: 0, width: CGFloat.leastNormalMagnitude, height: CGFloat.leastNormalMagnitude))
   }
   
   public func clearData(withChart chart: OCKCartesianChartView) {
