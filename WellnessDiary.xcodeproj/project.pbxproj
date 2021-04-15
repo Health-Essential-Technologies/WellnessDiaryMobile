@@ -109,6 +109,8 @@
 		ABA381AE25F86D51003F64B2 /* ResearchKitStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA381AD25F86D51003F64B2 /* ResearchKitStoreManager.swift */; };
 		ABB12F2A2624FA540094FEA3 /* WDMSimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB12F292624FA540094FEA3 /* WDMSimpleView.swift */; };
 		ABB12F2C2624FA9C0094FEA3 /* WDMSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB12F2B2624FA9C0094FEA3 /* WDMSummaryView.swift */; };
+		ABB12F362625410F0094FEA3 /* WDMPasscodeDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB12F352625410F0094FEA3 /* WDMPasscodeDelegateHandler.swift */; };
+		ABB12F3D2627615C0094FEA3 /* WDMPasscodeViewControllerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB12F3C2627615C0094FEA3 /* WDMPasscodeViewControllerHandler.swift */; };
 		ABB1C5D725E331FF003CA06E /* LocalNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */; };
 		ABB1E4A125EB3D0200F66083 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1E4A025EB3D0200F66083 /* UserPreference.swift */; };
 		ABB1E4AD25EC285000F66083 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ABB1E4AC25EC285000F66083 /* Settings.bundle */; };
@@ -286,6 +288,8 @@
 		ABA381AD25F86D51003F64B2 /* ResearchKitStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchKitStoreManager.swift; sourceTree = "<group>"; };
 		ABB12F292624FA540094FEA3 /* WDMSimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleView.swift; sourceTree = "<group>"; };
 		ABB12F2B2624FA9C0094FEA3 /* WDMSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSummaryView.swift; sourceTree = "<group>"; };
+		ABB12F352625410F0094FEA3 /* WDMPasscodeDelegateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMPasscodeDelegateHandler.swift; sourceTree = "<group>"; };
+		ABB12F3C2627615C0094FEA3 /* WDMPasscodeViewControllerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMPasscodeViewControllerHandler.swift; sourceTree = "<group>"; };
 		ABB1C5D625E331FF003CA06E /* LocalNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsManager.swift; sourceTree = "<group>"; };
 		ABB1E4A025EB3D0200F66083 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 		ABB1E4AC25EC285000F66083 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -366,6 +370,8 @@
 		5C3BBAA04845D93BB672BE18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ABB12F33262532530094FEA3 /* DataHandlers */,
+				ABB12F31262531FA0094FEA3 /* Protocols */,
 				AB52C4862624BD9B005DA001 /* Enums */,
 				AB52C47026236411005DA001 /* User */,
 				AB6257EC25FAA55300B202F4 /* Utils */,
@@ -741,6 +747,31 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		ABB12F30262530620094FEA3 /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Passcode;
+			sourceTree = "<group>";
+		};
+		ABB12F31262531FA0094FEA3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		ABB12F33262532530094FEA3 /* DataHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				AB9E649425C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift */,
+				AB9E649325C4D13E008CD933 /* WDMTableViewDelegateHandler.swift */,
+				ABB12F352625410F0094FEA3 /* WDMPasscodeDelegateHandler.swift */,
+				ABB12F3C2627615C0094FEA3 /* WDMPasscodeViewControllerHandler.swift */,
+			);
+			path = DataHandlers;
+			sourceTree = "<group>";
+		};
 		ABB1C5D525E331E1003CA06E /* WDMLocalNotifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -781,7 +812,6 @@
 				AB9E64B725CA2E67008CD933 /* WDMInfoProvider.swift */,
 				ABD8EB2225C2CC9C0002F902 /* Model */,
 				AB62586C25FD98F100B202F4 /* TableViewSectionItems */,
-				ABD8EB1D25C2CB540002F902 /* Handlers */,
 				ABD8EB1C25C2CB0C0002F902 /* PickerView */,
 				ABD8EB1125C2C9BC0002F902 /* TableViewCells */,
 				ABD8EB1025C2C9730002F902 /* TableView */,
@@ -829,15 +859,6 @@
 				ABD8EB1A25C2CAFB0002F902 /* PickerViewRowItem.swift */,
 			);
 			path = PickerView;
-			sourceTree = "<group>";
-		};
-		ABD8EB1D25C2CB540002F902 /* Handlers */ = {
-			isa = PBXGroup;
-			children = (
-				AB9E649425C4D13E008CD933 /* WDMTableViewDataSourceHandler.swift */,
-				AB9E649325C4D13E008CD933 /* WDMTableViewDelegateHandler.swift */,
-			);
-			path = Handlers;
 			sourceTree = "<group>";
 		};
 		ABD8EB2225C2CC9C0002F902 /* Model */ = {
@@ -895,6 +916,7 @@
 			isa = PBXGroup;
 			children = (
 				AB9E64AF25C8B075008CD933 /* Base */,
+				ABB12F30262530620094FEA3 /* Passcode */,
 				AB900A4325F1A23B00D5BF61 /* Summary */,
 				AB3B515025C1E634008C5011 /* DailyTask */,
 				AB8A207725DAE3AB000986A5 /* DailySurvey */,
@@ -1143,6 +1165,7 @@
 				AB8A202825D58EE4000986A5 /* WDMDailyTasksViewController.swift in Sources */,
 				694725E4395CF97582E7EC3C /* UITableviewCell+Extension.swift in Sources */,
 				ABD8EB0F25C2C9550002F902 /* WDMSingleButtonCellInfoProvider.swift in Sources */,
+				ABB12F362625410F0094FEA3 /* WDMPasscodeDelegateHandler.swift in Sources */,
 				40AC6F2253711AD700AAA2C9 /* UIView+Extension.swift in Sources */,
 				AB9E64B325C8F27C008CD933 /* RawComparable+Extension.swift in Sources */,
 				ABD8EB1925C2CAEC0002F902 /* PickerViewComponentItem.swift in Sources */,
@@ -1165,6 +1188,7 @@
 				ABD8EB0325C24E3C0002F902 /* LocalLocalizable.swift in Sources */,
 				AB6257DF25F9C35400B202F4 /* WDMCDSurvey+Utils.swift in Sources */,
 				ABA3814625F5C7A6003F64B2 /* WDMSummaryInfoProvider.swift in Sources */,
+				ABB12F3D2627615C0094FEA3 /* WDMPasscodeViewControllerHandler.swift in Sources */,
 				ABD8EB3325C2CE4E0002F902 /* WDMMealAddPickerViewTableViewCell.swift in Sources */,
 				AB9E649825C4EAC1008CD933 /* WDMLabelTextFieldCellInfoProvider.swift in Sources */,
 				ABA381A025F860B1003F64B2 /* WDMCDWeightStep+CoreDataProperties.swift in Sources */,

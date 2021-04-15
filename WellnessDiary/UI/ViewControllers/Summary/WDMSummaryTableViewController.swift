@@ -13,7 +13,7 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
   // MARK: Properties
 
   public var summaryView = WDMSummaryView()
-  
+  public lazy var passcodeViewControllerHandler = WDMPasscodeViewControllerHandler(with: self)
 
   // MARK: Lifecycle
   
@@ -24,10 +24,22 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      NotificationCenter.default.addObserver(self, selector: #selector(surveyAdded(notification:)), name: .surveyAdded, object: nil)
+      showPasscodeViewController()
     }
   
   // MARK: Methods
+  
+  private func showPasscodeViewController() {
+    tabBarController?.tabBar.isHidden = true
+    navigationController?.navigationBar.isHidden = true
+    
+    
+    present(passcodeViewControllerHandler.displayPasscodeViewController(), animated: false) { [unowned self] in
+      self.createInfoProvider()
+      self.tabBarController?.tabBar.isHidden = false
+      self.navigationController?.navigationBar.isHidden = false
+    }
+  }
   
   override func initialSetup() {
     
