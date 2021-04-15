@@ -28,13 +28,12 @@ class WDMDailySurveyEditViewController: WDMSimpleTableViewController {
     
     NotificationCenter.default.addObserver(self, selector: #selector(settingsChanged(_:)), name: NSNotification.Name.IASKSettingChanged, object: nil)
     
-    infoProvider = createInfoProvider()
-    
+    createInfoProvider()
     super.initialSetup()
     
   }
   
-  override func createInfoProvider() -> WDMTableViewInfoProvider {
+  override func createInfoProvider() {
     
     var sectionRowItems = [TableViewSectionRowItem]()
 
@@ -46,11 +45,11 @@ class WDMDailySurveyEditViewController: WDMSimpleTableViewController {
     }
     
     let sectionItem = TableViewSectionItem(headerTitle: "", footerTitle: "", sectionRowItems: sectionRowItems)
-    return WDMDailySurveyEditInfoProvider(withSectionItems: [sectionItem], presenterViewController: self)
+    infoProvider = WDMDailySurveyEditInfoProvider(withSectionItems: [sectionItem], presenterViewController: self)
   }
   
  @objc  private func settingsChanged(_ notification: Any) {
-  infoProvider = createInfoProvider()
+  createInfoProvider()
   }
   
 }

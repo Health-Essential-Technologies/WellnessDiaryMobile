@@ -39,7 +39,7 @@ class WDMTaskDetailsViewController: WDMSimpleTableViewController {
     
     tableView = WDMSimpleTableView(frame: view.bounds, style: .insetGrouped)
     
-    infoProvider = createInfoProvider()
+    createInfoProvider()
     
     super.initialSetup()
     
@@ -47,7 +47,7 @@ class WDMTaskDetailsViewController: WDMSimpleTableViewController {
     NotificationCenter.default.addObserver(self, selector: #selector(notificationReceived(_:)), name: .taskUpdated, object: nil)
   }
   
-  override func createInfoProvider() -> WDMTableViewInfoProvider {
+  override func createInfoProvider() {
     
     var sections = [TableViewSectionItem]()
     
@@ -61,7 +61,7 @@ class WDMTaskDetailsViewController: WDMSimpleTableViewController {
                                                                                   cellType: WDMTaskDetailsTableViewCell.self)]))
     }
     
-    return WDMTaskDetailsInfoProvider(withSectionItems: sections, presenterViewController: self, tasks: tasks)
+    infoProvider = WDMTaskDetailsInfoProvider(withSectionItems: sections, presenterViewController: self, tasks: tasks)
   }
   
   @objc private func notificationReceived(_ notification: Notification) {
@@ -84,7 +84,7 @@ class WDMTaskDetailsViewController: WDMSimpleTableViewController {
       }
     }
     
-    infoProvider = createInfoProvider()
+    createInfoProvider()
     tableView.reloadData()
   }
   

@@ -56,5 +56,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSFaceIDUsageDescription</key>
+	<string>In order to achieve the highest levels of protection and quick access to your personal health information, we would like to authenticate you with biometrics.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>In order to provide highest level health tracking</string>
 </dict>
 </plist>

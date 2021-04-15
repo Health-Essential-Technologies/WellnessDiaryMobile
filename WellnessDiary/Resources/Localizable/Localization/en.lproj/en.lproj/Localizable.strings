@@ -166,3 +166,7 @@
 
 "PLEASE_ENTER_THE_BLOOD_PRESSURE_READING_WITH_FORMAT_120/70" = "Please enter the blood pressure reading with format \"120/70\"";
 "FORMAT:_120/70" = "Format: 120/70 (mmHg)";
+
+"WELCOME_TO_WELLNESS_DIARY_MOBILE" = "Welcome to Wellness Diary Mobile";
+
+"TO_HELP_KEEP_YOUR_DATA_SECURE,_ENTER_YOUR_PASSCODE_BEFORE_PROCEEDING." = "To help keep your data secure, enter you passcode before proceeding.";

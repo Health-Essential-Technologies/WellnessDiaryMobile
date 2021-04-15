@@ -18,7 +18,6 @@ class WDMMainTabViewController: WDMSimpleTabViewController, UITabBarControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialSetup()
     }
     
     // MARK: - Methods
