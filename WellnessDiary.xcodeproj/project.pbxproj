@@ -144,6 +144,7 @@
 		ABD8EB3C25C2CEB70002F902 /* WDMSimpleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8EB3B25C2CEB70002F902 /* WDMSimpleLabel.swift */; };
 		ABD8EB3E25C2CECF0002F902 /* WDMSimpleDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8EB3D25C2CECF0002F902 /* WDMSimpleDatePicker.swift */; };
 		ABD8EB4025C2CEE90002F902 /* WDMSimplePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8EB3F25C2CEE90002F902 /* WDMSimplePickerView.swift */; };
+		ABF2FB8A262E76E8002AE3AB /* InAppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ABF2FB89262E76E8002AE3AB /* InAppSettings.bundle */; };
 		B12260E79C137718798B77F3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895A81BAE10799A35A91E93 /* UIImage+Extension.swift */; };
 		CB69BCC8DB599350090E033A /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DDF026850C3F78D13B563B /* Collection+Extension.swift */; };
 		D98BF8D0A77D93E31116D765 /* UITableview+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C4CCDE4DA69A35418758B /* UITableview+Extension.swift */; };
@@ -323,6 +324,7 @@
 		ABD8EB3B25C2CEB70002F902 /* WDMSimpleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleLabel.swift; sourceTree = "<group>"; };
 		ABD8EB3D25C2CECF0002F902 /* WDMSimpleDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleDatePicker.swift; sourceTree = "<group>"; };
 		ABD8EB3F25C2CEE90002F902 /* WDMSimplePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimplePickerView.swift; sourceTree = "<group>"; };
+		ABF2FB89262E76E8002AE3AB /* InAppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InAppSettings.bundle; sourceTree = "<group>"; };
 		B35C4CCDE4DA69A35418758B /* UITableview+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableview+Extension.swift"; sourceTree = "<group>"; };
 		BEE48FF325C580155FD62279 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C940C73299B37115E18DEC0A /* WDMSimpleTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDMSimpleTabViewController.swift; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 			isa = PBXGroup;
 			children = (
 				ABB1E4AC25EC285000F66083 /* Settings.bundle */,
+				ABF2FB89262E76E8002AE3AB /* InAppSettings.bundle */,
 			);
 			path = Bundles;
 			sourceTree = "<group>";
@@ -1051,6 +1054,7 @@
 				633849EFA9C15F022D043884 /* Colors.xcassets in Resources */,
 				AB27C2DB2603FCAD000718DD /* DailySurveyMockData.json in Resources */,
 				E8D7336E6C2BF972A7425841 /* Icons.xcassets in Resources */,
+				ABF2FB8A262E76E8002AE3AB /* InAppSettings.bundle in Resources */,
 				AB86F6E825CC693F00A661A1 /* Localizable.stringsdict in Resources */,
 				ABB1E4AD25EC285000F66083 /* Settings.bundle in Resources */,
 			);
