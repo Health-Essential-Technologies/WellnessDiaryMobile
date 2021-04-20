@@ -34,8 +34,7 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
     navigationController?.navigationBar.isHidden = true
     
     
-    present(passcodeViewControllerHandler.displayPasscodeViewController(), animated: false) { [unowned self] in
-      self.createInfoProvider()
+    navigationController?.present(passcodeViewControllerHandler.displayPasscodeViewController(), animated: false) { [unowned self] in
       self.tabBarController?.tabBar.isHidden = false
       self.navigationController?.navigationBar.isHidden = false
     }
@@ -48,6 +47,7 @@ class WDMSummaryTableViewController: WDMSimpleTableViewController {
     title = "SUMMARY".localize()
     summaryView.frequencySegment.addTarget(self, action: #selector(frequencySegmentTapped(_:)), for: .valueChanged)
     tableView = summaryView.tableView
+    self.createInfoProvider()
     tableView.dataSource = tableViewDataSourceHandler
     tableView.delegate = tableviewDelegateHandler
   }
